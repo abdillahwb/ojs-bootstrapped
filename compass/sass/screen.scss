@@ -1,0 +1,370 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass";
+@import "bootstrap.css";
+//
+// =====================================
+// Color variables
+// =====================================
+//
+$vt_header_url: "http://www.vt.edu/global_assets/themes/standard_2/images/vt_header_secondary_bg_960.jpg";
+$vt_deep_maroon: #660000;
+$vt_orange: #ff6600;
+$vt_deep_gray: #333333;
+$vt_md_gray: #646464;
+$vt_lt_gray: #c2c1ba;
+$form_gray: #eee;
+$default_gray_outline: #ccc;
+$link_hover: #12252c;
+$link_color: #557082;
+$nav_font_color: #ffffff;
+//
+// =====================================
+// Custom breakpoints
+// =====================================
+//
+$xl_screen: 1200px;
+$tablet_break: 767px;
+$mobile_break: 467px;
+/*
+* =====================================
+* Main elements
+* =====================================
+*/
+body {
+	font-family: "PT Sans", sans-serif;
+}
+a{
+	&:link {
+		color: $link_color;
+	}
+	&:hover, &:focus {
+		@include background(none);
+		color:$link_hover !important;
+	}
+}
+
+textarea {
+	@include box-sizing(border-box);
+	width: 100%;
+
+	&.form-control {
+		width:100%;
+	}
+}
+
+label {
+	font-weight:bold;
+}
+
+.mobile {
+	display:none!important;
+}
+
+.desktop {
+	display:inherit;
+}
+/*
+* =====================================
+* Header elements
+* =====================================
+*/
+#header {
+	@include background(url($vt_header_url) repeat scroll center top transparent!important);
+	border: 0px none;
+	height: 147px;
+	padding: 0px;
+	@include filter-margin(0px);
+	margin: 0px;
+	@include min-width(100%!important);
+
+	#headerTitle {
+		display:none;
+	}
+}
+
+
+#navbar {
+	border: none;
+
+	& > ul > li > a {
+		font-size: $base-font-size;
+	}
+}
+/*
+* =====================================
+* Navbar elements
+* =====================================
+*/
+.navbar {
+	border-radius: 0px;
+	max-height: 25px;
+
+	& .nav > li > a {
+		color: $nav_font_color;
+		text-transform: uppercase;
+		font-weight: bold;
+		@include filter-margin-top(-1px);
+		margin-top: -1px;
+	}
+
+	& .nav > li > a:hover {
+		@include background($vt_orange);
+		color: $nav_font_color;
+		text-decoration: none;
+	}
+
+	& .nav li.dropdown.open.active > .dropdown-toggle {
+		@include background($vt_orange);
+		color: $nav_font_color;
+	}
+}
+
+.nav {
+	& > li > a:hover {
+		@include background($vt_orange);
+		text-decoration: none;
+	}
+}
+
+.navbar-default {
+	@include background($vt_deep_gray);
+
+	& .navbar-brand {
+		color: $vt_lt_gray;
+		font-size: $base-font-size + 4px;
+	}
+
+	& .navbar-nav > .open > a,
+	& .navbar-nav > .open > a:hover,
+	& .navbar-nav > .open > a:focus {
+		@include background($vt_orange);
+		color: $nav_font_color;
+	}
+}
+
+.dropdown-menu {
+	& li > a {
+		@include has-layout-block;
+		padding: 3px 20px;
+		@include legacy-pie-clearfix;
+		font-weight: normal;
+		line-height: $base-line-height + 4px;
+		color: $vt_deep_gray;
+		@include nowrap;
+	}
+
+	& li > a:hover,
+	& li > a:focus {
+		color: $nav_font_color;
+		text-decoration: none;
+		@include background($vt_orange);
+	}
+
+	& li > .active > a, 
+	& li > .active > a:hover {
+		color: $vt_orange;
+		text-decoration: none;
+		outline: 0;
+		@include background($vt_orange);
+	}
+}
+
+.dropdown-submenu:hover > a {
+	color: $nav_font_color;
+	text-decoration: none;
+	@include background($vt_orange);
+}
+
+.container {
+	width: 95%!important;
+	padding-left: 10px;
+	padding-right: 10px;
+
+	#loginDisplay {
+		padding: 2px;
+	}
+
+	#userNotify, #user, #info, #searchDrop {
+		font-size: $base-font-size + 4px;
+	 	line-height: 1.3333333;
+	  	height:50px;
+	}
+
+	#userNotify > a, #user > a, #info > a, #searchDrop > a {
+		width: 100%; 
+		height: 100%;
+	}
+
+	#userNotify > a > .glyphicon, #user > a > .glyphicon, #info > a > .glyphicon, #searchDrop > a > .glyphicon {
+		font-size: $base-font-size - 1px; 
+		padding-top:1px;
+	}
+
+	.notify-badge {
+		width:auto;
+	    height:auto;
+	    position:relative;
+	    @include inline-block($alignment: $inline-block-alignment, $ie-alignment: auto);
+	    @include filter-margin-top(-10px);
+	    @include filter-margin-left(-3px);
+	    margin-top: -10px;
+	    margin-left: -3px;
+	}
+	.notify-badge > span {
+		@include background($vt_deep_maroon);
+		font-size: $base-font-size - 6px;
+	}
+
+	#searchBar {
+	  	padding-top:.5em;
+	}
+}
+/*
+* =====================================
+* Body/content elements
+* =====================================
+*/
+#container {
+	width:100%; 
+	@include min-width(100%!important);
+}
+#main {
+	@include filter-margin-left(5%);
+	margin-left: 5%; 
+	width: 90%; 
+	color:$vt_deep_gray;
+	font-size: $base-font-size + 4px;
+	line-height: $base-line-height - 4px;
+}
+
+#sidebar {
+	display: none;
+}
+#content {
+	border:none;
+}
+
+.label {
+	color:$vt_deep_gray; 
+	font-size: $base-font-size - 2px;
+}
+
+.btn-danger {
+	@include background($vt_deep_maroon);
+	border-color: $vt_deep_maroon;
+}
+.btn-success {
+	@include background($vt_deep_gray);
+	border-color: $vt_deep_gray;
+}
+.btn-info {
+	@include background($vt_md_gray);
+	border-color: $vt_md_gray;
+}
+.btn-info:hover, .btn-info:focus, .btn-info:active {
+	@include background($vt_lt_gray);
+	border-color: $vt_md_gray;
+}
+.btn-info:focus, .btn-info:active, .btn-info.active:focus {
+	outline: 5px auto $vt_md_gray!important;
+}
+/*
+* =====================================
+* Journal setup form
+* =====================================
+*/
+ul.steplist li a{
+	color:$link_color;
+}
+.form-control:focus {
+	border-color: $vt_md_gray;
+	@include box-shadow(inset 0 1px 1px rgba(194,193,186,.075),0 0 8px rgba(100,100,100,.6));
+}
+
+.formSubheading > p {
+	font-size: $base-font-size + 2px;
+	font-weight: normal!important;
+}
+
+.emptyInputGroup {
+	border: 1px $default_gray_outline solid!important; 
+	border-radius: 4px!important;
+	background-color: $form_gray;
+	font-weight: normal;
+  	line-height: $base-line-height;
+  	color: #555;
+  	padding: 6px 12px;
+  	@include filter-margin-top(-1%);
+  	width: 100%;
+  	font-size: $base-font-size - 2px;
+
+  	& > label {
+		@include float-left;
+	}
+}
+
+table.mceLayout {
+    width: 100% !important;
+}
+.defaultSkin table{
+	@include float-left;
+}
+
+
+@media (max-width: $tablet-break) {
+/*
+* =====================================
+* Main elements
+* =====================================
+*/
+	.desktop {
+		display:none;
+	}
+	.mobile{
+		display:inherit!important;
+	}
+/*
+* =====================================
+* Navbar elements
+* =====================================
+*/
+	.container {
+		padding-right: 15px;
+	}
+	#navbar li {
+		font-size: $base-font-size + 8px;
+		text-align: left;
+		width:100%;
+
+		& li a {
+			width:100%;
+		}
+	}
+	.navbar {
+		max-height: 100%;
+	}
+	.navbar-collapse {
+		padding-right: 0px;
+	}
+	.navbar-collapse.in {
+		overflow-y: inherit;
+	}
+	.navbar-default .navbar-brand {
+		font-size: $base-font-size + 8px;
+	}
+	#searchBtn > span.glyphicon, #userBtn > span.glyphicon, #notifyBtn > span.glyphicon  {
+		color: $nav_font_color;
+	}
+	.navbar-toggle:hover, .navbar-toggle:focus {
+		background-color: #660000!important;
+		border-color: #660000;
+	}
+
+
+}
+
