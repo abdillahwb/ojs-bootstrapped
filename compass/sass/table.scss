@@ -1,0 +1,167 @@
+@import "compass";
+//
+// =====================================
+// Functions
+// =====================================
+//
+//Function to convert px to em
+@function em($px, $base: $base-font-size) {
+    @return ($px / $base) * 1em;
+}
+
+
+/*==============CSS for Tables======================================*/
+table.art{
+	width:100%;
+	border-style:solid;
+	border-width:em(1px) 0 em(1px) 0;
+	border-spacing:0em;
+	margin:0 0 1em 0;
+ 	border: em(1px) solid black;
+}
+
+table.art caption {
+	@include justify-content(flex-start);
+	padding:0.4em em(3px);
+	font-weight:bold;
+}
+
+table.art td {
+	padding: em(3px) em(6px);
+	vertical-align:top;
+	text-align:center;
+  	border: em(1px) solid black!important;
+}
+
+table.art th {
+	padding: em(3px) em(6px);
+	vertical-align:top;
+	@include justify-content(center);
+	font-weight:bold;
+  	border: em(1px) solid black!important;
+}
+table.art tr{
+	border: em(1px) solid black!important;
+}
+table.art td:first-child, table.art th:first-child {
+	@include justify-content(flex-start);
+}
+
+table.art tfoot td, table.art tfoot th{
+	border-top:em(1px) solid;
+}
+
+table.foot {
+	border-width:em(1px) 0;
+	border-style:solid;
+}
+
+table.grid td, table.grid th {
+	border-left:solid em(1px);
+	border-top:solid em(1px);
+}
+
+table.grid thead tr:first-child th {
+	border-top: 0em solid;
+}
+
+table.grid tr th:last-child, table.grid tr td:last-child {
+	border-right: em(1px) solid;
+}
+
+table.grid tfoot tr td:first-child, table.grid tfoot tr th:first-child {
+	border-left: 0em solid;
+}
+table.grid tfoot tr td:last-child, table.grid tfoot tr th:last-child {
+	border-right: 0em solid;
+}
+
+table.vert {
+	border-left: solid em(1px);
+}
+table.vert td, table.vert th {
+	border-left: em(1px) solid;
+}
+
+table.vert thead tr:first-child th {
+	border-top: 0em solid;
+}
+
+table.vert tr th:last-child, table.vert tr td:last-child {
+	border-right: em(1px) solid;
+}
+
+table.vert tfoot tr td:first-child, table.vert tfoot tr th:first-child {
+	border-left: em(0px) solid;
+}
+table.vert tfoot tr td:last-child, table.vert tfoot tr th:last-child {
+	border-right: em(0px) solid;
+}
+
+table.left td, table.left th {
+	@include justify-content(flex-start);
+}
+
+tr.left td, tr.left th {
+	@include justify-content(flex-start);
+}
+
+table.right td, table.right th {
+	@include justify-content(flex-end);
+}
+
+tr.right td, tr.right th {
+	@include justify-content(flex-end);
+}
+
+tr.right th:first-child, tr.right td:first-child {
+	@include justify-content(flex-start);
+}
+
+table.underline th, table.underline td {
+	border-bottom: em(1px) solid;
+}
+
+table.underline tr:last-of-type th, table.underline tr:last-of-type td {
+	border-bottom: 0em solid;
+}
+
+tr.underline th, tr.underline td {
+	border-bottom: em(1px) solid;
+}
+
+tr.overline th, tr.overline td {
+	border-top: em(1px) solid;
+}
+
+tr.underlinedark th, tr.underlinedark td {
+	border-bottom: em(2px) solid;
+}
+
+table.spaced tbody td {
+	padding-top: 1em;
+}
+
+table.spaced tbody tr:first-child td {
+	padding-top: 0.4em;
+}
+
+tr.spaced th, tr.spaced td {
+	padding-top: 1em;
+}
+table{
+	width:100%; 
+	border-spacing: em(2px);
+}
+table.art tr, table.art th, table.art td{
+	border: em(1px) solid black;
+}
+td th, td tr, td td{
+	border: em(1px) solid black;
+}
+#content blockquote th, #content blockquote tr, #content blockquote td{
+	border: em(1px) solid black;
+}
+
+/*==================End table CSS==============================================*/
+

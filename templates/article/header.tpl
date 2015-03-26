@@ -29,7 +29,6 @@
 	<link rel="stylesheet" href="{$baseUrl}/lib/pkp/styles/common.css" type="text/css" />
 	<link rel="stylesheet" href="{$baseUrl}/styles/common.css" type="text/css" />
 	<link rel="stylesheet" href="{$baseUrl}/styles/compiled.css" type="text/css" />
-	<link rel="stylesheet" href="{$baseUrl}/styles/articleView.css" type="text/css" />
 	{if $journalRt && $journalRt->getEnabled()}
 		<link rel="stylesheet" href="{$baseUrl}/lib/pkp/styles/rtEmbedded.css" type="text/css" />
 	{/if}
@@ -97,6 +96,13 @@
 </div>
 
 <div id="body">
+{include file="common/navbar.tpl"}
+<div class="row row-offcanvas row-offcanvas-left">
+<div class=" col-xs-6 col-sm-3 sidebar-offcanvas showhide navbar-collapse" id="sidebar" role="navigation" style="">
+			<div class="sidebar-nav">
+  				{include file="common/mobileMainNavSection.tpl"}
+			</div>
+		</div>
 
 {if $leftSidebarCode || $rightSidebarCode}
 	<div id="sidebar">
@@ -112,16 +118,18 @@
 		{/if}
 	</div>
 {/if}
-
-<div id="main">
-
-{include file="common/navbar.tpl"}
-
 <div id="breadcrumb">
-	<a href="{url page="index"}" target="_parent">{translate key="navigation.home"}</a> &gt;
-	{if $issue}<a href="{url page="issue" op="view" path=$issue->getBestIssueId($currentJournal)}" target="_parent">{$issue->getIssueIdentification(false,true)|escape}</a> &gt;{/if}
-	<a href="{url page="article" op="view" path=$articleId|to_array:$galleyId}" class="current" target="_parent">{$article->getFirstAuthor(true)|escape}</a>
+	<ol class="breadcrumb">
+		<li>
+			<a href="{url page="index"}" target="_parent">{translate key="navigation.home"}</a>
+		</li>
+		{if $issue}<li><a href="{url page="issue" op="view" path=$issue->getBestIssueId($currentJournal)}" target="_parent">{$issue->getIssueIdentification(false,true)|escape}</a></li>{/if}
+		<li>
+			<a href="{url page="article" op="view" path=$articleId|to_array:$galleyId}" class="current" target="_parent">{$article->getFirstAuthor(true)|escape}</a>
+		</li>
+	</ol>
 </div>
-
+<div id="main">
+{include file="common/scroll2top.tpl"}
 <div id="content">
 

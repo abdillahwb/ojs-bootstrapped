@@ -19,7 +19,6 @@
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset={$defaultCharset|escape}" />
 	<title>{$pageTitleTranslated}</title>
 	<meta name="description" content="{$metaSearchDescription|escape}" />
@@ -71,7 +70,6 @@
 	{else}
 		{include file="common/minifiedScripts.tpl"}
 	{/if}
-
 	<!-- Form validation -->
 	<script type="text/javascript" src="{$baseUrl}/lib/pkp/js/lib/jquery/plugins/validate/jquery.validate.js"></script>
 	<script type="text/javascript">
@@ -148,25 +146,30 @@
 <div id="body">
 {include file="common/navbar.tpl"}
 
+<div class="row row-offcanvas row-offcanvas-left">
+<div class=" col-xs-6 col-sm-3 sidebar-offcanvas showhide navbar-collapse" id="sidebar" role="navigation" style="">
+			<div class="sidebar-nav">
+  				{include file="common/mobileMainNavSection.tpl"}
+			</div>
+		</div>
+		
 {if $leftSidebarCode || $rightSidebarCode}
 	<div id="sidebar">
 		{if $leftSidebarCode}
 			<div id="leftSidebar">
-				{$leftSidebarCode}
+				
 			</div>
 		{/if}
 		{if $rightSidebarCode}
 			<div id="rightSidebar">
-				{$rightSidebarCode}
+				
 			</div>
 		{/if}
 	</div>
 {/if}
-
+{include file="common/breadcrumbs.tpl"}
 <div id="main">
-
-
-<!-- {include file="common/breadcrumbs.tpl"} -->
+{include file="common/scroll2top.tpl"}
 
 <h2>{$pageTitleTranslated}</h2>
 
@@ -176,5 +179,4 @@
 {/if}
 
 <div id="content">
-
 

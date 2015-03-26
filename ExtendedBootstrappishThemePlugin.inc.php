@@ -15,6 +15,7 @@
 //$Id$
 
 import('classes.plugins.ThemePlugin');
+import('lib.pkp.classes.user.PKPUser');
 
 class ExtendedBootstrappishThemePlugin extends ThemePlugin {
 	
@@ -68,20 +69,40 @@ class ExtendedBootstrappishThemePlugin extends ThemePlugin {
 
 		$templateMgr->template_dir[0] = Core::getBaseDir() . DIRECTORY_SEPARATOR . 'plugins' . DIRECTORY_SEPARATOR . 'themes' . DIRECTORY_SEPARATOR . 'extendedbootstrappish' . DIRECTORY_SEPARATOR . 'templates';
 		$templateMgr->compile_id = 'extendedbootstrappish';
+		
+		// Add viewport
+		$viewport = ' <meta name="viewport" content="width=device-width, initial-scale=1">';
 
-		// Add in jQuery from CMS
+		// Add Font Awesome
+		$fontAwesome = ' <link rel="stylesheet" id="font-awesome-css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" type="text/css" media="screen">';
+
+		// Add in jQuery
 		$jQuery = '	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>';
+
 		$additionalHeadData = $templateMgr->get_template_vars('additionalHeadData');
-		$templateMgr->assign('additionalHeadData', $additionalHeadData."\n".$jQuery);
+		$templateMgr->assign('additionalHeadData', $additionalHeadData."\n".$jQuery."\n".$viewport."\n".$fontAwesome);
+		// Add Scroll2Top JS
+		$templateMgr->addJavaScript($this->getPluginPath() . '/js/scroll2top.js');
+
+		// Add Modernizr JS
+		$templateMgr->addJavaScript($this->getPluginPath() . '/js/modernizr.custom.69748.js');
 
 		// Add in Bootstrap JS
-		$templateMgr->addJavaScript('plugins/themes/extendedbootstrappish/js/bootstrap.min.js');
+		$templateMgr->addJavaScript($this->getPluginPath() . '/js/bootstrap.min.js');
+
+		// Add Custom JS
+		$templateMgr->addJavaScript($this->getPluginPath() . '/js/custom.js');
 		
 		if (($stylesheetFilename = $this->getStylesheetFilename()) != null) {
 			$path = Request::getBaseUrl() . '/' . $this->getPluginPath() . '/compass/stylesheets/' . $stylesheetFilename .'?bootstrappish';
 			$templateMgr->addStyleSheet($path);
-			
-			
+		
+		
+		}
+		$requestedPage = PKPRequest::getRequestedPage();
+		if ($requestedPage == 'article') {
+			$path = Request::getBaseUrl() . '/' . $this->getPluginPath() . '/compass/stylesheets/article.css'.'?bootstrappish';
+			$templateMgr->addStyleSheet($path);
 		}
 
 	}

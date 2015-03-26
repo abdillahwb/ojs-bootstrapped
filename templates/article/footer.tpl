@@ -103,5 +103,6 @@
 {get_debug_info}
 {if $enableDebugStats}{include file=$pqpTemplate}{/if}
 </div> <!-- container -->
+</div>
 </body>
 </html>

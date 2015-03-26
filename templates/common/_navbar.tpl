@@ -24,7 +24,7 @@
 				<span class="sr-only">Search</span>
             	<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
           	</button>
-          	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          	<button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 				<span class="sr-only">Toggle navigation</span>
             	<span class="icon-bar"></span>
             	<span class="icon-bar"></span>
@@ -62,7 +62,7 @@
 			<ul class="dropdown-menu pull-right" role="menu" aria-labelledby="userBtn">
 				{if $isUserLoggedIn}
 					<li>
-					<strong>{$loggedInUsername|escape}</strong></li>
+					<strong>&nbsp;{$loggedInUsername|escape}</strong></li>
 					<li id="userHome"><a href="{url journal="index" page="user"}">{translate key="navigation.userHome"}</a></li>
 					{if $hasOtherJournals}
 					<li><a href="{url journal="index" page="user"}">{translate key="plugins.block.user.myJournals"}</a></li>
@@ -123,7 +123,7 @@
 	              <ul class="dropdown-menu" role="menu">
 					{if $isUserLoggedIn}
 						<li>
-						<strong>{$loggedInUsername|escape}</strong></li>
+						<strong>&nbsp;{$loggedInUsername|escape}</strong></li>
 						<li id="userHome"><a href="{url journal="index" page="user"}">{translate key="navigation.userHome"}</a></li>
 						{if $hasOtherJournals}
 						<li><a href="{url journal="index" page="user"}">{translate key="plugins.block.user.myJournals"}</a></li>

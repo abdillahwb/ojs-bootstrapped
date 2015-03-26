@@ -18,6 +18,7 @@
 {call_hook name="Templates::Common::Footer::PageFooter"}
 </div><!-- content -->
 </div><!-- main -->
+</div><!-- off-canvas -->
 </div><!-- body -->
 
 {get_debug_info}

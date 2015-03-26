@@ -287,7 +287,7 @@
 				<span class="instruct">{translate key="manager.setup.disciplineDescription"}</span>
 			</div>
 		</div>
-		<div class="form-group"><br></div>
+		<div class="form-group"></div>
 		<div class="form-group formOptions">
 			<label for="metaDisciplineExamples[{$formLocale|escape}]" class="col-sm-12">
 				{translate key="manager.setup.disciplineProvideExamples"}:
@@ -311,7 +311,7 @@
 				<input type="text" name="metaSubjectClassTitle[{$formLocale|escape}]" id="metaSubjectClassTitle" value="{$metaSubjectClassTitle[$formLocale]|escape}" size="40" class="form-control" />
 			</div>
 		</div>
-		<div class="form-group"><br></div>
+		<div class="form-group"></div>
 		<div class="form-group formOptions">
 			<label for="metaSubjectClassUrl[{$formLocale|escape}]" name="metaSubjectClassUrl" class="col-sm-10">{translate key="common.url"}</label>
 			<div class="col-sm-10">
@@ -348,7 +348,7 @@
 			</div>
 		</div>
 
-		<div class="form-group"><br></div>
+		<div class="form-group"></div>
 
 		<div class="form-group formOptions">
 			<label for="metaCoverageGeoExamples[{$formLocale|escape}]" class="col-sm-10">{translate key="manager.setup.coverageGeoProvideExamples"}:</label>
@@ -360,7 +360,7 @@
 			</div>
 		</div>
 
-		<div class="form-group"><br></div>
+		<div class="form-group"></div>
 
 		<div class="form-group formOptions">
 			<label for="metaCoverageChronExamples[{$formLocale|escape}]" name="metaSubjectClassUrl" class="col-sm-10">{translate key="manager.setup.coverageChronProvideExamples"}:</label>
@@ -372,7 +372,7 @@
 			</div>
 		</div>
 
-		<div class="form-group"><br></div>
+		<div class="form-group"></div>
 
 		<div class="form-group formOptions">
 			<label for="metaCoverageResearchSampleExamples[{$formLocale|escape}]" name="metaSubjectClassUrl" class="col-sm-10">{translate key="manager.setup.coverageResearchSampleProvideExamples"}:</label>
@@ -477,7 +477,7 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<div class="col-sm-4">
+						<div class="col-sm-10">
 							<label class="emptyInputGroup" for="metaCitations">
 								<input type="checkbox" name="metaCitations" id="metaCitations" value="1"{if $metaCitations} checked="checked"{/if} /> {translate key="manager.setup.citations"}
 							</label>
