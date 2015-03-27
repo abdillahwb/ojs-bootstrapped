@@ -1,21 +1,8 @@
 @import "compass";
 @import "table.scss";
 @import "hacks.scss";
-//
-// =====================================
-// Functions
-// =====================================
-//
-//Function to convert px to em
-@function em($px, $base: $base-font-size) {
-    @return ($px / $base) * 1em;
-}
+@import "variables.scss";
 
-$alan_background: #686868;
-//Base font-size (16px) converted to em (1em)
-$font-size: em($base-font-size);
-$base-font-color: black;
-$webkit_min_device: "-webkit-min-device-pixel-ratio";
 
 blockquote {
 	font-size: $font-size;
@@ -29,7 +16,9 @@ blockquote {
 #main {
 	width: 95%!important;
 }
-
+ #content {
+ 	max-width: em(1200px);
+ }
 .center{
 	text-align:center;
 }
@@ -55,18 +44,12 @@ blockquote {
 		}
 	}
 
-	.center {
-		span.sansserif.b:first-of-type, span.sansserif:nth-child(3) {
-			font-size: em(30px);
-		}
-	}
-
 }
 .alanauthor{
 	@include background($alan_background);
 	padding:1em;
 	margin-bottom:0.4em;
-	color:#ffffff;
+	color:$nav_font_color;
 	font-weight:normal;
 	font-size: $font-size + .1em;
 	font-family:Geneva, Tahoma, sans-serif;
@@ -228,9 +211,10 @@ img.center{
 .right{
 	text-align: right;
 }
+
+//duplication in HTML somewhere
 .underline {
-	border-style:solid;
-	border-width:0em 0em em(1px) 0em;
+	@extend .u;
 }
 
 .overline {
@@ -267,23 +251,24 @@ ol{
 	list-style-type:decimal; 
 	margin-left:1em;
 }
-// #content li{font-size:1em; line-height:1.2em;}
 
 .clip {
 	@include legacy-pie-clearfix;
 	padding:0 1em;
-	border: em(1px) solid #000;
+	border: em(1px) solid $vt_deep_gray;
 	margin-bottom:1em;
-	div:first-of-type {
-		@include float-left;
-	}
-	div:nth-child(2) {
-		@include float-right;
-		@include legacy-pie-clearfix;
-	}
+
 	div:last-of-type {
-		@include float-left;
+		clear:both;
 	}
+}
+
+.clipLeft {
+	@include float-left;
+}
+
+.clipRight {
+	@include float-right;
 }
 
 .cliptitle {
@@ -314,18 +299,16 @@ ol{
 		@include float-left;
 		width: 100%!important;
 		margin: 0 0 1em 0;
-		font-size: $font-size + .3em;
+		// font-size: $font-size + .3em;
 
 		img {
 			display: block;
 			margin: auto;
 		}
 	}
-	.clip {
-		div:first-child, div:nth-child(2) {
-			@include reset-float();
-			text-align: center;
-		}
+	.clipLeft, .clipRight {
+		@include reset-float();
+		text-align: center;
 	}
 }
 
