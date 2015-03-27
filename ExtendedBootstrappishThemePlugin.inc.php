@@ -79,8 +79,14 @@ class ExtendedBootstrappishThemePlugin extends ThemePlugin {
 		// Add in jQuery
 		$jQuery = '	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>';
 
+		// Selctivizr for IE Pseudo classes
+		$selctivizr = '<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/mootools/1.5.1/mootools-yui-compressed.js"></script>
+						<!--[if (gte IE 6)&(lte IE 8)]>
+  							<script type="text/javascript" src="/js/selectivizr-min.js"></script>
+						<![endif]-->';
+
 		$additionalHeadData = $templateMgr->get_template_vars('additionalHeadData');
-		$templateMgr->assign('additionalHeadData', $additionalHeadData."\n".$jQuery."\n".$viewport."\n".$fontAwesome);
+		$templateMgr->assign('additionalHeadData', $additionalHeadData."\n".$jQuery."\n".$viewport."\n".$fontAwesome."\n".$selctivizr);
 		// Add Scroll2Top JS
 		$templateMgr->addJavaScript($this->getPluginPath() . '/js/scroll2top.js');
 
@@ -92,7 +98,7 @@ class ExtendedBootstrappishThemePlugin extends ThemePlugin {
 
 		// Add Custom JS
 		$templateMgr->addJavaScript($this->getPluginPath() . '/js/custom.js');
-		
+
 		if (($stylesheetFilename = $this->getStylesheetFilename()) != null) {
 			$path = Request::getBaseUrl() . '/' . $this->getPluginPath() . '/compass/stylesheets/' . $stylesheetFilename .'?bootstrappish';
 			$templateMgr->addStyleSheet($path);
