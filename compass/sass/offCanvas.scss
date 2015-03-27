@@ -1,48 +1,7 @@
 
 @import "compass";
-//
-// =====================================
-// Color variables
-// =====================================
-//
-$vt_header_url: "../img/vt_header_secondary_bg_960.jpg";
-$vt_deep_maroon: #660000;
-$vt_orange: #ff6600;
-$vt_deep_gray: #333333;
-$vt_md_gray: #646464;
-$vt_lt_gray: #c2c1ba;
-$form_gray: #eee;
-$default_gray_outline: #ccc;
-$link_hover: #12252c;
-$link_color: #557082;
-$breadcrumb_color: $link_hover;
-$breadcrumb_hover: $vt_deep_maroon;
-$nav_font_color: #ffffff;
-//
-// =====================================
-// Functions
-// =====================================
-//
-//Function to convert px to em
-@function em($px, $base: $base-font-size) {
-    @return ($px / $base) * 1em;
-}
-//
-// =====================================
-// Other variables
-// =====================================
-//
-$font-size: em($base-font-size);
-$default-font-family: "PT Sans", sans-serif;
-//
-//
-// =====================================
-// Custom breakpoints
-// =====================================
-//
-$xl_screen: 1200px;
-$tablet_break: 767px;
-$mobile_break: 479px;
+@import "variables.scss";
+
 /*
  * Off Canvas
  * --------------------------------------------------
@@ -56,6 +15,9 @@ $mobile_break: 479px;
 .transparent {
   @include opacity(.3);
 }
+// .row-offcanvas {
+//   @include min-width(em(768px));
+// }
 @media screen and (max-width: 768px) {
   .row-offcanvas {
     position: relative;
