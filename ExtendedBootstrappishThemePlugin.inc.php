@@ -53,7 +53,7 @@ class ExtendedBootstrappishThemePlugin extends ThemePlugin {
 	}
 
 	function getStylesheetFilename() {
-		return 'screen.css';
+		return 'main.css';
 	}
 
 	function getLocaleFilename($locale) {
@@ -78,7 +78,6 @@ class ExtendedBootstrappishThemePlugin extends ThemePlugin {
 
 		// Add in jQuery
 		$jQuery = '	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>';
-
 		// Selctivizr for IE Pseudo classes
 		$selctivizr = '<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/mootools/1.5.1/mootools-yui-compressed.js"></script>
 						<!--[if (gte IE 6)&(lte IE 8)]>
@@ -105,10 +104,12 @@ class ExtendedBootstrappishThemePlugin extends ThemePlugin {
 		
 		
 		}
+
 		$requestedPage = PKPRequest::getRequestedPage();
 		if ($requestedPage == 'article') {
 			$path = Request::getBaseUrl() . '/' . $this->getPluginPath() . '/compass/stylesheets/article.css'.'?bootstrappish';
 			$templateMgr->addStyleSheet($path);
+			$templateMgr->addJavaScript($this->getPluginPath() . '/js/article.js');
 		}
 
 	}
