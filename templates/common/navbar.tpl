@@ -11,12 +11,12 @@
  * Navigation Bar
  *
  *}
-	<div class="desktop">
+	<div class="hidden-xs">
  		<nav class="navbar navbar-default navbar-static-top">
 			{include file="common/mainNavSection.tpl"}
 		</nav>
 	</div>
-	<div class="mobile">
+	<div class="visible-xs">
 		<div class="navbar navbar-default" role="navigation">
 			<div class="container">
 				<div class="navbar-header">
@@ -39,7 +39,7 @@
 		            	<span class="icon-bar"></span>
 		            	<span class="icon-bar"></span>
 		          	</button>
-		    		<a class="navbar-brand desktop" href="{url page="index"}">{$siteTitle}</a> 
+		    		<a class="navbar-brand hidden-xs" href="{url page="index"}">{$siteTitle}</a> 
 		   		</div>
 			</div>
 		</div>
@@ -70,7 +70,7 @@
 		</div>
 <!-- End Modal build -->
 <!-- User and notification build for mobile display -->
-		<div id="mobileUser" class="dropdown mobile">	
+		<div id="mobileUser" class="dropdown visible-xs">	
 			<ul class="dropdown-menu pull-right" role="menu" aria-labelledby="userBtn">
 				{if $isUserLoggedIn}
 					<li>
@@ -92,14 +92,14 @@
 				{/if}{* $isUserLoggedIn *}
 			</ul>
 		</div>
-		<div id="mobileNotification" class="dropdown mobile" aria-labelledby="notifyBtn">
+		<div id="mobileNotification" class="dropdown visible-xs" aria-labelledby="notifyBtn">
 			<ul class="dropdown-menu pull-right" role="menu">
 				<li><a href="{url page="notification"}">{translate key="common.view"}</a>
 					{if $unreadNotifications > 0}{translate key="notification.notificationsNew" numNew=$unreadNotifications}{/if}</li>
 				<li><a href="{url page="notification" op="settings"}">{translate key="common.manage"}</a></li>
 			</ul>
 		</div>
-		<div id="mobileNotifySub" class="dropdown mobile" aria-labelledby="notifyBtn">
+		<div id="mobileNotifySub" class="dropdown visible-xs" aria-labelledby="notifyBtn">
 			<ul class="dropdown-menu pull-right" role="menu">
 				<li><a href="{url page="notification" op="subscribeMailList"}">{translate key="notification.subscribe"}</a></li>
 			</ul>
