@@ -11,163 +11,203 @@
 {assign var="pageTitle" value="manager.setup.managingTheJournal"}
 {include file="manager/setup/setupHeader.tpl"}
 
-<form id="setupForm" method="post" action="{url op="saveSetup" path="4"}" enctype="multipart/form-data">
+<form id="setupForm" class="form-horizontal" method="post" action="{url op="saveSetup" path="4"}" enctype="multipart/form-data">
 {include file="common/formErrors.tpl"}
 
 {if count($formLocales) > 1}
 <div id="locales">
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
-		<td width="80%" class="value">
+	<div class="form-group">
+		<label class="control-label col-sm-2">{fieldLabel name="formLocale" key="form.formLanguage"}</label>
+		<div class="col-sm-10">
 			{url|assign:"setupFormUrl" op="setup" path="4" escape=false}
 			{form_language_chooser form="setupForm" url=$setupFormUrl}
 			<span class="instruct">{translate key="form.formLanguage.description"}</span>
-		</td>
-	</tr>
-</table>
+		</div>
+	</div>
 </div><!-- locales -->
 {/if}
 
 <div id="securitySettings">
-<h3>4.1 {translate key="manager.setup.securitySettings"}</h3>
-<div id="onlineAccessManagement">
-<h4>{translate key="manager.setup.onlineAccessManagement"}</h4>
-<script type="text/javascript">
+	<div class="form-group">
+		<div class="col-sm-10">
+			<h3>4.1 {translate key="manager.setup.securitySettings"}</h3>
+		</div>
+	</div>
+	<div id="onlineAccessManagement">
+		<div class="form-group">
+			<div class="col-sm-10">
+				<h4>{translate key="manager.setup.onlineAccessManagement"}</h4>
+			</div>
+		</div>
+		<script type="text/javascript">
+			{literal}
+			<!--
+				function togglePublishingMode(form) {
+					if (form.publishingMode[0].checked) {
+						// PUBLISHING_MODE_OPEN
+						form.openAccessPolicy.disabled = false;
+						form.showGalleyLinks.disabled = true;
+					} else if (form.publishingMode[1].checked) {
+						// PUBLISHING_MODE_SUBSCRIPTION
+						form.openAccessPolicy.disabled = true;
+						form.showGalleyLinks.disabled = false;
+					} else {
+						// PUBLISHING_MODE_NONE
+						form.openAccessPolicy.disabled = true;
+						form.showGalleyLinks.disabled = true;
+					}
+				}
+			// -->
+			{/literal}
+		</script>
+
+		<div class="form-group">
+			<div class="col-sm-10">
+				<label class="emptyInputGroup btn-default">
+					<input type="radio" name="publishingMode" id="publishingMode-0" value="{$smarty.const.PUBLISHING_MODE_OPEN}" onclick="togglePublishingMode(this.form)"{if $publishingMode == $smarty.const.PUBLISHING_MODE_OPEN} checked="checked"{/if} />{translate key="manager.setup.openAccess"}
+				</label>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-10">
+				<h4>{translate key="manager.setup.openAccessPolicy"}</h4>
+				<p><span class="instruct">{translate key="manager.setup.openAccessPolicyDescription"}</span></p>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-10">
+				<textarea name="openAccessPolicy[{$formLocale|escape}]" id="openAccessPolicy" rows="12" cols="60" class="textArea"{if $publishingMode != $smarty.const.PUBLISHING_MODE_OPEN} disabled="disabled"{/if}>{$openAccessPolicy[$formLocale]|escape}</textarea>
+			</div>
+		</div>
+
+		<div class="form-group">
+		</div>
+
+		<div class="form-group">
+			<div class="col-sm-10">
+				<label class="emptyInputGroup btn-default">
+					<input type="radio" name="publishingMode" id="publishingMode-1" value="{$smarty.const.PUBLISHING_MODE_SUBSCRIPTION}" onclick="togglePublishingMode(this.form)"{if $publishingMode == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION} checked="checked"{/if} />
+					{translate key="manager.setup.subscription"}
+				</label>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-10">
+				<p><span class="instruct">{translate key="manager.setup.subscriptionDescription"}</span></p>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-10">
+				<label class="emptyInputGroup btn-default">
+					<input type="checkbox" name="showGalleyLinks" id="showGalleyLinks" {if $showGalleyLinks} checked="checked"{/if} /> {translate key="manager.setup.showGalleyLinksDescription"}
+				</label>
+			</div>
+		</div>
+
+		<div class="form-group">
+		</div>
+
+		<div class="form-group">
+			<div class="col-sm-10">
+				<label class="emptyInputGroup btn-default">
+					<input type="radio" name="publishingMode" id="publishingMode-2" value="{$smarty.const.PUBLISHING_MODE_NONE}" onclick="togglePublishingMode(this.form)"{if $publishingMode == $smarty.const.PUBLISHING_MODE_NONE} checked="checked"{/if} />{translate key="manager.setup.noPublishing"}
+				</label>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-10">
+				<p>{translate key="manager.setup.securitySettingsDescription"}</p>
+			</div>
+		</div>
+	</div><!-- onlineAccessManagement -->
+
+	<script type="text/javascript">
 	{literal}
 	<!--
-		function togglePublishingMode(form) {
-			if (form.publishingMode[0].checked) {
-				// PUBLISHING_MODE_OPEN
-				form.openAccessPolicy.disabled = false;
-				form.showGalleyLinks.disabled = true;
-			} else if (form.publishingMode[1].checked) {
-				// PUBLISHING_MODE_SUBSCRIPTION
-				form.openAccessPolicy.disabled = true;
-				form.showGalleyLinks.disabled = false;
-			} else {
-				// PUBLISHING_MODE_NONE
-				form.openAccessPolicy.disabled = true;
-				form.showGalleyLinks.disabled = true;
-			}
+	function setRegAllowOpts(form) {
+		if(form.disableUserReg[0].checked) {
+			form.allowRegReader.disabled=false;
+			form.allowRegAuthor.disabled=false;
+			form.allowRegReviewer.disabled=false;
+		} else {
+			form.allowRegReader.disabled=true;
+			form.allowRegAuthor.disabled=true;
+			form.allowRegReviewer.disabled=true;
 		}
+	}
 	// -->
 	{/literal}
-</script>
+	</script>
 
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="5%" class="label" align="right">
-			<input type="radio" name="publishingMode" id="publishingMode-0" value="{$smarty.const.PUBLISHING_MODE_OPEN}" onclick="togglePublishingMode(this.form)"{if $publishingMode == $smarty.const.PUBLISHING_MODE_OPEN} checked="checked"{/if} />
-		</td>
-		<td width="95%" class="value">
-			<label for="publishingMode-0">{translate key="manager.setup.openAccess"}</label>
-			<h4>{translate key="manager.setup.openAccessPolicy"}</h4>
-			<p><span class="instruct">{translate key="manager.setup.openAccessPolicyDescription"}</span></p>
-			<p><textarea name="openAccessPolicy[{$formLocale|escape}]" id="openAccessPolicy" rows="12" cols="60" class="textArea"{if $publishingMode != $smarty.const.PUBLISHING_MODE_OPEN} disabled="disabled"{/if}>{$openAccessPolicy[$formLocale]|escape}</textarea></p>
-		</td>
-	</tr>
-	<tr>
-		<td colspan="2" class="separator">&nbsp;</td>
-	</tr>
-	<tr valign="top">
-		<td width="5%" class="label" align="right">
-			<input type="radio" name="publishingMode" id="publishingMode-1" value="{$smarty.const.PUBLISHING_MODE_SUBSCRIPTION}" onclick="togglePublishingMode(this.form)"{if $publishingMode == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION} checked="checked"{/if} />
-		</td>
-		<td width="95%" class="value">
-			<label for="publishingMode-1">{translate key="manager.setup.subscription"}</label>
-			<p><span class="instruct">{translate key="manager.setup.subscriptionDescription"}</span></p>
-			<table width="100%">
-				<tr>
-					<td width="5%"><input type="checkbox" name="showGalleyLinks" id="showGalleyLinks" {if $showGalleyLinks} checked="checked"{/if} /></td>
-					<td width="95%"><label for="showGalleyLinks">{translate key="manager.setup.showGalleyLinksDescription"}</label></td>
-				</tr>
-			</table>
-		</td>
-	</tr>
-	<tr>
-		<td colspan="2" class="separator">&nbsp;</td>
-	</tr>
-	<tr valign="top">
-		<td width="5%" class="label" align="right">
-			<input type="radio" name="publishingMode" id="publishingMode-2" value="{$smarty.const.PUBLISHING_MODE_NONE}" onclick="togglePublishingMode(this.form)"{if $publishingMode == $smarty.const.PUBLISHING_MODE_NONE} checked="checked"{/if} />
-		</td>
-		<td width="95%" class="value">
-			<label for="publishingMode-2">{translate key="manager.setup.noPublishing"}</label>
-		</td>
-	</tr>
-</table>
+	<div id="siteAccess">
+		<div class="form-group">
+			<div class="col-sm-10">
+				<h4>{translate key="manager.setup.siteAccess"}</h4>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-10">	
+				<label class="emptyInputGroup btn-default">
+					<input type="checkbox" name="restrictSiteAccess" id="restrictSiteAccess" value="1"{if $restrictSiteAccess} checked="checked"{/if} /> {translate key="manager.setup.restrictSiteAccess"}
+				</label>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-10">
+				<label class="emptyInputGroup btn-default">
+					<input type="checkbox" name="restrictArticleAccess" id="restrictArticleAccess" value="1"{if $restrictArticleAccess} checked="checked"{/if} />{translate key="manager.setup.restrictArticleAccess"}
+				</label>
+			</div>
+		</div>
+	</div><!-- siteAccess -->
 
-<p>{translate key="manager.setup.securitySettingsDescription"}</p>
-</div><!-- onlineAccessManagement -->
-
-<script type="text/javascript">
-{literal}
-<!--
-function setRegAllowOpts(form) {
-	if(form.disableUserReg[0].checked) {
-		form.allowRegReader.disabled=false;
-		form.allowRegAuthor.disabled=false;
-		form.allowRegReviewer.disabled=false;
-	} else {
-		form.allowRegReader.disabled=true;
-		form.allowRegAuthor.disabled=true;
-		form.allowRegReviewer.disabled=true;
-	}
-}
-// -->
-{/literal}
-</script>
-
-<div id="siteAccess">
-<h4>{translate key="manager.setup.siteAccess"}</h4>
-
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="5%" class="label"><input type="checkbox" name="restrictSiteAccess" id="restrictSiteAccess" value="1"{if $restrictSiteAccess} checked="checked"{/if} /></td>
-		<td width="95%" class="value"><label for="restrictSiteAccess">{translate key="manager.setup.restrictSiteAccess"}</label></td>
-	</tr>
-	<tr valign="top">
-		<td width="5%" class="label"><input type="checkbox" name="restrictArticleAccess" id="restrictArticleAccess" value="1"{if $restrictArticleAccess} checked="checked"{/if} /></td>
-		<td width="95%" class="value"><label for="restrictArticleAccess">{translate key="manager.setup.restrictArticleAccess"}</label></td>
-	</tr>
-</table>
-</div><!-- siteAccess -->
-
-<div id="userRegistration">
-<h4>{translate key="manager.setup.userRegistration"}</h4>
-
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="5%" class="label"><input type="radio" name="disableUserReg" id="disableUserReg-0" value="0" onclick="setRegAllowOpts(this.form)"{if !$disableUserReg} checked="checked"{/if} /></td>
-		<td width="95%" class="value">
-			<label for="disableUserReg-0">{translate key="manager.setup.enableUserRegistration"}</label>
-			<table width="100%">
-				<tr>
-					<td width="5%"><input type="checkbox" name="allowRegReader" id="allowRegReader" value="1"{if $allowRegReader} checked="checked"{/if}{if $disableUserReg} disabled="disabled"{/if} /></td>
-					<td width="95%"><label for="allowRegReader">{translate key="manager.setup.enableUserRegistration.reader"}</label></td>
-				</tr>
-				<tr>
-					<td width="5%"><input type="checkbox" name="allowRegAuthor" id="allowRegAuthor" value="1"{if $allowRegAuthor} checked="checked"{/if}{if $disableUserReg} disabled="disabled"{/if} /></td>
-					<td width="95%"><label for="allowRegAuthor">{translate key="manager.setup.enableUserRegistration.author"}</label></td>
-				</tr>
-				<tr>
-					<td width="5%"><input type="checkbox" name="allowRegReviewer" id="allowRegReviewer" value="1"{if $allowRegReviewer} checked="checked"{/if}{if $disableUserReg} disabled="disabled"{/if} /></td>
-					<td width="95%"><label for="allowRegReviewer">{translate key="manager.setup.enableUserRegistration.reviewer"}</label></td>
-				</tr>
-			</table>
-		</td>
-	</tr>
-	<tr valign="top">
-		<td width="5%" class="label"><input type="radio" name="disableUserReg" id="disableUserReg-1" value="1" onclick="setRegAllowOpts(this.form)"{if $disableUserReg} checked="checked"{/if} /></td>
-		<td width="95%" class="value"><label for="disableUserReg-1">{translate key="manager.setup.disableUserRegistration"}</label></td>
-	</tr>
-</table>
-</div><!-- userRegistration -->
-
+	<div id="userRegistration">
+		<div class="form-group">
+			<div class="col-sm-10">
+				<h4>{translate key="manager.setup.userRegistration"}</h4>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-10">
+				<label class="emptyInputGroup btn-default">
+					<input type="radio" name="disableUserReg" id="disableUserReg-0" value="0" onclick="setRegAllowOpts(this.form)"{if !$disableUserReg} checked="checked"{/if} />{translate key="manager.setup.enableUserRegistration"}
+				</label>
+			</div>
+		</div>
+		<div class="form-group formOptions">
+			<div class="col-sm-10">
+				<label class="emptyInputGroup btn-default">
+					<input type="checkbox" name="allowRegReader" id="allowRegReader" value="1"{if $allowRegReader} checked="checked"{/if}{if $disableUserReg} disabled="disabled"{/if} />{translate key="manager.setup.enableUserRegistration.reader"}
+				</label>
+			</div>
+		</div>
+		<div class="form-group formOptions">
+			<div class="col-sm-10">
+				<label class="emptyInputGroup btn-default">
+					<input type="checkbox" name="allowRegAuthor" id="allowRegAuthor" value="1"{if $allowRegAuthor} checked="checked"{/if}{if $disableUserReg} disabled="disabled"{/if} />{translate key="manager.setup.enableUserRegistration.author"}
+				</label>
+			</div>
+		</div>
+		<div class="form-group formOptions">
+			<div class="col-sm-10">
+				<label class="emptyInputGroup btn-default">
+					<input type="checkbox" name="allowRegReviewer" id="allowRegReviewer" value="1"{if $allowRegReviewer} checked="checked"{/if}{if $disableUserReg} disabled="disabled"{/if} />{translate key="manager.setup.enableUserRegistration.reviewer"}
+				</label>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-10">
+				<label class="emptyInputGroup btn-default">
+					<input type="radio" name="disableUserReg" id="disableUserReg-1" value="1" onclick="setRegAllowOpts(this.form)"{if $disableUserReg} checked="checked"{/if} /> {translate key="manager.setup.disableUserRegistration"}
+				</label>
+			</div>
+		</div>
+	</div><!-- userRegistration -->
 </div><!-- securitySettings -->
 
-<div class="separator"></div>
+<div class="form-group">
+	<div class="separator"></div>
+</div>
 
 <div id="publicationScheduling">
 <h3>4.2 {translate key="manager.setup.publicationScheduling"}</h3>

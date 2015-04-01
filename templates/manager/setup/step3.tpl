@@ -16,7 +16,7 @@
 	{if count($formLocales) > 1}
 	<div id="locale">
 		<div class="form-group">
-			<label for="" class="control-label col-sm-2">{fieldLabel name="formLocale" key="form.formLanguage"}</label>
+			<label class="control-label col-sm-2">{fieldLabel name="formLocale" key="form.formLanguage"}</label>
 			<div class="col-sm-10">
 				{url|assign:"setupFormUrl" op="setup" path="3" escape=false}
 				{form_language_chooser form="setupForm" url=$setupFormUrl}
@@ -102,12 +102,12 @@
 		</div>
 		<div class="form-group">
 			<div class="col-sm-10">
-				<label class="emptyInputGroup" for="copyrightHolderType">
+				<label class="emptyInputGroup btn-default">
 					<input type="radio" value="author" name="copyrightHolderType" {if $copyrightHolderType=="author"}checked="checked" {/if}id="copyrightHolderType-author" /> {translate key="user.role.author"}
 				</label>
 			</div>
 			<div class="col-sm-10">
-				<label class="emptyInputGroup" for="copyrightHolderType">
+				<label class="emptyInputGroup btn-default">
 				<input type="radio" value="journal" name="copyrightHolderType" {if $copyrightHolderType=="journal"}checked="checked" {/if}id="copyrightHolderType-journal" /> {translate key="journal.journal"}&nbsp;({$currentJournal->getLocalizedTitle()|escape})
 			</label>
 			</div>
@@ -131,12 +131,12 @@
 		</div>
 		<div class="form-group">
 			<div class="col-sm-10">
-				<label class="emptyInputGroup">
+				<label class="emptyInputGroup btn-default">
 					<input type="radio" value="issue" name="copyrightYearBasis" {if $copyrightYearBasis=="issue"}checked="checked" {/if}id="copyrightYearBasis-issue" />&nbsp;{translate key="issue.issue"} ({translate key="manager.setup.copyrightYearBasis.Issue"})
 				</label>
 			</div>
 			<div class="col-sm-10">
-				<label class=" emptyInputGroup">
+				<label class=" emptyInputGroup btn-default">
 					<input type="radio" value="article" name="copyrightYearBasis" {if $copyrightYearBasis=="article"}checked="checked" {/if}id="copyrightYearBasis-article" />&nbsp;{translate key="article.article"} ({translate key="manager.setup.copyrightYearBasis.Article"})
 				</label>
 			</div>
@@ -149,7 +149,7 @@
 		</div>
 		<div class="form-group">
 			<div class="col-sm-10">
-				<label class="emptyInputGroup">
+				<label class="emptyInputGroup btn-default">
 					<input type="checkbox" name="copyrightNoticeAgree" id="copyrightNoticeAgree" value="1"{if $copyrightNoticeAgree} checked="checked"{/if} />&nbsp;{translate key="manager.setup.authorCopyrightNoticeAgree"}
 				</label>
 			</div>
@@ -162,7 +162,7 @@
 		</div>
 		<div class="form-group">
 			<div class="col-sm-10">
-				<label class="emptyInputGroup">
+				<label class="emptyInputGroup btn-default">
 					<input type="checkbox" name="includeCopyrightStatement" id="includeCopyrightStatement" value="1"{if $includeCopyrightStatement} checked="checked"{/if} />&nbsp;{translate key="manager.setup.includeCopyrightStatement"}
 				</label>
 			</div>
@@ -201,7 +201,7 @@
 		</div>
 		<div class="form-group">
 			<div class="col-sm-10">
-				<label class="emptyInputGroup">
+				<label class="emptyInputGroup btn-default">
 					<input type="checkbox" name="includeLicense" id="includeLicense" value="1"{if $includeLicense} checked="checked"{/if} />&nbsp;{translate key="manager.setup.includeLicense"}
 				</label>
 			</div>
@@ -428,7 +428,7 @@
 		</div>
 		<div class="form-group">
 			<div class="col-sm-10">
-				<label class="emptyInputGroup" name="copySubmissionAckPrimaryContact">
+				<label class="emptyInputGroup btn-default" name="copySubmissionAckPrimaryContact">
 					<input {if !$submissionAckEnabled}disabled="disabled" {/if}type="checkbox" name="copySubmissionAckPrimaryContact" id="copySubmissionAckPrimaryContact" value="true" {if $copySubmissionAckPrimaryContact}checked="checked"{/if}/> {translate key="manager.setup.notifications.copyPrimaryContact"}
 				</label>
 			</div>
@@ -436,7 +436,7 @@
 		<div class="form-group">
 			<div class="col-sm-10">
 				<div class="input-group">
-					<div class="input-group-addon">
+					<div id="copySubmissionEmail" class="input-group-addon">
 						<label name="copySubmissionAckAddress">
 							<input {if !$submissionAckEnabled}disabled="disabled" {/if}type="checkbox" name="copySubmissionAckSpecified" id="copySubmissionAckSpecified" value="true" {if $copySubmissionAckSpecified}checked="checked"{/if}/> {translate key="manager.setup.notifications.copySpecifiedAddress"}
 						</label>
@@ -478,7 +478,7 @@
 					</div>
 					<div class="form-group">
 						<div class="col-sm-10">
-							<label class="emptyInputGroup" for="metaCitations">
+							<label class="emptyInputGroup btn-default" for="metaCitations">
 								<input type="checkbox" name="metaCitations" id="metaCitations" value="1"{if $metaCitations} checked="checked"{/if} /> {translate key="manager.setup.citations"}
 							</label>
 						</div>
