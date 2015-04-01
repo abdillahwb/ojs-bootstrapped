@@ -15,5 +15,8 @@ $font-size: em($base-font-size);
 		margin-top: em(-16px)!important;
 		padding: em(12.5px) 0 0 0!important;
 	} 
-	
+	sup {
+		top: -.5em!important;
+		left: 0em!important; 
+	}
 }

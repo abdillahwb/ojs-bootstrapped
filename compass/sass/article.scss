@@ -1,6 +1,6 @@
 @import "compass";
-@import "table.scss";
-@import "hacks.scss";
+@import "table.css";
+// @import "hacks.css";
 @import "variables.scss";
 
 
@@ -137,6 +137,8 @@ cite {
 
 sup { 
 	font-size: $font-size - .17em; 
+	top: .5em;
+	left: -.4em;
 }
 
 .outdent {

@@ -6,52 +6,8 @@
 // @import "compass/reset";
 @import '../vendors/sanitize.scss';
 @import "compass";
-@import "bootstrap.css";
-@import "hacks.css";
-@import "offCanvas.css";
+@import "variables.scss";
 
-//
-// =====================================
-// Functions
-// =====================================
-//
-//Function to convert px to em
-@function em($px, $base: $base-font-size) {
-    @return ($px / $base) * 1em;
-}
-//
-// =====================================
-// Color variables
-// =====================================
-//
-$vt_header_url: "../img/vt_header_secondary_bg_960.jpg";
-$vt_deep_maroon: #660000;
-$vt_orange: #ff6600;
-$vt_deep_gray: #333333;
-$vt_md_gray: #646464;
-$vt_lt_gray: #c2c1ba;
-$form_gray: #eee;
-$default_gray_outline: #ccc;
-$link_hover: #12252c;
-$link_color: #557082;
-$breadcrumb_color: $link_hover;
-$breadcrumb_hover: $vt_deep_maroon;
-$nav_font_color: #ffffff;
-//
-// =====================================
-// Other variables
-// =====================================
-//
-$font-size: em($base-font-size);
-$default-font-family: "PT Sans", sans-serif;
-//
-// =====================================
-// Custom breakpoints
-// =====================================
-//
-$xl_screen: 1200px;
-$tablet_break: 767px;
-$mobile_break: 479px;
 /*
 * =====================================
 * Main elements
@@ -83,6 +39,9 @@ label {
 	font-weight:bold;
 }
 
+li {
+	vertical-align: middle;
+}
 .mobile {
 	display:none!important;
 }
@@ -225,12 +184,6 @@ label {
 	@include background($vt_orange);
 }
 
-.container {
-	width: 95%!important;
-	padding-left: em(10px);
-	padding-right: em(10px);
-}
-
 #loginDisplay {
 	padding: em(2px);
 }
@@ -279,8 +232,8 @@ label {
     @include inline-block($alignment: $inline-block-alignment, $ie-alignment: auto);
     @include filter-margin-top(-1.3em);
     @include filter-margin-left(-.4em!important);
-    margin-top: -.55em;
-    margin-left: -.45em;
+    margin-top: -1em;
+    margin-left: -.42em;
 }
 .notify-badge > span {
 	@include background($vt_deep_maroon);
@@ -317,7 +270,6 @@ label {
 		width: auto!important;
 		font-size: $font-size + .1em!important;
 		margin-top: -2.5em;
-		margin-left: 1em;
 
 		a{
 			&:link, &:visited, &:active {
@@ -335,8 +287,8 @@ label {
 }
 #main {
 	@include filter-margin-left(0!important);
-	margin-left: 0!important; 
-	width: 90%; 
+	margin-left: 0!important;
+	width: 90%!important;
 	color:$vt_deep_gray;
 	font-size: em($base-font-size + 8px);
 	line-height: em($base-line-height - 4px);
@@ -386,15 +338,13 @@ label {
 	}
 	#content {
 		@include filter-margin-left(5%);
-		margin-left: 5%; 
+		margin-left: 5%;
+		border:none;
 	}
 }
 
 #sidebar, #topBar {
 	display: none;
-}
-#content {
-	border:none;
 }
 
 .label {
@@ -441,6 +391,21 @@ ul.steplist li a{
 	font-weight: normal!important;
 }
 
+h4.checkbox-inline {
+	input[type="checkbox"] {
+		margin-top: em(-4px)!important;
+	}
+}
+
+.input-group {
+	.input-group-addon {
+		padding: em(6px) em(6px) 0 em(6px)!important;
+	}
+	input[type="checkbox"] {
+		margin-top: -.2em!important;
+	}
+}
+
 .emptyInputGroup {
 	border: em(1px) $default_gray_outline solid!important;
 	@include border-top-left-radius(em(4px)!important); 
@@ -456,7 +421,10 @@ ul.steplist li a{
   	margin-top: -1%;
   	width: 100%;
   	font-size: em($base-font-size - 2px);
-
+  	
+  	input[type="checkbox"], input[type="radio"] {
+		margin: em(1px) 0 0!important;
+	}
   	& > label {
 		@include float-left;
 	}
@@ -465,13 +433,23 @@ ul.steplist li a{
 	margin-left: 2%!important;
 	@include filter-margin-left(2%!important);
 }
+
+#userRegistration {
+	.formOptions {
+		margin-top: -1em;
+		margin-left:-1em!important;
+		.emptyInputGroup {
+			@include background(#fff);
+			padding-left: 2em;
+		}
+	}
+}
 table.mceLayout {
     width: 100% !important;
 }
 .defaultSkin table{
 	@include float-left;
 }
-
 
 @media (max-width: $tablet-break) {
 /*
@@ -489,7 +467,9 @@ table.mceLayout {
 	#container #breadcrumb {
 		font-size: $font-size!important;
 	}
-
+	#body.container {
+		width:100%;
+	}
 /*
 * =====================================
 * Navbar elements
@@ -503,7 +483,6 @@ table.mceLayout {
 		}
 	}
 	.container {
-		width:100%!important;
 		.navbar-collapse {
 			padding-right: 0em;
 
@@ -565,9 +544,37 @@ table.mceLayout {
 	}
 
 }
-/* iPhone / mobile webkit */
-@media screen and (max-device-width: $mobile_break + 1px) {
-	.navbar-brand {
+@media screen and (max-width: $mobile_break + 1px) {
+	.steplist {
 		display:none;
+	}
+	.mceButton {
+    	width: em(17px)!important;
+    	height: em(17px)!important;
+   		margin-right: em(2px)!important;
+	}
+	#submissionPreparationChecklist, #notifications {
+		.input-group {
+			width: 100%;
+		}
+		.input-group-addon {
+			display: inherit;
+			@include min-width(100%);
+
+			&:first-child {
+				border-right: 1px solid #ccc;
+				@include border-top-left-radius(em(4px)!important); 
+				@include border-top-right-radius(em(4px)!important);  
+				@include border-bottom-left-radius(0!important);  
+				@include border-bottom-right-radius(0!important);
+			}
+			&:last-child {
+				border-left: 1px solid #ccc;
+				@include border-top-left-radius(0!important); 
+				@include border-top-right-radius(0!important);  
+				@include border-bottom-left-radius(em(4px)!important);  
+				@include border-bottom-right-radius(em(4px)!important);
+			}
+		}
 	}
 }

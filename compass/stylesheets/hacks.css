@@ -6,4 +6,10 @@
     margin-top: -1em !important;
     padding: 0.78125em 0 0 0 !important;
   }
+
+  /* line 18, ../sass/hacks.scss */
+  sup {
+    top: -0.5em !important;
+    left: 0em !important;
+  }
 }

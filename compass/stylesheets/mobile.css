@@ -1,0 +1,17 @@
+@media screen and (max-device-width: 480px) {
+  /* line 6, ../sass/mobile.scss */
+  .container .notify-badge {
+    margin-top: -0.5em !important;
+    padding-left: 0.6em !important;
+  }
+
+  /* line 13, ../sass/mobile.scss */
+  .emptyInputGroup input[type="radio"], .emptyInputGroup input[type="checkbox"] {
+    margin: 0.3em 0.5em 0 !important;
+  }
+
+  /* line 19, ../sass/mobile.scss */
+  h4.checkbox-inline input[type="checkbox"] {
+    margin-top: 0 !important;
+  }
+}

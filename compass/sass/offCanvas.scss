@@ -15,9 +15,7 @@
 .transparent {
   @include opacity(.3);
 }
-// .row-offcanvas {
-//   @include min-width(em(768px));
-// }
+
 @media screen and (max-width: 768px) {
   .row-offcanvas {
     position: relative;
