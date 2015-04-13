@@ -29,6 +29,10 @@
 .u {
 	text-decoration:underline;
 }
+//duplication in HTML somewhere
+.underline {
+	@extend .u;
+}
 .normal {
 	font-style:normal;
 	font-weight:normal;

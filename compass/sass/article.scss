@@ -186,10 +186,6 @@ img.center{
  	font-style: normal;
  }
 
-//duplication in HTML somewhere
-.underline {
-	@extend .u;
-}
 
 .overline {
 	border-style:solid;
