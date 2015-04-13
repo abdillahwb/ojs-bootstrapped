@@ -1,0 +1,35 @@
+@import "compass";
+@import "variables.scss";
+/*
+* =====================================
+* General classes and ids
+* =====================================
+*/
+
+.center{
+	text-align:center;
+}
+.left {
+	text-align: left;
+}
+.right{
+	text-align: right;
+}
+
+.b, b{
+	font-weight:bold;
+}
+.i, i{
+	font-style:italic;
+}
+.bi{
+	font-weight:bold; 
+	font-style:italic;
+}
+.u {
+	text-decoration:underline;
+}
+.normal {
+	font-style:normal;
+	font-weight:normal;
+}

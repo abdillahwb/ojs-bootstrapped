@@ -64,7 +64,7 @@ li {
 	@include min-width(100%!important);
 
 	#headerTitle {
-		display:none;
+		color: $nav_font_color;
 	}
 }
 
@@ -127,6 +127,21 @@ li {
 	& .navbar-nav > .open > a:focus {
 		@include background($vt_orange);
 		color: $nav_font_color;
+	}
+}
+#user {
+	.dropdown-menu {
+		margin-right: -5.4em;
+	}
+}
+#userNotify {
+	.dropdown-menu {
+		margin-right: -.8em;
+	}
+}
+#searchDrop {
+	.dropdown-menu {
+		margin-right: -8.7em;
 	}
 }
 .dropdown-menu {
@@ -420,10 +435,10 @@ h4.checkbox-inline {
   	@include filter-margin-top(-1%);
   	margin-top: -1%;
   	width: 100%;
-  	font-size: em($base-font-size - 2px);
+  	font-size: $font-size;
   	
   	input[type="checkbox"], input[type="radio"] {
-		margin: em(1px) 0 0!important;
+		margin: 0!important;
 	}
   	& > label {
 		@include float-left;
@@ -444,11 +459,30 @@ h4.checkbox-inline {
 		}
 	}
 }
+
+#displayNumAnnouncements {
+	.emptyInputGroup {
+		@include background(#fff);
+		padding-left: 2em;
+	}
+}
+
+#template-file, .disabled_img, .img_input_group {
+	height: 100%;
+	padding: 1em 0em 1em .5em;
+}
+
 table.mceLayout {
     width: 100% !important;
 }
 .defaultSkin table{
 	@include float-left;
+}
+
+.input-group-addon {
+	.control-label {
+		margin-top: -.5em;
+	}
 }
 
 @media (max-width: $tablet-break) {
@@ -544,6 +578,15 @@ table.mceLayout {
 	}
 
 }
+@media screen and (max-width: $tablet_break + 1px) {
+	// .emptyInputGroup {
+	// 	font-size: $font-size;
+	// 	input[type="radio"], input[type="checkbox"] {
+			
+	// 	}
+	// }
+}
+
 @media screen and (max-width: $mobile_break + 1px) {
 	.steplist {
 		display:none;

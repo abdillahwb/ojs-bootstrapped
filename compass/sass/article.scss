@@ -19,9 +19,6 @@ blockquote {
  #content {
  	max-width: em(1200px);
  }
-.center{
-	text-align:center;
-}
  .artmargin {
 	margin: 0 .5em;
 	position:relative;
@@ -54,16 +51,6 @@ blockquote {
 	font-size: $font-size + .1em;
 	font-family:Geneva, Tahoma, sans-serif;
 	width:13em!important;
-}
-.b, b{
-	font-weight:bold;
-}
-.i, i{
-	font-style:italic;
-}
-.bi{
-	font-weight:bold; 
-	font-style:italic;
 }
 .indent {
 	text-indent:2em;
@@ -161,17 +148,9 @@ img {
 img.center{
 	@include align-content(center);
 }
-.u {
-	text-decoration:underline;
-}
 
 .small-caps {
 	font-variant:small-caps;
-}
-
-.normal {
-	font-style:normal;
-	font-weight:normal;
 }
 
 .notbold {
@@ -206,13 +185,6 @@ img.center{
  	padding-left: em(20px);
  	font-style: normal;
  }
-
-.left {
-	text-align: left;
-}
-.right{
-	text-align: right;
-}
 
 //duplication in HTML somewhere
 .underline {
