@@ -50,12 +50,12 @@
 		<script type="text/javascript" src="{$baseUrl}/lib/pkp/js/lib/jquery/plugins/jqueryUi.min.js"></script>
 	{/if}
 
-	{call_hook|assign:"leftSidebarCode" name="Templates::Common::LeftSidebar"}
+<!-- 	{call_hook|assign:"leftSidebarCode" name="Templates::Common::LeftSidebar"}
 	{call_hook|assign:"rightSidebarCode" name="Templates::Common::RightSidebar"}
 	{if $leftSidebarCode || $rightSidebarCode}<link rel="stylesheet" href="{$baseUrl}/styles/sidebar.css" type="text/css" />{/if}
 	{if $leftSidebarCode}<link rel="stylesheet" href="{$baseUrl}/styles/leftSidebar.css" type="text/css" />{/if}
 	{if $rightSidebarCode}<link rel="stylesheet" href="{$baseUrl}/styles/rightSidebar.css" type="text/css" />{/if}
-	{if $leftSidebarCode && $rightSidebarCode}<link rel="stylesheet" href="{$baseUrl}/styles/bothSidebars.css" type="text/css" />{/if}
+	{if $leftSidebarCode && $rightSidebarCode}<link rel="stylesheet" href="{$baseUrl}/styles/bothSidebars.css" type="text/css" />{/if} -->
 
 	{foreach from=$stylesheets item=cssUrl}
 		<link rel="stylesheet" href="{$cssUrl}" type="text/css" />
@@ -143,8 +143,9 @@
 </h1>
 </div>
 </div>
-<div id="body">
 {include file="common/navbar.tpl"}
+{include file="common/breadcrumbs.tpl"}
+<div id="body" class="container">
 
 <div class="row row-offcanvas row-offcanvas-left">
 <div class=" col-xs-6 col-sm-3 sidebar-offcanvas showhide navbar-collapse" id="sidebar" role="navigation" style="">
@@ -167,8 +168,8 @@
 		{/if}
 	</div>
 {/if}
-{include file="common/breadcrumbs.tpl"}
-<div id="main">
+
+<div id="main" class="row">
 {include file="common/scroll2top.tpl"}
 
 <h2>{$pageTitleTranslated}</h2>
@@ -178,5 +179,5 @@
 	<h3>{$pageSubtitleTranslated}</h3>
 {/if}
 
-<div id="content">
+<div id="content" class=".col-xs-12 .col-md-8">
 
