@@ -21,24 +21,19 @@ blockquote {
 }
 
 /* line 22, ../sass/article.scss */
-.center {
-  text-align: center;
-}
-
-/* line 25, ../sass/article.scss */
 .artmargin {
   margin: 0 .5em;
   position: relative;
 }
-/* line 29, ../sass/article.scss */
+/* line 26, ../sass/article.scss */
 .artmargin h2 {
   margin-bottom: 1em !important;
 }
-/* line 32, ../sass/article.scss */
+/* line 29, ../sass/article.scss */
 .artmargin p {
   font-size: 1em;
 }
-/* line 35, ../sass/article.scss */
+/* line 32, ../sass/article.scss */
 .artmargin p.bigFirst:first-letter {
   font-size: 4em;
   float: left;
@@ -50,7 +45,7 @@ blockquote {
   padding: 0.75em 0 0 0;
 }
 
-/* line 48, ../sass/article.scss */
+/* line 45, ../sass/article.scss */
 .alanauthor {
   background: #686868;
   padding: 1em;
@@ -62,45 +57,29 @@ blockquote {
   width: 13em !important;
 }
 
-/* line 58, ../sass/article.scss */
-.b, b {
-  font-weight: bold;
-}
-
-/* line 61, ../sass/article.scss */
-.i, i {
-  font-style: italic;
-}
-
-/* line 64, ../sass/article.scss */
-.bi {
-  font-weight: bold;
-  font-style: italic;
-}
-
-/* line 68, ../sass/article.scss */
+/* line 55, ../sass/article.scss */
 .indent {
   text-indent: 2em;
 }
 
-/* line 71, ../sass/article.scss */
+/* line 58, ../sass/article.scss */
 .block {
   margin-left: 2.5em;
 }
 
-/* line 74, ../sass/article.scss */
+/* line 61, ../sass/article.scss */
 .floatleft {
   float: left;
   padding-right: 0.625em;
 }
 
-/* line 78, ../sass/article.scss */
+/* line 65, ../sass/article.scss */
 .floatright {
   float: right;
   padding-left: 0.625em;
 }
 
-/* line 83, ../sass/article.scss */
+/* line 70, ../sass/article.scss */
 .vol_ssn {
   float: right;
   font-weight: bold;
@@ -108,7 +87,7 @@ blockquote {
   font-size: 1.1em;
 }
 
-/* line 89, ../sass/article.scss */
+/* line 76, ../sass/article.scss */
 .vol_issue {
   float: left;
   font-weight: bold;
@@ -116,26 +95,26 @@ blockquote {
   font-size: 1.1em;
 }
 
-/* line 96, ../sass/article.scss */
+/* line 83, ../sass/article.scss */
 .subheading {
   font-weight: bold;
   font-size: 1.1em;
 }
 
-/* line 101, ../sass/article.scss */
+/* line 88, ../sass/article.scss */
 .subheading2 {
   font-style: italic;
   font-size: 1.1em;
 }
 
-/* line 106, ../sass/article.scss */
+/* line 93, ../sass/article.scss */
 .subheading3 {
   font-style: italic;
   font-weight: bold;
   font-size: 1em;
 }
 
-/* line 111, ../sass/article.scss */
+/* line 98, ../sass/article.scss */
 .vl_logo {
   background: black;
   color: white;
@@ -148,11 +127,11 @@ blockquote {
   padding: 0.125em;
 }
 
-/* line 122, ../sass/article.scss */
+/* line 109, ../sass/article.scss */
 cite {
   font-style: inherit;
 }
-/* line 125, ../sass/article.scss */
+/* line 112, ../sass/article.scss */
 cite a {
   white-space: pre;
   /* CSS 2.0 */
@@ -172,84 +151,73 @@ cite a {
   /* IE 5+ */
 }
 
-/* line 138, ../sass/article.scss */
+/* line 125, ../sass/article.scss */
 sup {
   font-size: 0.83em;
   top: .5em;
   left: -.4em;
 }
 
-/* line 144, ../sass/article.scss */
+/* line 131, ../sass/article.scss */
 .outdent {
   text-indent: -2em;
 }
 
-/* line 148, ../sass/article.scss */
+/* line 135, ../sass/article.scss */
 .outdentflush {
   text-indent: -2em;
   padding-left: 2em;
 }
 
-/* line 153, ../sass/article.scss */
+/* line 140, ../sass/article.scss */
 .outdentli {
   text-indent: -1.3em;
 }
 
-/* line 157, ../sass/article.scss */
+/* line 144, ../sass/article.scss */
 img {
   border: 0;
 }
 
-/* line 161, ../sass/article.scss */
+/* line 148, ../sass/article.scss */
 img.center {
   -webkit-align-content: center;
   align-content: center;
 }
 
-/* line 164, ../sass/article.scss */
-.u, .underline {
-  text-decoration: underline;
-}
-
-/* line 168, ../sass/article.scss */
+/* line 152, ../sass/article.scss */
 .small-caps {
   font-variant: small-caps;
 }
 
-/* line 172, ../sass/article.scss */
-.normal {
-  font-style: normal;
-  font-weight: normal;
-}
-
-/* line 177, ../sass/article.scss */
+/* line 156, ../sass/article.scss */
 .notbold {
   font-weight: normal;
 }
 
-/* line 181, ../sass/article.scss */
+/* line 160, ../sass/article.scss */
 .notitalic {
   font-style: normal;
 }
 
-/* line 185, ../sass/article.scss */
+/* line 164, ../sass/article.scss */
 .sup {
   vertical-align: super;
   font-size: 0.83em;
 }
 
-/* line 190, ../sass/article.scss */
+/* line 169, ../sass/article.scss */
 .sub {
   vertical-align: sub;
   font-size: 0.83em;
 }
 
-/* line 194, ../sass/article.scss */
+/* line 173, ../sass/article.scss */
 .sansserif {
   font-family: "PT Sans", sans-serif !important;
 }
 
-/* line 197, ../sass/article.scss */
+/* line 176, ../sass/article.scss */
 .pdf {
   font-weight: normal;
   font-size: 0.8em;
@@ -257,30 +225,20 @@ img.center {
   font-style: normal;
 }
 
-/* line 204, ../sass/article.scss */
+/* line 183, ../sass/article.scss */
 .artlink {
   font-size: 0.85em;
   padding-left: 1.25em;
   font-style: normal;
 }
 
-/* line 210, ../sass/article.scss */
-.left {
-  text-align: left;
-}
-
-/* line 213, ../sass/article.scss */
-.right {
-  text-align: right;
-}
-
-/* line 222, ../sass/article.scss */
+/* line 190, ../sass/article.scss */
 .overline {
   border-style: solid;
   border-width: 0.0625em 0em 0em 0em;
 }
 
-/* line 226, ../sass/article.scss */
+/* line 194, ../sass/article.scss */
 div.quoteright {
   float: right;
   width: 16em;
@@ -294,31 +252,31 @@ div.quoteright {
   font-weight: bold;
   font-size: 1em;
 }
-/* line 239, ../sass/article.scss */
+/* line 207, ../sass/article.scss */
 div.quoteright p {
   font-size: 0.8em;
   line-height: 1.3em;
 }
 
-/* line 244, ../sass/article.scss */
+/* line 212, ../sass/article.scss */
 .va_caption {
   font-style: italic;
   font-size: .75em;
   font-family: Verdana, Arial, Geneva, sans-serif;
 }
 
-/* line 249, ../sass/article.scss */
+/* line 217, ../sass/article.scss */
 ul.NoBullet {
   list-style-type: none;
 }
 
-/* line 252, ../sass/article.scss */
+/* line 220, ../sass/article.scss */
 ol {
   list-style-type: decimal;
   margin-left: 1em;
 }
 
-/* line 257, ../sass/article.scss */
+/* line 225, ../sass/article.scss */
 .clip {
   *zoom: 1;
   padding: 0 1em;
@@ -334,22 +292,22 @@ ol {
   overflow: hidden;
   visibility: hidden;
 }
-/* line 263, ../sass/article.scss */
+/* line 231, ../sass/article.scss */
 .clip div:last-of-type {
   clear: both;
 }
 
-/* line 268, ../sass/article.scss */
+/* line 236, ../sass/article.scss */
 .clipLeft {
   float: left;
 }
 
-/* line 272, ../sass/article.scss */
+/* line 240, ../sass/article.scss */
 .clipRight {
   float: right;
 }
 
-/* line 276, ../sass/article.scss */
+/* line 244, ../sass/article.scss */
 .cliptitle {
   margin: 1em 0 0 0;
   text-align: left;
@@ -358,41 +316,41 @@ ol {
   font-size: 1em;
 }
 
-/* line 283, ../sass/article.scss */
+/* line 251, ../sass/article.scss */
 .Z3988 {
   padding-left: .2em;
 }
 
 @media (max-width: 767px) {
-  /* line 288, ../sass/article.scss */
+  /* line 256, ../sass/article.scss */
   h2 {
     text-align: center;
   }
 
-  /* line 292, ../sass/article.scss */
+  /* line 260, ../sass/article.scss */
   .artmargin p {
     font-size: 1.2em;
   }
 
-  /* line 296, ../sass/article.scss */
+  /* line 264, ../sass/article.scss */
   .alanauthor {
     width: 100% !important;
     font-size: 1.2em;
   }
 
-  /* line 300, ../sass/article.scss */
+  /* line 268, ../sass/article.scss */
   div.quoteright {
     float: left;
     width: 100% !important;
     margin: 0 0 1em 0;
   }
-  /* line 306, ../sass/article.scss */
+  /* line 274, ../sass/article.scss */
   div.quoteright img {
     display: block;
     margin: auto;
   }
 
-  /* line 311, ../sass/article.scss */
+  /* line 279, ../sass/article.scss */
   .clipLeft, .clipRight {
     float: none;
     text-align: center;
@@ -400,7 +358,7 @@ ol {
 }
 /* iPhone / mobile webkit */
 @media screen and (max-width: 480px) {
-  /* line 319, ../sass/article.scss */
+  /* line 287, ../sass/article.scss */
   .vol_ssn, .vol_issue {
     float: none;
     margin: auto;
