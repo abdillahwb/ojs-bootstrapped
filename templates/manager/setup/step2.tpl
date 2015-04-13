@@ -126,7 +126,7 @@
 			</div>
 			<div class="form-group">
 				<div class="col-sm-2">
-					 <input class="form-control" type="text" name="numWeeksPerReview" id="numWeeksPerReview" value="{$numWeeksPerReview|escape}" size="2" maxlength="8" class="textField" />
+					 <input type="text" name="numWeeksPerReview" id="numWeeksPerReview" value="{$numWeeksPerReview|escape}" size="2" maxlength="8" class=" form-control" />
 				</div>
 			</div>
 			<div class="form-group">
