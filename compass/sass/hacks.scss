@@ -1,11 +1,5 @@
 @import "compass";
-//Function to convert px to em
-@function em($px, $base: $base-font-size) {
-    @return ($px / $base) * 1em;
-}
-
-//Base font-size (16px) converted to em (1em)
-$font-size: em($base-font-size);
+@import "variables.scss";
 
 // Check for Chrome >= 29 & Opera >= 16
  @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dppx) { 
@@ -19,4 +13,10 @@ $font-size: em($base-font-size);
 		top: -.5em!important;
 		left: 0em!important; 
 	}
+	@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dppx) and (max-width: $tablet-break) { 
+		.notify-badge {
+		    margin-top: -.5em!important;
+		}
+	}
+
 }
