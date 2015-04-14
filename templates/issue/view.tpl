@@ -8,6 +8,7 @@
  * View issue -- This displays the issue TOC or title page, as appropriate,
  * *without* header or footer HTML (see viewPage.tpl)
  *}
+
 {if $subscriptionRequired && $showGalleyLinks && $showToc}
 	<div id="accessKey">
 		<img src="{$baseUrl}/lib/pkp/templates/images/icons/fulltext_open_medium.gif" alt="{translate key="article.accessLogoOpen.altText"}" />
