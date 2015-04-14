@@ -90,7 +90,7 @@ class ExtendedBootstrappishThemePlugin extends ThemePlugin {
 		$templateMgr->addJavaScript($this->getPluginPath() . '/js/scroll2top.js');
 
 		// Add Modernizr JS
-		$templateMgr->addJavaScript($this->getPluginPath() . '/js/modernizr.custom.69748.js');
+		$templateMgr->addJavaScript($this->getPluginPath() . '/js/modernizr.custom.64607.js');
 
 		// Add in Bootstrap JS
 		$templateMgr->addJavaScript($this->getPluginPath() . '/js/bootstrap.min.js');
