@@ -24,8 +24,9 @@
 			$('#searchForm').pkpHandler('$.pkp.pages.search.SearchFormHandler');
 		{rdelim});
 	</script>
+	
 	<form class="form-horizontal" method="post" id="searchForm" action="{url op="search"}">
-		<!-- <table class="data">
+	<!-- 	<table class="data">
 			<tr valign="top">
 				<td class="label"><label for="query">{translate key="search.searchAllCategories"}</label></td>
 				<td class="value">
@@ -124,14 +125,15 @@
 				{translate key="journal.journal"}
 			</div>
 		{/if}
-		<div class="col-sm-4">
-			{translate key="issue.issue"}
+		<div class="col-sm-4 hidden-xs">
+			<h4>{translate key="issue.issue"}</h4>
 		</div>
 		<div class="col-sm-2"></div>
-		<div class="col-sm-4">
-			{translate key="article.title"}
+		<div class="col-sm-4 hidden-xs">
+			<h4>{translate key="article.title"}</h4>
 		</div>
 	</div>
+	<div class="row"><div class="separator"></div></div> 
 	{iterate from=results item=result}
 			{assign var=publishedArticle value=$result.publishedArticle}
 			{assign var=article value=$result.article}
@@ -143,15 +145,15 @@
 				{if !$currentJournal}
 					<div class="col-sm-4"><a href="{url journal=$journal->getPath()}">{$journal->getLocalizedTitle()|escape}</a></div>
 				{/if}
-				<div class="col-sm-4"><a href="{url journal=$journal->getPath() page="issue" op="view" path=$issue->getBestIssueId($journal)}">{$issue->getIssueIdentification()|escape}</a></div>
+				<div class="col-sm-4"><h4 class="visible-xs normal">{translate key="issue.issue"}: </h4><a href="{url journal=$journal->getPath() page="issue" op="view" path=$issue->getBestIssueId($journal)}">{$issue->getIssueIdentification()|escape}</a></div>
 				<div class="col-sm-2"></div>
-				<div class="col-sm-4">{$article->getLocalizedTitle()|strip_unsafe_html}</div>
+				<div class="col-sm-4 b"><h4 class="visible-xs normal">{translate key="article.title"}: </h4>{$article->getLocalizedTitle()|strip_unsafe_html}</div>
 				
 			</div>
 			<div class="row">
 				<div class="col-sm-6">
 					{foreach from=$article->getAuthors() item=authorItem name=authorList}
-						{$authorItem->getFullName()|escape}{if !$smarty.foreach.authorList.last},{/if}
+						<span class="i">{$authorItem->getFullName()|escape}{if !$smarty.foreach.authorList.last},{/if}</span>
 					{/foreach}
 				</div>
 				<div class="col-sm-4 right">
