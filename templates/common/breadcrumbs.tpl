@@ -19,7 +19,7 @@
 			</li>
 		{/foreach}
 		{* Disable linking to the current page if the request is a post (form) request. Otherwise following the link will lead to a form submission error. *}
-		{if $requiresFormRequest}<span class="current">{else}<li><a href="{$currentUrl|escape}" class="current">{/if}{$pageCrumbTitleTranslated}{if $requiresFormRequest}</span>{else}</a></li>{/if}
+		{if $requiresFormRequest}<li><span class="current">{else}<li><a href="{$currentUrl|escape}" class="current">{/if}{$pageCrumbTitleTranslated}{if $requiresFormRequest}</span></li>{else}</a></li>{/if}
 	</ol>
 </div>
 
