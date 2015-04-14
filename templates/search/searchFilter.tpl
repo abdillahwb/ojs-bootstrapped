@@ -28,16 +28,16 @@
 		</td>
 		<td class="value">
 			{if $filterType == "date"}
-				{html_select_date prefix=$filterName time=$filterValue all_extra="class=\"selectMenu\"" year_empty="" month_empty="" day_empty="" start_year="$startYear" end_year="$endYear"}
+				{html_select_date prefix=$filterName time=$filterValue all_extra="class=\"form-control\"" year_empty="" month_empty="" day_empty="" start_year="$startYear" end_year="$endYear"}
 				{if $filterName == "dateTo"}
-					<input type="hidden" name="dateToHour" value="23" />
-					<input type="hidden" name="dateToMinute" value="59" />
-					<input type="hidden" name="dateToSecond" value="59" />
+					<select type="hidden" name="dateToHour" value="23" ></select>
+					<select type="hidden" name="dateToMinute" value="59" ></select>
+					<select type="hidden" name="dateToSecond" value="59" ></select>
 				{/if}
 			{else}
 				{capture assign="filterInput"}{call_hook name="Templates::Search::SearchResults::FilterInput" filterName=$filterName filterValue=$filterValue}{/capture}
 				{if empty($filterInput)}
-					<input type="text" name="{$filterName}" id="{$filterName}" size="40" maxlength="255" value="{$filterValue|escape}" class="textField">
+					<input type="text" name="{$filterName}" id="{$filterName}" size="40" maxlength="255" value="{$filterValue|escape}" class="form-control">
 				{else}
 					{$filterInput}
 				{/if}
