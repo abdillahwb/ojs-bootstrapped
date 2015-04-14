@@ -49,6 +49,13 @@ li {
 .desktop {
 	display:inherit;
 }
+// Need to add in no-js functionality
+html.no-js{
+	.collapse {
+	  display: block
+	}
+}
+
 /*
 * =====================================
 * Header elements
@@ -134,7 +141,7 @@ li {
 		margin-right: -5.4em;
 	}
 }
-#userNotify {
+#userNotify, #notifySub {
 	.dropdown-menu {
 		margin-right: -.8em;
 	}
@@ -144,6 +151,11 @@ li {
 		margin-right: -8.7em;
 	}
 }
+
+#notifySub {
+	padding-right: 1em;
+}
+
 .dropdown-menu {
 	@include filter-margin-top(-.2em!important);
 	margin-top: -.2em!important;
@@ -271,6 +283,7 @@ li {
 		@include border-bottom-right-radius(em(5px));
 	}
 }
+ 
 
 /*
 * =====================================
@@ -577,14 +590,6 @@ table.mceLayout {
 		}
 	}
 
-}
-@media screen and (max-width: $tablet_break + 1px) {
-	// .emptyInputGroup {
-	// 	font-size: $font-size;
-	// 	input[type="radio"], input[type="checkbox"] {
-			
-	// 	}
-	// }
 }
 
 @media screen and (max-width: $mobile_break + 1px) {
