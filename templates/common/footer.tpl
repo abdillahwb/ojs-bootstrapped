@@ -20,7 +20,6 @@
 </div><!-- main -->
 </div><!-- off-canvas -->
 </div><!-- body -->
-
 {get_debug_info}
 {if $enableDebugStats}{include file=$pqpTemplate}{/if}
 
