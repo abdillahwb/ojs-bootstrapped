@@ -1,5 +1,5 @@
 @media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dppx) {
-  /* line 12, ../sass/hacks.scss */
+  /* line 6, ../sass/hacks.scss */
   .bigFirst:first-letter {
     padding: 0.0625em !important;
     line-height: 0.625em !important;
@@ -7,9 +7,15 @@
     padding: 0.78125em 0 0 0 !important;
   }
 
-  /* line 18, ../sass/hacks.scss */
+  /* line 12, ../sass/hacks.scss */
   sup {
     top: -0.5em !important;
     left: 0em !important;
+  }
+}
+@media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dppx) and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dppx) and (max-width: 767px) {
+  /* line 17, ../sass/hacks.scss */
+  .notify-badge {
+    margin-top: -0.5em !important;
   }
 }
