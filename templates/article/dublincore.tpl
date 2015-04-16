@@ -11,9 +11,23 @@
 <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
 
 {* DC.Contributor.PersonalName (reviewer) *}
-{if $article->getSponsor(null)}{foreach from=$article->getSponsor(null) key=metaLocale item=metaValue}
-	<meta name="DC.Contributor.Sponsor" xml:lang="{$metaLocale|String_substr:0:2|escape}" content="{$metaValue|strip_tags|escape}"/>
+
+<!-- Editted to reflect VT specific edits -->
+
+{if !is_null($journal->getSetting('sponsors'))}{assign var="sponsors" value=$journal->getSetting('sponsors')}{foreach name=sponsors from=$sponsors key=sponsorId item=sponsor}
+	<meta name="DC.Contributor.Sponsor" xml:lang="{$article->getLocale()|String_substr:0:2|escape}" content="{$sponsor.institution|escape}"/>
 {/foreach}{/if}
+
+{if !is_null($journal->getSetting('publisherInstitution'))}
+	<meta name="DC.publisher" xml:lang="{$article->getLocale()|String_substr:0:2|escape}" content="{$journal->getSetting('publisherInstitution')|escape}"/>
+{/if}
+
+{assign var="titles" value=$journal->getSetting('title')}{foreach name=titles from=$titles key=titleId item=title}
+	{assign var="journalTitle" value=$title}
+{/foreach}
+
+<meta name="DCTERMS.bibliographicCitation" content="{$journalTitle|escape} {$issue->getVolume()|strip_tags|escape}({$issue->getNumber()|strip_tags|escape}): ({$article->getDatePublished()|date_format:"%Y"})" />
+<!-- End VT specific edits -->
 {if $article->getCoverageSample(null)}{foreach from=$article->getCoverageSample(null) key=metaLocale item=metaValue}
 	<meta name="DC.Coverage" xml:lang="{$metaLocale|String_substr:0:2|escape}" content="{$metaValue|strip_tags|escape}"/>
 {/foreach}{/if}
