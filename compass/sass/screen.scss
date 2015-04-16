@@ -42,18 +42,15 @@ label {
 li {
 	vertical-align: middle;
 }
-.mobile {
-	display:none!important;
-}
 
-.desktop {
-	display:inherit;
-}
 // Need to add in no-js functionality
 html.no-js{
 	.collapse {
 	  display: block
 	}
+}
+#body.container {
+	min-height: 50em;
 }
 
 /*
@@ -625,4 +622,18 @@ table.mceLayout {
 			}
 		}
 	}
+}
+/*
+* =====================================
+* No-JS Solutions
+* =====================================
+*/
+
+html.no-js {
+	.dropdown:hover, .dropdown:focus {
+		.dropdown-menu {
+			display:block;
+		}
+	}
+	
 }
