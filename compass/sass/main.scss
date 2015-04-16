@@ -1,6 +1,40 @@
-@import "bootstrap.css";
-@import "hacks.css";
-@import "offCanvas.css";
-@import "screen.css";
-@import "mobile.css";
-@import "general.css";
+
+@import "bootstrap.scss";
+@import "hacks.scss";
+@import "offCanvas.scss";
+@import "screen.scss";
+@import "mobile.scss";
+@import "general.scss";
+
+
+// Items are extended/overridden here because they pull from the bootstrap.scss. 
+// So, instead of loading the bootstrap.scss in multiple places, better to just edit here.
+
+input[type="submit"] {
+	@extend .btn-success;
+	@extend .btn;
+	margin-top: .5em!important;
+}
+
+input[class="uploadField"] {
+	@extend .form-control;
+	height: 100%!important;
+	padding: .5em 0em .5em .5em!important;
+}
+
+input[value="cancel"], input[value="Cancel"], input[value='delete'] {
+	@extend .btn-danger;
+	@extend .btn;
+	margin-top: .5em!important;
+}
+
+@media (max-width: $tablet-break) {
+	html.no-js {
+		div.hidden-xs {
+			display: block!important;
+		}
+		div.visible-xs {
+			display:none!important;
+		}
+	}
+}
