@@ -1,13 +1,13 @@
 <?php
 
 /**
- * @file ExtendedBootstrappishThemePlugin.inc.php
+ * @file BootstrappedThemePlugin.inc.php
  *
  * Copyright (c) 2013 Christopher Anderton
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class ExtendedBootstrappishThemePlugin
- * @ingroup plugins_themes_extendedbootstrappish
+ * @class BootstrappedThemePlugin
+ * @ingroup plugins_themes_bootstrapped
  *
  * @brief Extension of "Bootstrappish" theme plugin
  */
@@ -17,7 +17,7 @@
 import('classes.plugins.ThemePlugin');
 import('lib.pkp.classes.user.PKPUser');
 
-class ExtendedBootstrappishThemePlugin extends ThemePlugin {
+class BootstrappedThemePlugin extends ThemePlugin {
 	
 	/**
 	 * @see PKPPlugin::register($category, $path)
@@ -41,11 +41,11 @@ class ExtendedBootstrappishThemePlugin extends ThemePlugin {
 	 * @return String name of plugin
 	 */
 	function getName() {
-		return 'ExtendedBootstrappishThemePlugin';
+		return 'BootstrappedThemePlugin';
 	}
 
 	function getDisplayName() {
-		return 'Extension of Bootstrappish Theme';
+		return 'Bootstrapped Theme';
 	}
 
 	function getDescription() {
@@ -67,8 +67,8 @@ class ExtendedBootstrappishThemePlugin extends ThemePlugin {
 
 		// Resets the template directory to the files in this directory -- Credit to https://github.com/cu-library/OJS-Modern-Theme for the fix/redirection
 
-		$templateMgr->template_dir[0] = Core::getBaseDir() . DIRECTORY_SEPARATOR . 'plugins' . DIRECTORY_SEPARATOR . 'themes' . DIRECTORY_SEPARATOR . 'extendedbootstrappish' . DIRECTORY_SEPARATOR . 'templates';
-		$templateMgr->compile_id = 'extendedbootstrappish';
+		$templateMgr->template_dir[0] = Core::getBaseDir() . DIRECTORY_SEPARATOR . 'plugins' . DIRECTORY_SEPARATOR . 'themes' . DIRECTORY_SEPARATOR . 'bootstrapped' . DIRECTORY_SEPARATOR . 'templates';
+		$templateMgr->compile_id = 'bootstrapped';
 		
 		// Add viewport
 		$viewport = ' <meta name="viewport" content="width=device-width, initial-scale=1">';
@@ -99,7 +99,7 @@ class ExtendedBootstrappishThemePlugin extends ThemePlugin {
 		$templateMgr->addJavaScript($this->getPluginPath() . '/js/custom.js');
 
 		if (($stylesheetFilename = $this->getStylesheetFilename()) != null) {
-			$path = Request::getBaseUrl() . '/' . $this->getPluginPath() . '/compass/stylesheets/' . $stylesheetFilename .'?bootstrappish';
+			$path = Request::getBaseUrl() . '/' . $this->getPluginPath() . '/compass/stylesheets/' . $stylesheetFilename;
 			$templateMgr->addStyleSheet($path);
 		
 		
@@ -107,7 +107,7 @@ class ExtendedBootstrappishThemePlugin extends ThemePlugin {
 
 		$requestedPage = PKPRequest::getRequestedPage();
 		if ($requestedPage == 'article') {
-			$path = Request::getBaseUrl() . '/' . $this->getPluginPath() . '/compass/stylesheets/article.css'.'?bootstrappish';
+			$path = Request::getBaseUrl() . '/' . $this->getPluginPath() . '/compass/stylesheets/article.css';
 			$templateMgr->addStyleSheet($path);
 			$templateMgr->addJavaScript($this->getPluginPath() . '/js/article.js');
 		}
