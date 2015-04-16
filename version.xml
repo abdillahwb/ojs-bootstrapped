@@ -10,7 +10,7 @@
   * $Id$
   -->
 <version>
-	<application>extendedbootstrappish</application>
+	<application>bootstrapped</application>
 	<type>plugins.themes</type>
 	<release>1.0.0.1</release>
 	<date>2014-12-03</date>

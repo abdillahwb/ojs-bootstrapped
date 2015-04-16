@@ -1,24 +1,24 @@
 <?php
 
 /**
- * @defgroup plugins_themes_extendedbootstrappish
+ * @defgroup plugins_themes_bootstrapped
  */
  
 /**
- * @file plugins/themes/extendedbootstrappish/index.php
+ * @file plugins/themes/bootstrapped/index.php
  *
  * Copyright (c) 2012 Christopher Anderton
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @brief Wrapper for "bootstrappish" theme plugin.
  *
- * @ingroup plugins_themes_extendedbootstrappish
+ * @ingroup plugins_themes_bootstrapped
  */
 
 //$Id$
 
-require_once('ExtendedBootstrappishThemePlugin.inc.php');
+require_once('BootstrappedThemePlugin.inc.php');
 
-return new ExtendedBootstrappishThemePlugin();
+return new BootstrappedThemePlugin();
 
 ?>
