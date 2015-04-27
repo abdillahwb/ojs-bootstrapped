@@ -1,8 +1,8 @@
 {**
  * templates/article/header.tpl
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Article View -- Header component.
@@ -29,16 +29,17 @@
 	<link rel="stylesheet" href="{$baseUrl}/lib/pkp/styles/common.css" type="text/css" />
 	<link rel="stylesheet" href="{$baseUrl}/styles/common.css" type="text/css" />
 	<link rel="stylesheet" href="{$baseUrl}/styles/compiled.css" type="text/css" />
+	<link rel="stylesheet" href="{$baseUrl}/styles/articleView.css" type="text/css" />
 	{if $journalRt && $journalRt->getEnabled()}
 		<link rel="stylesheet" href="{$baseUrl}/lib/pkp/styles/rtEmbedded.css" type="text/css" />
 	{/if}
 
 	{call_hook|assign:"leftSidebarCode" name="Templates::Common::LeftSidebar"}
 	{call_hook|assign:"rightSidebarCode" name="Templates::Common::RightSidebar"}
-<!-- 	{if $leftSidebarCode || $rightSidebarCode}<link rel="stylesheet" href="{$baseUrl}/styles/sidebar.css" type="text/css" />{/if}
+	{if $leftSidebarCode || $rightSidebarCode}<link rel="stylesheet" href="{$baseUrl}/styles/sidebar.css" type="text/css" />{/if}
 	{if $leftSidebarCode}<link rel="stylesheet" href="{$baseUrl}/styles/leftSidebar.css" type="text/css" />{/if}
 	{if $rightSidebarCode}<link rel="stylesheet" href="{$baseUrl}/styles/rightSidebar.css" type="text/css" />{/if}
-	{if $leftSidebarCode && $rightSidebarCode}<link rel="stylesheet" href="{$baseUrl}/styles/bothSidebars.css" type="text/css" />{/if} -->
+	{if $leftSidebarCode && $rightSidebarCode}<link rel="stylesheet" href="{$baseUrl}/styles/bothSidebars.css" type="text/css" />{/if}
 
 	{foreach from=$stylesheets item=cssUrl}
 		<link rel="stylesheet" href="{$cssUrl}" type="text/css" />
@@ -70,7 +71,7 @@
 
 	{$additionalHeadData}
 </head>
-<body>
+<body id="pkp-{$pageTitle|replace:'.':'-'}">
 
 <div id="container">
 
@@ -94,26 +95,8 @@
 </h1>
 </div>
 </div>
-{include file="common/navbar.tpl"}
-<div id="breadcrumb">
-	<ol class="breadcrumb">
-		<li>
-			<a href="{url page="index"}" target="_parent">{translate key="navigation.home"}</a>
-		</li>
-		{if $issue}<li><a href="{url page="issue" op="view" path=$issue->getBestIssueId($currentJournal)}" target="_parent">{$issue->getIssueIdentification(false,true)|escape}</a></li>{/if}
-		<li>
-			<a href="{url page="article" op="view" path=$articleId|to_array:$galleyId}" class="current" target="_parent">{$article->getFirstAuthor(true)|escape}</a>
-		</li>
-	</ol>
-</div>
-<div class="container" id="body">
 
-<div class="row row-offcanvas row-offcanvas-left">
-<div class=" col-xs-6 col-sm-3 sidebar-offcanvas showhide navbar-collapse" id="sidebar" role="navigation" style="">
-			<div class="sidebar-nav">
-  				{include file="common/mobileMainNavSection.tpl"}
-			</div>
-		</div>
+<div id="body">
 
 {if $leftSidebarCode || $rightSidebarCode}
 	<div id="sidebar">
@@ -130,6 +113,15 @@
 	</div>
 {/if}
 
-<div class="row" id="main">
-	{include file="common/scroll2top.tpl"}
-		<div id="content" class=".col-xs-12 .col-md-8">
+<div id="main">
+
+{include file="common/navbar.tpl"}
+
+<div id="breadcrumb">
+	<a href="{url page="index"}" target="_parent">{translate key="navigation.home"}</a> &gt;
+	{if $issue}<a href="{url page="issue" op="view" path=$issue->getBestIssueId($currentJournal)}" target="_parent">{$issue->getIssueIdentification(false,true)|escape}</a> &gt;{/if}
+	<a href="{url page="article" op="view" path=$articleId|to_array:$galleyId}" class="current" target="_parent">{$article->getFirstAuthor(true)|escape}</a>
+</div>
+
+<div id="content">
+

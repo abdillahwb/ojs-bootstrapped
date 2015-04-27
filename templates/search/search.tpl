@@ -1,8 +1,8 @@
 {**
  * templates/search/search.tpl
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * A unified search interface.
@@ -11,22 +11,17 @@
 {assign var="pageTitle" value="navigation.search"}
 {include file="common/header.tpl"}
 {/strip}
-<div class="row">
-	<div class="col-sm-10">
-		<button class="btn btn-info" type="button" data-toggle="collapse" data-target="#search" aria-expanded="false">Advanced Search</button>
-	</div>
-</div>
 
-<div id="search" class="collapse">
+<div id="search">
+
 	<script type="text/javascript">
 		$(function() {ldelim}
 			// Attach the form handler.
 			$('#searchForm').pkpHandler('$.pkp.pages.search.SearchFormHandler');
 		{rdelim});
 	</script>
-	
-	<form class="form-horizontal" method="post" id="searchForm" action="{url op="search"}">
-	<!-- 	<table class="data">
+	<form method="post" id="searchForm" action="{url op="search"}">
+		<table class="data">
 			<tr valign="top">
 				<td class="label"><label for="query">{translate key="search.searchAllCategories"}</label></td>
 				<td class="value">
@@ -63,16 +58,15 @@
 				{include file="search/searchFilter.tpl" displayIf="activeFilter" filterName="coverage" filterValue=$coverage key="search.coverage"}
 				{include file="search/searchFilter.tpl" displayIf="activeFilter" filterName="indexTerms" filterValue=$indexTerms key="search.indexTermsLong"}
 			{/if}
-		</table> -->
+		</table>
+		<br/>
 		{if $hasEmptyFilters}
 			{capture assign="emptyFilters"}
-				<form class="form-horizontal">
+				<table class="data">
 					{if empty($authors) || empty($title) || empty($abstract) || empty($galleyFullText) || empty($suppFiles)}
-						<div class="form-group">
-							<div class="col-sm-10">
-								<h4>{translate key="search.searchCategories"}</h4>
-							</div>
-						</div>
+						<tr valign="top">
+							<td colspan="2" class="label"><h4>{translate key="search.searchCategories"}</h4></td>
+						</tr>
 						{include file="search/searchFilter.tpl" displayIf="emptyFilter" filterName="authors" filterValue=$authors key="search.author"}
 						{include file="search/searchFilter.tpl" displayIf="emptyFilter" filterName="title" filterValue=$title key="article.title"}
 						{include file="search/searchFilter.tpl" displayIf="emptyFilter" filterName="abstract" filterValue=$abstract key="search.abstract"}
@@ -96,13 +90,8 @@
 						{include file="search/searchFilter.tpl" displayIf="emptyFilter" filterName="coverage" filterValue=$coverage key="search.coverage"}
 						{include file="search/searchFilter.tpl" displayIf="emptyFilter" filterName="indexTerms" filterValue=$indexTerms key="search.indexTermsLong"}
 					{/if}
-					<div class="form-group"></div>
-					<div class="form-group">
-						<div class="col-sm-10">
-							<input type="submit" value="{translate key="common.search"}" class="btn btn-success" />
-						</div>
-					</div>
-				</form>
+				</table>
+				<p><input type="submit" value="{translate key="common.search"}" class="button defaultButton" /></p>
 			{/capture}
 			{include file="controllers/extrasOnDemand.tpl" id="emptyFilters" moreDetailsText="search.advancedSearchMore" lessDetailsText="search.advancedSearchLess" extraContent=$emptyFilters}
 		{/if}
@@ -119,44 +108,29 @@
 {/if}
 
 <div id="results">
-	<div class="row">
-		{if !$currentJournal}
-			<div class="col-sm-4 center">
-				{translate key="journal.journal"}
-			</div>
-		{/if}
-		<div class="col-sm-4 hidden-xs">
-			<h4>{translate key="issue.issue"}</h4>
-		</div>
-		<div class="col-sm-2"></div>
-		<div class="col-sm-4 hidden-xs">
-			<h4>{translate key="article.title"}</h4>
-		</div>
-	</div>
-	<div class="row"><div class="separator"></div></div> 
-	{iterate from=results item=result}
+	<table width="100%" class="listing">
+		<tr><td colspan="{$numCols|escape}" class="headseparator">&nbsp;</td></tr>
+		<tr class="heading" valign="bottom">
+			{if !$currentJournal}<td width="20%">{translate key="journal.journal"}</td>{/if}
+			<td width="{if !$currentJournal}20%{else}40%{/if}">{translate key="issue.issue"}</td>
+			<td width="60%" colspan="2">{translate key="article.title"}</td>
+		</tr>
+		<tr><td colspan="{$numCols|escape}" class="headseparator">&nbsp;</td></tr>
+
+		{iterate from=results item=result}
 			{assign var=publishedArticle value=$result.publishedArticle}
 			{assign var=article value=$result.article}
 			{assign var=issue value=$result.issue}
 			{assign var=issueAvailable value=$result.issueAvailable}
 			{assign var=journal value=$result.journal}
 			{assign var=section value=$result.section}
-			<div class="row">
+			<tr valign="top">
 				{if !$currentJournal}
-					<div class="col-sm-4"><a href="{url journal=$journal->getPath()}">{$journal->getLocalizedTitle()|escape}</a></div>
+					<td><a href="{url journal=$journal->getPath()}">{$journal->getLocalizedTitle()|escape}</a></td>
 				{/if}
-				<div class="col-sm-4"><h4 class="visible-xs normal">{translate key="issue.issue"}: </h4><a href="{url journal=$journal->getPath() page="issue" op="view" path=$issue->getBestIssueId($journal)}">{$issue->getIssueIdentification()|escape}</a></div>
-				<div class="col-sm-2"></div>
-				<div class="col-sm-4 b"><h4 class="visible-xs normal">{translate key="article.title"}: </h4>{$article->getLocalizedTitle()|strip_unsafe_html}</div>
-				
-			</div>
-			<div class="row">
-				<div class="col-sm-6">
-					{foreach from=$article->getAuthors() item=authorItem name=authorList}
-						<span class="i">{$authorItem->getFullName()|escape}{if !$smarty.foreach.authorList.last},{/if}</span>
-					{/foreach}
-				</div>
-				<div class="col-sm-4 right">
+				<td><a href="{url journal=$journal->getPath() page="issue" op="view" path=$issue->getBestIssueId($journal)}">{$issue->getIssueIdentification()|escape}</a></td>
+				<td width="30%">{$article->getLocalizedTitle()|strip_unsafe_html}</td>
+				<td width="30%" align="right">
 					{if $publishedArticle->getAccessStatus() == $smarty.const.ARTICLE_ACCESS_OPEN|| $issueAvailable}
 						{assign var=hasAccess value=1}
 					{else}
@@ -182,40 +156,44 @@
 						{/foreach}
 					{/if}
 					{call_hook name="Templates::Search::SearchResults::AdditionalArticleLinks" articleId=$publishedArticle->getId()}
-				</div>
-			</div>
-			<div class="row"><div class="separator"></div></div> 
+				</td>
+			</tr>
+			<tr>
+				<td colspan="{$numCols|escape}" style="padding-left: 30px;font-style: italic;">
+					{foreach from=$article->getAuthors() item=authorItem name=authorList}
+						{$authorItem->getFullName()|escape}{if !$smarty.foreach.authorList.last},{/if}
+					{/foreach}
+				</td>
+			</tr>
 			{call_hook name="Templates::Search::SearchResults::AdditionalArticleInfo" articleId=$publishedArticle->getId() numCols=$numCols|escape}
+			<tr><td colspan="{$numCols|escape}" class="{if $results->eof()}end{/if}separator">&nbsp;</td></tr>
 		{/iterate}
 		{if $results->wasEmpty()}
-			<div class="row">
-				<div class="col-sm-4">
+			<tr>
+				<td colspan="{$numCols|escape}" class="nodata">
 					{if $error}
 						{$error|escape}
 					{else}
 						{translate key="search.noResults"}
 					{/if}
-				</div>
-			</div>
+				</td>
+			</tr>
+			<tr><td colspan="{$numCols|escape}" class="endseparator">&nbsp;</td></tr>
 		{else}
-			<div class="row">
-				<div class="col-sm-4">{page_info iterator=$results}</div>
-				<div class="col-sm-4">{page_links anchor="results" iterator=$results name="search" query=$query searchJournal=$searchJournal authors=$authors title=$title abstract=$abstract galleyFullText=$galleyFullText suppFiles=$suppFiles discipline=$discipline subject=$subject type=$type coverage=$coverage indexTerms=$indexTerms dateFromMonth=$dateFromMonth dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateToMonth=$dateToMonth dateToDay=$dateToDay dateToYear=$dateToYear orderBy=$orderBy orderDir=$orderDir}</div>
-			</div>
+			<tr>
+				<td {if !$currentJournal}colspan="2" {/if}align="left">{page_info iterator=$results}</td>
+				<td colspan="2" align="right">{page_links anchor="results" iterator=$results name="search" query=$query searchJournal=$searchJournal authors=$authors title=$title abstract=$abstract galleyFullText=$galleyFullText suppFiles=$suppFiles discipline=$discipline subject=$subject type=$type coverage=$coverage indexTerms=$indexTerms dateFromMonth=$dateFromMonth dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateToMonth=$dateToMonth dateToDay=$dateToDay dateToYear=$dateToYear orderBy=$orderBy orderDir=$orderDir}</td>
+			</tr>
 		{/if}
+	</table>
+
 	{capture assign="syntaxInstructions"}{call_hook name="Templates::Search::SearchResults::SyntaxInstructions"}{/capture}
-	<div class="row">
-		<div class="col-sm-12">
-			<p>
-				{if empty($syntaxInstructions)}
-					{translate key="search.syntaxInstructions"}
-				{else}
-					{* Must be properly escaped in the controller as we potentially get HTML here! *}
-					{$syntaxInstructions}
-				{/if}
-			</p>
-		</div>
-	</div>
+		{if empty($syntaxInstructions)}
+			{translate key="search.syntaxInstructions"}
+		{else}
+			{* Must be properly escaped in the controller as we potentially get HTML here! *}
+			{$syntaxInstructions}
+		{/if}
 </div>
 
 {include file="common/footer.tpl"}

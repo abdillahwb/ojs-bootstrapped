@@ -53,7 +53,7 @@ class BootstrappedThemePlugin extends ThemePlugin {
 	}
 
 	function getStylesheetFilename() {
-		return 'main.css';
+		return 'style.css'; //style.css until bootstrapification is complete. Then, main.css.
 	}
 
 	function getLocaleFilename($locale) {

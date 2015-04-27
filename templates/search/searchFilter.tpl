@@ -1,8 +1,8 @@
 {**
  * templates/search/searchFilter.tpl
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Search filter template.
@@ -28,16 +28,16 @@
 		</td>
 		<td class="value">
 			{if $filterType == "date"}
-				{html_select_date prefix=$filterName time=$filterValue all_extra="class=\"form-control\"" year_empty="" month_empty="" day_empty="" start_year="$startYear" end_year="$endYear"}
+				{html_select_date prefix=$filterName time=$filterValue all_extra="class=\"selectMenu\"" year_empty="" month_empty="" day_empty="" start_year="$startYear" end_year="$endYear"}
 				{if $filterName == "dateTo"}
-					<select type="hidden" name="dateToHour" value="23" ></select>
-					<select type="hidden" name="dateToMinute" value="59" ></select>
-					<select type="hidden" name="dateToSecond" value="59" ></select>
+					<input type="hidden" name="dateToHour" value="23" />
+					<input type="hidden" name="dateToMinute" value="59" />
+					<input type="hidden" name="dateToSecond" value="59" />
 				{/if}
 			{else}
 				{capture assign="filterInput"}{call_hook name="Templates::Search::SearchResults::FilterInput" filterName=$filterName filterValue=$filterValue}{/capture}
 				{if empty($filterInput)}
-					<input type="text" name="{$filterName}" id="{$filterName}" size="40" maxlength="255" value="{$filterValue|escape}" class="form-control">
+					<input type="text" name="{$filterName}" id="{$filterName}" size="40" maxlength="255" value="{$filterValue|escape}" class="textField" />
 				{else}
 					{$filterInput}
 				{/if}

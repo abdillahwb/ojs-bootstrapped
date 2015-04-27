@@ -1,8 +1,8 @@
 {**
  * templates/article/googlescholar.tpl
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
+ * Copyright (c) 2013-2015 Simon Fraser University Library
+ * Copyright (c) 2003-2015 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Metadata elements for articles based on preferred types for Google Scholar
@@ -30,11 +30,11 @@
  * year and issue publication date in sequence. Bug #6480.
  *}
 {if is_a($article, 'PublishedArticle') && $article->getDatePublished()}
-	<meta name="citation_date" content="{$article->getDatePublished()|date_format:"%Y"}"/>
+	<meta name="citation_date" content="{$article->getDatePublished()|date_format:"%Y/%m/%d"}"/>
 {elseif $issue && $issue->getYear()}
 	<meta name="citation_date" content="{$issue->getYear()|escape}"/>
 {elseif $issue && $issue->getDatePublished()}
-	<meta name="citation_date" content="{$issue->getDatePublished()|date_format:"%Y"}"/>
+	<meta name="citation_date" content="{$issue->getDatePublished()|date_format:"%Y/%m/%d"}"/>
 {/if}
 
 {if $issue}

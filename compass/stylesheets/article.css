@@ -316,41 +316,41 @@ ol {
   font-size: 1em;
 }
 
-/* line 251, ../sass/article.scss */
+/* line 252, ../sass/article.scss */
 .Z3988 {
   padding-left: .2em;
 }
 
 @media (max-width: 767px) {
-  /* line 256, ../sass/article.scss */
+  /* line 257, ../sass/article.scss */
   h2 {
     text-align: center;
   }
 
-  /* line 260, ../sass/article.scss */
+  /* line 261, ../sass/article.scss */
   .artmargin p {
     font-size: 1.2em;
   }
 
-  /* line 264, ../sass/article.scss */
+  /* line 265, ../sass/article.scss */
   .alanauthor {
     width: 100% !important;
     font-size: 1.2em;
   }
 
-  /* line 268, ../sass/article.scss */
+  /* line 269, ../sass/article.scss */
   div.quoteright {
     float: left;
     width: 100% !important;
     margin: 0 0 1em 0;
   }
-  /* line 274, ../sass/article.scss */
+  /* line 275, ../sass/article.scss */
   div.quoteright img {
     display: block;
     margin: auto;
   }
 
-  /* line 279, ../sass/article.scss */
+  /* line 280, ../sass/article.scss */
   .clipLeft, .clipRight {
     float: none;
     text-align: center;
@@ -358,7 +358,7 @@ ol {
 }
 /* iPhone / mobile webkit */
 @media screen and (max-width: 480px) {
-  /* line 287, ../sass/article.scss */
+  /* line 288, ../sass/article.scss */
   .vol_ssn, .vol_issue {
     float: none;
     margin: auto;
