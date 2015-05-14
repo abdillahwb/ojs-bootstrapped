@@ -5,17 +5,17 @@
 */
 /* line 9, ../sass/general.scss */
 .center {
-  text-align: center;
+  text-align: center !important;
 }
 
 /* line 12, ../sass/general.scss */
 .left {
-  text-align: left;
+  text-align: left !important;
 }
 
 /* line 15, ../sass/general.scss */
 .right {
-  text-align: right;
+  text-align: right !important;
 }
 
 /* line 19, ../sass/general.scss */

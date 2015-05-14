@@ -11,54 +11,70 @@
 
 
 /*==============CSS for Tables======================================*/
-table.art{
+
+
+table.art {
 	width:100%;
 	border-style:solid;
-	border-width:em(1px) 0 em(1px) 0;
+//	border-width:.1em 0 .1em 0;
 	border-spacing:0em;
 	margin:0 0 1em 0;
- 	border: em(1px) solid black;
+// 	border: .1em solid black;
 }
 
 table.art caption {
-	@include justify-content(flex-start);
+	text-align: left;
 	padding:0.4em em(3px);
 	font-weight:bold;
 }
 
-table.art td {
-	padding: em(3px) em(6px);
-	vertical-align:top;
-	text-align:center;
-  	border: em(1px) solid black!important;
+table.art {
+    tbody {
+        td {
+	       padding: em(3px) em(6px);
+	       vertical-align:top;
+	       text-align:center;
+           border: .1em solid black!important;
+        }
+    }
 }
 
-table.art th {
-	padding: em(3px) em(6px);
-	vertical-align:top;
-	@include justify-content(center);
-	font-weight:bold;
-  	border: em(1px) solid black!important;
+table.art {
+    thead, tbody {
+        th {
+            padding: em(3px) em(6px);
+            vertical-align:top;
+            text-align: center;
+            font-weight:bold;
+            border: .1em solid black!important;
+        }
+    }
 }
-table.art tr{
-	border: em(1px) solid black!important;
+table.art {
+    thead, tbody {
+        tr{
+            border: .1em solid black!important;
+        }
+    }
 }
-table.art td:first-child, table.art th:first-child {
-	@include justify-content(flex-start);
+table.art {
+    thead, tbody {
+        td:first-child, table.art th:first-child {
+            text-align: left;
+        }
+    }
 }
 
-table.art tfoot td, table.art tfoot th{
-	border-top:em(1px) solid;
-}
-
-table.foot {
-	border-width:em(1px) 0;
-	border-style:solid;
+tfoot {
+    border: none!important;
+	tr, td, th {
+		border: none!important;
+	}
 }
 
 table.grid td, table.grid th {
-	border-left:solid em(1px);
-	border-top:solid em(1px);
+	border-left:solid .1em;
+	border-top:solid .1em;
 }
 
 table.grid thead tr:first-child th {
@@ -66,7 +82,7 @@ table.grid thead tr:first-child th {
 }
 
 table.grid tr th:last-child, table.grid tr td:last-child {
-	border-right: em(1px) solid;
+	border-right: .1em solid;
 }
 
 table.grid tfoot tr td:first-child, table.grid tfoot tr th:first-child {
@@ -77,10 +93,10 @@ table.grid tfoot tr td:last-child, table.grid tfoot tr th:last-child {
 }
 
 table.vert {
-	border-left: solid em(1px);
+	border-left: solid .1em;
 }
 table.vert td, table.vert th {
-	border-left: em(1px) solid;
+	border-left: .1em solid;
 }
 
 table.vert thead tr:first-child th {
@@ -88,7 +104,7 @@ table.vert thead tr:first-child th {
 }
 
 table.vert tr th:last-child, table.vert tr td:last-child {
-	border-right: em(1px) solid;
+	border-right: .1em solid;
 }
 
 table.vert tfoot tr td:first-child, table.vert tfoot tr th:first-child {
@@ -99,27 +115,27 @@ table.vert tfoot tr td:last-child, table.vert tfoot tr th:last-child {
 }
 
 table.left td, table.left th {
-	@include justify-content(flex-start);
+	text-align: left;
 }
 
 tr.left td, tr.left th {
-	@include justify-content(flex-start);
+	text-align: left;
 }
 
 table.right td, table.right th {
-	@include justify-content(flex-end);
+	text-align: right;
 }
 
 tr.right td, tr.right th {
-	@include justify-content(flex-end);
+	text-align: right;
 }
 
 tr.right th:first-child, tr.right td:first-child {
-	@include justify-content(flex-start);
+	text-align: left;
 }
 
 table.underline th, table.underline td {
-	border-bottom: em(1px) solid;
+	border-bottom: .1em solid;
 }
 
 table.underline tr:last-of-type th, table.underline tr:last-of-type td {
@@ -127,11 +143,11 @@ table.underline tr:last-of-type th, table.underline tr:last-of-type td {
 }
 
 tr.underline th, tr.underline td {
-	border-bottom: em(1px) solid;
+	border-bottom: .1em solid;
 }
 
 tr.overline th, tr.overline td {
-	border-top: em(1px) solid;
+	border-top: .1em solid;
 }
 
 tr.underlinedark th, tr.underlinedark td {
@@ -154,13 +170,20 @@ table{
 	border-spacing: em(2px);
 }
 table.art tr, table.art th, table.art td{
-	border: em(1px) solid black;
+	border: .1em solid black;
 }
 td th, td tr, td td{
-	border: em(1px) solid black;
+	border: .1em solid black;
 }
+
+table.cube {
+	td:first-child {
+		width: 50%;
+	}
+}
+
 #content blockquote th, #content blockquote tr, #content blockquote td{
-	border: em(1px) solid black;
+	border: .1em solid black;
 }
 
 /*==================End table CSS==============================================*/
