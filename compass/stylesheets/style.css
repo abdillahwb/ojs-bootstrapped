@@ -1,248 +1,4 @@
 @charset "UTF-8";
-/*! sanitize.css | CC0 Public Domain | github.com/jonathantneal/sanitize.css */
-/*
- * Normalization
- */
-/* line 23, ../vendors/sanitize.scss */
-:root {
-  -ms-overflow-style: -ms-autohiding-scrollbar;
-  overflow-y: scroll;
-  text-size-adjust: 100%;
-}
-
-/* line 29, ../vendors/sanitize.scss */
-audio:not([controls]) {
-  display: none;
-}
-
-/* line 33, ../vendors/sanitize.scss */
-details {
-  display: block;
-}
-
-/* line 38, ../vendors/sanitize.scss */
-input[type="number"] {
-  width: auto;
-}
-/* line 42, ../vendors/sanitize.scss */
-input[type="search"] {
-  -webkit-appearance: textfield;
-}
-/* line 45, ../vendors/sanitize.scss */
-input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-/* line 52, ../vendors/sanitize.scss */
-main {
-  display: block;
-}
-
-/* line 56, ../vendors/sanitize.scss */
-summary {
-  display: block;
-}
-
-/* line 60, ../vendors/sanitize.scss */
-pre {
-  overflow: auto;
-}
-
-/* line 64, ../vendors/sanitize.scss */
-progress {
-  display: inline-block;
-}
-
-/* line 68, ../vendors/sanitize.scss */
-small {
-  font-size: 75%;
-}
-
-/* line 72, ../vendors/sanitize.scss */
-template {
-  display: none;
-}
-
-/* line 76, ../vendors/sanitize.scss */
-textarea {
-  overflow: auto;
-}
-
-/* line 80, ../vendors/sanitize.scss */
-[hidden] {
-  display: none;
-}
-
-/* line 84, ../vendors/sanitize.scss */
-[unselectable] {
-  user-select: none;
-}
-
-/*
- * Universal inheritance
- */
-/* line 94, ../vendors/sanitize.scss */
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-  text-decoration: inherit;
-  vertical-align: inherit;
-}
-
-/* line 102, ../vendors/sanitize.scss */
-* {
-  color: inherit;
-  font-family: inherit;
-  font-size: inherit;
-  font-style: inherit;
-  line-height: inherit;
-}
-
-/*
- * Opinionated defaults
- */
-/* line 118, ../vendors/sanitize.scss */
-*,
-*::before,
-*::after {
-  border-style: solid;
-  border-width: 0;
-}
-
-/* line 127, ../vendors/sanitize.scss */
-* {
-  margin: 0;
-  padding: 0;
-}
-
-/* line 134, ../vendors/sanitize.scss */
-:root {
-  box-sizing: border-box;
-  cursor: default;
-  font-family: sans-serif;
-  line-height: 1.5em;
-  text-rendering: optimizeLegibility;
-  vertical-align: top;
-}
-
-/* line 145, ../vendors/sanitize.scss */
-button,
-input,
-select,
-textarea {
-  background: transparent;
-}
-
-/* line 154, ../vendors/sanitize.scss */
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, monospace;
-}
-
-/* line 163, ../vendors/sanitize.scss */
-input {
-  min-height: 1.5em;
-}
-
-/* line 169, ../vendors/sanitize.scss */
-nav ol,
-nav ul {
-  list-style: none;
-}
-
-/* line 176, ../vendors/sanitize.scss */
-select {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-}
-/* line 180, ../vendors/sanitize.scss */
-select::-ms-expand {
-  display: none;
-}
-/* line 184, ../vendors/sanitize.scss */
-select::-ms-value {
-  color: currentColor;
-}
-
-/* line 191, ../vendors/sanitize.scss */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* line 198, ../vendors/sanitize.scss */
-textarea {
-  resize: vertical;
-}
-
-/* line 204, ../vendors/sanitize.scss */
-::selection {
-  background-color: #B3D4FC;
-  text-shadow: none;
-}
-
-@media screen {
-  /* line 212, ../vendors/sanitize.scss */
-  [hidden~="screen"] {
-    display: inherit;
-  }
-
-  /* line 216, ../vendors/sanitize.scss */
-  [hidden~="screen"]:not(:active):not(:focus):not(:target) {
-    clip: rect(0 0 0 0) !important;
-    position: absolute !important;
-  }
-}
-/*
-* =====================================
-* General classes and ids
-* =====================================
-*/
-/* line 9, ../sass/general.scss */
-.center {
-  text-align: center;
-}
-
-/* line 12, ../sass/general.scss */
-.left {
-  text-align: left;
-}
-
-/* line 15, ../sass/general.scss */
-.right {
-  text-align: right;
-}
-
-/* line 19, ../sass/general.scss */
-.b, b {
-  font-weight: bold;
-}
-
-/* line 22, ../sass/general.scss */
-.i, i {
-  font-style: italic;
-}
-
-/* line 25, ../sass/general.scss */
-.bi {
-  font-weight: bold;
-  font-style: italic;
-}
-
-/* line 29, ../sass/general.scss */
-.u, .underline {
-  text-decoration: underline;
-}
-
-/* line 36, ../sass/general.scss */
-.normal {
-  font-style: normal;
-  font-weight: normal;
-}
-
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /* line 9, ../sass/bootstrap/_normalize.scss */
 html {
@@ -586,13 +342,15 @@ th {
   }
 
   /* line 83, ../sass/bootstrap/_print.scss */
-  .btn > .caret, input[type="submit"] > .caret, input[value="cancel"] > .caret, input[value="Cancel"] > .caret, input[value='delete'] > .caret, input[value='Delete'] > .caret, #assignBlocksToSidebars input[class="button defaultButton"] > .caret,
+  .btn > .caret, input[type="submit"] > .caret, input[value="cancel"] > .caret, input[value="Cancel"] > .caret, input[value='delete'] > .caret, input[value='Delete'] > .caret, input[value='Close'] > .caret, input[value='close'] > .caret, #assignBlocksToSidebars input[class="button defaultButton"] > .caret,
   .dropup > .btn > .caret,
   .dropup > input[type="submit"] > .caret,
   .dropup > input[value="cancel"] > .caret,
   .dropup > input[value="Cancel"] > .caret,
   .dropup > input[value='delete'] > .caret,
   .dropup > input[value='Delete'] > .caret,
+  .dropup > input[value='Close'] > .caret,
+  .dropup > input[value='close'] > .caret,
   #assignBlocksToSidebars .dropup > input[class="button defaultButton"] > .caret {
     border-top-color: #000 !important;
   }
@@ -1989,12 +1747,12 @@ textarea {
 
 /* line 48, ../sass/bootstrap/_scaffolding.scss */
 a {
-  color: #557082;
+  color: #337ab7;
   text-decoration: none;
 }
 /* line 52, ../sass/bootstrap/_scaffolding.scss */
 a:hover, a:focus {
-  color: #374854;
+  color: #23527c;
   text-decoration: underline;
 }
 /* line 58, ../sass/bootstrap/_scaffolding.scss */
@@ -4133,6 +3891,8 @@ input[type="search"] {
   .input-group-sm > .input-group-btn > input[type="date"][value="Cancel"],
   .input-group-sm > .input-group-btn > input[type="date"][value='delete'],
   .input-group-sm > .input-group-btn > input[type="date"][value='Delete'],
+  .input-group-sm > .input-group-btn > input[type="date"][value='Close'],
+  .input-group-sm > .input-group-btn > input[type="date"][value='close'],
   #assignBlocksToSidebars .input-group-sm > .input-group-btn > input[type="date"][class="button defaultButton"], .input-group-sm input[type="date"],
   input[type="time"].input-sm,
   .input-group-sm > input[type="time"].form-control,
@@ -4147,6 +3907,8 @@ input[type="search"] {
   .input-group-sm > .input-group-btn > input[type="time"][value="Cancel"],
   .input-group-sm > .input-group-btn > input[type="time"][value='delete'],
   .input-group-sm > .input-group-btn > input[type="time"][value='Delete'],
+  .input-group-sm > .input-group-btn > input[type="time"][value='Close'],
+  .input-group-sm > .input-group-btn > input[type="time"][value='close'],
   #assignBlocksToSidebars .input-group-sm > .input-group-btn > input[type="time"][class="button defaultButton"], .input-group-sm
   input[type="time"],
   input[type="datetime-local"].input-sm,
@@ -4162,6 +3924,8 @@ input[type="search"] {
   .input-group-sm > .input-group-btn > input[type="datetime-local"][value="Cancel"],
   .input-group-sm > .input-group-btn > input[type="datetime-local"][value='delete'],
   .input-group-sm > .input-group-btn > input[type="datetime-local"][value='Delete'],
+  .input-group-sm > .input-group-btn > input[type="datetime-local"][value='Close'],
+  .input-group-sm > .input-group-btn > input[type="datetime-local"][value='close'],
   #assignBlocksToSidebars .input-group-sm > .input-group-btn > input[type="datetime-local"][class="button defaultButton"], .input-group-sm
   input[type="datetime-local"],
   input[type="month"].input-sm,
@@ -4177,6 +3941,8 @@ input[type="search"] {
   .input-group-sm > .input-group-btn > input[type="month"][value="Cancel"],
   .input-group-sm > .input-group-btn > input[type="month"][value='delete'],
   .input-group-sm > .input-group-btn > input[type="month"][value='Delete'],
+  .input-group-sm > .input-group-btn > input[type="month"][value='Close'],
+  .input-group-sm > .input-group-btn > input[type="month"][value='close'],
   #assignBlocksToSidebars .input-group-sm > .input-group-btn > input[type="month"][class="button defaultButton"], .input-group-sm
   input[type="month"] {
     line-height: 30px;
@@ -4190,6 +3956,8 @@ input[type="search"] {
   .input-group-lg > .input-group-btn > input[type="date"][value="Cancel"],
   .input-group-lg > .input-group-btn > input[type="date"][value='delete'],
   .input-group-lg > .input-group-btn > input[type="date"][value='Delete'],
+  .input-group-lg > .input-group-btn > input[type="date"][value='Close'],
+  .input-group-lg > .input-group-btn > input[type="date"][value='close'],
   #assignBlocksToSidebars .input-group-lg > .input-group-btn > input[type="date"][class="button defaultButton"], .input-group-lg input[type="date"],
   input[type="time"].input-lg,
   .input-group-lg > input[type="time"].form-control,
@@ -4204,6 +3972,8 @@ input[type="search"] {
   .input-group-lg > .input-group-btn > input[type="time"][value="Cancel"],
   .input-group-lg > .input-group-btn > input[type="time"][value='delete'],
   .input-group-lg > .input-group-btn > input[type="time"][value='Delete'],
+  .input-group-lg > .input-group-btn > input[type="time"][value='Close'],
+  .input-group-lg > .input-group-btn > input[type="time"][value='close'],
   #assignBlocksToSidebars .input-group-lg > .input-group-btn > input[type="time"][class="button defaultButton"], .input-group-lg
   input[type="time"],
   input[type="datetime-local"].input-lg,
@@ -4219,6 +3989,8 @@ input[type="search"] {
   .input-group-lg > .input-group-btn > input[type="datetime-local"][value="Cancel"],
   .input-group-lg > .input-group-btn > input[type="datetime-local"][value='delete'],
   .input-group-lg > .input-group-btn > input[type="datetime-local"][value='Delete'],
+  .input-group-lg > .input-group-btn > input[type="datetime-local"][value='Close'],
+  .input-group-lg > .input-group-btn > input[type="datetime-local"][value='close'],
   #assignBlocksToSidebars .input-group-lg > .input-group-btn > input[type="datetime-local"][class="button defaultButton"], .input-group-lg
   input[type="datetime-local"],
   input[type="month"].input-lg,
@@ -4234,6 +4006,8 @@ input[type="search"] {
   .input-group-lg > .input-group-btn > input[type="month"][value="Cancel"],
   .input-group-lg > .input-group-btn > input[type="month"][value='delete'],
   .input-group-lg > .input-group-btn > input[type="month"][value='Delete'],
+  .input-group-lg > .input-group-btn > input[type="month"][value='Close'],
+  .input-group-lg > .input-group-btn > input[type="month"][value='close'],
   #assignBlocksToSidebars .input-group-lg > .input-group-btn > input[type="month"][class="button defaultButton"], .input-group-lg
   input[type="month"] {
     line-height: 46px;
@@ -4335,6 +4109,8 @@ input[type="checkbox"] {
 .input-group-lg > .input-group-btn > input.form-control-static[value="Cancel"],
 .input-group-lg > .input-group-btn > input.form-control-static[value='delete'],
 .input-group-lg > .input-group-btn > input.form-control-static[value='Delete'],
+.input-group-lg > .input-group-btn > input.form-control-static[value='Close'],
+.input-group-lg > .input-group-btn > input.form-control-static[value='close'],
 #assignBlocksToSidebars .input-group-lg > .input-group-btn > input.form-control-static[class="button defaultButton"], .form-control-static.input-sm, .input-group-sm > .form-control-static.form-control, .input-group-sm > input.form-control-static[class="uploadField"], .input-group-sm > .form-control-static.textField, .input-group-sm > .form-control-static.selectMenu, .input-group-sm > .form-control-static.textArea,
 .input-group-sm > .form-control-static.input-group-addon,
 .input-group-sm > .input-group-btn > .form-control-static.btn,
@@ -4343,6 +4119,8 @@ input[type="checkbox"] {
 .input-group-sm > .input-group-btn > input.form-control-static[value="Cancel"],
 .input-group-sm > .input-group-btn > input.form-control-static[value='delete'],
 .input-group-sm > .input-group-btn > input.form-control-static[value='Delete'],
+.input-group-sm > .input-group-btn > input.form-control-static[value='Close'],
+.input-group-sm > .input-group-btn > input.form-control-static[value='close'],
 #assignBlocksToSidebars .input-group-sm > .input-group-btn > input.form-control-static[class="button defaultButton"] {
   padding-left: 0;
   padding-right: 0;
@@ -4357,6 +4135,8 @@ input[type="checkbox"] {
 .input-group-sm > .input-group-btn > input[value="Cancel"],
 .input-group-sm > .input-group-btn > input[value='delete'],
 .input-group-sm > .input-group-btn > input[value='Delete'],
+.input-group-sm > .input-group-btn > input[value='Close'],
+.input-group-sm > .input-group-btn > input[value='close'],
 #assignBlocksToSidebars .input-group-sm > .input-group-btn > input[class="button defaultButton"] {
   height: 30px;
   padding: 5px 10px;
@@ -4426,6 +4206,8 @@ select[multiple].input-sm,
 .input-group-lg > .input-group-btn > input[value="Cancel"],
 .input-group-lg > .input-group-btn > input[value='delete'],
 .input-group-lg > .input-group-btn > input[value='Delete'],
+.input-group-lg > .input-group-btn > input[value='Close'],
+.input-group-lg > .input-group-btn > input[value='close'],
 #assignBlocksToSidebars .input-group-lg > .input-group-btn > input[class="button defaultButton"] {
   height: 46px;
   padding: 10px 16px;
@@ -4518,6 +4300,8 @@ select[multiple].input-lg,
 .input-group-lg > .input-group-btn > input[value="Cancel"] + .form-control-feedback,
 .input-group-lg > .input-group-btn > input[value='delete'] + .form-control-feedback,
 .input-group-lg > .input-group-btn > input[value='Delete'] + .form-control-feedback,
+.input-group-lg > .input-group-btn > input[value='Close'] + .form-control-feedback,
+.input-group-lg > .input-group-btn > input[value='close'] + .form-control-feedback,
 #assignBlocksToSidebars .input-group-lg > .input-group-btn > input[class="button defaultButton"] + .form-control-feedback {
   width: 46px;
   height: 46px;
@@ -4533,6 +4317,8 @@ select[multiple].input-lg,
 .input-group-sm > .input-group-btn > input[value="Cancel"] + .form-control-feedback,
 .input-group-sm > .input-group-btn > input[value='delete'] + .form-control-feedback,
 .input-group-sm > .input-group-btn > input[value='Delete'] + .form-control-feedback,
+.input-group-sm > .input-group-btn > input[value='Close'] + .form-control-feedback,
+.input-group-sm > .input-group-btn > input[value='close'] + .form-control-feedback,
 #assignBlocksToSidebars .input-group-sm > .input-group-btn > input[class="button defaultButton"] + .form-control-feedback {
   width: 30px;
   height: 30px;
@@ -4719,64 +4505,68 @@ select[multiple].input-lg,
 }
 
 /* line 522, ../sass/bootstrap/_forms.scss */
-.form-horizontal .radio, form .radio,
+.form-horizontal .radio, form .radio, table.data .radio,
 .form-horizontal .checkbox,
 form .checkbox,
+table.data .checkbox,
 .form-horizontal .radio-inline,
 form .radio-inline,
+table.data .radio-inline,
 .form-horizontal .checkbox-inline,
-form .checkbox-inline {
+form .checkbox-inline,
+table.data .checkbox-inline {
   margin-top: 0;
   margin-bottom: 0;
   padding-top: 7px;
 }
 /* line 532, ../sass/bootstrap/_forms.scss */
-.form-horizontal .radio, form .radio,
+.form-horizontal .radio, form .radio, table.data .radio,
 .form-horizontal .checkbox,
-form .checkbox {
+form .checkbox,
+table.data .checkbox {
   min-height: 27px;
 }
 /* line 538, ../sass/bootstrap/_forms.scss */
-.form-horizontal .form-group, form .form-group {
+.form-horizontal .form-group, form .form-group, table.data .form-group {
   margin-left: -15px;
   margin-right: -15px;
 }
 /* line 14, ../sass/bootstrap/mixins/_clearfix.scss */
-.form-horizontal .form-group:before, form .form-group:before, .form-horizontal .form-group:after, form .form-group:after {
+.form-horizontal .form-group:before, form .form-group:before, table.data .form-group:before, .form-horizontal .form-group:after, form .form-group:after, table.data .form-group:after {
   content: " ";
   display: table;
 }
 /* line 19, ../sass/bootstrap/mixins/_clearfix.scss */
-.form-horizontal .form-group:after, form .form-group:after {
+.form-horizontal .form-group:after, form .form-group:after, table.data .form-group:after {
   clear: both;
 }
 @media (min-width: 768px) {
   /* line 545, ../sass/bootstrap/_forms.scss */
-  .form-horizontal .control-label, form .control-label {
+  .form-horizontal .control-label, form .control-label, table.data .control-label {
     text-align: right;
     margin-bottom: 0;
     padding-top: 7px;
   }
 }
 /* line 556, ../sass/bootstrap/_forms.scss */
-.form-horizontal .has-feedback .form-control-feedback, form .has-feedback .form-control-feedback {
+.form-horizontal .has-feedback .form-control-feedback, form .has-feedback .form-control-feedback, table.data .has-feedback .form-control-feedback {
   right: 15px;
 }
 @media (min-width: 768px) {
   /* line 566, ../sass/bootstrap/_forms.scss */
-  .form-horizontal .form-group-lg .control-label, form .form-group-lg .control-label {
+  .form-horizontal .form-group-lg .control-label, form .form-group-lg .control-label, table.data .form-group-lg .control-label {
     padding-top: 14.33333px;
   }
 }
 @media (min-width: 768px) {
   /* line 573, ../sass/bootstrap/_forms.scss */
-  .form-horizontal .form-group-sm .control-label, form .form-group-sm .control-label {
+  .form-horizontal .form-group-sm .control-label, form .form-group-sm .control-label, table.data .form-group-sm .control-label {
     padding-top: 6px;
   }
 }
 
 /* line 9, ../sass/bootstrap/_buttons.scss */
-.btn, input[type="submit"], input[value="cancel"], input[value="Cancel"], input[value='delete'], input[value='Delete'], #assignBlocksToSidebars input[class="button defaultButton"] {
+.btn, input[type="submit"], input[value="cancel"], input[value="Cancel"], input[value='delete'], input[value='Delete'], input[value='Close'], input[value='close'], #assignBlocksToSidebars input[class="button defaultButton"] {
   display: inline-block;
   margin-bottom: 0;
   font-weight: normal;
@@ -4797,25 +4587,25 @@ form .checkbox {
   user-select: none;
 }
 /* line 26, ../sass/bootstrap/_buttons.scss */
-.btn:focus, input[type="submit"]:focus, input[value="cancel"]:focus, input[value="Cancel"]:focus, input[value='delete']:focus, input[value='Delete']:focus, #assignBlocksToSidebars input[class="button defaultButton"]:focus, .btn.focus, input.focus[type="submit"], input.focus[value="cancel"], input.focus[value="Cancel"], input.focus[value='delete'], input.focus[value='Delete'], #assignBlocksToSidebars input.focus[class="button defaultButton"], .btn:active:focus, input[type="submit"]:active:focus, input[value="cancel"]:active:focus, input[value="Cancel"]:active:focus, input[value='delete']:active:focus, input[value='Delete']:active:focus, #assignBlocksToSidebars input[class="button defaultButton"]:active:focus, .btn:active.focus, input[type="submit"]:active.focus, input[value="cancel"]:active.focus, input[value="Cancel"]:active.focus, input[value='delete']:active.focus, input[value='Delete']:active.focus, #assignBlocksToSidebars input[class="button defaultButton"]:active.focus, .btn.active:focus, input.active[type="submit"]:focus, input.active[value="cancel"]:focus, input.active[value="Cancel"]:focus, input.active[value='delete']:focus, input.active[value='Delete']:focus, #assignBlocksToSidebars input.active[class="button defaultButton"]:focus, .btn.active.focus, input.active.focus[type="submit"], input.active.focus[value="cancel"], input.active.focus[value="Cancel"], input.active.focus[value='delete'], input.active.focus[value='Delete'], #assignBlocksToSidebars input.active.focus[class="button defaultButton"] {
+.btn:focus, input[type="submit"]:focus, input[value="cancel"]:focus, input[value="Cancel"]:focus, input[value='delete']:focus, input[value='Delete']:focus, input[value='Close']:focus, input[value='close']:focus, #assignBlocksToSidebars input[class="button defaultButton"]:focus, .btn.focus, input.focus[type="submit"], input.focus[value="cancel"], input.focus[value="Cancel"], input.focus[value='delete'], input.focus[value='Delete'], input.focus[value='Close'], input.focus[value='close'], #assignBlocksToSidebars input.focus[class="button defaultButton"], .btn:active:focus, input[type="submit"]:active:focus, input[value="cancel"]:active:focus, input[value="Cancel"]:active:focus, input[value='delete']:active:focus, input[value='Delete']:active:focus, input[value='Close']:active:focus, input[value='close']:active:focus, #assignBlocksToSidebars input[class="button defaultButton"]:active:focus, .btn:active.focus, input[type="submit"]:active.focus, input[value="cancel"]:active.focus, input[value="Cancel"]:active.focus, input[value='delete']:active.focus, input[value='Delete']:active.focus, input[value='Close']:active.focus, input[value='close']:active.focus, #assignBlocksToSidebars input[class="button defaultButton"]:active.focus, .btn.active:focus, input.active[type="submit"]:focus, input.active[value="cancel"]:focus, input.active[value="Cancel"]:focus, input.active[value='delete']:focus, input.active[value='Delete']:focus, input.active[value='Close']:focus, input.active[value='close']:focus, #assignBlocksToSidebars input.active[class="button defaultButton"]:focus, .btn.active.focus, input.active.focus[type="submit"], input.active.focus[value="cancel"], input.active.focus[value="Cancel"], input.active.focus[value='delete'], input.active.focus[value='Delete'], input.active.focus[value='Close'], input.active.focus[value='close'], #assignBlocksToSidebars input.active.focus[class="button defaultButton"] {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
 /* line 32, ../sass/bootstrap/_buttons.scss */
-.btn:hover, input[type="submit"]:hover, input[value="cancel"]:hover, input[value="Cancel"]:hover, input[value='delete']:hover, input[value='Delete']:hover, #assignBlocksToSidebars input[class="button defaultButton"]:hover, .btn:focus, input[type="submit"]:focus, input[value="cancel"]:focus, input[value="Cancel"]:focus, input[value='delete']:focus, input[value='Delete']:focus, #assignBlocksToSidebars input[class="button defaultButton"]:focus, .btn.focus, input.focus[type="submit"], input.focus[value="cancel"], input.focus[value="Cancel"], input.focus[value='delete'], input.focus[value='Delete'], #assignBlocksToSidebars input.focus[class="button defaultButton"] {
+.btn:hover, input[type="submit"]:hover, input[value="cancel"]:hover, input[value="Cancel"]:hover, input[value='delete']:hover, input[value='Delete']:hover, input[value='Close']:hover, input[value='close']:hover, #assignBlocksToSidebars input[class="button defaultButton"]:hover, .btn:focus, input[type="submit"]:focus, input[value="cancel"]:focus, input[value="Cancel"]:focus, input[value='delete']:focus, input[value='Delete']:focus, input[value='Close']:focus, input[value='close']:focus, #assignBlocksToSidebars input[class="button defaultButton"]:focus, .btn.focus, input.focus[type="submit"], input.focus[value="cancel"], input.focus[value="Cancel"], input.focus[value='delete'], input.focus[value='Delete'], input.focus[value='Close'], input.focus[value='close'], #assignBlocksToSidebars input.focus[class="button defaultButton"] {
   color: #333;
   text-decoration: none;
 }
 /* line 39, ../sass/bootstrap/_buttons.scss */
-.btn:active, input[type="submit"]:active, input[value="cancel"]:active, input[value="Cancel"]:active, input[value='delete']:active, input[value='Delete']:active, #assignBlocksToSidebars input[class="button defaultButton"]:active, .btn.active, input.active[type="submit"], input.active[value="cancel"], input.active[value="Cancel"], input.active[value='delete'], input.active[value='Delete'], #assignBlocksToSidebars input.active[class="button defaultButton"] {
+.btn:active, input[type="submit"]:active, input[value="cancel"]:active, input[value="Cancel"]:active, input[value='delete']:active, input[value='Delete']:active, input[value='Close']:active, input[value='close']:active, #assignBlocksToSidebars input[class="button defaultButton"]:active, .btn.active, input.active[type="submit"], input.active[value="cancel"], input.active[value="Cancel"], input.active[value='delete'], input.active[value='Delete'], input.active[value='Close'], input.active[value='close'], #assignBlocksToSidebars input.active[class="button defaultButton"] {
   outline: 0;
   background-image: none;
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 /* line 46, ../sass/bootstrap/_buttons.scss */
-.btn.disabled, input.disabled[type="submit"], input.disabled[value="cancel"], input.disabled[value="Cancel"], input.disabled[value='delete'], input.disabled[value='Delete'], #assignBlocksToSidebars input.disabled[class="button defaultButton"], .btn[disabled], input[disabled][type="submit"], input[disabled][value="cancel"], input[disabled][value="Cancel"], input[disabled][value='delete'], input[disabled][value='Delete'], #assignBlocksToSidebars input[disabled][class="button defaultButton"], fieldset[disabled] .btn, fieldset[disabled] input[type="submit"], fieldset[disabled] input[value="cancel"], fieldset[disabled] input[value="Cancel"], fieldset[disabled] input[value='delete'], fieldset[disabled] input[value='Delete'], fieldset[disabled] #assignBlocksToSidebars input[class="button defaultButton"], #assignBlocksToSidebars fieldset[disabled] input[class="button defaultButton"] {
+.btn.disabled, input.disabled[type="submit"], input.disabled[value="cancel"], input.disabled[value="Cancel"], input.disabled[value='delete'], input.disabled[value='Delete'], input.disabled[value='Close'], input.disabled[value='close'], #assignBlocksToSidebars input.disabled[class="button defaultButton"], .btn[disabled], input[disabled][type="submit"], input[disabled][value="cancel"], input[disabled][value="Cancel"], input[disabled][value='delete'], input[disabled][value='Delete'], input[disabled][value='Close'], input[disabled][value='close'], #assignBlocksToSidebars input[disabled][class="button defaultButton"], fieldset[disabled] .btn, fieldset[disabled] input[type="submit"], fieldset[disabled] input[value="cancel"], fieldset[disabled] input[value="Cancel"], fieldset[disabled] input[value='delete'], fieldset[disabled] input[value='Delete'], fieldset[disabled] input[value='Close'], fieldset[disabled] input[value='close'], fieldset[disabled] #assignBlocksToSidebars input[class="button defaultButton"], #assignBlocksToSidebars fieldset[disabled] input[class="button defaultButton"] {
   cursor: not-allowed;
   pointer-events: none;
   opacity: 0.65;
@@ -4960,35 +4750,35 @@ form .checkbox {
 }
 
 /* line 79, ../sass/bootstrap/_buttons.scss */
-.btn-danger, input[value="cancel"], input[value="Cancel"], input[value='delete'], input[value='Delete'] {
+.btn-danger, input[value="cancel"], input[value="Cancel"], input[value='delete'], input[value='Delete'], input[value='Close'], input[value='close'] {
   color: #fff;
   background-color: #d9534f;
   border-color: #d43f3a;
 }
 /* line 11, ../sass/bootstrap/mixins/_buttons.scss */
-.btn-danger:hover, input[value="cancel"]:hover, input[value="Cancel"]:hover, input[value='delete']:hover, input[value='Delete']:hover, .btn-danger:focus, input[value="cancel"]:focus, input[value="Cancel"]:focus, input[value='delete']:focus, input[value='Delete']:focus, .btn-danger.focus, input.focus[value="cancel"], input.focus[value="Cancel"], input.focus[value='delete'], input.focus[value='Delete'], .btn-danger:active, input[value="cancel"]:active, input[value="Cancel"]:active, input[value='delete']:active, input[value='Delete']:active, .btn-danger.active, input.active[value="cancel"], input.active[value="Cancel"], input.active[value='delete'], input.active[value='Delete'], .open > .btn-danger.dropdown-toggle, .open > input.dropdown-toggle[value="cancel"], .open > input.dropdown-toggle[value="Cancel"], .open > input.dropdown-toggle[value='delete'], .open > input.dropdown-toggle[value='Delete'] {
+.btn-danger:hover, input[value="cancel"]:hover, input[value="Cancel"]:hover, input[value='delete']:hover, input[value='Delete']:hover, input[value='Close']:hover, input[value='close']:hover, .btn-danger:focus, input[value="cancel"]:focus, input[value="Cancel"]:focus, input[value='delete']:focus, input[value='Delete']:focus, input[value='Close']:focus, input[value='close']:focus, .btn-danger.focus, input.focus[value="cancel"], input.focus[value="Cancel"], input.focus[value='delete'], input.focus[value='Delete'], input.focus[value='Close'], input.focus[value='close'], .btn-danger:active, input[value="cancel"]:active, input[value="Cancel"]:active, input[value='delete']:active, input[value='Delete']:active, input[value='Close']:active, input[value='close']:active, .btn-danger.active, input.active[value="cancel"], input.active[value="Cancel"], input.active[value='delete'], input.active[value='Delete'], input.active[value='Close'], input.active[value='close'], .open > .btn-danger.dropdown-toggle, .open > input.dropdown-toggle[value="cancel"], .open > input.dropdown-toggle[value="Cancel"], .open > input.dropdown-toggle[value='delete'], .open > input.dropdown-toggle[value='Delete'], .open > input.dropdown-toggle[value='Close'], .open > input.dropdown-toggle[value='close'] {
   color: #fff;
   background-color: #c9302c;
   border-color: #ac2925;
 }
 /* line 21, ../sass/bootstrap/mixins/_buttons.scss */
-.btn-danger:active, input[value="cancel"]:active, input[value="Cancel"]:active, input[value='delete']:active, input[value='Delete']:active, .btn-danger.active, input.active[value="cancel"], input.active[value="Cancel"], input.active[value='delete'], input.active[value='Delete'], .open > .btn-danger.dropdown-toggle, .open > input.dropdown-toggle[value="cancel"], .open > input.dropdown-toggle[value="Cancel"], .open > input.dropdown-toggle[value='delete'], .open > input.dropdown-toggle[value='Delete'] {
+.btn-danger:active, input[value="cancel"]:active, input[value="Cancel"]:active, input[value='delete']:active, input[value='Delete']:active, input[value='Close']:active, input[value='close']:active, .btn-danger.active, input.active[value="cancel"], input.active[value="Cancel"], input.active[value='delete'], input.active[value='Delete'], input.active[value='Close'], input.active[value='close'], .open > .btn-danger.dropdown-toggle, .open > input.dropdown-toggle[value="cancel"], .open > input.dropdown-toggle[value="Cancel"], .open > input.dropdown-toggle[value='delete'], .open > input.dropdown-toggle[value='Delete'], .open > input.dropdown-toggle[value='Close'], .open > input.dropdown-toggle[value='close'] {
   background-image: none;
 }
 /* line 29, ../sass/bootstrap/mixins/_buttons.scss */
-.btn-danger.disabled, input.disabled[value="cancel"], input.disabled[value="Cancel"], input.disabled[value='delete'], input.disabled[value='Delete'], .btn-danger.disabled:hover, input.disabled[value="cancel"]:hover, input.disabled[value="Cancel"]:hover, input.disabled[value='delete']:hover, input.disabled[value='Delete']:hover, .btn-danger.disabled:focus, input.disabled[value="cancel"]:focus, input.disabled[value="Cancel"]:focus, input.disabled[value='delete']:focus, input.disabled[value='Delete']:focus, .btn-danger.disabled.focus, input.disabled.focus[value="cancel"], input.disabled.focus[value="Cancel"], input.disabled.focus[value='delete'], input.disabled.focus[value='Delete'], .btn-danger.disabled:active, input.disabled[value="cancel"]:active, input.disabled[value="Cancel"]:active, input.disabled[value='delete']:active, input.disabled[value='Delete']:active, .btn-danger.disabled.active, input.disabled.active[value="cancel"], input.disabled.active[value="Cancel"], input.disabled.active[value='delete'], input.disabled.active[value='Delete'], .btn-danger[disabled], input[disabled][value="cancel"], input[disabled][value="Cancel"], input[disabled][value='delete'], input[disabled][value='Delete'], .btn-danger[disabled]:hover, input[disabled][value="cancel"]:hover, input[disabled][value="Cancel"]:hover, input[disabled][value='delete']:hover, input[disabled][value='Delete']:hover, .btn-danger[disabled]:focus, input[disabled][value="cancel"]:focus, input[disabled][value="Cancel"]:focus, input[disabled][value='delete']:focus, input[disabled][value='Delete']:focus, .btn-danger[disabled].focus, input[disabled].focus[value="cancel"], input[disabled].focus[value="Cancel"], input[disabled].focus[value='delete'], input[disabled].focus[value='Delete'], .btn-danger[disabled]:active, input[disabled][value="cancel"]:active, input[disabled][value="Cancel"]:active, input[disabled][value='delete']:active, input[disabled][value='Delete']:active, .btn-danger[disabled].active, input[disabled].active[value="cancel"], input[disabled].active[value="Cancel"], input[disabled].active[value='delete'], input[disabled].active[value='Delete'], fieldset[disabled] .btn-danger, fieldset[disabled] input[value="cancel"], fieldset[disabled] input[value="Cancel"], fieldset[disabled] input[value='delete'], fieldset[disabled] input[value='Delete'], fieldset[disabled] .btn-danger:hover, fieldset[disabled] input[value="cancel"]:hover, fieldset[disabled] input[value="Cancel"]:hover, fieldset[disabled] input[value='delete']:hover, fieldset[disabled] input[value='Delete']:hover, fieldset[disabled] .btn-danger:focus, fieldset[disabled] input[value="cancel"]:focus, fieldset[disabled] input[value="Cancel"]:focus, fieldset[disabled] input[value='delete']:focus, fieldset[disabled] input[value='Delete']:focus, fieldset[disabled] .btn-danger.focus, fieldset[disabled] input.focus[value="cancel"], fieldset[disabled] input.focus[value="Cancel"], fieldset[disabled] input.focus[value='delete'], fieldset[disabled] input.focus[value='Delete'], fieldset[disabled] .btn-danger:active, fieldset[disabled] input[value="cancel"]:active, fieldset[disabled] input[value="Cancel"]:active, fieldset[disabled] input[value='delete']:active, fieldset[disabled] input[value='Delete']:active, fieldset[disabled] .btn-danger.active, fieldset[disabled] input.active[value="cancel"], fieldset[disabled] input.active[value="Cancel"], fieldset[disabled] input.active[value='delete'], fieldset[disabled] input.active[value='Delete'] {
+.btn-danger.disabled, input.disabled[value="cancel"], input.disabled[value="Cancel"], input.disabled[value='delete'], input.disabled[value='Delete'], input.disabled[value='Close'], input.disabled[value='close'], .btn-danger.disabled:hover, input.disabled[value="cancel"]:hover, input.disabled[value="Cancel"]:hover, input.disabled[value='delete']:hover, input.disabled[value='Delete']:hover, input.disabled[value='Close']:hover, input.disabled[value='close']:hover, .btn-danger.disabled:focus, input.disabled[value="cancel"]:focus, input.disabled[value="Cancel"]:focus, input.disabled[value='delete']:focus, input.disabled[value='Delete']:focus, input.disabled[value='Close']:focus, input.disabled[value='close']:focus, .btn-danger.disabled.focus, input.disabled.focus[value="cancel"], input.disabled.focus[value="Cancel"], input.disabled.focus[value='delete'], input.disabled.focus[value='Delete'], input.disabled.focus[value='Close'], input.disabled.focus[value='close'], .btn-danger.disabled:active, input.disabled[value="cancel"]:active, input.disabled[value="Cancel"]:active, input.disabled[value='delete']:active, input.disabled[value='Delete']:active, input.disabled[value='Close']:active, input.disabled[value='close']:active, .btn-danger.disabled.active, input.disabled.active[value="cancel"], input.disabled.active[value="Cancel"], input.disabled.active[value='delete'], input.disabled.active[value='Delete'], input.disabled.active[value='Close'], input.disabled.active[value='close'], .btn-danger[disabled], input[disabled][value="cancel"], input[disabled][value="Cancel"], input[disabled][value='delete'], input[disabled][value='Delete'], input[disabled][value='Close'], input[disabled][value='close'], .btn-danger[disabled]:hover, input[disabled][value="cancel"]:hover, input[disabled][value="Cancel"]:hover, input[disabled][value='delete']:hover, input[disabled][value='Delete']:hover, input[disabled][value='Close']:hover, input[disabled][value='close']:hover, .btn-danger[disabled]:focus, input[disabled][value="cancel"]:focus, input[disabled][value="Cancel"]:focus, input[disabled][value='delete']:focus, input[disabled][value='Delete']:focus, input[disabled][value='Close']:focus, input[disabled][value='close']:focus, .btn-danger[disabled].focus, input[disabled].focus[value="cancel"], input[disabled].focus[value="Cancel"], input[disabled].focus[value='delete'], input[disabled].focus[value='Delete'], input[disabled].focus[value='Close'], input[disabled].focus[value='close'], .btn-danger[disabled]:active, input[disabled][value="cancel"]:active, input[disabled][value="Cancel"]:active, input[disabled][value='delete']:active, input[disabled][value='Delete']:active, input[disabled][value='Close']:active, input[disabled][value='close']:active, .btn-danger[disabled].active, input[disabled].active[value="cancel"], input[disabled].active[value="Cancel"], input[disabled].active[value='delete'], input[disabled].active[value='Delete'], input[disabled].active[value='Close'], input[disabled].active[value='close'], fieldset[disabled] .btn-danger, fieldset[disabled] input[value="cancel"], fieldset[disabled] input[value="Cancel"], fieldset[disabled] input[value='delete'], fieldset[disabled] input[value='Delete'], fieldset[disabled] input[value='Close'], fieldset[disabled] input[value='close'], fieldset[disabled] .btn-danger:hover, fieldset[disabled] input[value="cancel"]:hover, fieldset[disabled] input[value="Cancel"]:hover, fieldset[disabled] input[value='delete']:hover, fieldset[disabled] input[value='Delete']:hover, fieldset[disabled] input[value='Close']:hover, fieldset[disabled] input[value='close']:hover, fieldset[disabled] .btn-danger:focus, fieldset[disabled] input[value="cancel"]:focus, fieldset[disabled] input[value="Cancel"]:focus, fieldset[disabled] input[value='delete']:focus, fieldset[disabled] input[value='Delete']:focus, fieldset[disabled] input[value='Close']:focus, fieldset[disabled] input[value='close']:focus, fieldset[disabled] .btn-danger.focus, fieldset[disabled] input.focus[value="cancel"], fieldset[disabled] input.focus[value="Cancel"], fieldset[disabled] input.focus[value='delete'], fieldset[disabled] input.focus[value='Delete'], fieldset[disabled] input.focus[value='Close'], fieldset[disabled] input.focus[value='close'], fieldset[disabled] .btn-danger:active, fieldset[disabled] input[value="cancel"]:active, fieldset[disabled] input[value="Cancel"]:active, fieldset[disabled] input[value='delete']:active, fieldset[disabled] input[value='Delete']:active, fieldset[disabled] input[value='Close']:active, fieldset[disabled] input[value='close']:active, fieldset[disabled] .btn-danger.active, fieldset[disabled] input.active[value="cancel"], fieldset[disabled] input.active[value="Cancel"], fieldset[disabled] input.active[value='delete'], fieldset[disabled] input.active[value='Delete'], fieldset[disabled] input.active[value='Close'], fieldset[disabled] input.active[value='close'] {
   background-color: #d9534f;
   border-color: #d43f3a;
 }
 /* line 40, ../sass/bootstrap/mixins/_buttons.scss */
-.btn-danger .badge, input[value="cancel"] .badge, input[value="Cancel"] .badge, input[value='delete'] .badge, input[value='Delete'] .badge {
+.btn-danger .badge, input[value="cancel"] .badge, input[value="Cancel"] .badge, input[value='delete'] .badge, input[value='Delete'] .badge, input[value='Close'] .badge, input[value='close'] .badge {
   color: #d9534f;
   background-color: #fff;
 }
 
 /* line 88, ../sass/bootstrap/_buttons.scss */
 .btn-link {
-  color: #557082;
+  color: #337ab7;
   font-weight: normal;
   border-radius: 0;
 }
@@ -5004,7 +4794,7 @@ form .checkbox {
 }
 /* line 107, ../sass/bootstrap/_buttons.scss */
 .btn-link:hover, .btn-link:focus {
-  color: #374854;
+  color: #23527c;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -5015,7 +4805,7 @@ form .checkbox {
 }
 
 /* line 127, ../sass/bootstrap/_buttons.scss */
-.btn-lg, .btn-group-lg > .btn, .btn-group-lg > input[type="submit"], .btn-group-lg > input[value="cancel"], .btn-group-lg > input[value="Cancel"], .btn-group-lg > input[value='delete'], .btn-group-lg > input[value='Delete'], #assignBlocksToSidebars .btn-group-lg > input[class="button defaultButton"] {
+.btn-lg, .btn-group-lg > .btn, .btn-group-lg > input[type="submit"], .btn-group-lg > input[value="cancel"], .btn-group-lg > input[value="Cancel"], .btn-group-lg > input[value='delete'], .btn-group-lg > input[value='Delete'], .btn-group-lg > input[value='Close'], .btn-group-lg > input[value='close'], #assignBlocksToSidebars .btn-group-lg > input[class="button defaultButton"] {
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.33333;
@@ -5023,7 +4813,7 @@ form .checkbox {
 }
 
 /* line 131, ../sass/bootstrap/_buttons.scss */
-.btn-sm, .btn-group-sm > .btn, .btn-group-sm > input[type="submit"], .btn-group-sm > input[value="cancel"], .btn-group-sm > input[value="Cancel"], .btn-group-sm > input[value='delete'], .btn-group-sm > input[value='Delete'], #assignBlocksToSidebars .btn-group-sm > input[class="button defaultButton"] {
+.btn-sm, .btn-group-sm > .btn, .btn-group-sm > input[type="submit"], .btn-group-sm > input[value="cancel"], .btn-group-sm > input[value="Cancel"], .btn-group-sm > input[value='delete'], .btn-group-sm > input[value='Delete'], .btn-group-sm > input[value='Close'], .btn-group-sm > input[value='close'], #assignBlocksToSidebars .btn-group-sm > input[class="button defaultButton"] {
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
@@ -5031,7 +4821,7 @@ form .checkbox {
 }
 
 /* line 135, ../sass/bootstrap/_buttons.scss */
-.btn-xs, .btn-group-xs > .btn, .btn-group-xs > input[type="submit"], .btn-group-xs > input[value="cancel"], .btn-group-xs > input[value="Cancel"], .btn-group-xs > input[value='delete'], .btn-group-xs > input[value='Delete'], #assignBlocksToSidebars .btn-group-xs > input[class="button defaultButton"] {
+.btn-xs, .btn-group-xs > .btn, .btn-group-xs > input[type="submit"], .btn-group-xs > input[value="cancel"], .btn-group-xs > input[value="Cancel"], .btn-group-xs > input[value='delete'], .btn-group-xs > input[value='Delete'], .btn-group-xs > input[value='Close'], .btn-group-xs > input[value='close'], #assignBlocksToSidebars .btn-group-xs > input[class="button defaultButton"] {
   padding: 1px 5px;
   font-size: 12px;
   line-height: 1.5;
@@ -5278,25 +5068,29 @@ tbody.collapse.in {
   vertical-align: middle;
 }
 /* line 11, ../sass/bootstrap/_button-groups.scss */
-.btn-group > .btn, .btn-group > input[type="submit"], .btn-group > input[value="cancel"], .btn-group > input[value="Cancel"], .btn-group > input[value='delete'], .btn-group > input[value='Delete'], #assignBlocksToSidebars .btn-group > input[class="button defaultButton"],
+.btn-group > .btn, .btn-group > input[type="submit"], .btn-group > input[value="cancel"], .btn-group > input[value="Cancel"], .btn-group > input[value='delete'], .btn-group > input[value='Delete'], .btn-group > input[value='Close'], .btn-group > input[value='close'], #assignBlocksToSidebars .btn-group > input[class="button defaultButton"],
 .btn-group-vertical > .btn,
 .btn-group-vertical > input[type="submit"],
 .btn-group-vertical > input[value="cancel"],
 .btn-group-vertical > input[value="Cancel"],
 .btn-group-vertical > input[value='delete'],
 .btn-group-vertical > input[value='Delete'],
+.btn-group-vertical > input[value='Close'],
+.btn-group-vertical > input[value='close'],
 #assignBlocksToSidebars .btn-group-vertical > input[class="button defaultButton"] {
   position: relative;
   float: left;
 }
 /* line 15, ../sass/bootstrap/_button-groups.scss */
-.btn-group > .btn:hover, .btn-group > input[type="submit"]:hover, .btn-group > input[value="cancel"]:hover, .btn-group > input[value="Cancel"]:hover, .btn-group > input[value='delete']:hover, .btn-group > input[value='Delete']:hover, #assignBlocksToSidebars .btn-group > input[class="button defaultButton"]:hover, .btn-group > .btn:focus, .btn-group > input[type="submit"]:focus, .btn-group > input[value="cancel"]:focus, .btn-group > input[value="Cancel"]:focus, .btn-group > input[value='delete']:focus, .btn-group > input[value='Delete']:focus, #assignBlocksToSidebars .btn-group > input[class="button defaultButton"]:focus, .btn-group > .btn:active, .btn-group > input[type="submit"]:active, .btn-group > input[value="cancel"]:active, .btn-group > input[value="Cancel"]:active, .btn-group > input[value='delete']:active, .btn-group > input[value='Delete']:active, #assignBlocksToSidebars .btn-group > input[class="button defaultButton"]:active, .btn-group > .btn.active, .btn-group > input.active[type="submit"], .btn-group > input.active[value="cancel"], .btn-group > input.active[value="Cancel"], .btn-group > input.active[value='delete'], .btn-group > input.active[value='Delete'], #assignBlocksToSidebars .btn-group > input.active[class="button defaultButton"],
+.btn-group > .btn:hover, .btn-group > input[type="submit"]:hover, .btn-group > input[value="cancel"]:hover, .btn-group > input[value="Cancel"]:hover, .btn-group > input[value='delete']:hover, .btn-group > input[value='Delete']:hover, .btn-group > input[value='Close']:hover, .btn-group > input[value='close']:hover, #assignBlocksToSidebars .btn-group > input[class="button defaultButton"]:hover, .btn-group > .btn:focus, .btn-group > input[type="submit"]:focus, .btn-group > input[value="cancel"]:focus, .btn-group > input[value="Cancel"]:focus, .btn-group > input[value='delete']:focus, .btn-group > input[value='Delete']:focus, .btn-group > input[value='Close']:focus, .btn-group > input[value='close']:focus, #assignBlocksToSidebars .btn-group > input[class="button defaultButton"]:focus, .btn-group > .btn:active, .btn-group > input[type="submit"]:active, .btn-group > input[value="cancel"]:active, .btn-group > input[value="Cancel"]:active, .btn-group > input[value='delete']:active, .btn-group > input[value='Delete']:active, .btn-group > input[value='Close']:active, .btn-group > input[value='close']:active, #assignBlocksToSidebars .btn-group > input[class="button defaultButton"]:active, .btn-group > .btn.active, .btn-group > input.active[type="submit"], .btn-group > input.active[value="cancel"], .btn-group > input.active[value="Cancel"], .btn-group > input.active[value='delete'], .btn-group > input.active[value='Delete'], .btn-group > input.active[value='Close'], .btn-group > input.active[value='close'], #assignBlocksToSidebars .btn-group > input.active[class="button defaultButton"],
 .btn-group-vertical > .btn:hover,
 .btn-group-vertical > input[type="submit"]:hover,
 .btn-group-vertical > input[value="cancel"]:hover,
 .btn-group-vertical > input[value="Cancel"]:hover,
 .btn-group-vertical > input[value='delete']:hover,
 .btn-group-vertical > input[value='Delete']:hover,
+.btn-group-vertical > input[value='Close']:hover,
+.btn-group-vertical > input[value='close']:hover,
 #assignBlocksToSidebars .btn-group-vertical > input[class="button defaultButton"]:hover,
 .btn-group-vertical > .btn:focus,
 .btn-group-vertical > input[type="submit"]:focus,
@@ -5304,6 +5098,8 @@ tbody.collapse.in {
 .btn-group-vertical > input[value="Cancel"]:focus,
 .btn-group-vertical > input[value='delete']:focus,
 .btn-group-vertical > input[value='Delete']:focus,
+.btn-group-vertical > input[value='Close']:focus,
+.btn-group-vertical > input[value='close']:focus,
 #assignBlocksToSidebars .btn-group-vertical > input[class="button defaultButton"]:focus,
 .btn-group-vertical > .btn:active,
 .btn-group-vertical > input[type="submit"]:active,
@@ -5311,6 +5107,8 @@ tbody.collapse.in {
 .btn-group-vertical > input[value="Cancel"]:active,
 .btn-group-vertical > input[value='delete']:active,
 .btn-group-vertical > input[value='Delete']:active,
+.btn-group-vertical > input[value='Close']:active,
+.btn-group-vertical > input[value='close']:active,
 #assignBlocksToSidebars .btn-group-vertical > input[class="button defaultButton"]:active,
 .btn-group-vertical > .btn.active,
 .btn-group-vertical > input.active[type="submit"],
@@ -5318,18 +5116,22 @@ tbody.collapse.in {
 .btn-group-vertical > input.active[value="Cancel"],
 .btn-group-vertical > input.active[value='delete'],
 .btn-group-vertical > input.active[value='Delete'],
+.btn-group-vertical > input.active[value='Close'],
+.btn-group-vertical > input.active[value='close'],
 #assignBlocksToSidebars .btn-group-vertical > input.active[class="button defaultButton"] {
   z-index: 2;
 }
 
 /* line 26, ../sass/bootstrap/_button-groups.scss */
-.btn-group .btn + .btn, .btn-group input[type="submit"] + .btn, .btn-group input[value="cancel"] + .btn, .btn-group input[value="Cancel"] + .btn, .btn-group input[value='delete'] + .btn, .btn-group input[value='Delete'] + .btn, .btn-group #assignBlocksToSidebars input[class="button defaultButton"] + .btn, #assignBlocksToSidebars .btn-group input[class="button defaultButton"] + .btn, .btn-group .btn + input[type="submit"], .btn-group input[type="submit"] + input[type="submit"], .btn-group input[value="cancel"] + input[type="submit"], .btn-group input[value="Cancel"] + input[type="submit"], .btn-group input[value='delete'] + input[type="submit"], .btn-group input[value='Delete'] + input[type="submit"], .btn-group #assignBlocksToSidebars input[class="button defaultButton"] + input[type="submit"], #assignBlocksToSidebars .btn-group input[class="button defaultButton"] + input[type="submit"], .btn-group .btn + input[value="cancel"], .btn-group input[type="submit"] + input[value="cancel"], .btn-group input[value="cancel"] + input[value="cancel"], .btn-group input[value="Cancel"] + input[value="cancel"], .btn-group input[value='delete'] + input[value="cancel"], .btn-group input[value='Delete'] + input[value="cancel"], .btn-group #assignBlocksToSidebars input[class="button defaultButton"] + input[value="cancel"], #assignBlocksToSidebars .btn-group input[class="button defaultButton"] + input[value="cancel"], .btn-group .btn + input[value="Cancel"], .btn-group input[type="submit"] + input[value="Cancel"], .btn-group input[value="cancel"] + input[value="Cancel"], .btn-group input[value="Cancel"] + input[value="Cancel"], .btn-group input[value='delete'] + input[value="Cancel"], .btn-group input[value='Delete'] + input[value="Cancel"], .btn-group #assignBlocksToSidebars input[class="button defaultButton"] + input[value="Cancel"], #assignBlocksToSidebars .btn-group input[class="button defaultButton"] + input[value="Cancel"], .btn-group .btn + input[value='delete'], .btn-group input[type="submit"] + input[value='delete'], .btn-group input[value="cancel"] + input[value='delete'], .btn-group input[value="Cancel"] + input[value='delete'], .btn-group input[value='delete'] + input[value='delete'], .btn-group input[value='Delete'] + input[value='delete'], .btn-group #assignBlocksToSidebars input[class="button defaultButton"] + input[value='delete'], #assignBlocksToSidebars .btn-group input[class="button defaultButton"] + input[value='delete'], .btn-group .btn + input[value='Delete'], .btn-group input[type="submit"] + input[value='Delete'], .btn-group input[value="cancel"] + input[value='Delete'], .btn-group input[value="Cancel"] + input[value='Delete'], .btn-group input[value='delete'] + input[value='Delete'], .btn-group input[value='Delete'] + input[value='Delete'], .btn-group #assignBlocksToSidebars input[class="button defaultButton"] + input[value='Delete'], #assignBlocksToSidebars .btn-group input[class="button defaultButton"] + input[value='Delete'], .btn-group #assignBlocksToSidebars .btn + input[class="button defaultButton"], #assignBlocksToSidebars .btn-group .btn + input[class="button defaultButton"], .btn-group #assignBlocksToSidebars input[type="submit"] + input[class="button defaultButton"], #assignBlocksToSidebars .btn-group input[type="submit"] + input[class="button defaultButton"], .btn-group #assignBlocksToSidebars input[value="cancel"] + input[class="button defaultButton"], #assignBlocksToSidebars .btn-group input[value="cancel"] + input[class="button defaultButton"], .btn-group #assignBlocksToSidebars input[value="Cancel"] + input[class="button defaultButton"], #assignBlocksToSidebars .btn-group input[value="Cancel"] + input[class="button defaultButton"], .btn-group #assignBlocksToSidebars input[value='delete'] + input[class="button defaultButton"], #assignBlocksToSidebars .btn-group input[value='delete'] + input[class="button defaultButton"], .btn-group #assignBlocksToSidebars input[value='Delete'] + input[class="button defaultButton"], #assignBlocksToSidebars .btn-group input[value='Delete'] + input[class="button defaultButton"], .btn-group #assignBlocksToSidebars input[class="button defaultButton"] + input[class="button defaultButton"], #assignBlocksToSidebars .btn-group input[class="button defaultButton"] + input[class="button defaultButton"],
+.btn-group .btn + .btn, .btn-group input[type="submit"] + .btn, .btn-group input[value="cancel"] + .btn, .btn-group input[value="Cancel"] + .btn, .btn-group input[value='delete'] + .btn, .btn-group input[value='Delete'] + .btn, .btn-group input[value='Close'] + .btn, .btn-group input[value='close'] + .btn, .btn-group #assignBlocksToSidebars input[class="button defaultButton"] + .btn, #assignBlocksToSidebars .btn-group input[class="button defaultButton"] + .btn, .btn-group .btn + input[type="submit"], .btn-group input[type="submit"] + input[type="submit"], .btn-group input[value="cancel"] + input[type="submit"], .btn-group input[value="Cancel"] + input[type="submit"], .btn-group input[value='delete'] + input[type="submit"], .btn-group input[value='Delete'] + input[type="submit"], .btn-group input[value='Close'] + input[type="submit"], .btn-group input[value='close'] + input[type="submit"], .btn-group #assignBlocksToSidebars input[class="button defaultButton"] + input[type="submit"], #assignBlocksToSidebars .btn-group input[class="button defaultButton"] + input[type="submit"], .btn-group .btn + input[value="cancel"], .btn-group input[type="submit"] + input[value="cancel"], .btn-group input[value="cancel"] + input[value="cancel"], .btn-group input[value="Cancel"] + input[value="cancel"], .btn-group input[value='delete'] + input[value="cancel"], .btn-group input[value='Delete'] + input[value="cancel"], .btn-group input[value='Close'] + input[value="cancel"], .btn-group input[value='close'] + input[value="cancel"], .btn-group #assignBlocksToSidebars input[class="button defaultButton"] + input[value="cancel"], #assignBlocksToSidebars .btn-group input[class="button defaultButton"] + input[value="cancel"], .btn-group .btn + input[value="Cancel"], .btn-group input[type="submit"] + input[value="Cancel"], .btn-group input[value="cancel"] + input[value="Cancel"], .btn-group input[value="Cancel"] + input[value="Cancel"], .btn-group input[value='delete'] + input[value="Cancel"], .btn-group input[value='Delete'] + input[value="Cancel"], .btn-group input[value='Close'] + input[value="Cancel"], .btn-group input[value='close'] + input[value="Cancel"], .btn-group #assignBlocksToSidebars input[class="button defaultButton"] + input[value="Cancel"], #assignBlocksToSidebars .btn-group input[class="button defaultButton"] + input[value="Cancel"], .btn-group .btn + input[value='delete'], .btn-group input[type="submit"] + input[value='delete'], .btn-group input[value="cancel"] + input[value='delete'], .btn-group input[value="Cancel"] + input[value='delete'], .btn-group input[value='delete'] + input[value='delete'], .btn-group input[value='Delete'] + input[value='delete'], .btn-group input[value='Close'] + input[value='delete'], .btn-group input[value='close'] + input[value='delete'], .btn-group #assignBlocksToSidebars input[class="button defaultButton"] + input[value='delete'], #assignBlocksToSidebars .btn-group input[class="button defaultButton"] + input[value='delete'], .btn-group .btn + input[value='Delete'], .btn-group input[type="submit"] + input[value='Delete'], .btn-group input[value="cancel"] + input[value='Delete'], .btn-group input[value="Cancel"] + input[value='Delete'], .btn-group input[value='delete'] + input[value='Delete'], .btn-group input[value='Delete'] + input[value='Delete'], .btn-group input[value='Close'] + input[value='Delete'], .btn-group input[value='close'] + input[value='Delete'], .btn-group #assignBlocksToSidebars input[class="button defaultButton"] + input[value='Delete'], #assignBlocksToSidebars .btn-group input[class="button defaultButton"] + input[value='Delete'], .btn-group .btn + input[value='Close'], .btn-group input[type="submit"] + input[value='Close'], .btn-group input[value="cancel"] + input[value='Close'], .btn-group input[value="Cancel"] + input[value='Close'], .btn-group input[value='delete'] + input[value='Close'], .btn-group input[value='Delete'] + input[value='Close'], .btn-group input[value='Close'] + input[value='Close'], .btn-group input[value='close'] + input[value='Close'], .btn-group #assignBlocksToSidebars input[class="button defaultButton"] + input[value='Close'], #assignBlocksToSidebars .btn-group input[class="button defaultButton"] + input[value='Close'], .btn-group .btn + input[value='close'], .btn-group input[type="submit"] + input[value='close'], .btn-group input[value="cancel"] + input[value='close'], .btn-group input[value="Cancel"] + input[value='close'], .btn-group input[value='delete'] + input[value='close'], .btn-group input[value='Delete'] + input[value='close'], .btn-group input[value='Close'] + input[value='close'], .btn-group input[value='close'] + input[value='close'], .btn-group #assignBlocksToSidebars input[class="button defaultButton"] + input[value='close'], #assignBlocksToSidebars .btn-group input[class="button defaultButton"] + input[value='close'], .btn-group #assignBlocksToSidebars .btn + input[class="button defaultButton"], #assignBlocksToSidebars .btn-group .btn + input[class="button defaultButton"], .btn-group #assignBlocksToSidebars input[type="submit"] + input[class="button defaultButton"], #assignBlocksToSidebars .btn-group input[type="submit"] + input[class="button defaultButton"], .btn-group #assignBlocksToSidebars input[value="cancel"] + input[class="button defaultButton"], #assignBlocksToSidebars .btn-group input[value="cancel"] + input[class="button defaultButton"], .btn-group #assignBlocksToSidebars input[value="Cancel"] + input[class="button defaultButton"], #assignBlocksToSidebars .btn-group input[value="Cancel"] + input[class="button defaultButton"], .btn-group #assignBlocksToSidebars input[value='delete'] + input[class="button defaultButton"], #assignBlocksToSidebars .btn-group input[value='delete'] + input[class="button defaultButton"], .btn-group #assignBlocksToSidebars input[value='Delete'] + input[class="button defaultButton"], #assignBlocksToSidebars .btn-group input[value='Delete'] + input[class="button defaultButton"], .btn-group #assignBlocksToSidebars input[value='Close'] + input[class="button defaultButton"], #assignBlocksToSidebars .btn-group input[value='Close'] + input[class="button defaultButton"], .btn-group #assignBlocksToSidebars input[value='close'] + input[class="button defaultButton"], #assignBlocksToSidebars .btn-group input[value='close'] + input[class="button defaultButton"], .btn-group #assignBlocksToSidebars input[class="button defaultButton"] + input[class="button defaultButton"], #assignBlocksToSidebars .btn-group input[class="button defaultButton"] + input[class="button defaultButton"],
 .btn-group .btn + .btn-group,
 .btn-group input[type="submit"] + .btn-group,
 .btn-group input[value="cancel"] + .btn-group,
 .btn-group input[value="Cancel"] + .btn-group,
 .btn-group input[value='delete'] + .btn-group,
 .btn-group input[value='Delete'] + .btn-group,
+.btn-group input[value='Close'] + .btn-group,
+.btn-group input[value='close'] + .btn-group,
 .btn-group #assignBlocksToSidebars input[class="button defaultButton"] + .btn-group,
 #assignBlocksToSidebars .btn-group input[class="button defaultButton"] + .btn-group,
 .btn-group .btn-group + .btn,
@@ -5338,6 +5140,8 @@ tbody.collapse.in {
 .btn-group .btn-group + input[value="Cancel"],
 .btn-group .btn-group + input[value='delete'],
 .btn-group .btn-group + input[value='Delete'],
+.btn-group .btn-group + input[value='Close'],
+.btn-group .btn-group + input[value='close'],
 .btn-group #assignBlocksToSidebars .btn-group + input[class="button defaultButton"],
 #assignBlocksToSidebars .btn-group .btn-group + input[class="button defaultButton"],
 .btn-group .btn-group + .btn-group {
@@ -5363,29 +5167,29 @@ tbody.collapse.in {
   float: left;
 }
 /* line 43, ../sass/bootstrap/_button-groups.scss */
-.btn-toolbar > .btn, .btn-toolbar > input[type="submit"], .btn-toolbar > input[value="cancel"], .btn-toolbar > input[value="Cancel"], .btn-toolbar > input[value='delete'], .btn-toolbar > input[value='Delete'], #assignBlocksToSidebars .btn-toolbar > input[class="button defaultButton"],
+.btn-toolbar > .btn, .btn-toolbar > input[type="submit"], .btn-toolbar > input[value="cancel"], .btn-toolbar > input[value="Cancel"], .btn-toolbar > input[value='delete'], .btn-toolbar > input[value='Delete'], .btn-toolbar > input[value='Close'], .btn-toolbar > input[value='close'], #assignBlocksToSidebars .btn-toolbar > input[class="button defaultButton"],
 .btn-toolbar > .btn-group,
 .btn-toolbar > .input-group {
   margin-left: 5px;
 }
 
 /* line 50, ../sass/bootstrap/_button-groups.scss */
-.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > input[type="submit"]:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > input[value="cancel"]:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > input[value="Cancel"]:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > input[value='delete']:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > input[value='Delete']:not(:first-child):not(:last-child):not(.dropdown-toggle), #assignBlocksToSidebars .btn-group > input[class="button defaultButton"]:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > input[type="submit"]:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > input[value="cancel"]:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > input[value="Cancel"]:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > input[value='delete']:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > input[value='Delete']:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > input[value='Close']:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > input[value='close']:not(:first-child):not(:last-child):not(.dropdown-toggle), #assignBlocksToSidebars .btn-group > input[class="button defaultButton"]:not(:first-child):not(:last-child):not(.dropdown-toggle) {
   border-radius: 0;
 }
 
 /* line 55, ../sass/bootstrap/_button-groups.scss */
-.btn-group > .btn:first-child, .btn-group > input[type="submit"]:first-child, .btn-group > input[value="cancel"]:first-child, .btn-group > input[value="Cancel"]:first-child, .btn-group > input[value='delete']:first-child, .btn-group > input[value='Delete']:first-child, #assignBlocksToSidebars .btn-group > input[class="button defaultButton"]:first-child {
+.btn-group > .btn:first-child, .btn-group > input[type="submit"]:first-child, .btn-group > input[value="cancel"]:first-child, .btn-group > input[value="Cancel"]:first-child, .btn-group > input[value='delete']:first-child, .btn-group > input[value='Delete']:first-child, .btn-group > input[value='Close']:first-child, .btn-group > input[value='close']:first-child, #assignBlocksToSidebars .btn-group > input[class="button defaultButton"]:first-child {
   margin-left: 0;
 }
 /* line 57, ../sass/bootstrap/_button-groups.scss */
-.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > input[type="submit"]:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > input[value="cancel"]:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > input[value="Cancel"]:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > input[value='delete']:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > input[value='Delete']:first-child:not(:last-child):not(.dropdown-toggle), #assignBlocksToSidebars .btn-group > input[class="button defaultButton"]:first-child:not(:last-child):not(.dropdown-toggle) {
+.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > input[type="submit"]:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > input[value="cancel"]:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > input[value="Cancel"]:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > input[value='delete']:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > input[value='Delete']:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > input[value='Close']:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > input[value='close']:first-child:not(:last-child):not(.dropdown-toggle), #assignBlocksToSidebars .btn-group > input[class="button defaultButton"]:first-child:not(:last-child):not(.dropdown-toggle) {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
 
 /* line 62, ../sass/bootstrap/_button-groups.scss */
-.btn-group > .btn:last-child:not(:first-child), .btn-group > input[type="submit"]:last-child:not(:first-child), .btn-group > input[value="cancel"]:last-child:not(:first-child), .btn-group > input[value="Cancel"]:last-child:not(:first-child), .btn-group > input[value='delete']:last-child:not(:first-child), .btn-group > input[value='Delete']:last-child:not(:first-child), #assignBlocksToSidebars .btn-group > input[class="button defaultButton"]:last-child:not(:first-child),
+.btn-group > .btn:last-child:not(:first-child), .btn-group > input[type="submit"]:last-child:not(:first-child), .btn-group > input[value="cancel"]:last-child:not(:first-child), .btn-group > input[value="Cancel"]:last-child:not(:first-child), .btn-group > input[value='delete']:last-child:not(:first-child), .btn-group > input[value='Delete']:last-child:not(:first-child), .btn-group > input[value='Close']:last-child:not(:first-child), .btn-group > input[value='close']:last-child:not(:first-child), #assignBlocksToSidebars .btn-group > input[class="button defaultButton"]:last-child:not(:first-child),
 .btn-group > .dropdown-toggle:not(:first-child) {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
@@ -5397,19 +5201,19 @@ tbody.collapse.in {
 }
 
 /* line 71, ../sass/bootstrap/_button-groups.scss */
-.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, .btn-group > .btn-group:not(:first-child):not(:last-child) > input[type="submit"], .btn-group > .btn-group:not(:first-child):not(:last-child) > input[value="cancel"], .btn-group > .btn-group:not(:first-child):not(:last-child) > input[value="Cancel"], .btn-group > .btn-group:not(:first-child):not(:last-child) > input[value='delete'], .btn-group > .btn-group:not(:first-child):not(:last-child) > input[value='Delete'], #assignBlocksToSidebars .btn-group > .btn-group:not(:first-child):not(:last-child) > input[class="button defaultButton"] {
+.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, .btn-group > .btn-group:not(:first-child):not(:last-child) > input[type="submit"], .btn-group > .btn-group:not(:first-child):not(:last-child) > input[value="cancel"], .btn-group > .btn-group:not(:first-child):not(:last-child) > input[value="Cancel"], .btn-group > .btn-group:not(:first-child):not(:last-child) > input[value='delete'], .btn-group > .btn-group:not(:first-child):not(:last-child) > input[value='Delete'], .btn-group > .btn-group:not(:first-child):not(:last-child) > input[value='Close'], .btn-group > .btn-group:not(:first-child):not(:last-child) > input[value='close'], #assignBlocksToSidebars .btn-group > .btn-group:not(:first-child):not(:last-child) > input[class="button defaultButton"] {
   border-radius: 0;
 }
 
 /* line 75, ../sass/bootstrap/_button-groups.scss */
-.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, .btn-group > .btn-group:first-child:not(:last-child) > input[type="submit"]:last-child, .btn-group > .btn-group:first-child:not(:last-child) > input[value="cancel"]:last-child, .btn-group > .btn-group:first-child:not(:last-child) > input[value="Cancel"]:last-child, .btn-group > .btn-group:first-child:not(:last-child) > input[value='delete']:last-child, .btn-group > .btn-group:first-child:not(:last-child) > input[value='Delete']:last-child, #assignBlocksToSidebars .btn-group > .btn-group:first-child:not(:last-child) > input[class="button defaultButton"]:last-child,
+.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, .btn-group > .btn-group:first-child:not(:last-child) > input[type="submit"]:last-child, .btn-group > .btn-group:first-child:not(:last-child) > input[value="cancel"]:last-child, .btn-group > .btn-group:first-child:not(:last-child) > input[value="Cancel"]:last-child, .btn-group > .btn-group:first-child:not(:last-child) > input[value='delete']:last-child, .btn-group > .btn-group:first-child:not(:last-child) > input[value='Delete']:last-child, .btn-group > .btn-group:first-child:not(:last-child) > input[value='Close']:last-child, .btn-group > .btn-group:first-child:not(:last-child) > input[value='close']:last-child, #assignBlocksToSidebars .btn-group > .btn-group:first-child:not(:last-child) > input[class="button defaultButton"]:last-child,
 .btn-group > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
 
 /* line 80, ../sass/bootstrap/_button-groups.scss */
-.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child, .btn-group > .btn-group:last-child:not(:first-child) > input[type="submit"]:first-child, .btn-group > .btn-group:last-child:not(:first-child) > input[value="cancel"]:first-child, .btn-group > .btn-group:last-child:not(:first-child) > input[value="Cancel"]:first-child, .btn-group > .btn-group:last-child:not(:first-child) > input[value='delete']:first-child, .btn-group > .btn-group:last-child:not(:first-child) > input[value='Delete']:first-child, #assignBlocksToSidebars .btn-group > .btn-group:last-child:not(:first-child) > input[class="button defaultButton"]:first-child {
+.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child, .btn-group > .btn-group:last-child:not(:first-child) > input[type="submit"]:first-child, .btn-group > .btn-group:last-child:not(:first-child) > input[value="cancel"]:first-child, .btn-group > .btn-group:last-child:not(:first-child) > input[value="Cancel"]:first-child, .btn-group > .btn-group:last-child:not(:first-child) > input[value='delete']:first-child, .btn-group > .btn-group:last-child:not(:first-child) > input[value='Delete']:first-child, .btn-group > .btn-group:last-child:not(:first-child) > input[value='Close']:first-child, .btn-group > .btn-group:last-child:not(:first-child) > input[value='close']:first-child, #assignBlocksToSidebars .btn-group > .btn-group:last-child:not(:first-child) > input[class="button defaultButton"]:first-child {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
@@ -5421,13 +5225,13 @@ tbody.collapse.in {
 }
 
 /* line 104, ../sass/bootstrap/_button-groups.scss */
-.btn-group > .btn + .dropdown-toggle, .btn-group > input[type="submit"] + .dropdown-toggle, .btn-group > input[value="cancel"] + .dropdown-toggle, .btn-group > input[value="Cancel"] + .dropdown-toggle, .btn-group > input[value='delete'] + .dropdown-toggle, .btn-group > input[value='Delete'] + .dropdown-toggle, #assignBlocksToSidebars .btn-group > input[class="button defaultButton"] + .dropdown-toggle {
+.btn-group > .btn + .dropdown-toggle, .btn-group > input[type="submit"] + .dropdown-toggle, .btn-group > input[value="cancel"] + .dropdown-toggle, .btn-group > input[value="Cancel"] + .dropdown-toggle, .btn-group > input[value='delete'] + .dropdown-toggle, .btn-group > input[value='Delete'] + .dropdown-toggle, .btn-group > input[value='Close'] + .dropdown-toggle, .btn-group > input[value='close'] + .dropdown-toggle, #assignBlocksToSidebars .btn-group > input[class="button defaultButton"] + .dropdown-toggle {
   padding-left: 8px;
   padding-right: 8px;
 }
 
 /* line 108, ../sass/bootstrap/_button-groups.scss */
-.btn-group > .btn-lg + .dropdown-toggle, .btn-group-lg.btn-group > .btn + .dropdown-toggle, .btn-group-lg.btn-group > input[type="submit"] + .dropdown-toggle, .btn-group-lg.btn-group > input[value="cancel"] + .dropdown-toggle, .btn-group-lg.btn-group > input[value="Cancel"] + .dropdown-toggle, .btn-group-lg.btn-group > input[value='delete'] + .dropdown-toggle, .btn-group-lg.btn-group > input[value='Delete'] + .dropdown-toggle, #assignBlocksToSidebars .btn-group-lg.btn-group > input[class="button defaultButton"] + .dropdown-toggle {
+.btn-group > .btn-lg + .dropdown-toggle, .btn-group-lg.btn-group > .btn + .dropdown-toggle, .btn-group-lg.btn-group > input[type="submit"] + .dropdown-toggle, .btn-group-lg.btn-group > input[value="cancel"] + .dropdown-toggle, .btn-group-lg.btn-group > input[value="Cancel"] + .dropdown-toggle, .btn-group-lg.btn-group > input[value='delete'] + .dropdown-toggle, .btn-group-lg.btn-group > input[value='Delete'] + .dropdown-toggle, .btn-group-lg.btn-group > input[value='Close'] + .dropdown-toggle, .btn-group-lg.btn-group > input[value='close'] + .dropdown-toggle, #assignBlocksToSidebars .btn-group-lg.btn-group > input[class="button defaultButton"] + .dropdown-toggle {
   padding-left: 12px;
   padding-right: 12px;
 }
@@ -5444,23 +5248,23 @@ tbody.collapse.in {
 }
 
 /* line 126, ../sass/bootstrap/_button-groups.scss */
-.btn .caret, input[type="submit"] .caret, input[value="cancel"] .caret, input[value="Cancel"] .caret, input[value='delete'] .caret, input[value='Delete'] .caret, #assignBlocksToSidebars input[class="button defaultButton"] .caret {
+.btn .caret, input[type="submit"] .caret, input[value="cancel"] .caret, input[value="Cancel"] .caret, input[value='delete'] .caret, input[value='Delete'] .caret, input[value='Close'] .caret, input[value='close'] .caret, #assignBlocksToSidebars input[class="button defaultButton"] .caret {
   margin-left: 0;
 }
 
 /* line 130, ../sass/bootstrap/_button-groups.scss */
-.btn-lg .caret, .btn-group-lg > .btn .caret, .btn-group-lg > input[type="submit"] .caret, .btn-group-lg > input[value="cancel"] .caret, .btn-group-lg > input[value="Cancel"] .caret, .btn-group-lg > input[value='delete'] .caret, .btn-group-lg > input[value='Delete'] .caret, #assignBlocksToSidebars .btn-group-lg > input[class="button defaultButton"] .caret {
+.btn-lg .caret, .btn-group-lg > .btn .caret, .btn-group-lg > input[type="submit"] .caret, .btn-group-lg > input[value="cancel"] .caret, .btn-group-lg > input[value="Cancel"] .caret, .btn-group-lg > input[value='delete'] .caret, .btn-group-lg > input[value='Delete'] .caret, .btn-group-lg > input[value='Close'] .caret, .btn-group-lg > input[value='close'] .caret, #assignBlocksToSidebars .btn-group-lg > input[class="button defaultButton"] .caret {
   border-width: 5px 5px 0;
   border-bottom-width: 0;
 }
 
 /* line 135, ../sass/bootstrap/_button-groups.scss */
-.dropup .btn-lg .caret, .dropup .btn-group-lg > .btn .caret, .dropup .btn-group-lg > input[type="submit"] .caret, .dropup .btn-group-lg > input[value="cancel"] .caret, .dropup .btn-group-lg > input[value="Cancel"] .caret, .dropup .btn-group-lg > input[value='delete'] .caret, .dropup .btn-group-lg > input[value='Delete'] .caret, .dropup #assignBlocksToSidebars .btn-group-lg > input[class="button defaultButton"] .caret, #assignBlocksToSidebars .dropup .btn-group-lg > input[class="button defaultButton"] .caret {
+.dropup .btn-lg .caret, .dropup .btn-group-lg > .btn .caret, .dropup .btn-group-lg > input[type="submit"] .caret, .dropup .btn-group-lg > input[value="cancel"] .caret, .dropup .btn-group-lg > input[value="Cancel"] .caret, .dropup .btn-group-lg > input[value='delete'] .caret, .dropup .btn-group-lg > input[value='Delete'] .caret, .dropup .btn-group-lg > input[value='Close'] .caret, .dropup .btn-group-lg > input[value='close'] .caret, .dropup #assignBlocksToSidebars .btn-group-lg > input[class="button defaultButton"] .caret, #assignBlocksToSidebars .dropup .btn-group-lg > input[class="button defaultButton"] .caret {
   border-width: 0 5px 5px;
 }
 
 /* line 144, ../sass/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn, .btn-group-vertical > input[type="submit"], .btn-group-vertical > input[value="cancel"], .btn-group-vertical > input[value="Cancel"], .btn-group-vertical > input[value='delete'], .btn-group-vertical > input[value='Delete'], #assignBlocksToSidebars .btn-group-vertical > input[class="button defaultButton"],
+.btn-group-vertical > .btn, .btn-group-vertical > input[type="submit"], .btn-group-vertical > input[value="cancel"], .btn-group-vertical > input[value="Cancel"], .btn-group-vertical > input[value='delete'], .btn-group-vertical > input[value='Delete'], .btn-group-vertical > input[value='Close'], .btn-group-vertical > input[value='close'], #assignBlocksToSidebars .btn-group-vertical > input[class="button defaultButton"],
 .btn-group-vertical > .btn-group,
 .btn-group-vertical > .btn-group > .btn,
 .btn-group-vertical > .btn-group > input[type="submit"],
@@ -5468,6 +5272,8 @@ tbody.collapse.in {
 .btn-group-vertical > .btn-group > input[value="Cancel"],
 .btn-group-vertical > .btn-group > input[value='delete'],
 .btn-group-vertical > .btn-group > input[value='Delete'],
+.btn-group-vertical > .btn-group > input[value='Close'],
+.btn-group-vertical > .btn-group > input[value='close'],
 #assignBlocksToSidebars .btn-group-vertical > .btn-group > input[class="button defaultButton"] {
   display: block;
   float: none;
@@ -5484,17 +5290,19 @@ tbody.collapse.in {
   clear: both;
 }
 /* line 156, ../sass/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn-group > .btn, .btn-group-vertical > .btn-group > input[type="submit"], .btn-group-vertical > .btn-group > input[value="cancel"], .btn-group-vertical > .btn-group > input[value="Cancel"], .btn-group-vertical > .btn-group > input[value='delete'], .btn-group-vertical > .btn-group > input[value='Delete'], #assignBlocksToSidebars .btn-group-vertical > .btn-group > input[class="button defaultButton"] {
+.btn-group-vertical > .btn-group > .btn, .btn-group-vertical > .btn-group > input[type="submit"], .btn-group-vertical > .btn-group > input[value="cancel"], .btn-group-vertical > .btn-group > input[value="Cancel"], .btn-group-vertical > .btn-group > input[value='delete'], .btn-group-vertical > .btn-group > input[value='Delete'], .btn-group-vertical > .btn-group > input[value='Close'], .btn-group-vertical > .btn-group > input[value='close'], #assignBlocksToSidebars .btn-group-vertical > .btn-group > input[class="button defaultButton"] {
   float: none;
 }
 /* line 161, ../sass/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn + .btn, .btn-group-vertical > input[type="submit"] + .btn, .btn-group-vertical > input[value="cancel"] + .btn, .btn-group-vertical > input[value="Cancel"] + .btn, .btn-group-vertical > input[value='delete'] + .btn, .btn-group-vertical > input[value='Delete'] + .btn, #assignBlocksToSidebars .btn-group-vertical > input[class="button defaultButton"] + .btn, .btn-group-vertical > .btn + input[type="submit"], .btn-group-vertical > input[type="submit"] + input[type="submit"], .btn-group-vertical > input[value="cancel"] + input[type="submit"], .btn-group-vertical > input[value="Cancel"] + input[type="submit"], .btn-group-vertical > input[value='delete'] + input[type="submit"], .btn-group-vertical > input[value='Delete'] + input[type="submit"], #assignBlocksToSidebars .btn-group-vertical > input[class="button defaultButton"] + input[type="submit"], .btn-group-vertical > .btn + input[value="cancel"], .btn-group-vertical > input[type="submit"] + input[value="cancel"], .btn-group-vertical > input[value="cancel"] + input[value="cancel"], .btn-group-vertical > input[value="Cancel"] + input[value="cancel"], .btn-group-vertical > input[value='delete'] + input[value="cancel"], .btn-group-vertical > input[value='Delete'] + input[value="cancel"], #assignBlocksToSidebars .btn-group-vertical > input[class="button defaultButton"] + input[value="cancel"], .btn-group-vertical > .btn + input[value="Cancel"], .btn-group-vertical > input[type="submit"] + input[value="Cancel"], .btn-group-vertical > input[value="cancel"] + input[value="Cancel"], .btn-group-vertical > input[value="Cancel"] + input[value="Cancel"], .btn-group-vertical > input[value='delete'] + input[value="Cancel"], .btn-group-vertical > input[value='Delete'] + input[value="Cancel"], #assignBlocksToSidebars .btn-group-vertical > input[class="button defaultButton"] + input[value="Cancel"], .btn-group-vertical > .btn + input[value='delete'], .btn-group-vertical > input[type="submit"] + input[value='delete'], .btn-group-vertical > input[value="cancel"] + input[value='delete'], .btn-group-vertical > input[value="Cancel"] + input[value='delete'], .btn-group-vertical > input[value='delete'] + input[value='delete'], .btn-group-vertical > input[value='Delete'] + input[value='delete'], #assignBlocksToSidebars .btn-group-vertical > input[class="button defaultButton"] + input[value='delete'], .btn-group-vertical > .btn + input[value='Delete'], .btn-group-vertical > input[type="submit"] + input[value='Delete'], .btn-group-vertical > input[value="cancel"] + input[value='Delete'], .btn-group-vertical > input[value="Cancel"] + input[value='Delete'], .btn-group-vertical > input[value='delete'] + input[value='Delete'], .btn-group-vertical > input[value='Delete'] + input[value='Delete'], #assignBlocksToSidebars .btn-group-vertical > input[class="button defaultButton"] + input[value='Delete'], #assignBlocksToSidebars .btn-group-vertical > .btn + input[class="button defaultButton"], #assignBlocksToSidebars .btn-group-vertical > input[type="submit"] + input[class="button defaultButton"], #assignBlocksToSidebars .btn-group-vertical > input[value="cancel"] + input[class="button defaultButton"], #assignBlocksToSidebars .btn-group-vertical > input[value="Cancel"] + input[class="button defaultButton"], #assignBlocksToSidebars .btn-group-vertical > input[value='delete'] + input[class="button defaultButton"], #assignBlocksToSidebars .btn-group-vertical > input[value='Delete'] + input[class="button defaultButton"], #assignBlocksToSidebars .btn-group-vertical > input[class="button defaultButton"] + input[class="button defaultButton"],
+.btn-group-vertical > .btn + .btn, .btn-group-vertical > input[type="submit"] + .btn, .btn-group-vertical > input[value="cancel"] + .btn, .btn-group-vertical > input[value="Cancel"] + .btn, .btn-group-vertical > input[value='delete'] + .btn, .btn-group-vertical > input[value='Delete'] + .btn, .btn-group-vertical > input[value='Close'] + .btn, .btn-group-vertical > input[value='close'] + .btn, #assignBlocksToSidebars .btn-group-vertical > input[class="button defaultButton"] + .btn, .btn-group-vertical > .btn + input[type="submit"], .btn-group-vertical > input[type="submit"] + input[type="submit"], .btn-group-vertical > input[value="cancel"] + input[type="submit"], .btn-group-vertical > input[value="Cancel"] + input[type="submit"], .btn-group-vertical > input[value='delete'] + input[type="submit"], .btn-group-vertical > input[value='Delete'] + input[type="submit"], .btn-group-vertical > input[value='Close'] + input[type="submit"], .btn-group-vertical > input[value='close'] + input[type="submit"], #assignBlocksToSidebars .btn-group-vertical > input[class="button defaultButton"] + input[type="submit"], .btn-group-vertical > .btn + input[value="cancel"], .btn-group-vertical > input[type="submit"] + input[value="cancel"], .btn-group-vertical > input[value="cancel"] + input[value="cancel"], .btn-group-vertical > input[value="Cancel"] + input[value="cancel"], .btn-group-vertical > input[value='delete'] + input[value="cancel"], .btn-group-vertical > input[value='Delete'] + input[value="cancel"], .btn-group-vertical > input[value='Close'] + input[value="cancel"], .btn-group-vertical > input[value='close'] + input[value="cancel"], #assignBlocksToSidebars .btn-group-vertical > input[class="button defaultButton"] + input[value="cancel"], .btn-group-vertical > .btn + input[value="Cancel"], .btn-group-vertical > input[type="submit"] + input[value="Cancel"], .btn-group-vertical > input[value="cancel"] + input[value="Cancel"], .btn-group-vertical > input[value="Cancel"] + input[value="Cancel"], .btn-group-vertical > input[value='delete'] + input[value="Cancel"], .btn-group-vertical > input[value='Delete'] + input[value="Cancel"], .btn-group-vertical > input[value='Close'] + input[value="Cancel"], .btn-group-vertical > input[value='close'] + input[value="Cancel"], #assignBlocksToSidebars .btn-group-vertical > input[class="button defaultButton"] + input[value="Cancel"], .btn-group-vertical > .btn + input[value='delete'], .btn-group-vertical > input[type="submit"] + input[value='delete'], .btn-group-vertical > input[value="cancel"] + input[value='delete'], .btn-group-vertical > input[value="Cancel"] + input[value='delete'], .btn-group-vertical > input[value='delete'] + input[value='delete'], .btn-group-vertical > input[value='Delete'] + input[value='delete'], .btn-group-vertical > input[value='Close'] + input[value='delete'], .btn-group-vertical > input[value='close'] + input[value='delete'], #assignBlocksToSidebars .btn-group-vertical > input[class="button defaultButton"] + input[value='delete'], .btn-group-vertical > .btn + input[value='Delete'], .btn-group-vertical > input[type="submit"] + input[value='Delete'], .btn-group-vertical > input[value="cancel"] + input[value='Delete'], .btn-group-vertical > input[value="Cancel"] + input[value='Delete'], .btn-group-vertical > input[value='delete'] + input[value='Delete'], .btn-group-vertical > input[value='Delete'] + input[value='Delete'], .btn-group-vertical > input[value='Close'] + input[value='Delete'], .btn-group-vertical > input[value='close'] + input[value='Delete'], #assignBlocksToSidebars .btn-group-vertical > input[class="button defaultButton"] + input[value='Delete'], .btn-group-vertical > .btn + input[value='Close'], .btn-group-vertical > input[type="submit"] + input[value='Close'], .btn-group-vertical > input[value="cancel"] + input[value='Close'], .btn-group-vertical > input[value="Cancel"] + input[value='Close'], .btn-group-vertical > input[value='delete'] + input[value='Close'], .btn-group-vertical > input[value='Delete'] + input[value='Close'], .btn-group-vertical > input[value='Close'] + input[value='Close'], .btn-group-vertical > input[value='close'] + input[value='Close'], #assignBlocksToSidebars .btn-group-vertical > input[class="button defaultButton"] + input[value='Close'], .btn-group-vertical > .btn + input[value='close'], .btn-group-vertical > input[type="submit"] + input[value='close'], .btn-group-vertical > input[value="cancel"] + input[value='close'], .btn-group-vertical > input[value="Cancel"] + input[value='close'], .btn-group-vertical > input[value='delete'] + input[value='close'], .btn-group-vertical > input[value='Delete'] + input[value='close'], .btn-group-vertical > input[value='Close'] + input[value='close'], .btn-group-vertical > input[value='close'] + input[value='close'], #assignBlocksToSidebars .btn-group-vertical > input[class="button defaultButton"] + input[value='close'], #assignBlocksToSidebars .btn-group-vertical > .btn + input[class="button defaultButton"], #assignBlocksToSidebars .btn-group-vertical > input[type="submit"] + input[class="button defaultButton"], #assignBlocksToSidebars .btn-group-vertical > input[value="cancel"] + input[class="button defaultButton"], #assignBlocksToSidebars .btn-group-vertical > input[value="Cancel"] + input[class="button defaultButton"], #assignBlocksToSidebars .btn-group-vertical > input[value='delete'] + input[class="button defaultButton"], #assignBlocksToSidebars .btn-group-vertical > input[value='Delete'] + input[class="button defaultButton"], #assignBlocksToSidebars .btn-group-vertical > input[value='Close'] + input[class="button defaultButton"], #assignBlocksToSidebars .btn-group-vertical > input[value='close'] + input[class="button defaultButton"], #assignBlocksToSidebars .btn-group-vertical > input[class="button defaultButton"] + input[class="button defaultButton"],
 .btn-group-vertical > .btn + .btn-group,
 .btn-group-vertical > input[type="submit"] + .btn-group,
 .btn-group-vertical > input[value="cancel"] + .btn-group,
 .btn-group-vertical > input[value="Cancel"] + .btn-group,
 .btn-group-vertical > input[value='delete'] + .btn-group,
 .btn-group-vertical > input[value='Delete'] + .btn-group,
+.btn-group-vertical > input[value='Close'] + .btn-group,
+.btn-group-vertical > input[value='close'] + .btn-group,
 #assignBlocksToSidebars .btn-group-vertical > input[class="button defaultButton"] + .btn-group,
 .btn-group-vertical > .btn-group + .btn,
 .btn-group-vertical > .btn-group + input[type="submit"],
@@ -5502,6 +5310,8 @@ tbody.collapse.in {
 .btn-group-vertical > .btn-group + input[value="Cancel"],
 .btn-group-vertical > .btn-group + input[value='delete'],
 .btn-group-vertical > .btn-group + input[value='Delete'],
+.btn-group-vertical > .btn-group + input[value='Close'],
+.btn-group-vertical > .btn-group + input[value='close'],
 #assignBlocksToSidebars .btn-group-vertical > .btn-group + input[class="button defaultButton"],
 .btn-group-vertical > .btn-group + .btn-group {
   margin-top: -1px;
@@ -5509,36 +5319,36 @@ tbody.collapse.in {
 }
 
 /* line 171, ../sass/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn:not(:first-child):not(:last-child), .btn-group-vertical > input[type="submit"]:not(:first-child):not(:last-child), .btn-group-vertical > input[value="cancel"]:not(:first-child):not(:last-child), .btn-group-vertical > input[value="Cancel"]:not(:first-child):not(:last-child), .btn-group-vertical > input[value='delete']:not(:first-child):not(:last-child), .btn-group-vertical > input[value='Delete']:not(:first-child):not(:last-child), #assignBlocksToSidebars .btn-group-vertical > input[class="button defaultButton"]:not(:first-child):not(:last-child) {
+.btn-group-vertical > .btn:not(:first-child):not(:last-child), .btn-group-vertical > input[type="submit"]:not(:first-child):not(:last-child), .btn-group-vertical > input[value="cancel"]:not(:first-child):not(:last-child), .btn-group-vertical > input[value="Cancel"]:not(:first-child):not(:last-child), .btn-group-vertical > input[value='delete']:not(:first-child):not(:last-child), .btn-group-vertical > input[value='Delete']:not(:first-child):not(:last-child), .btn-group-vertical > input[value='Close']:not(:first-child):not(:last-child), .btn-group-vertical > input[value='close']:not(:first-child):not(:last-child), #assignBlocksToSidebars .btn-group-vertical > input[class="button defaultButton"]:not(:first-child):not(:last-child) {
   border-radius: 0;
 }
 /* line 174, ../sass/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn:first-child:not(:last-child), .btn-group-vertical > input[type="submit"]:first-child:not(:last-child), .btn-group-vertical > input[value="cancel"]:first-child:not(:last-child), .btn-group-vertical > input[value="Cancel"]:first-child:not(:last-child), .btn-group-vertical > input[value='delete']:first-child:not(:last-child), .btn-group-vertical > input[value='Delete']:first-child:not(:last-child), #assignBlocksToSidebars .btn-group-vertical > input[class="button defaultButton"]:first-child:not(:last-child) {
+.btn-group-vertical > .btn:first-child:not(:last-child), .btn-group-vertical > input[type="submit"]:first-child:not(:last-child), .btn-group-vertical > input[value="cancel"]:first-child:not(:last-child), .btn-group-vertical > input[value="Cancel"]:first-child:not(:last-child), .btn-group-vertical > input[value='delete']:first-child:not(:last-child), .btn-group-vertical > input[value='Delete']:first-child:not(:last-child), .btn-group-vertical > input[value='Close']:first-child:not(:last-child), .btn-group-vertical > input[value='close']:first-child:not(:last-child), #assignBlocksToSidebars .btn-group-vertical > input[class="button defaultButton"]:first-child:not(:last-child) {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 /* line 178, ../sass/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn:last-child:not(:first-child), .btn-group-vertical > input[type="submit"]:last-child:not(:first-child), .btn-group-vertical > input[value="cancel"]:last-child:not(:first-child), .btn-group-vertical > input[value="Cancel"]:last-child:not(:first-child), .btn-group-vertical > input[value='delete']:last-child:not(:first-child), .btn-group-vertical > input[value='Delete']:last-child:not(:first-child), #assignBlocksToSidebars .btn-group-vertical > input[class="button defaultButton"]:last-child:not(:first-child) {
+.btn-group-vertical > .btn:last-child:not(:first-child), .btn-group-vertical > input[type="submit"]:last-child:not(:first-child), .btn-group-vertical > input[value="cancel"]:last-child:not(:first-child), .btn-group-vertical > input[value="Cancel"]:last-child:not(:first-child), .btn-group-vertical > input[value='delete']:last-child:not(:first-child), .btn-group-vertical > input[value='Delete']:last-child:not(:first-child), .btn-group-vertical > input[value='Close']:last-child:not(:first-child), .btn-group-vertical > input[value='close']:last-child:not(:first-child), #assignBlocksToSidebars .btn-group-vertical > input[class="button defaultButton"]:last-child:not(:first-child) {
   border-bottom-left-radius: 4px;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
 
 /* line 183, ../sass/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > input[type="submit"], .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > input[value="cancel"], .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > input[value="Cancel"], .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > input[value='delete'], .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > input[value='Delete'], #assignBlocksToSidebars .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > input[class="button defaultButton"] {
+.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > input[type="submit"], .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > input[value="cancel"], .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > input[value="Cancel"], .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > input[value='delete'], .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > input[value='Delete'], .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > input[value='Close'], .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > input[value='close'], #assignBlocksToSidebars .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > input[class="button defaultButton"] {
   border-radius: 0;
 }
 
 /* line 187, ../sass/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > input[type="submit"]:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > input[value="cancel"]:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > input[value="Cancel"]:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > input[value='delete']:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > input[value='Delete']:last-child, #assignBlocksToSidebars .btn-group-vertical > .btn-group:first-child:not(:last-child) > input[class="button defaultButton"]:last-child,
+.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > input[type="submit"]:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > input[value="cancel"]:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > input[value="Cancel"]:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > input[value='delete']:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > input[value='Delete']:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > input[value='Close']:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > input[value='close']:last-child, #assignBlocksToSidebars .btn-group-vertical > .btn-group:first-child:not(:last-child) > input[class="button defaultButton"]:last-child,
 .btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 
 /* line 192, ../sass/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > input[type="submit"]:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > input[value="cancel"]:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > input[value="Cancel"]:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > input[value='delete']:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > input[value='Delete']:first-child, #assignBlocksToSidebars .btn-group-vertical > .btn-group:last-child:not(:first-child) > input[class="button defaultButton"]:first-child {
+.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > input[type="submit"]:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > input[value="cancel"]:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > input[value="Cancel"]:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > input[value='delete']:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > input[value='Delete']:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > input[value='Close']:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > input[value='close']:first-child, #assignBlocksToSidebars .btn-group-vertical > .btn-group:last-child:not(:first-child) > input[class="button defaultButton"]:first-child {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
@@ -5551,14 +5361,14 @@ tbody.collapse.in {
   border-collapse: separate;
 }
 /* line 205, ../sass/bootstrap/_button-groups.scss */
-.btn-group-justified > .btn, .btn-group-justified > input[type="submit"], .btn-group-justified > input[value="cancel"], .btn-group-justified > input[value="Cancel"], .btn-group-justified > input[value='delete'], .btn-group-justified > input[value='Delete'], #assignBlocksToSidebars .btn-group-justified > input[class="button defaultButton"],
+.btn-group-justified > .btn, .btn-group-justified > input[type="submit"], .btn-group-justified > input[value="cancel"], .btn-group-justified > input[value="Cancel"], .btn-group-justified > input[value='delete'], .btn-group-justified > input[value='Delete'], .btn-group-justified > input[value='Close'], .btn-group-justified > input[value='close'], #assignBlocksToSidebars .btn-group-justified > input[class="button defaultButton"],
 .btn-group-justified > .btn-group {
   float: none;
   display: table-cell;
   width: 1%;
 }
 /* line 211, ../sass/bootstrap/_button-groups.scss */
-.btn-group-justified > .btn-group .btn, .btn-group-justified > .btn-group input[type="submit"], .btn-group-justified > .btn-group input[value="cancel"], .btn-group-justified > .btn-group input[value="Cancel"], .btn-group-justified > .btn-group input[value='delete'], .btn-group-justified > .btn-group input[value='Delete'], .btn-group-justified > .btn-group #assignBlocksToSidebars input[class="button defaultButton"], #assignBlocksToSidebars .btn-group-justified > .btn-group input[class="button defaultButton"] {
+.btn-group-justified > .btn-group .btn, .btn-group-justified > .btn-group input[type="submit"], .btn-group-justified > .btn-group input[value="cancel"], .btn-group-justified > .btn-group input[value="Cancel"], .btn-group-justified > .btn-group input[value='delete'], .btn-group-justified > .btn-group input[value='Delete'], .btn-group-justified > .btn-group input[value='Close'], .btn-group-justified > .btn-group input[value='close'], .btn-group-justified > .btn-group #assignBlocksToSidebars input[class="button defaultButton"], #assignBlocksToSidebars .btn-group-justified > .btn-group input[class="button defaultButton"] {
   width: 100%;
 }
 /* line 215, ../sass/bootstrap/_button-groups.scss */
@@ -5567,13 +5377,15 @@ tbody.collapse.in {
 }
 
 /* line 236, ../sass/bootstrap/_button-groups.scss */
-[data-toggle="buttons"] > .btn input[type="radio"], [data-toggle="buttons"] > input[type="submit"] input[type="radio"], [data-toggle="buttons"] > input[value="cancel"] input[type="radio"], [data-toggle="buttons"] > input[value="Cancel"] input[type="radio"], [data-toggle="buttons"] > input[value='delete'] input[type="radio"], [data-toggle="buttons"] > input[value='Delete'] input[type="radio"], #assignBlocksToSidebars [data-toggle="buttons"] > input[class="button defaultButton"] input[type="radio"],
+[data-toggle="buttons"] > .btn input[type="radio"], [data-toggle="buttons"] > input[type="submit"] input[type="radio"], [data-toggle="buttons"] > input[value="cancel"] input[type="radio"], [data-toggle="buttons"] > input[value="Cancel"] input[type="radio"], [data-toggle="buttons"] > input[value='delete'] input[type="radio"], [data-toggle="buttons"] > input[value='Delete'] input[type="radio"], [data-toggle="buttons"] > input[value='Close'] input[type="radio"], [data-toggle="buttons"] > input[value='close'] input[type="radio"], #assignBlocksToSidebars [data-toggle="buttons"] > input[class="button defaultButton"] input[type="radio"],
 [data-toggle="buttons"] > .btn input[type="checkbox"],
 [data-toggle="buttons"] > input[type="submit"] input[type="checkbox"],
 [data-toggle="buttons"] > input[value="cancel"] input[type="checkbox"],
 [data-toggle="buttons"] > input[value="Cancel"] input[type="checkbox"],
 [data-toggle="buttons"] > input[value='delete'] input[type="checkbox"],
 [data-toggle="buttons"] > input[value='Delete'] input[type="checkbox"],
+[data-toggle="buttons"] > input[value='Close'] input[type="checkbox"],
+[data-toggle="buttons"] > input[value='close'] input[type="checkbox"],
 #assignBlocksToSidebars [data-toggle="buttons"] > input[class="button defaultButton"] input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="radio"],
 [data-toggle="buttons"] > .btn-group > input[type="submit"] input[type="radio"],
@@ -5581,6 +5393,8 @@ tbody.collapse.in {
 [data-toggle="buttons"] > .btn-group > input[value="Cancel"] input[type="radio"],
 [data-toggle="buttons"] > .btn-group > input[value='delete'] input[type="radio"],
 [data-toggle="buttons"] > .btn-group > input[value='Delete'] input[type="radio"],
+[data-toggle="buttons"] > .btn-group > input[value='Close'] input[type="radio"],
+[data-toggle="buttons"] > .btn-group > input[value='close'] input[type="radio"],
 #assignBlocksToSidebars [data-toggle="buttons"] > .btn-group > input[class="button defaultButton"] input[type="radio"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > input[type="submit"] input[type="checkbox"],
@@ -5588,6 +5402,8 @@ tbody.collapse.in {
 [data-toggle="buttons"] > .btn-group > input[value="Cancel"] input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > input[value='delete'] input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > input[value='Delete'] input[type="checkbox"],
+[data-toggle="buttons"] > .btn-group > input[value='Close'] input[type="checkbox"],
+[data-toggle="buttons"] > .btn-group > input[value='close'] input[type="checkbox"],
 #assignBlocksToSidebars [data-toggle="buttons"] > .btn-group > input[class="button defaultButton"] input[type="checkbox"] {
   position: absolute;
   clip: rect(0, 0, 0, 0);
@@ -5665,6 +5481,8 @@ tbody.collapse.in {
 .input-group-sm > .input-group-btn > input.input-group-addon[value="Cancel"],
 .input-group-sm > .input-group-btn > input.input-group-addon[value='delete'],
 .input-group-sm > .input-group-btn > input.input-group-addon[value='Delete'],
+.input-group-sm > .input-group-btn > input.input-group-addon[value='Close'],
+.input-group-sm > .input-group-btn > input.input-group-addon[value='close'],
 #assignBlocksToSidebars .input-group-sm > .input-group-btn > input.input-group-addon[class="button defaultButton"] {
   padding: 5px 10px;
   font-size: 12px;
@@ -5679,6 +5497,8 @@ tbody.collapse.in {
 .input-group-lg > .input-group-btn > input.input-group-addon[value="Cancel"],
 .input-group-lg > .input-group-btn > input.input-group-addon[value='delete'],
 .input-group-lg > .input-group-btn > input.input-group-addon[value='Delete'],
+.input-group-lg > .input-group-btn > input.input-group-addon[value='Close'],
+.input-group-lg > .input-group-btn > input.input-group-addon[value='close'],
 #assignBlocksToSidebars .input-group-lg > .input-group-btn > input.input-group-addon[class="button defaultButton"] {
   padding: 10px 16px;
   font-size: 18px;
@@ -5699,6 +5519,8 @@ tbody.collapse.in {
 .input-group-btn:first-child > input[value="Cancel"],
 .input-group-btn:first-child > input[value='delete'],
 .input-group-btn:first-child > input[value='Delete'],
+.input-group-btn:first-child > input[value='Close'],
+.input-group-btn:first-child > input[value='close'],
 #assignBlocksToSidebars .input-group-btn:first-child > input[class="button defaultButton"],
 .input-group-btn:first-child > .btn-group > .btn,
 .input-group-btn:first-child > .btn-group > input[type="submit"],
@@ -5706,6 +5528,8 @@ tbody.collapse.in {
 .input-group-btn:first-child > .btn-group > input[value="Cancel"],
 .input-group-btn:first-child > .btn-group > input[value='delete'],
 .input-group-btn:first-child > .btn-group > input[value='Delete'],
+.input-group-btn:first-child > .btn-group > input[value='Close'],
+.input-group-btn:first-child > .btn-group > input[value='close'],
 #assignBlocksToSidebars .input-group-btn:first-child > .btn-group > input[class="button defaultButton"],
 .input-group-btn:first-child > .dropdown-toggle,
 .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
@@ -5714,6 +5538,8 @@ tbody.collapse.in {
 .input-group-btn:last-child > input[value="Cancel"]:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:last-child > input[value='delete']:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:last-child > input[value='Delete']:not(:last-child):not(.dropdown-toggle),
+.input-group-btn:last-child > input[value='Close']:not(:last-child):not(.dropdown-toggle),
+.input-group-btn:last-child > input[value='close']:not(:last-child):not(.dropdown-toggle),
 #assignBlocksToSidebars .input-group-btn:last-child > input[class="button defaultButton"]:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:last-child > .btn-group:not(:last-child) > .btn,
 .input-group-btn:last-child > .btn-group:not(:last-child) > input[type="submit"],
@@ -5721,6 +5547,8 @@ tbody.collapse.in {
 .input-group-btn:last-child > .btn-group:not(:last-child) > input[value="Cancel"],
 .input-group-btn:last-child > .btn-group:not(:last-child) > input[value='delete'],
 .input-group-btn:last-child > .btn-group:not(:last-child) > input[value='Delete'],
+.input-group-btn:last-child > .btn-group:not(:last-child) > input[value='Close'],
+.input-group-btn:last-child > .btn-group:not(:last-child) > input[value='close'],
 #assignBlocksToSidebars .input-group-btn:last-child > .btn-group:not(:last-child) > input[class="button defaultButton"] {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
@@ -5740,6 +5568,8 @@ tbody.collapse.in {
 .input-group-btn:last-child > input[value="Cancel"],
 .input-group-btn:last-child > input[value='delete'],
 .input-group-btn:last-child > input[value='Delete'],
+.input-group-btn:last-child > input[value='Close'],
+.input-group-btn:last-child > input[value='close'],
 #assignBlocksToSidebars .input-group-btn:last-child > input[class="button defaultButton"],
 .input-group-btn:last-child > .btn-group > .btn,
 .input-group-btn:last-child > .btn-group > input[type="submit"],
@@ -5747,6 +5577,8 @@ tbody.collapse.in {
 .input-group-btn:last-child > .btn-group > input[value="Cancel"],
 .input-group-btn:last-child > .btn-group > input[value='delete'],
 .input-group-btn:last-child > .btn-group > input[value='Delete'],
+.input-group-btn:last-child > .btn-group > input[value='Close'],
+.input-group-btn:last-child > .btn-group > input[value='close'],
 #assignBlocksToSidebars .input-group-btn:last-child > .btn-group > input[class="button defaultButton"],
 .input-group-btn:last-child > .dropdown-toggle,
 .input-group-btn:first-child > .btn:not(:first-child),
@@ -5755,6 +5587,8 @@ tbody.collapse.in {
 .input-group-btn:first-child > input[value="Cancel"]:not(:first-child),
 .input-group-btn:first-child > input[value='delete']:not(:first-child),
 .input-group-btn:first-child > input[value='Delete']:not(:first-child),
+.input-group-btn:first-child > input[value='Close']:not(:first-child),
+.input-group-btn:first-child > input[value='close']:not(:first-child),
 #assignBlocksToSidebars .input-group-btn:first-child > input[class="button defaultButton"]:not(:first-child),
 .input-group-btn:first-child > .btn-group:not(:first-child) > .btn,
 .input-group-btn:first-child > .btn-group:not(:first-child) > input[type="submit"],
@@ -5762,6 +5596,8 @@ tbody.collapse.in {
 .input-group-btn:first-child > .btn-group:not(:first-child) > input[value="Cancel"],
 .input-group-btn:first-child > .btn-group:not(:first-child) > input[value='delete'],
 .input-group-btn:first-child > .btn-group:not(:first-child) > input[value='Delete'],
+.input-group-btn:first-child > .btn-group:not(:first-child) > input[value='Close'],
+.input-group-btn:first-child > .btn-group:not(:first-child) > input[value='close'],
 #assignBlocksToSidebars .input-group-btn:first-child > .btn-group:not(:first-child) > input[class="button defaultButton"] {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
@@ -5779,24 +5615,24 @@ tbody.collapse.in {
   white-space: nowrap;
 }
 /* line 140, ../sass/bootstrap/_input-groups.scss */
-.input-group-btn > .btn, .input-group-btn > input[type="submit"], .input-group-btn > input[value="cancel"], .input-group-btn > input[value="Cancel"], .input-group-btn > input[value='delete'], .input-group-btn > input[value='Delete'], #assignBlocksToSidebars .input-group-btn > input[class="button defaultButton"] {
+.input-group-btn > .btn, .input-group-btn > input[type="submit"], .input-group-btn > input[value="cancel"], .input-group-btn > input[value="Cancel"], .input-group-btn > input[value='delete'], .input-group-btn > input[value='Delete'], .input-group-btn > input[value='Close'], .input-group-btn > input[value='close'], #assignBlocksToSidebars .input-group-btn > input[class="button defaultButton"] {
   position: relative;
 }
 /* line 142, ../sass/bootstrap/_input-groups.scss */
-.input-group-btn > .btn + .btn, .input-group-btn > input[type="submit"] + .btn, .input-group-btn > input[value="cancel"] + .btn, .input-group-btn > input[value="Cancel"] + .btn, .input-group-btn > input[value='delete'] + .btn, .input-group-btn > input[value='Delete'] + .btn, #assignBlocksToSidebars .input-group-btn > input[class="button defaultButton"] + .btn, .input-group-btn > .btn + input[type="submit"], .input-group-btn > input[type="submit"] + input[type="submit"], .input-group-btn > input[value="cancel"] + input[type="submit"], .input-group-btn > input[value="Cancel"] + input[type="submit"], .input-group-btn > input[value='delete'] + input[type="submit"], .input-group-btn > input[value='Delete'] + input[type="submit"], #assignBlocksToSidebars .input-group-btn > input[class="button defaultButton"] + input[type="submit"], .input-group-btn > .btn + input[value="cancel"], .input-group-btn > input[type="submit"] + input[value="cancel"], .input-group-btn > input[value="cancel"] + input[value="cancel"], .input-group-btn > input[value="Cancel"] + input[value="cancel"], .input-group-btn > input[value='delete'] + input[value="cancel"], .input-group-btn > input[value='Delete'] + input[value="cancel"], #assignBlocksToSidebars .input-group-btn > input[class="button defaultButton"] + input[value="cancel"], .input-group-btn > .btn + input[value="Cancel"], .input-group-btn > input[type="submit"] + input[value="Cancel"], .input-group-btn > input[value="cancel"] + input[value="Cancel"], .input-group-btn > input[value="Cancel"] + input[value="Cancel"], .input-group-btn > input[value='delete'] + input[value="Cancel"], .input-group-btn > input[value='Delete'] + input[value="Cancel"], #assignBlocksToSidebars .input-group-btn > input[class="button defaultButton"] + input[value="Cancel"], .input-group-btn > .btn + input[value='delete'], .input-group-btn > input[type="submit"] + input[value='delete'], .input-group-btn > input[value="cancel"] + input[value='delete'], .input-group-btn > input[value="Cancel"] + input[value='delete'], .input-group-btn > input[value='delete'] + input[value='delete'], .input-group-btn > input[value='Delete'] + input[value='delete'], #assignBlocksToSidebars .input-group-btn > input[class="button defaultButton"] + input[value='delete'], .input-group-btn > .btn + input[value='Delete'], .input-group-btn > input[type="submit"] + input[value='Delete'], .input-group-btn > input[value="cancel"] + input[value='Delete'], .input-group-btn > input[value="Cancel"] + input[value='Delete'], .input-group-btn > input[value='delete'] + input[value='Delete'], .input-group-btn > input[value='Delete'] + input[value='Delete'], #assignBlocksToSidebars .input-group-btn > input[class="button defaultButton"] + input[value='Delete'], #assignBlocksToSidebars .input-group-btn > .btn + input[class="button defaultButton"], #assignBlocksToSidebars .input-group-btn > input[type="submit"] + input[class="button defaultButton"], #assignBlocksToSidebars .input-group-btn > input[value="cancel"] + input[class="button defaultButton"], #assignBlocksToSidebars .input-group-btn > input[value="Cancel"] + input[class="button defaultButton"], #assignBlocksToSidebars .input-group-btn > input[value='delete'] + input[class="button defaultButton"], #assignBlocksToSidebars .input-group-btn > input[value='Delete'] + input[class="button defaultButton"], #assignBlocksToSidebars .input-group-btn > input[class="button defaultButton"] + input[class="button defaultButton"] {
+.input-group-btn > .btn + .btn, .input-group-btn > input[type="submit"] + .btn, .input-group-btn > input[value="cancel"] + .btn, .input-group-btn > input[value="Cancel"] + .btn, .input-group-btn > input[value='delete'] + .btn, .input-group-btn > input[value='Delete'] + .btn, .input-group-btn > input[value='Close'] + .btn, .input-group-btn > input[value='close'] + .btn, #assignBlocksToSidebars .input-group-btn > input[class="button defaultButton"] + .btn, .input-group-btn > .btn + input[type="submit"], .input-group-btn > input[type="submit"] + input[type="submit"], .input-group-btn > input[value="cancel"] + input[type="submit"], .input-group-btn > input[value="Cancel"] + input[type="submit"], .input-group-btn > input[value='delete'] + input[type="submit"], .input-group-btn > input[value='Delete'] + input[type="submit"], .input-group-btn > input[value='Close'] + input[type="submit"], .input-group-btn > input[value='close'] + input[type="submit"], #assignBlocksToSidebars .input-group-btn > input[class="button defaultButton"] + input[type="submit"], .input-group-btn > .btn + input[value="cancel"], .input-group-btn > input[type="submit"] + input[value="cancel"], .input-group-btn > input[value="cancel"] + input[value="cancel"], .input-group-btn > input[value="Cancel"] + input[value="cancel"], .input-group-btn > input[value='delete'] + input[value="cancel"], .input-group-btn > input[value='Delete'] + input[value="cancel"], .input-group-btn > input[value='Close'] + input[value="cancel"], .input-group-btn > input[value='close'] + input[value="cancel"], #assignBlocksToSidebars .input-group-btn > input[class="button defaultButton"] + input[value="cancel"], .input-group-btn > .btn + input[value="Cancel"], .input-group-btn > input[type="submit"] + input[value="Cancel"], .input-group-btn > input[value="cancel"] + input[value="Cancel"], .input-group-btn > input[value="Cancel"] + input[value="Cancel"], .input-group-btn > input[value='delete'] + input[value="Cancel"], .input-group-btn > input[value='Delete'] + input[value="Cancel"], .input-group-btn > input[value='Close'] + input[value="Cancel"], .input-group-btn > input[value='close'] + input[value="Cancel"], #assignBlocksToSidebars .input-group-btn > input[class="button defaultButton"] + input[value="Cancel"], .input-group-btn > .btn + input[value='delete'], .input-group-btn > input[type="submit"] + input[value='delete'], .input-group-btn > input[value="cancel"] + input[value='delete'], .input-group-btn > input[value="Cancel"] + input[value='delete'], .input-group-btn > input[value='delete'] + input[value='delete'], .input-group-btn > input[value='Delete'] + input[value='delete'], .input-group-btn > input[value='Close'] + input[value='delete'], .input-group-btn > input[value='close'] + input[value='delete'], #assignBlocksToSidebars .input-group-btn > input[class="button defaultButton"] + input[value='delete'], .input-group-btn > .btn + input[value='Delete'], .input-group-btn > input[type="submit"] + input[value='Delete'], .input-group-btn > input[value="cancel"] + input[value='Delete'], .input-group-btn > input[value="Cancel"] + input[value='Delete'], .input-group-btn > input[value='delete'] + input[value='Delete'], .input-group-btn > input[value='Delete'] + input[value='Delete'], .input-group-btn > input[value='Close'] + input[value='Delete'], .input-group-btn > input[value='close'] + input[value='Delete'], #assignBlocksToSidebars .input-group-btn > input[class="button defaultButton"] + input[value='Delete'], .input-group-btn > .btn + input[value='Close'], .input-group-btn > input[type="submit"] + input[value='Close'], .input-group-btn > input[value="cancel"] + input[value='Close'], .input-group-btn > input[value="Cancel"] + input[value='Close'], .input-group-btn > input[value='delete'] + input[value='Close'], .input-group-btn > input[value='Delete'] + input[value='Close'], .input-group-btn > input[value='Close'] + input[value='Close'], .input-group-btn > input[value='close'] + input[value='Close'], #assignBlocksToSidebars .input-group-btn > input[class="button defaultButton"] + input[value='Close'], .input-group-btn > .btn + input[value='close'], .input-group-btn > input[type="submit"] + input[value='close'], .input-group-btn > input[value="cancel"] + input[value='close'], .input-group-btn > input[value="Cancel"] + input[value='close'], .input-group-btn > input[value='delete'] + input[value='close'], .input-group-btn > input[value='Delete'] + input[value='close'], .input-group-btn > input[value='Close'] + input[value='close'], .input-group-btn > input[value='close'] + input[value='close'], #assignBlocksToSidebars .input-group-btn > input[class="button defaultButton"] + input[value='close'], #assignBlocksToSidebars .input-group-btn > .btn + input[class="button defaultButton"], #assignBlocksToSidebars .input-group-btn > input[type="submit"] + input[class="button defaultButton"], #assignBlocksToSidebars .input-group-btn > input[value="cancel"] + input[class="button defaultButton"], #assignBlocksToSidebars .input-group-btn > input[value="Cancel"] + input[class="button defaultButton"], #assignBlocksToSidebars .input-group-btn > input[value='delete'] + input[class="button defaultButton"], #assignBlocksToSidebars .input-group-btn > input[value='Delete'] + input[class="button defaultButton"], #assignBlocksToSidebars .input-group-btn > input[value='Close'] + input[class="button defaultButton"], #assignBlocksToSidebars .input-group-btn > input[value='close'] + input[class="button defaultButton"], #assignBlocksToSidebars .input-group-btn > input[class="button defaultButton"] + input[class="button defaultButton"] {
   margin-left: -1px;
 }
 /* line 146, ../sass/bootstrap/_input-groups.scss */
-.input-group-btn > .btn:hover, .input-group-btn > input[type="submit"]:hover, .input-group-btn > input[value="cancel"]:hover, .input-group-btn > input[value="Cancel"]:hover, .input-group-btn > input[value='delete']:hover, .input-group-btn > input[value='Delete']:hover, #assignBlocksToSidebars .input-group-btn > input[class="button defaultButton"]:hover, .input-group-btn > .btn:focus, .input-group-btn > input[type="submit"]:focus, .input-group-btn > input[value="cancel"]:focus, .input-group-btn > input[value="Cancel"]:focus, .input-group-btn > input[value='delete']:focus, .input-group-btn > input[value='Delete']:focus, #assignBlocksToSidebars .input-group-btn > input[class="button defaultButton"]:focus, .input-group-btn > .btn:active, .input-group-btn > input[type="submit"]:active, .input-group-btn > input[value="cancel"]:active, .input-group-btn > input[value="Cancel"]:active, .input-group-btn > input[value='delete']:active, .input-group-btn > input[value='Delete']:active, #assignBlocksToSidebars .input-group-btn > input[class="button defaultButton"]:active {
+.input-group-btn > .btn:hover, .input-group-btn > input[type="submit"]:hover, .input-group-btn > input[value="cancel"]:hover, .input-group-btn > input[value="Cancel"]:hover, .input-group-btn > input[value='delete']:hover, .input-group-btn > input[value='Delete']:hover, .input-group-btn > input[value='Close']:hover, .input-group-btn > input[value='close']:hover, #assignBlocksToSidebars .input-group-btn > input[class="button defaultButton"]:hover, .input-group-btn > .btn:focus, .input-group-btn > input[type="submit"]:focus, .input-group-btn > input[value="cancel"]:focus, .input-group-btn > input[value="Cancel"]:focus, .input-group-btn > input[value='delete']:focus, .input-group-btn > input[value='Delete']:focus, .input-group-btn > input[value='Close']:focus, .input-group-btn > input[value='close']:focus, #assignBlocksToSidebars .input-group-btn > input[class="button defaultButton"]:focus, .input-group-btn > .btn:active, .input-group-btn > input[type="submit"]:active, .input-group-btn > input[value="cancel"]:active, .input-group-btn > input[value="Cancel"]:active, .input-group-btn > input[value='delete']:active, .input-group-btn > input[value='Delete']:active, .input-group-btn > input[value='Close']:active, .input-group-btn > input[value='close']:active, #assignBlocksToSidebars .input-group-btn > input[class="button defaultButton"]:active {
   z-index: 2;
 }
 /* line 155, ../sass/bootstrap/_input-groups.scss */
-.input-group-btn:first-child > .btn, .input-group-btn:first-child > input[type="submit"], .input-group-btn:first-child > input[value="cancel"], .input-group-btn:first-child > input[value="Cancel"], .input-group-btn:first-child > input[value='delete'], .input-group-btn:first-child > input[value='Delete'], #assignBlocksToSidebars .input-group-btn:first-child > input[class="button defaultButton"],
+.input-group-btn:first-child > .btn, .input-group-btn:first-child > input[type="submit"], .input-group-btn:first-child > input[value="cancel"], .input-group-btn:first-child > input[value="Cancel"], .input-group-btn:first-child > input[value='delete'], .input-group-btn:first-child > input[value='Delete'], .input-group-btn:first-child > input[value='Close'], .input-group-btn:first-child > input[value='close'], #assignBlocksToSidebars .input-group-btn:first-child > input[class="button defaultButton"],
 .input-group-btn:first-child > .btn-group {
   margin-right: -1px;
 }
 /* line 161, ../sass/bootstrap/_input-groups.scss */
-.input-group-btn:last-child > .btn, .input-group-btn:last-child > input[type="submit"], .input-group-btn:last-child > input[value="cancel"], .input-group-btn:last-child > input[value="Cancel"], .input-group-btn:last-child > input[value='delete'], .input-group-btn:last-child > input[value='Delete'], #assignBlocksToSidebars .input-group-btn:last-child > input[class="button defaultButton"],
+.input-group-btn:last-child > .btn, .input-group-btn:last-child > input[type="submit"], .input-group-btn:last-child > input[value="cancel"], .input-group-btn:last-child > input[value="Cancel"], .input-group-btn:last-child > input[value='delete'], .input-group-btn:last-child > input[value='Delete'], .input-group-btn:last-child > input[value='Close'], .input-group-btn:last-child > input[value='close'], #assignBlocksToSidebars .input-group-btn:last-child > input[class="button defaultButton"],
 .input-group-btn:last-child > .btn-group {
   margin-left: -1px;
 }
@@ -5846,7 +5682,7 @@ tbody.collapse.in {
 /* line 46, ../sass/bootstrap/_navs.scss */
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
   background-color: #eeeeee;
-  border-color: #557082;
+  border-color: #337ab7;
 }
 /* line 59, ../sass/bootstrap/_navs.scss */
 .nav .nav-divider {
@@ -6388,12 +6224,12 @@ tbody.collapse.in {
   margin-bottom: 8px;
 }
 /* line 346, ../sass/bootstrap/_navbar.scss */
-.navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn, .btn-group-sm > input.navbar-btn[type="submit"], .btn-group-sm > input.navbar-btn[value="cancel"], .btn-group-sm > input.navbar-btn[value="Cancel"], .btn-group-sm > input.navbar-btn[value='delete'], .btn-group-sm > input.navbar-btn[value='Delete'], #assignBlocksToSidebars .btn-group-sm > input.navbar-btn[class="button defaultButton"] {
+.navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn, .btn-group-sm > input.navbar-btn[type="submit"], .btn-group-sm > input.navbar-btn[value="cancel"], .btn-group-sm > input.navbar-btn[value="Cancel"], .btn-group-sm > input.navbar-btn[value='delete'], .btn-group-sm > input.navbar-btn[value='Delete'], .btn-group-sm > input.navbar-btn[value='Close'], .btn-group-sm > input.navbar-btn[value='close'], #assignBlocksToSidebars .btn-group-sm > input.navbar-btn[class="button defaultButton"] {
   margin-top: 10px;
   margin-bottom: 10px;
 }
 /* line 349, ../sass/bootstrap/_navbar.scss */
-.navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn, .btn-group-xs > input.navbar-btn[type="submit"], .btn-group-xs > input.navbar-btn[value="cancel"], .btn-group-xs > input.navbar-btn[value="Cancel"], .btn-group-xs > input.navbar-btn[value='delete'], .btn-group-xs > input.navbar-btn[value='Delete'], #assignBlocksToSidebars .btn-group-xs > input.navbar-btn[class="button defaultButton"] {
+.navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn, .btn-group-xs > input.navbar-btn[type="submit"], .btn-group-xs > input.navbar-btn[value="cancel"], .btn-group-xs > input.navbar-btn[value="Cancel"], .btn-group-xs > input.navbar-btn[value='delete'], .btn-group-xs > input.navbar-btn[value='Delete'], .btn-group-xs > input.navbar-btn[value='Close'], .btn-group-xs > input.navbar-btn[value='close'], #assignBlocksToSidebars .btn-group-xs > input.navbar-btn[class="button defaultButton"] {
   margin-top: 14px;
   margin-bottom: 14px;
 }
@@ -6639,7 +6475,7 @@ tbody.collapse.in {
 }
 
 /* line 6, ../sass/bootstrap/_breadcrumbs.scss */
-.breadcrumb, #container #breadcrumb {
+.breadcrumb {
   padding: 8px 15px;
   margin-bottom: 20px;
   list-style: none;
@@ -6647,17 +6483,17 @@ tbody.collapse.in {
   border-radius: 4px;
 }
 /* line 13, ../sass/bootstrap/_breadcrumbs.scss */
-.breadcrumb > li, #container #breadcrumb > li {
+.breadcrumb > li {
   display: inline-block;
 }
 /* line 16, ../sass/bootstrap/_breadcrumbs.scss */
-.breadcrumb > li + li:before, #container #breadcrumb > li + li:before {
+.breadcrumb > li + li:before {
   content: "/ ";
   padding: 0 5px;
-  color: #12252c;
+  color: #ccc;
 }
 /* line 23, ../sass/bootstrap/_breadcrumbs.scss */
-.breadcrumb > .active, #container #breadcrumb > .active {
+.breadcrumb > .active {
   color: #777777;
 }
 
@@ -6680,7 +6516,7 @@ tbody.collapse.in {
   padding: 6px 12px;
   line-height: 1.42857;
   text-decoration: none;
-  color: #557082;
+  color: #337ab7;
   background-color: #fff;
   border: 1px solid #ddd;
   margin-left: -1px;
@@ -6702,7 +6538,7 @@ tbody.collapse.in {
 .pagination > li > a:hover, .pagination > li > a:focus,
 .pagination > li > span:hover,
 .pagination > li > span:focus {
-  color: #374854;
+  color: #23527c;
   background-color: #eeeeee;
   border-color: #ddd;
 }
@@ -6841,7 +6677,7 @@ tbody.collapse.in {
   display: none;
 }
 /* line 25, ../sass/bootstrap/_labels.scss */
-.btn .label, input[type="submit"] .label, input[value="cancel"] .label, input[value="Cancel"] .label, input[value='delete'] .label, input[value='Delete'] .label, #assignBlocksToSidebars input[class="button defaultButton"] .label {
+.btn .label, input[type="submit"] .label, input[value="cancel"] .label, input[value="Cancel"] .label, input[value='delete'] .label, input[value='Delete'] .label, input[value='Close'] .label, input[value='close'] .label, #assignBlocksToSidebars input[class="button defaultButton"] .label {
   position: relative;
   top: -1px;
 }
@@ -6927,18 +6763,18 @@ a.label:hover, a.label:focus {
   display: none;
 }
 /* line 27, ../sass/bootstrap/_badges.scss */
-.btn .badge, input[type="submit"] .badge, input[value="cancel"] .badge, input[value="Cancel"] .badge, input[value='delete'] .badge, input[value='Delete'] .badge, #assignBlocksToSidebars input[class="button defaultButton"] .badge {
+.btn .badge, input[type="submit"] .badge, input[value="cancel"] .badge, input[value="Cancel"] .badge, input[value='delete'] .badge, input[value='Delete'] .badge, input[value='Close'] .badge, input[value='close'] .badge, #assignBlocksToSidebars input[class="button defaultButton"] .badge {
   position: relative;
   top: -1px;
 }
 /* line 32, ../sass/bootstrap/_badges.scss */
-.btn-xs .badge, .btn-group-xs > .btn .badge, .btn-group-xs > input[type="submit"] .badge, .btn-group-xs > input[value="cancel"] .badge, .btn-group-xs > input[value="Cancel"] .badge, .btn-group-xs > input[value='delete'] .badge, .btn-group-xs > input[value='Delete'] .badge, #assignBlocksToSidebars .btn-group-xs > input[class="button defaultButton"] .badge, .btn-group-xs > .btn .badge, .btn-group-xs > input[type="submit"] .badge, .btn-group-xs > input[value="cancel"] .badge, .btn-group-xs > input[value="Cancel"] .badge, .btn-group-xs > input[value='delete'] .badge, .btn-group-xs > input[value='Delete'] .badge, #assignBlocksToSidebars .btn-group-xs > input[class="button defaultButton"] .badge {
+.btn-xs .badge, .btn-group-xs > .btn .badge, .btn-group-xs > input[type="submit"] .badge, .btn-group-xs > input[value="cancel"] .badge, .btn-group-xs > input[value="Cancel"] .badge, .btn-group-xs > input[value='delete'] .badge, .btn-group-xs > input[value='Delete'] .badge, .btn-group-xs > input[value='Close'] .badge, .btn-group-xs > input[value='close'] .badge, #assignBlocksToSidebars .btn-group-xs > input[class="button defaultButton"] .badge, .btn-group-xs > .btn .badge, .btn-group-xs > input[type="submit"] .badge, .btn-group-xs > input[value="cancel"] .badge, .btn-group-xs > input[value="Cancel"] .badge, .btn-group-xs > input[value='delete'] .badge, .btn-group-xs > input[value='Delete'] .badge, .btn-group-xs > input[value='Close'] .badge, .btn-group-xs > input[value='close'] .badge, #assignBlocksToSidebars .btn-group-xs > input[class="button defaultButton"] .badge {
   top: 0;
   padding: 1px 5px;
 }
 /* line 41, ../sass/bootstrap/_badges.scss */
 .list-group-item.active > .badge, .nav-pills > .active > a > .badge {
-  color: #557082;
+  color: #337ab7;
   background-color: #fff;
 }
 /* line 47, ../sass/bootstrap/_badges.scss */
@@ -7040,7 +6876,7 @@ a.badge:hover, a.badge:focus {
 a.thumbnail:hover,
 a.thumbnail:focus,
 a.thumbnail.active {
-  border-color: #557082;
+  border-color: #337ab7;
 }
 
 /* line 9, ../sass/bootstrap/_alerts.scss */
@@ -7192,7 +7028,7 @@ a.thumbnail.active {
 .progress-bar-striped {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-size: 40px 40px;
 }
 
@@ -7212,7 +7048,7 @@ a.thumbnail.active {
 .progress-striped .progress-bar-success {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 
 /* line 77, ../sass/bootstrap/_progress-bars.scss */
@@ -7223,7 +7059,7 @@ a.thumbnail.active {
 .progress-striped .progress-bar-info {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 
 /* line 81, ../sass/bootstrap/_progress-bars.scss */
@@ -7234,7 +7070,7 @@ a.thumbnail.active {
 .progress-striped .progress-bar-warning {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 
 /* line 85, ../sass/bootstrap/_progress-bars.scss */
@@ -7245,7 +7081,7 @@ a.thumbnail.active {
 .progress-striped .progress-bar-danger {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 
 /* line 1, ../sass/bootstrap/_media.scss */
@@ -8157,12 +7993,12 @@ button.close {
   clear: both;
 }
 /* line 110, ../sass/bootstrap/_modals.scss */
-.modal-footer .btn + .btn, .modal-footer input[type="submit"] + .btn, .modal-footer input[value="cancel"] + .btn, .modal-footer input[value="Cancel"] + .btn, .modal-footer input[value='delete'] + .btn, .modal-footer input[value='Delete'] + .btn, .modal-footer #assignBlocksToSidebars input[class="button defaultButton"] + .btn, #assignBlocksToSidebars .modal-footer input[class="button defaultButton"] + .btn, .modal-footer .btn + input[type="submit"], .modal-footer input[type="submit"] + input[type="submit"], .modal-footer input[value="cancel"] + input[type="submit"], .modal-footer input[value="Cancel"] + input[type="submit"], .modal-footer input[value='delete'] + input[type="submit"], .modal-footer input[value='Delete'] + input[type="submit"], .modal-footer #assignBlocksToSidebars input[class="button defaultButton"] + input[type="submit"], #assignBlocksToSidebars .modal-footer input[class="button defaultButton"] + input[type="submit"], .modal-footer .btn + input[value="cancel"], .modal-footer input[type="submit"] + input[value="cancel"], .modal-footer input[value="cancel"] + input[value="cancel"], .modal-footer input[value="Cancel"] + input[value="cancel"], .modal-footer input[value='delete'] + input[value="cancel"], .modal-footer input[value='Delete'] + input[value="cancel"], .modal-footer #assignBlocksToSidebars input[class="button defaultButton"] + input[value="cancel"], #assignBlocksToSidebars .modal-footer input[class="button defaultButton"] + input[value="cancel"], .modal-footer .btn + input[value="Cancel"], .modal-footer input[type="submit"] + input[value="Cancel"], .modal-footer input[value="cancel"] + input[value="Cancel"], .modal-footer input[value="Cancel"] + input[value="Cancel"], .modal-footer input[value='delete'] + input[value="Cancel"], .modal-footer input[value='Delete'] + input[value="Cancel"], .modal-footer #assignBlocksToSidebars input[class="button defaultButton"] + input[value="Cancel"], #assignBlocksToSidebars .modal-footer input[class="button defaultButton"] + input[value="Cancel"], .modal-footer .btn + input[value='delete'], .modal-footer input[type="submit"] + input[value='delete'], .modal-footer input[value="cancel"] + input[value='delete'], .modal-footer input[value="Cancel"] + input[value='delete'], .modal-footer input[value='delete'] + input[value='delete'], .modal-footer input[value='Delete'] + input[value='delete'], .modal-footer #assignBlocksToSidebars input[class="button defaultButton"] + input[value='delete'], #assignBlocksToSidebars .modal-footer input[class="button defaultButton"] + input[value='delete'], .modal-footer .btn + input[value='Delete'], .modal-footer input[type="submit"] + input[value='Delete'], .modal-footer input[value="cancel"] + input[value='Delete'], .modal-footer input[value="Cancel"] + input[value='Delete'], .modal-footer input[value='delete'] + input[value='Delete'], .modal-footer input[value='Delete'] + input[value='Delete'], .modal-footer #assignBlocksToSidebars input[class="button defaultButton"] + input[value='Delete'], #assignBlocksToSidebars .modal-footer input[class="button defaultButton"] + input[value='Delete'], .modal-footer #assignBlocksToSidebars .btn + input[class="button defaultButton"], #assignBlocksToSidebars .modal-footer .btn + input[class="button defaultButton"], .modal-footer #assignBlocksToSidebars input[type="submit"] + input[class="button defaultButton"], #assignBlocksToSidebars .modal-footer input[type="submit"] + input[class="button defaultButton"], .modal-footer #assignBlocksToSidebars input[value="cancel"] + input[class="button defaultButton"], #assignBlocksToSidebars .modal-footer input[value="cancel"] + input[class="button defaultButton"], .modal-footer #assignBlocksToSidebars input[value="Cancel"] + input[class="button defaultButton"], #assignBlocksToSidebars .modal-footer input[value="Cancel"] + input[class="button defaultButton"], .modal-footer #assignBlocksToSidebars input[value='delete'] + input[class="button defaultButton"], #assignBlocksToSidebars .modal-footer input[value='delete'] + input[class="button defaultButton"], .modal-footer #assignBlocksToSidebars input[value='Delete'] + input[class="button defaultButton"], #assignBlocksToSidebars .modal-footer input[value='Delete'] + input[class="button defaultButton"], .modal-footer #assignBlocksToSidebars input[class="button defaultButton"] + input[class="button defaultButton"], #assignBlocksToSidebars .modal-footer input[class="button defaultButton"] + input[class="button defaultButton"] {
+.modal-footer .btn + .btn, .modal-footer input[type="submit"] + .btn, .modal-footer input[value="cancel"] + .btn, .modal-footer input[value="Cancel"] + .btn, .modal-footer input[value='delete'] + .btn, .modal-footer input[value='Delete'] + .btn, .modal-footer input[value='Close'] + .btn, .modal-footer input[value='close'] + .btn, .modal-footer #assignBlocksToSidebars input[class="button defaultButton"] + .btn, #assignBlocksToSidebars .modal-footer input[class="button defaultButton"] + .btn, .modal-footer .btn + input[type="submit"], .modal-footer input[type="submit"] + input[type="submit"], .modal-footer input[value="cancel"] + input[type="submit"], .modal-footer input[value="Cancel"] + input[type="submit"], .modal-footer input[value='delete'] + input[type="submit"], .modal-footer input[value='Delete'] + input[type="submit"], .modal-footer input[value='Close'] + input[type="submit"], .modal-footer input[value='close'] + input[type="submit"], .modal-footer #assignBlocksToSidebars input[class="button defaultButton"] + input[type="submit"], #assignBlocksToSidebars .modal-footer input[class="button defaultButton"] + input[type="submit"], .modal-footer .btn + input[value="cancel"], .modal-footer input[type="submit"] + input[value="cancel"], .modal-footer input[value="cancel"] + input[value="cancel"], .modal-footer input[value="Cancel"] + input[value="cancel"], .modal-footer input[value='delete'] + input[value="cancel"], .modal-footer input[value='Delete'] + input[value="cancel"], .modal-footer input[value='Close'] + input[value="cancel"], .modal-footer input[value='close'] + input[value="cancel"], .modal-footer #assignBlocksToSidebars input[class="button defaultButton"] + input[value="cancel"], #assignBlocksToSidebars .modal-footer input[class="button defaultButton"] + input[value="cancel"], .modal-footer .btn + input[value="Cancel"], .modal-footer input[type="submit"] + input[value="Cancel"], .modal-footer input[value="cancel"] + input[value="Cancel"], .modal-footer input[value="Cancel"] + input[value="Cancel"], .modal-footer input[value='delete'] + input[value="Cancel"], .modal-footer input[value='Delete'] + input[value="Cancel"], .modal-footer input[value='Close'] + input[value="Cancel"], .modal-footer input[value='close'] + input[value="Cancel"], .modal-footer #assignBlocksToSidebars input[class="button defaultButton"] + input[value="Cancel"], #assignBlocksToSidebars .modal-footer input[class="button defaultButton"] + input[value="Cancel"], .modal-footer .btn + input[value='delete'], .modal-footer input[type="submit"] + input[value='delete'], .modal-footer input[value="cancel"] + input[value='delete'], .modal-footer input[value="Cancel"] + input[value='delete'], .modal-footer input[value='delete'] + input[value='delete'], .modal-footer input[value='Delete'] + input[value='delete'], .modal-footer input[value='Close'] + input[value='delete'], .modal-footer input[value='close'] + input[value='delete'], .modal-footer #assignBlocksToSidebars input[class="button defaultButton"] + input[value='delete'], #assignBlocksToSidebars .modal-footer input[class="button defaultButton"] + input[value='delete'], .modal-footer .btn + input[value='Delete'], .modal-footer input[type="submit"] + input[value='Delete'], .modal-footer input[value="cancel"] + input[value='Delete'], .modal-footer input[value="Cancel"] + input[value='Delete'], .modal-footer input[value='delete'] + input[value='Delete'], .modal-footer input[value='Delete'] + input[value='Delete'], .modal-footer input[value='Close'] + input[value='Delete'], .modal-footer input[value='close'] + input[value='Delete'], .modal-footer #assignBlocksToSidebars input[class="button defaultButton"] + input[value='Delete'], #assignBlocksToSidebars .modal-footer input[class="button defaultButton"] + input[value='Delete'], .modal-footer .btn + input[value='Close'], .modal-footer input[type="submit"] + input[value='Close'], .modal-footer input[value="cancel"] + input[value='Close'], .modal-footer input[value="Cancel"] + input[value='Close'], .modal-footer input[value='delete'] + input[value='Close'], .modal-footer input[value='Delete'] + input[value='Close'], .modal-footer input[value='Close'] + input[value='Close'], .modal-footer input[value='close'] + input[value='Close'], .modal-footer #assignBlocksToSidebars input[class="button defaultButton"] + input[value='Close'], #assignBlocksToSidebars .modal-footer input[class="button defaultButton"] + input[value='Close'], .modal-footer .btn + input[value='close'], .modal-footer input[type="submit"] + input[value='close'], .modal-footer input[value="cancel"] + input[value='close'], .modal-footer input[value="Cancel"] + input[value='close'], .modal-footer input[value='delete'] + input[value='close'], .modal-footer input[value='Delete'] + input[value='close'], .modal-footer input[value='Close'] + input[value='close'], .modal-footer input[value='close'] + input[value='close'], .modal-footer #assignBlocksToSidebars input[class="button defaultButton"] + input[value='close'], #assignBlocksToSidebars .modal-footer input[class="button defaultButton"] + input[value='close'], .modal-footer #assignBlocksToSidebars .btn + input[class="button defaultButton"], #assignBlocksToSidebars .modal-footer .btn + input[class="button defaultButton"], .modal-footer #assignBlocksToSidebars input[type="submit"] + input[class="button defaultButton"], #assignBlocksToSidebars .modal-footer input[type="submit"] + input[class="button defaultButton"], .modal-footer #assignBlocksToSidebars input[value="cancel"] + input[class="button defaultButton"], #assignBlocksToSidebars .modal-footer input[value="cancel"] + input[class="button defaultButton"], .modal-footer #assignBlocksToSidebars input[value="Cancel"] + input[class="button defaultButton"], #assignBlocksToSidebars .modal-footer input[value="Cancel"] + input[class="button defaultButton"], .modal-footer #assignBlocksToSidebars input[value='delete'] + input[class="button defaultButton"], #assignBlocksToSidebars .modal-footer input[value='delete'] + input[class="button defaultButton"], .modal-footer #assignBlocksToSidebars input[value='Delete'] + input[class="button defaultButton"], #assignBlocksToSidebars .modal-footer input[value='Delete'] + input[class="button defaultButton"], .modal-footer #assignBlocksToSidebars input[value='Close'] + input[class="button defaultButton"], #assignBlocksToSidebars .modal-footer input[value='Close'] + input[class="button defaultButton"], .modal-footer #assignBlocksToSidebars input[value='close'] + input[class="button defaultButton"], #assignBlocksToSidebars .modal-footer input[value='close'] + input[class="button defaultButton"], .modal-footer #assignBlocksToSidebars input[class="button defaultButton"] + input[class="button defaultButton"], #assignBlocksToSidebars .modal-footer input[class="button defaultButton"] + input[class="button defaultButton"] {
   margin-left: 5px;
   margin-bottom: 0;
 }
 /* line 115, ../sass/bootstrap/_modals.scss */
-.modal-footer .btn-group .btn + .btn, .modal-footer .btn-group input[type="submit"] + .btn, .modal-footer .btn-group input[value="cancel"] + .btn, .modal-footer .btn-group input[value="Cancel"] + .btn, .modal-footer .btn-group input[value='delete'] + .btn, .modal-footer .btn-group input[value='Delete'] + .btn, .modal-footer .btn-group #assignBlocksToSidebars input[class="button defaultButton"] + .btn, #assignBlocksToSidebars .modal-footer .btn-group input[class="button defaultButton"] + .btn, .modal-footer .btn-group .btn + input[type="submit"], .modal-footer .btn-group input[type="submit"] + input[type="submit"], .modal-footer .btn-group input[value="cancel"] + input[type="submit"], .modal-footer .btn-group input[value="Cancel"] + input[type="submit"], .modal-footer .btn-group input[value='delete'] + input[type="submit"], .modal-footer .btn-group input[value='Delete'] + input[type="submit"], .modal-footer .btn-group #assignBlocksToSidebars input[class="button defaultButton"] + input[type="submit"], #assignBlocksToSidebars .modal-footer .btn-group input[class="button defaultButton"] + input[type="submit"], .modal-footer .btn-group .btn + input[value="cancel"], .modal-footer .btn-group input[type="submit"] + input[value="cancel"], .modal-footer .btn-group input[value="cancel"] + input[value="cancel"], .modal-footer .btn-group input[value="Cancel"] + input[value="cancel"], .modal-footer .btn-group input[value='delete'] + input[value="cancel"], .modal-footer .btn-group input[value='Delete'] + input[value="cancel"], .modal-footer .btn-group #assignBlocksToSidebars input[class="button defaultButton"] + input[value="cancel"], #assignBlocksToSidebars .modal-footer .btn-group input[class="button defaultButton"] + input[value="cancel"], .modal-footer .btn-group .btn + input[value="Cancel"], .modal-footer .btn-group input[type="submit"] + input[value="Cancel"], .modal-footer .btn-group input[value="cancel"] + input[value="Cancel"], .modal-footer .btn-group input[value="Cancel"] + input[value="Cancel"], .modal-footer .btn-group input[value='delete'] + input[value="Cancel"], .modal-footer .btn-group input[value='Delete'] + input[value="Cancel"], .modal-footer .btn-group #assignBlocksToSidebars input[class="button defaultButton"] + input[value="Cancel"], #assignBlocksToSidebars .modal-footer .btn-group input[class="button defaultButton"] + input[value="Cancel"], .modal-footer .btn-group .btn + input[value='delete'], .modal-footer .btn-group input[type="submit"] + input[value='delete'], .modal-footer .btn-group input[value="cancel"] + input[value='delete'], .modal-footer .btn-group input[value="Cancel"] + input[value='delete'], .modal-footer .btn-group input[value='delete'] + input[value='delete'], .modal-footer .btn-group input[value='Delete'] + input[value='delete'], .modal-footer .btn-group #assignBlocksToSidebars input[class="button defaultButton"] + input[value='delete'], #assignBlocksToSidebars .modal-footer .btn-group input[class="button defaultButton"] + input[value='delete'], .modal-footer .btn-group .btn + input[value='Delete'], .modal-footer .btn-group input[type="submit"] + input[value='Delete'], .modal-footer .btn-group input[value="cancel"] + input[value='Delete'], .modal-footer .btn-group input[value="Cancel"] + input[value='Delete'], .modal-footer .btn-group input[value='delete'] + input[value='Delete'], .modal-footer .btn-group input[value='Delete'] + input[value='Delete'], .modal-footer .btn-group #assignBlocksToSidebars input[class="button defaultButton"] + input[value='Delete'], #assignBlocksToSidebars .modal-footer .btn-group input[class="button defaultButton"] + input[value='Delete'], .modal-footer .btn-group #assignBlocksToSidebars .btn + input[class="button defaultButton"], #assignBlocksToSidebars .modal-footer .btn-group .btn + input[class="button defaultButton"], .modal-footer .btn-group #assignBlocksToSidebars input[type="submit"] + input[class="button defaultButton"], #assignBlocksToSidebars .modal-footer .btn-group input[type="submit"] + input[class="button defaultButton"], .modal-footer .btn-group #assignBlocksToSidebars input[value="cancel"] + input[class="button defaultButton"], #assignBlocksToSidebars .modal-footer .btn-group input[value="cancel"] + input[class="button defaultButton"], .modal-footer .btn-group #assignBlocksToSidebars input[value="Cancel"] + input[class="button defaultButton"], #assignBlocksToSidebars .modal-footer .btn-group input[value="Cancel"] + input[class="button defaultButton"], .modal-footer .btn-group #assignBlocksToSidebars input[value='delete'] + input[class="button defaultButton"], #assignBlocksToSidebars .modal-footer .btn-group input[value='delete'] + input[class="button defaultButton"], .modal-footer .btn-group #assignBlocksToSidebars input[value='Delete'] + input[class="button defaultButton"], #assignBlocksToSidebars .modal-footer .btn-group input[value='Delete'] + input[class="button defaultButton"], .modal-footer .btn-group #assignBlocksToSidebars input[class="button defaultButton"] + input[class="button defaultButton"], #assignBlocksToSidebars .modal-footer .btn-group input[class="button defaultButton"] + input[class="button defaultButton"] {
+.modal-footer .btn-group .btn + .btn, .modal-footer .btn-group input[type="submit"] + .btn, .modal-footer .btn-group input[value="cancel"] + .btn, .modal-footer .btn-group input[value="Cancel"] + .btn, .modal-footer .btn-group input[value='delete'] + .btn, .modal-footer .btn-group input[value='Delete'] + .btn, .modal-footer .btn-group input[value='Close'] + .btn, .modal-footer .btn-group input[value='close'] + .btn, .modal-footer .btn-group #assignBlocksToSidebars input[class="button defaultButton"] + .btn, #assignBlocksToSidebars .modal-footer .btn-group input[class="button defaultButton"] + .btn, .modal-footer .btn-group .btn + input[type="submit"], .modal-footer .btn-group input[type="submit"] + input[type="submit"], .modal-footer .btn-group input[value="cancel"] + input[type="submit"], .modal-footer .btn-group input[value="Cancel"] + input[type="submit"], .modal-footer .btn-group input[value='delete'] + input[type="submit"], .modal-footer .btn-group input[value='Delete'] + input[type="submit"], .modal-footer .btn-group input[value='Close'] + input[type="submit"], .modal-footer .btn-group input[value='close'] + input[type="submit"], .modal-footer .btn-group #assignBlocksToSidebars input[class="button defaultButton"] + input[type="submit"], #assignBlocksToSidebars .modal-footer .btn-group input[class="button defaultButton"] + input[type="submit"], .modal-footer .btn-group .btn + input[value="cancel"], .modal-footer .btn-group input[type="submit"] + input[value="cancel"], .modal-footer .btn-group input[value="cancel"] + input[value="cancel"], .modal-footer .btn-group input[value="Cancel"] + input[value="cancel"], .modal-footer .btn-group input[value='delete'] + input[value="cancel"], .modal-footer .btn-group input[value='Delete'] + input[value="cancel"], .modal-footer .btn-group input[value='Close'] + input[value="cancel"], .modal-footer .btn-group input[value='close'] + input[value="cancel"], .modal-footer .btn-group #assignBlocksToSidebars input[class="button defaultButton"] + input[value="cancel"], #assignBlocksToSidebars .modal-footer .btn-group input[class="button defaultButton"] + input[value="cancel"], .modal-footer .btn-group .btn + input[value="Cancel"], .modal-footer .btn-group input[type="submit"] + input[value="Cancel"], .modal-footer .btn-group input[value="cancel"] + input[value="Cancel"], .modal-footer .btn-group input[value="Cancel"] + input[value="Cancel"], .modal-footer .btn-group input[value='delete'] + input[value="Cancel"], .modal-footer .btn-group input[value='Delete'] + input[value="Cancel"], .modal-footer .btn-group input[value='Close'] + input[value="Cancel"], .modal-footer .btn-group input[value='close'] + input[value="Cancel"], .modal-footer .btn-group #assignBlocksToSidebars input[class="button defaultButton"] + input[value="Cancel"], #assignBlocksToSidebars .modal-footer .btn-group input[class="button defaultButton"] + input[value="Cancel"], .modal-footer .btn-group .btn + input[value='delete'], .modal-footer .btn-group input[type="submit"] + input[value='delete'], .modal-footer .btn-group input[value="cancel"] + input[value='delete'], .modal-footer .btn-group input[value="Cancel"] + input[value='delete'], .modal-footer .btn-group input[value='delete'] + input[value='delete'], .modal-footer .btn-group input[value='Delete'] + input[value='delete'], .modal-footer .btn-group input[value='Close'] + input[value='delete'], .modal-footer .btn-group input[value='close'] + input[value='delete'], .modal-footer .btn-group #assignBlocksToSidebars input[class="button defaultButton"] + input[value='delete'], #assignBlocksToSidebars .modal-footer .btn-group input[class="button defaultButton"] + input[value='delete'], .modal-footer .btn-group .btn + input[value='Delete'], .modal-footer .btn-group input[type="submit"] + input[value='Delete'], .modal-footer .btn-group input[value="cancel"] + input[value='Delete'], .modal-footer .btn-group input[value="Cancel"] + input[value='Delete'], .modal-footer .btn-group input[value='delete'] + input[value='Delete'], .modal-footer .btn-group input[value='Delete'] + input[value='Delete'], .modal-footer .btn-group input[value='Close'] + input[value='Delete'], .modal-footer .btn-group input[value='close'] + input[value='Delete'], .modal-footer .btn-group #assignBlocksToSidebars input[class="button defaultButton"] + input[value='Delete'], #assignBlocksToSidebars .modal-footer .btn-group input[class="button defaultButton"] + input[value='Delete'], .modal-footer .btn-group .btn + input[value='Close'], .modal-footer .btn-group input[type="submit"] + input[value='Close'], .modal-footer .btn-group input[value="cancel"] + input[value='Close'], .modal-footer .btn-group input[value="Cancel"] + input[value='Close'], .modal-footer .btn-group input[value='delete'] + input[value='Close'], .modal-footer .btn-group input[value='Delete'] + input[value='Close'], .modal-footer .btn-group input[value='Close'] + input[value='Close'], .modal-footer .btn-group input[value='close'] + input[value='Close'], .modal-footer .btn-group #assignBlocksToSidebars input[class="button defaultButton"] + input[value='Close'], #assignBlocksToSidebars .modal-footer .btn-group input[class="button defaultButton"] + input[value='Close'], .modal-footer .btn-group .btn + input[value='close'], .modal-footer .btn-group input[type="submit"] + input[value='close'], .modal-footer .btn-group input[value="cancel"] + input[value='close'], .modal-footer .btn-group input[value="Cancel"] + input[value='close'], .modal-footer .btn-group input[value='delete'] + input[value='close'], .modal-footer .btn-group input[value='Delete'] + input[value='close'], .modal-footer .btn-group input[value='Close'] + input[value='close'], .modal-footer .btn-group input[value='close'] + input[value='close'], .modal-footer .btn-group #assignBlocksToSidebars input[class="button defaultButton"] + input[value='close'], #assignBlocksToSidebars .modal-footer .btn-group input[class="button defaultButton"] + input[value='close'], .modal-footer .btn-group #assignBlocksToSidebars .btn + input[class="button defaultButton"], #assignBlocksToSidebars .modal-footer .btn-group .btn + input[class="button defaultButton"], .modal-footer .btn-group #assignBlocksToSidebars input[type="submit"] + input[class="button defaultButton"], #assignBlocksToSidebars .modal-footer .btn-group input[type="submit"] + input[class="button defaultButton"], .modal-footer .btn-group #assignBlocksToSidebars input[value="cancel"] + input[class="button defaultButton"], #assignBlocksToSidebars .modal-footer .btn-group input[value="cancel"] + input[class="button defaultButton"], .modal-footer .btn-group #assignBlocksToSidebars input[value="Cancel"] + input[class="button defaultButton"], #assignBlocksToSidebars .modal-footer .btn-group input[value="Cancel"] + input[class="button defaultButton"], .modal-footer .btn-group #assignBlocksToSidebars input[value='delete'] + input[class="button defaultButton"], #assignBlocksToSidebars .modal-footer .btn-group input[value='delete'] + input[class="button defaultButton"], .modal-footer .btn-group #assignBlocksToSidebars input[value='Delete'] + input[class="button defaultButton"], #assignBlocksToSidebars .modal-footer .btn-group input[value='Delete'] + input[class="button defaultButton"], .modal-footer .btn-group #assignBlocksToSidebars input[value='Close'] + input[class="button defaultButton"], #assignBlocksToSidebars .modal-footer .btn-group input[value='Close'] + input[class="button defaultButton"], .modal-footer .btn-group #assignBlocksToSidebars input[value='close'] + input[class="button defaultButton"], #assignBlocksToSidebars .modal-footer .btn-group input[value='close'] + input[class="button defaultButton"], .modal-footer .btn-group #assignBlocksToSidebars input[class="button defaultButton"] + input[class="button defaultButton"], #assignBlocksToSidebars .modal-footer .btn-group input[class="button defaultButton"] + input[class="button defaultButton"] {
   margin-left: -1px;
 }
 /* line 119, ../sass/bootstrap/_modals.scss */
@@ -8697,7 +8533,7 @@ button.close {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
 /* line 228, ../sass/bootstrap/_carousel.scss */
-.carousel-caption .btn, .carousel-caption input[type="submit"], .carousel-caption input[value="cancel"], .carousel-caption input[value="Cancel"], .carousel-caption input[value='delete'], .carousel-caption input[value='Delete'], .carousel-caption #assignBlocksToSidebars input[class="button defaultButton"], #assignBlocksToSidebars .carousel-caption input[class="button defaultButton"] {
+.carousel-caption .btn, .carousel-caption input[type="submit"], .carousel-caption input[value="cancel"], .carousel-caption input[value="Cancel"], .carousel-caption input[value='delete'], .carousel-caption input[value='Delete'], .carousel-caption input[value='Close'], .carousel-caption input[value='close'], .carousel-caption #assignBlocksToSidebars input[class="button defaultButton"], #assignBlocksToSidebars .carousel-caption input[class="button defaultButton"] {
   text-shadow: none;
 }
 
@@ -9097,50 +8933,379 @@ button.close {
     display: none !important;
   }
 }
+@media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dppx) {
+  /* line 6, ../sass/hacks.scss */
+  .bigFirst:first-letter {
+    padding: 0.0625em !important;
+    line-height: 0.625em !important;
+    margin-top: -1em !important;
+    padding: 0.78125em 0 0 0 !important;
+  }
+
+  /* line 12, ../sass/hacks.scss */
+  sup {
+    left: 0em !important;
+  }
+}
+@media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dppx) and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dppx) and (max-width: 767px) {
+  /* line 16, ../sass/hacks.scss */
+  .notify-badge {
+    margin-top: -0.5em !important;
+  }
+}
+/*
+ * Off Canvas
+ * --------------------------------------------------
+ */
+/* line 9, ../sass/offCanvas.scss */
+.navbar-collapse {
+  max-height: 100%;
+}
+
+/* line 12, ../sass/offCanvas.scss */
+#navbarToggle {
+  margin-left: 1em;
+}
+
+/* line 15, ../sass/offCanvas.scss */
+.transparent {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+  opacity: 0.3;
+}
+
+@media screen and (max-width: 768px) {
+  /* line 20, ../sass/offCanvas.scss */
+  .row-offcanvas {
+    position: relative;
+    -moz-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    min-height: 50em;
+  }
+
+  /* line 25, ../sass/offCanvas.scss */
+  .row-offcanvas-right .sidebar-offcanvas {
+    right: -60%;
+    margin-right: 0px;
+  }
+
+  /* line 31, ../sass/offCanvas.scss */
+  .row-offcanvas-left .sidebar-offcanvas {
+    left: -70%;
+    overflow: hidden !important;
+    background: #ffffff;
+  }
+  /* line 35, ../sass/offCanvas.scss */
+  .row-offcanvas-left .sidebar-offcanvas .sidebar-nav {
+    margin-top: -.6em;
+    width: 100%;
+  }
+
+  /* line 41, ../sass/offCanvas.scss */
+  .row-offcanvas-right.active {
+    right: 60%;
+  }
+
+  /* line 44, ../sass/offCanvas.scss */
+  .row-offcanvas-left.active {
+    left: 70%;
+  }
+
+  /* line 47, ../sass/offCanvas.scss */
+  .sidebar-offcanvas {
+    position: absolute;
+    top: -1.45em;
+    width: 70%;
+    min-height: 120em;
+    display: none;
+    border-top: none;
+  }
+  /* line 57, ../sass/offCanvas.scss */
+  .sidebar-offcanvas .sidebar-nav {
+    min-height: 120em;
+  }
+  /* line 60, ../sass/offCanvas.scss */
+  .sidebar-offcanvas .sidebar-nav #userWelcome {
+    padding-left: 3em !important;
+    color: #333333;
+  }
+  /* line 64, ../sass/offCanvas.scss */
+  .sidebar-offcanvas .sidebar-nav li.dropdown.open a.dropdown-toggle {
+    background: #660000;
+  }
+  /* line 67, ../sass/offCanvas.scss */
+  .sidebar-offcanvas .sidebar-nav ul.nav.navbar-nav {
+    min-height: 100% !important;
+  }
+  /* line 70, ../sass/offCanvas.scss */
+  .sidebar-offcanvas .sidebar-nav ul.dropdown-menu > li {
+    margin-left: -2em !important;
+  }
+  /* line 73, ../sass/offCanvas.scss */
+  .sidebar-offcanvas .sidebar-nav ul.dropdown-menu > li a {
+    padding-left: 2.0625em !important;
+  }
+  /* line 79, ../sass/offCanvas.scss */
+  .sidebar-offcanvas li {
+    width: 100%;
+    height: 100%;
+    margin: 0 !important;
+    padding-left: 1.5em !important;
+    color: #ffffff;
+    font-size: 1.4em;
+  }
+}
+/* iPhone / mobile webkit */
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/*! sanitize.css | CC0 Public Domain | github.com/jonathantneal/sanitize.css */
+/*
+ * Normalization
+ */
+/* line 23, ../vendors/sanitize.scss */
+:root {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  overflow-y: scroll;
+  text-size-adjust: 100%;
+}
+
+/* line 29, ../vendors/sanitize.scss */
+audio:not([controls]) {
+  display: none;
+}
+
+/* line 33, ../vendors/sanitize.scss */
+details {
+  display: block;
+}
+
+/* line 38, ../vendors/sanitize.scss */
+input[type="number"] {
+  width: auto;
+}
+/* line 42, ../vendors/sanitize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+}
+/* line 45, ../vendors/sanitize.scss */
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 52, ../vendors/sanitize.scss */
+main {
+  display: block;
+}
+
+/* line 56, ../vendors/sanitize.scss */
+summary {
+  display: block;
+}
+
+/* line 60, ../vendors/sanitize.scss */
+pre {
+  overflow: auto;
+}
+
+/* line 64, ../vendors/sanitize.scss */
+progress {
+  display: inline-block;
+}
+
+/* line 68, ../vendors/sanitize.scss */
+small {
+  font-size: 75%;
+}
+
+/* line 72, ../vendors/sanitize.scss */
+template {
+  display: none;
+}
+
+/* line 76, ../vendors/sanitize.scss */
+textarea {
+  overflow: auto;
+}
+
+/* line 80, ../vendors/sanitize.scss */
+[hidden] {
+  display: none;
+}
+
+/* line 84, ../vendors/sanitize.scss */
+[unselectable] {
+  user-select: none;
+}
+
+/*
+ * Universal inheritance
+ */
+/* line 94, ../vendors/sanitize.scss */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+}
+
+/* line 102, ../vendors/sanitize.scss */
+* {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  line-height: inherit;
+}
+
+/*
+ * Opinionated defaults
+ */
+/* line 118, ../vendors/sanitize.scss */
+*,
+*::before,
+*::after {
+  border-style: solid;
+  border-width: 0;
+}
+
+/* line 127, ../vendors/sanitize.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 134, ../vendors/sanitize.scss */
+:root {
+  box-sizing: border-box;
+  cursor: default;
+  font-family: "PT Sans", sans-serif;
+  line-height: 1.5em;
+  text-rendering: optimizeLegibility;
+  vertical-align: top;
+}
+
+/* line 145, ../vendors/sanitize.scss */
+button,
+input,
+select,
+textarea {
+  background: transparent;
+}
+
+/* line 154, ../vendors/sanitize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+}
+
+/* line 163, ../vendors/sanitize.scss */
+input {
+  min-height: 1.5em;
+}
+
+/* line 169, ../vendors/sanitize.scss */
+nav ol,
+nav ul {
+  list-style: none;
+}
+
+/* line 176, ../vendors/sanitize.scss */
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+/* line 180, ../vendors/sanitize.scss */
+select::-ms-expand {
+  display: none;
+}
+/* line 184, ../vendors/sanitize.scss */
+select::-ms-value {
+  color: currentColor;
+}
+
+/* line 191, ../vendors/sanitize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 198, ../vendors/sanitize.scss */
+textarea {
+  resize: vertical;
+}
+
+/* line 204, ../vendors/sanitize.scss */
+::selection {
+  background-color: #B3D4FC;
+  text-shadow: none;
+}
+
+@media screen {
+  /* line 212, ../vendors/sanitize.scss */
+  [hidden~="screen"] {
+    display: inherit;
+  }
+
+  /* line 216, ../vendors/sanitize.scss */
+  [hidden~="screen"]:not(:active):not(:focus):not(:target) {
+    clip: rect(0 0 0 0) !important;
+    position: absolute !important;
+  }
+}
 /*
 * =====================================
 * Main elements
 * =====================================
 */
-/* line 12, ../sass/style.scss */
+/* line 16, ../sass/screen.scss */
 body {
   font-family: "PT Sans", sans-serif;
-  font-size: 1em;
 }
 
-/* line 17, ../sass/style.scss */
+/* line 20, ../sass/screen.scss */
 a:link, a:visited, a:active {
   color: #557082;
 }
-/* line 20, ../sass/style.scss */
+/* line 23, ../sass/screen.scss */
 a:hover, a:focus {
   background: none;
   color: #12252c !important;
 }
 
-/* line 26, ../sass/style.scss */
+/* line 29, ../sass/screen.scss */
 textarea {
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
 }
-/* line 30, ../sass/style.scss */
+/* line 33, ../sass/screen.scss */
 textarea.form-control, textarea.textField, textarea.selectMenu, textarea.textArea {
   width: 100%;
 }
 
-/* line 35, ../sass/style.scss */
+/* line 38, ../sass/screen.scss */
 label {
   font-weight: bold;
 }
 
-/* line 39, ../sass/style.scss */
+/* line 42, ../sass/screen.scss */
 li {
   vertical-align: middle;
 }
 
-/* line 43, ../sass/style.scss */
+/* line 48, ../sass/screen.scss */
+html.no-js .collapse {
+  display: block;
+}
+
+/* line 52, ../sass/screen.scss */
 #body.container {
   min-height: 50em;
 }
@@ -9150,18 +9315,18 @@ li {
 * Header elements
 * =====================================
 */
-/* line 52, ../sass/style.scss */
+/* line 61, ../sass/screen.scss */
 #header {
   background: url("../img/vt_header_secondary_bg_960.jpg") repeat scroll center top transparent !important;
   border: 0em none;
-  height: 14.7em;
+  height: 10.4375em;
   padding: 0;
   -webkit-filter-margin: 0em;
   filter-margin: 0em;
   margin: 0em;
   min-width: 100% !important;
 }
-/* line 61, ../sass/style.scss */
+/* line 70, ../sass/screen.scss */
 #header #headerTitle {
   color: #ffffff;
 }
@@ -9171,32 +9336,273 @@ li {
 * Navbar elements
 * =====================================
 */
-/* line 71, ../sass/style.scss */
-#navbar {
+/* line 80, ../sass/screen.scss */
+.navbar {
   border-radius: 0em;
+  max-height: 1.5625em;
   border: none;
-  background: #333333;
-  font-size: 1.5em;
 }
-/* line 78, ../sass/style.scss */
-#navbar .menu > li {
-  padding: 0 !important;
+/* line 85, ../sass/screen.scss */
+.navbar .navbar-right {
+  margin-right: .5em;
 }
-/* line 80, ../sass/style.scss */
-#navbar .menu > li a {
+/* line 89, ../sass/screen.scss */
+.navbar .nav > li > a {
   color: #ffffff;
   text-transform: uppercase;
   font-weight: bold;
   -webkit-filter-margin-top: -0.0625em;
   filter-margin-top: -0.0625em;
   margin-top: -0.0625em;
-  padding: 1px 16px 11px 16px !important;
+  padding-bottom: 16px !important;
 }
-/* line 90, ../sass/style.scss */
-#navbar .menu > li > a:hover {
+/* line 98, ../sass/screen.scss */
+.navbar .nav > li > a:hover {
   background: #ff6600;
   color: #ffffff !important;
   text-decoration: none;
+}
+/* line 104, ../sass/screen.scss */
+.navbar .nav li.dropdown.open.active > .dropdown-toggle {
+  background: #ff6600;
+  color: #ffffff;
+}
+
+/* line 112, ../sass/screen.scss */
+.nav > li > a:hover {
+  background: #ff6600;
+  text-decoration: none;
+}
+/* line 116, ../sass/screen.scss */
+.nav .nav-divider {
+  margin: 0;
+}
+
+/* line 121, ../sass/screen.scss */
+.navbar-default {
+  background: #333333;
+}
+/* line 124, ../sass/screen.scss */
+.navbar-default .navbar-brand {
+  color: #c2c1ba;
+  font-size: 1.25em;
+}
+/* line 129, ../sass/screen.scss */
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  background: #ff6600;
+  color: #ffffff;
+}
+
+/* line 137, ../sass/screen.scss */
+#user .dropdown-menu {
+  margin-right: -5.4em;
+}
+
+/* line 142, ../sass/screen.scss */
+#userNotify .dropdown-menu, #notifySub .dropdown-menu {
+  margin-right: -.8em;
+}
+
+/* line 147, ../sass/screen.scss */
+#searchDrop .dropdown-menu {
+  margin-right: -8.7em;
+}
+
+/* line 152, ../sass/screen.scss */
+#notifySub {
+  padding-right: 1em;
+}
+
+/* line 156, ../sass/screen.scss */
+.dropdown-menu {
+  -webkit-filter-margin-top: -0.2em !important;
+  filter-margin-top: -0.2em !important;
+  margin-top: -0.2em !important;
+  padding: 0;
+}
+/* line 160, ../sass/screen.scss */
+.dropdown-menu li > a {
+  font-size: 1.1em;
+}
+/* line 163, ../sass/screen.scss */
+.dropdown-menu.pull-right {
+  -webkit-filter-margin-top: -1.5em !important;
+  filter-margin-top: -1.5em !important;
+  margin-top: -1.5em !important;
+}
+
+/* line 169, ../sass/screen.scss */
+.dropdown-menu li > a, .sidebar-offcanvas li > a {
+  display: inline-block;
+  padding: 0.1875em 1.25em !important;
+  *zoom: 1;
+  font-weight: normal;
+  line-height: 1.75em !important;
+  color: #333333;
+  white-space: nowrap;
+}
+/* line 39, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_hacks.scss */
+.dropdown-menu li > a, .sidebar-offcanvas li > a {
+  display: block;
+}
+/* line 22, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+.dropdown-menu li > a:after, .sidebar-offcanvas li > a:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+/* line 179, ../sass/screen.scss */
+.dropdown-menu li > a:hover, .dropdown-menu li > a:focus, .sidebar-offcanvas li > a:hover, .sidebar-offcanvas li > a:focus {
+  color: #ffffff !important;
+  text-decoration: none;
+  background: #ff6600;
+}
+/* line 186, ../sass/screen.scss */
+.dropdown-menu li > .active > a, .dropdown-menu li > .active > a:hover, .sidebar-offcanvas li > .active > a, .sidebar-offcanvas li > .active > a:hover {
+  color: #ff6600;
+  text-decoration: none;
+  outline: 0;
+  background: #ff6600;
+}
+/* line 193, ../sass/screen.scss */
+.dropdown-menu li:first-child > a:hover,
+.dropdown-menu li:first-child > a:focus, .sidebar-offcanvas li:first-child > a:hover,
+.sidebar-offcanvas li:first-child > a:focus {
+  -moz-border-radius-topleft: 0.3125em;
+  -webkit-border-top-left-radius: 0.3125em;
+  border-top-left-radius: 0.3125em;
+  -moz-border-radius-topright: 0.3125em;
+  -webkit-border-top-right-radius: 0.3125em;
+  border-top-right-radius: 0.3125em;
+}
+/* line 198, ../sass/screen.scss */
+.dropdown-menu li:last-child > a:hover,
+.dropdown-menu li:last-child > a:focus, .sidebar-offcanvas li:last-child > a:hover,
+.sidebar-offcanvas li:last-child > a:focus {
+  -moz-border-radius-bottomleft: 0.3125em;
+  -webkit-border-bottom-left-radius: 0.3125em;
+  border-bottom-left-radius: 0.3125em;
+  -moz-border-radius-bottomright: 0.3125em;
+  -webkit-border-bottom-right-radius: 0.3125em;
+  border-bottom-right-radius: 0.3125em;
+}
+
+/* line 205, ../sass/screen.scss */
+.dropdown-submenu:hover > a {
+  color: #ffffff;
+  text-decoration: none;
+  background: #ff6600;
+}
+
+/* line 211, ../sass/screen.scss */
+#loginDisplay {
+  padding: 0.125em;
+}
+
+/* line 215, ../sass/screen.scss */
+#userNotify, #user, #info, #searchDrop, #notifySub {
+  font-size: 1.29em;
+  line-height: 1.3333333em;
+  height: 2.84375em;
+}
+
+/* line 221, ../sass/screen.scss */
+#userNotify > a, #user > a, #info > a, #searchDrop > a, #notifySub > a {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 226, ../sass/screen.scss */
+#userNotify > a > .glyphicon, #user > a > .glyphicon, #info > a > .glyphicon, #searchDrop > a > .glyphicon, #notifySub > a > .glyphicon {
+  font-size: 0.9375em;
+  padding-top: 0.0625em;
+  color: #ffffff;
+}
+
+/* line 231, ../sass/screen.scss */
+#userNotify, #info {
+  padding-right: 0.5em !important;
+}
+/* line 233, ../sass/screen.scss */
+#userNotify .dropdown-menu, #info .dropdown-menu {
+  -moz-border-radius-topleft: 0.3125em;
+  -webkit-border-top-left-radius: 0.3125em;
+  border-top-left-radius: 0.3125em;
+  -moz-border-radius-topright: 0.3125em;
+  -webkit-border-top-right-radius: 0.3125em;
+  border-top-right-radius: 0.3125em;
+  -moz-border-radius-bottomleft: 0.3125em;
+  -webkit-border-bottom-left-radius: 0.3125em;
+  border-bottom-left-radius: 0.3125em;
+  -moz-border-radius-bottomright: 0.3125em;
+  -webkit-border-bottom-right-radius: 0.3125em;
+  border-bottom-right-radius: 0.3125em;
+}
+
+/* line 241, ../sass/screen.scss */
+#searchTarget {
+  width: 20em;
+}
+/* line 244, ../sass/screen.scss */
+#searchTarget form .input-group {
+  padding-bottom: .5em;
+}
+/* line 246, ../sass/screen.scss */
+#searchTarget form .input-group #query {
+  width: 13em;
+}
+
+/* line 252, ../sass/screen.scss */
+.notify-badge {
+  width: auto;
+  height: auto;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  -webkit-filter-margin-top: -1.3em;
+  filter-margin-top: -1.3em;
+  -webkit-filter-margin-left: -0.4em !important;
+  filter-margin-left: -0.4em !important;
+  margin-top: -1em;
+  margin-left: -.42em;
+}
+
+/* line 262, ../sass/screen.scss */
+.notify-badge > span {
+  background: #660000;
+  font-size: .55em;
+}
+
+/* line 267, ../sass/screen.scss */
+#searchBar {
+  padding-top: .5em;
+}
+
+/* line 271, ../sass/screen.scss */
+#userWelcome {
+  margin-left: .5em;
+}
+
+/* line 276, ../sass/screen.scss */
+#user .dropdown-menu {
+  -moz-border-radius-topleft: 0.3125em;
+  -webkit-border-top-left-radius: 0.3125em;
+  border-top-left-radius: 0.3125em;
+  -moz-border-radius-topright: 0.3125em;
+  -webkit-border-top-right-radius: 0.3125em;
+  border-top-right-radius: 0.3125em;
+  -moz-border-radius-bottomleft: 0.3125em;
+  -webkit-border-bottom-left-radius: 0.3125em;
+  border-bottom-left-radius: 0.3125em;
+  -moz-border-radius-bottomright: 0.3125em;
+  -webkit-border-bottom-right-radius: 0.3125em;
+  border-bottom-right-radius: 0.3125em;
 }
 
 /*
@@ -9204,52 +9610,58 @@ li {
 * Body/content elements
 * =====================================
 */
-/* line 102, ../sass/style.scss */
-#sidebar, #rightSidebar, #leftSidebar {
-  font-size: 1.125em !important;
+/* line 290, ../sass/screen.scss */
+#container {
+  width: 100%;
+  min-width: 100% !important;
+  overflow: hidden !important;
 }
-
-/* line 106, ../sass/style.scss */
+/* line 294, ../sass/screen.scss */
 #container #breadcrumb {
   width: auto !important;
   font-size: 1.1em !important;
+  margin-top: -2.5em;
 }
-/* line 111, ../sass/style.scss */
+/* line 300, ../sass/screen.scss */
 #container #breadcrumb a:link, #container #breadcrumb a:visited, #container #breadcrumb a:active {
   color: #12252c;
 }
-/* line 114, ../sass/style.scss */
+/* line 303, ../sass/screen.scss */
 #container #breadcrumb a:hover, #container #breadcrumb a:focus {
   background: none;
   color: #660000 !important;
 }
-/* line 119, ../sass/style.scss */
-#container #breadcrumb ol.breadcrumb li:first-child, #container #breadcrumb ol#breadcrumb li:first-child {
+/* line 308, ../sass/screen.scss */
+#container #breadcrumb ol.breadcrumb li:first-child {
   padding-left: 1em;
 }
 
-/* line 124, ../sass/style.scss */
+/* line 313, ../sass/screen.scss */
 #main {
-  margin-top: -.5em;
+  -webkit-filter-margin-left: 0 !important;
+  filter-margin-left: 0 !important;
+  margin-left: 0 !important;
+  width: 90% !important;
   color: #333333;
   font-size: 1.5em;
   line-height: 1.25em;
+  padding: 0 0 0 1em !important;
 }
-/* line 130, ../sass/style.scss */
+/* line 322, ../sass/screen.scss */
 #main > h2, #main > h3, #main > h4 {
   -webkit-filter-margin-left: 5%;
   filter-margin-left: 5%;
   margin-left: 5%;
 }
-/* line 135, ../sass/style.scss */
+/* line 327, ../sass/screen.scss */
 #main > h2 {
   font-size: 1.975em;
 }
-/* line 139, ../sass/style.scss */
+/* line 331, ../sass/screen.scss */
 #main .scroll-top-wrapper {
   position: fixed;
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
-  filter: alpha(opacity=100);
   visibility: hidden;
   overflow: hidden;
   text-align: center;
@@ -9274,81 +9686,509 @@ li {
   -moz-border-radius-bottomright: 0.625em;
   -webkit-border-bottom-right-radius: 0.625em;
   border-bottom-right-radius: 0.625em;
-  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-/* line 160, ../sass/style.scss */
+/* line 352, ../sass/screen.scss */
 #main .scroll-top-wrapper:hover, #main .scroll-top-wrapper:focus {
   background: #333333;
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
-  filter: alpha(opacity=100);
 }
-/* line 164, ../sass/style.scss */
+/* line 356, ../sass/screen.scss */
 #main .scroll-top-wrapper.show {
   visibility: visible;
   cursor: pointer;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
-  filter: alpha(opacity=50);
 }
-/* line 169, ../sass/style.scss */
+/* line 361, ../sass/screen.scss */
 #main .scroll-top-wrapper i.fa {
   line-height: inherit;
 }
-/* line 172, ../sass/style.scss */
+/* line 364, ../sass/screen.scss */
 #main #content {
   -webkit-filter-margin-left: 5%;
   filter-margin-left: 5%;
   margin-left: 5%;
   border: none;
-  font-size: 1.125em !important;
 }
 
-/* line 181, ../sass/style.scss */
-.label, label {
+/* line 371, ../sass/screen.scss */
+#sidebar, #topBar {
+  display: none;
+}
+
+/* line 375, ../sass/screen.scss */
+.label {
   color: #333333;
-  font-size: 0.9375em;
-  vertical-align: top;
+  font-size: 0.875em;
 }
 
-/* line 188, ../sass/style.scss */
-.value {
-  padding-top: .5em;
-  vertical-align: bottom;
+/* line 379, ../sass/screen.scss */
+.nav-divider {
+  background: #333333;
 }
 
-/* line 194, ../sass/style.scss */
-form p input[type="checkbox"], form p input[type='radio'] {
-  margin-top: -.2em;
-}
-
-/* line 201, ../sass/style.scss */
-.btn-danger, input[value="cancel"], input[value="Cancel"], input[value='delete'], input[value='Delete'] {
+/* line 382, ../sass/screen.scss */
+.btn-danger, input[value="cancel"], input[value="Cancel"], input[value='delete'], input[value='Delete'], input[value='Close'], input[value='close'] {
   background: #660000;
   border-color: #660000;
 }
 
-/* line 205, ../sass/style.scss */
+/* line 386, ../sass/screen.scss */
 .btn-success, input[type="submit"], #assignBlocksToSidebars input[class="button defaultButton"] {
   background: #333333;
   border-color: #333333;
 }
 
-/* line 209, ../sass/style.scss */
+/* line 390, ../sass/screen.scss */
 .btn-info {
   background: #646464;
   border-color: #646464;
 }
 
-/* line 213, ../sass/style.scss */
+/* line 394, ../sass/screen.scss */
 .btn-info:hover, .btn-info:focus, .btn-info:active {
   background: #c2c1ba;
   border-color: #646464;
 }
 
-/* line 217, ../sass/style.scss */
+/* line 398, ../sass/screen.scss */
 .btn-info:focus, .btn-info:active, .btn-info.active:focus {
   outline: 0.3125em auto #646464 !important;
+}
+
+/*
+* =====================================
+* Journal setup form
+* =====================================
+*/
+/* line 406, ../sass/screen.scss */
+ul.steplist li a {
+  color: #557082;
+}
+
+/* line 409, ../sass/screen.scss */
+.form-control:focus, input[class="uploadField"]:focus, .textField:focus, .selectMenu:focus, .textArea:focus {
+  border-color: #646464;
+  -moz-box-shadow: inset 0 0.0625em 0.0625em rgba(194, 193, 186, 0.075), 0 0 0.5em rgba(100, 100, 100, 0.6);
+  -webkit-box-shadow: inset 0 0.0625em 0.0625em rgba(194, 193, 186, 0.075), 0 0 0.5em rgba(100, 100, 100, 0.6);
+  box-shadow: inset 0 0.0625em 0.0625em rgba(194, 193, 186, 0.075), 0 0 0.5em rgba(100, 100, 100, 0.6);
+}
+
+/* line 414, ../sass/screen.scss */
+.formSubheading > p {
+  font-size: 1.125em;
+  font-weight: normal !important;
+}
+
+/* line 420, ../sass/screen.scss */
+h4.checkbox-inline input[type="checkbox"] {
+  margin-top: -0.25em !important;
+}
+
+/* line 426, ../sass/screen.scss */
+.input-group .input-group-addon {
+  padding: 0.375em 0.375em 0 0.375em !important;
+}
+/* line 429, ../sass/screen.scss */
+.input-group input[type="checkbox"] {
+  margin-top: -0.2em !important;
+}
+
+/* line 434, ../sass/screen.scss */
+.emptyInputGroup {
+  border: 0.0625em #ccc solid !important;
+  -moz-border-radius-topleft: 0.25em !important;
+  -webkit-border-top-left-radius: 0.25em !important;
+  border-top-left-radius: 0.25em !important;
+  -moz-border-radius-topright: 0.25em !important;
+  -webkit-border-top-right-radius: 0.25em !important;
+  border-top-right-radius: 0.25em !important;
+  -moz-border-radius-bottomleft: 0.25em !important;
+  -webkit-border-bottom-left-radius: 0.25em !important;
+  border-bottom-left-radius: 0.25em !important;
+  -moz-border-radius-bottomright: 0.25em !important;
+  -webkit-border-bottom-right-radius: 0.25em !important;
+  border-bottom-right-radius: 0.25em !important;
+  background: #eee;
+  font-weight: normal;
+  line-height: 24px;
+  color: #555;
+  padding: 0.375em 0.75em;
+  -webkit-filter-margin-top: -1%;
+  filter-margin-top: -1%;
+  margin-top: -1%;
+  width: 100%;
+  font-size: 1em;
+}
+/* line 450, ../sass/screen.scss */
+.emptyInputGroup input[type="checkbox"], .emptyInputGroup input[type="radio"] {
+  margin: 0 !important;
+}
+/* line 453, ../sass/screen.scss */
+.emptyInputGroup > label {
+  float: left;
+}
+
+/* line 457, ../sass/screen.scss */
+.formOptions {
+  margin-left: 2% !important;
+  -webkit-filter-margin-left: 2% !important;
+  filter-margin-left: 2% !important;
+}
+
+/* line 463, ../sass/screen.scss */
+#userRegistration .formOptions {
+  margin-top: -1em;
+  margin-left: -1em !important;
+}
+/* line 466, ../sass/screen.scss */
+#userRegistration .formOptions .emptyInputGroup {
+  background: #fff;
+  padding-left: 2em;
+}
+
+/* line 474, ../sass/screen.scss */
+#displayNumAnnouncements .emptyInputGroup {
+  background: #fff;
+  padding-left: 2em;
+}
+
+/* line 480, ../sass/screen.scss */
+#template-file, .disabled_img, .img_input_group {
+  height: 100%;
+  padding: 1em 0em 1em .5em;
+}
+
+/* line 485, ../sass/screen.scss */
+table.mceLayout {
+  width: 100% !important;
+}
+
+/* line 488, ../sass/screen.scss */
+.defaultSkin table {
+  float: left;
+}
+
+/* line 493, ../sass/screen.scss */
+.input-group-addon .control-label {
+  margin-top: -.5em;
+}
+
+@media (max-width: 767px) {
+  /*
+  * =====================================
+  * Main elements
+  * =====================================
+  */
+  /* line 504, ../sass/screen.scss */
+  .desktop {
+    display: none;
+  }
+
+  /* line 507, ../sass/screen.scss */
+  .mobile {
+    display: inherit !important;
+  }
+
+  /* line 511, ../sass/screen.scss */
+  #container #breadcrumb {
+    font-size: 1em !important;
+  }
+
+  /* line 514, ../sass/screen.scss */
+  #body.container {
+    width: 100%;
+  }
+
+  /*
+  * =====================================
+  * Navbar elements
+  * =====================================
+  */
+  /* line 522, ../sass/screen.scss */
+  .navbar {
+    max-height: 100%;
+  }
+  /* line 525, ../sass/screen.scss */
+  .navbar .glyphicon {
+    font-size: 1.5em;
+  }
+
+  /* line 530, ../sass/screen.scss */
+  .container .navbar-collapse {
+    padding-right: 0em;
+  }
+  /* line 533, ../sass/screen.scss */
+  .container .navbar-collapse ul.nav.navbar-nav {
+    margin: 0.46875em -1.75em -0.875em;
+  }
+  /* line 536, ../sass/screen.scss */
+  .container .navbar-collapse ul.nav.navbar-nav li {
+    padding-left: 0.625em;
+  }
+  /* line 541, ../sass/screen.scss */
+  .container .navbar-collapse.in {
+    overflow-y: inherit;
+  }
+  /* line 545, ../sass/screen.scss */
+  .container .navbar-default .navbar-brand {
+    font-size: 1.5em;
+  }
+  /* line 550, ../sass/screen.scss */
+  .container #searchBtn > span.glyphicon, .container #userBtn > span.glyphicon, .container #notifyBtn > span.glyphicon, .container #subscribeBtn > span.glyphicon {
+    color: #ffffff;
+  }
+  /* line 554, ../sass/screen.scss */
+  .container .navbar-toggle .icon-bar {
+    width: 1.875em;
+    height: 0.275em;
+  }
+  /* line 558, ../sass/screen.scss */
+  .container .navbar-toggle:hover, .container .navbar-toggle:focus {
+    background-color: #660000 !important;
+    border-color: #660000;
+  }
+  /* line 563, ../sass/screen.scss */
+  .container .navbar-toggle:hover > .notify-badge .badge, .container .navbar-toggle:focus > .notify-badge .badge {
+    background: #333333;
+  }
+  /* line 569, ../sass/screen.scss */
+  .container .navbar-header {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+  /* line 574, ../sass/screen.scss */
+  .container #notifyBtn span {
+    margin-right: -0.5em !important;
+  }
+  /* line 578, ../sass/screen.scss */
+  .container .notify-badge {
+    margin-top: -2.5em;
+    margin-right: -.2em;
+    padding-left: .5em;
+    font-size: 1em !important;
+  }
+  /* line 584, ../sass/screen.scss */
+  .container .notify-badge span {
+    font-size: .625em;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 593, ../sass/screen.scss */
+  .steplist {
+    display: none;
+  }
+
+  /* line 596, ../sass/screen.scss */
+  .mceButton {
+    width: 1.0625em !important;
+    height: 1.0625em !important;
+    margin-right: 0.125em !important;
+  }
+
+  /* line 602, ../sass/screen.scss */
+  #submissionPreparationChecklist .input-group, #notifications .input-group {
+    width: 100%;
+  }
+  /* line 605, ../sass/screen.scss */
+  #submissionPreparationChecklist .input-group-addon, #notifications .input-group-addon {
+    display: inherit;
+    min-width: 100%;
+  }
+  /* line 609, ../sass/screen.scss */
+  #submissionPreparationChecklist .input-group-addon:first-child, #notifications .input-group-addon:first-child {
+    border-right: 1px solid #ccc;
+    -moz-border-radius-topleft: 0.25em !important;
+    -webkit-border-top-left-radius: 0.25em !important;
+    border-top-left-radius: 0.25em !important;
+    -moz-border-radius-topright: 0.25em !important;
+    -webkit-border-top-right-radius: 0.25em !important;
+    border-top-right-radius: 0.25em !important;
+    -moz-border-radius-bottomleft: 0 !important;
+    -webkit-border-bottom-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    -moz-border-radius-bottomright: 0 !important;
+    -webkit-border-bottom-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+  }
+  /* line 616, ../sass/screen.scss */
+  #submissionPreparationChecklist .input-group-addon:last-child, #notifications .input-group-addon:last-child {
+    border-left: 1px solid #ccc;
+    -moz-border-radius-topleft: 0 !important;
+    -webkit-border-top-left-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+    -moz-border-radius-topright: 0 !important;
+    -webkit-border-top-right-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    -moz-border-radius-bottomleft: 0.25em !important;
+    -webkit-border-bottom-left-radius: 0.25em !important;
+    border-bottom-left-radius: 0.25em !important;
+    -moz-border-radius-bottomright: 0.25em !important;
+    -webkit-border-bottom-right-radius: 0.25em !important;
+    border-bottom-right-radius: 0.25em !important;
+  }
+}
+/*
+* =====================================
+* No-JS Solutions
+* =====================================
+*/
+/* line 634, ../sass/screen.scss */
+html.no-js .dropdown:hover .dropdown-menu, html.no-js .dropdown:focus .dropdown-menu {
+  display: block;
+}
+
+@media screen and (max-device-width: 480px) {
+  /* line 6, ../sass/mobile.scss */
+  .container .notify-badge {
+    margin-top: -0.5em !important;
+    padding-left: 0.6em !important;
+  }
+
+  /* line 13, ../sass/mobile.scss */
+  .emptyInputGroup input[type="radio"], .emptyInputGroup input[type="checkbox"] {
+    margin: 0.3em 0.5em 0 !important;
+  }
+
+  /* line 19, ../sass/mobile.scss */
+  h4.checkbox-inline input[type="checkbox"] {
+    margin-top: 0 !important;
+  }
+}
+/*
+* =====================================
+* General classes and ids
+* =====================================
+*/
+/* line 9, ../sass/general.scss */
+.center {
+  text-align: center !important;
+}
+
+/* line 12, ../sass/general.scss */
+.left {
+  text-align: left !important;
+}
+
+/* line 15, ../sass/general.scss */
+.right {
+  text-align: right !important;
+}
+
+/* line 19, ../sass/general.scss */
+.b, b {
+  font-weight: bold;
+}
+
+/* line 22, ../sass/general.scss */
+.i, i {
+  font-style: italic;
+}
+
+/* line 25, ../sass/general.scss */
+.bi {
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* line 29, ../sass/general.scss */
+.u, .underline {
+  text-decoration: underline;
+}
+
+/* line 36, ../sass/general.scss */
+.normal {
+  font-style: normal;
+  font-weight: normal;
+}
+
+/*
+* =====================================
+* Header elements
+* =====================================
+*/
+/* line 14, ../sass/style.scss */
+#vt-logo {
+  margin-left: -1.8em !important;
+}
+
+/*
+* =====================================
+* Navbar elements
+* =====================================
+*/
+/* line 22, ../sass/style.scss */
+.modal-backdrop {
+  z-index: 0;
+}
+
+/*
+* =====================================
+* Body/content elements
+* =====================================
+*/
+/* line 31, ../sass/style.scss */
+#container {
+  min-width: 35em !important;
+}
+
+/* line 34, ../sass/style.scss */
+#main {
+  font-size: 1.4em !important;
+  margin-bottom: 5em !important;
+}
+/* line 37, ../sass/style.scss */
+#main #content {
+  margin-right: 5%;
+  border: none;
+}
+/* line 42, ../sass/style.scss */
+#main #content #editors a {
+  vertical-align: middle;
+}
+
+/* line 49, ../sass/style.scss */
+table.mceLayout {
+  margin-bottom: 1em !important;
+}
+
+/* line 54, ../sass/style.scss */
+#copyedit label, #layout label {
+  vertical-align: middle;
+}
+
+/* line 60, ../sass/style.scss */
+#createRemoteLayout #layoutFileTypeGalley, #createRemoteLayout #layoutFileTypeSupp {
+  margin-top: 8px !important;
+}
+
+/* line 65, ../sass/style.scss */
+.label, label {
+  color: #333333;
+  font-size: 0.9375em;
+  vertical-align: top;
+  padding-left: .3em;
+}
+
+/* line 73, ../sass/style.scss */
+.value {
+  padding-top: .1em;
+}
+
+/* line 79, ../sass/style.scss */
+form p input[type="checkbox"], form p input[type='radio'] {
+  margin-top: -.2em;
+}
+
+/* line 85, ../sass/style.scss */
+.tocArticle {
+  margin-top: 1em;
+  border-bottom: 2px outset black;
 }
 
 /*
@@ -9356,32 +10196,39 @@ form p input[type="checkbox"], form p input[type='radio'] {
 * Aesthetic Bootstrap Overrides 
 * =====================================
 */
-/* line 226, ../sass/style.scss */
+/* line 100, ../sass/style.scss */
 input[type="submit"] {
   margin-top: 0.5em !important;
 }
 
-/* line 232, ../sass/style.scss */
+/* line 106, ../sass/style.scss */
 input[class="uploadField"] {
   height: 100% !important;
   padding: 0.5em 0em 0.5em 0.5em !important;
 }
 
-/* line 238, ../sass/style.scss */
-input[value="cancel"], input[value="Cancel"], input[value='delete'], input[value='Delete'] {
+/* line 112, ../sass/style.scss */
+input[value="cancel"], input[value="Cancel"], input[value='delete'], input[value='Delete'], input[value='Close'], input[value='close'] {
   margin-top: 0.5em !important;
 }
 
-/* line 255, ../sass/style.scss */
+/* line 121, ../sass/style.scss */
 #assignBlocksToSidebars td {
   padding: .25em;
 }
-/* line 258, ../sass/style.scss */
+/* line 124, ../sass/style.scss */
 #assignBlocksToSidebars input[class="button defaultButton"] {
   padding: .25em .5em .25em .5em;
 }
 
-/* line 275, ../sass/style.scss */
+/* line 134, ../sass/style.scss */
 .textField, .selectMenu, .textArea {
   background-color: #fff !important;
+}
+
+@media (max-width: 768px) {
+  /* line 150, ../sass/style.scss */
+  #notifyBtn, #searchBtn {
+    float: left;
+  }
 }

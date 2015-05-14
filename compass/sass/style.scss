@@ -1,193 +1,78 @@
-@import '../vendors/sanitize.scss';
-@import "compass";
-@import "variables.scss";
-@import "general.scss";
 @import "bootstrap.scss";
-
-/*
-* =====================================
-* Main elements
-* =====================================
-*/
-body {
-	font-family: $default-font-family;
-	font-size: $font-size;
-}
-a{
-	&:link, &:visited, &:active {
-		color: $link_color;
-	}
-	&:hover, &:focus {
-		@include background(none);
-		color:$link_hover !important;
-	}
-}
-
-textarea {
-	@include box-sizing(border-box);
-	width: 100%;
-
-	&.form-control {
-		width:100%;
-	}
-}
-
-label {
-	font-weight:bold;
-}
-
-li {
-	vertical-align: middle;
-}
-
-#body.container {
-	min-height: 50em;
-}
+@import "hacks.scss";
+@import "offCanvas.scss";
+@import "screen.scss";
+@import "mobile.scss";
+@import "general.scss";
 
 /*
 * =====================================
 * Header elements
 * =====================================
 */
-#header {
-	@include background(url($vt_header_url) repeat scroll center top transparent!important);
-	border: 0em none;
-	height: 14.7em;
-	padding: 0;
-	@include filter-margin(0em);
-	margin: 0em;
-	@include min-width(100%!important);
 
-	#headerTitle {
-		color: $nav_font_color;
-	}
+#vt-logo {
+	margin-left: -1.8em!important;
 }
-
 /*
 * =====================================
 * Navbar elements
 * =====================================
 */
-#navbar {
-	border-radius: 0em;
-	// max-height: em(25px);
-	border: none;
-	@include background($vt_deep_gray);
-	font-size: $font-size + .5em;
-
-	& .menu > li {
-		padding: 0!important;
-		a {
-			color: $nav_font_color;
-			text-transform: uppercase;
-			font-weight: bold;
-			@include filter-margin-top(em(-1px));
-			margin-top: em(-1px);
-			padding:1px 16px 11px 16px!important;
-		}
-	}
-
-	& .menu > li > a:hover {
-		@include background($vt_orange);
-		color: $nav_font_color!important;
-		text-decoration: none;
-	}
-
+.modal-backdrop {
+	z-index: 0;
 }
 /*
 * =====================================
 * Body/content elements
 * =====================================
 */
-#sidebar, #rightSidebar, #leftSidebar {
-	font-size: em($base-font-size + 2px)!important;
-}
-#container {
-	#breadcrumb {
-		width: auto!important;
-		font-size: $font-size + .1em!important;
 
-		a{
-			&:link, &:visited, &:active {
-				color: $breadcrumb_color;
-			}
-			&:hover, &:focus {
-				@include background(none);
-				color:$breadcrumb_hover !important;
-			}
-		}
-		ol.breadcrumb li:first-child {
-			padding-left: 1em;
-		}
-	}
+#container {
+	@include min-width(35em!important);
 }
 #main {
-	margin-top: -.5em;
-	color:$vt_deep_gray;
-	font-size: em($base-font-size + 8px);
-	line-height: em($base-line-height - 4px);
-
-	& > h2, & > h3, & > h4 {
-		@include filter-margin-left(5%);
-		margin-left: 5%; 
-	}
-
-	& > h2 {
-		font-size: em(30px) + .1em; // 30px is bootstrap's default font-size
-	}
-	// .scroll-top Code taken and modified from Joe Sexton @ webtipblog.com
-	.scroll-top-wrapper {
-	    position: fixed;
-		@include opacity(1.0);
-		visibility: hidden;
-		overflow: hidden;
-		text-align: center;
-		z-index: 99999999;
-	    @include background($vt_lt_gray);
-		color: #eeeeee;
-		width: em(50px);
-		height: em(48px);
-		line-height: em(48px);
-		right: em(10px);
-		bottom: em(30px);
-		padding-top: 2px;
-		@include border-top-left-radius(em(10px));
-		@include border-top-right-radius(em(10px));
-		@include border-bottom-left-radius(em(10px));
-		@include border-bottom-right-radius(em(10px));
-		@include single-transition(all, 0.5s, ease-in-out);
-	}
-	.scroll-top-wrapper:hover, .scroll-top-wrapper:focus {
-		@include background($vt_deep_gray);
-		@include opacity(1.0);
-	}
-	.scroll-top-wrapper.show {
-	    visibility:visible;
-	    cursor:pointer;
-		@include opacity(.5);
-	}
-	.scroll-top-wrapper i.fa {
-		line-height: inherit;
-	}
+	font-size: 1.4em!important;
+	margin-bottom: 5em!important;
 	#content {
-		@include filter-margin-left(5%);
-		margin-left: 5%;
+		margin-right: 5%;
 		border:none;
-		font-size: em($base-font-size + 2px)!important;
+		
+		#editors {
+			a {
+				vertical-align: middle;
+			}
+		}
 	}
 }
 
+table.mceLayout {
+    margin-bottom: 1em!important;
+}
+
+#copyedit, #layout {
+	label {
+		vertical-align: middle;
+	}
+}
+
+#createRemoteLayout {
+	#layoutFileTypeGalley, #layoutFileTypeSupp {
+		margin-top: 8px!important;
+	}
+}
 
 .label, label {
 	color:$vt_deep_gray; 
 	font-size: em($base-font-size - 1px);
 	vertical-align: top;
+	padding-left: .3em;
 
 }
 
 .value {
-	padding-top: .5em;
-	vertical-align: bottom;
+	padding-top: .1em;
+//	vertical-align: bottom;
 }
 form {
 	p {
@@ -197,25 +82,9 @@ form {
 	}
 }
 
-
-.btn-danger {
-	@include background($vt_deep_maroon);
-	border-color: $vt_deep_maroon;
-}
-.btn-success {
-	@include background($vt_deep_gray);
-	border-color: $vt_deep_gray;
-}
-.btn-info {
-	@include background($vt_md_gray);
-	border-color: $vt_md_gray;
-}
-.btn-info:hover, .btn-info:focus, .btn-info:active {
-	@include background($vt_lt_gray);
-	border-color: $vt_md_gray;
-}
-.btn-info:focus, .btn-info:active, .btn-info.active:focus {
-	outline: em(5px) auto $vt_md_gray!important;
+.tocArticle {
+	margin-top: 1em;
+	border-bottom: 2px outset black;
 }
 
 /*
@@ -223,6 +92,11 @@ form {
 * Aesthetic Bootstrap Overrides 
 * =====================================
 */
+
+//#breadcrumb {
+//    @extend .breadcrumb;
+//}
+
 input[type="submit"] {
 	@extend .btn-success;
 	@extend .btn;
@@ -235,20 +109,12 @@ input[class="uploadField"] {
 	padding: .5em 0em .5em .5em!important;
 }
 
-input[value="cancel"], input[value="Cancel"], input[value='delete'], input[value='Delete'] {
+input[value="cancel"], input[value="Cancel"], input[value='delete'], input[value='Delete'], input[value='Close'], input[value='close'] {
 	@extend .btn-danger;
 	@extend .btn;
 	margin-top: .5em!important;
 }
 
-// input[type="checkbox"] {
-// 	@extend .checkbox;
-// }
-// form {
-// 	.label {
-// 		@extend .control-label;
-// 	}
-// }
 
 
 #assignBlocksToSidebars {
@@ -259,20 +125,33 @@ input[value="cancel"], input[value="Cancel"], input[value='delete'], input[value
 		@extend .btn-success;
 		@extend .btn;
 		padding:.25em .5em .25em .5em;
-		// margin: -.25em;
 	}
 }
 
-#container {
-	#breadcrumb {
-		@extend .breadcrumb;
-	
-	}
-}
-form {
+form, table.data {
 	@extend .form-horizontal;
 }
 .textField, .selectMenu, .textArea {
 	@extend .form-control;
 	background-color: #fff!important;
+}
+
+//table.data, table.info {
+//	tr {
+//		@extend .form-group;
+//	}
+//
+//	.label {
+//		@extend .control-label;
+//	}
+//}
+
+@media (max-width: $tablet-break + 1px) {
+	#notifyBtn, #searchBtn {
+		@include float-left();
+	}
+}
+
+@media screen and (max-device-width: $mobile_break + 1px) {
+
 }
