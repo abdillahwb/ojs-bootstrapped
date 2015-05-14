@@ -19,21 +19,6 @@ import('lib.pkp.classes.user.PKPUser');
 
 class BootstrappedThemePlugin extends ThemePlugin {
 	
-	/**
-	 * @see PKPPlugin::register($category, $path)
-	 */
-	function register($category, $path) {
-		HookRegistry::register ('TemplateManager::display', array(&$this, 'callbackDisplay'));
-		return parent::register($category, $path);
-	
-	}
-	
-	/**
-	 * Template manager display hook callback to register smarty filters.
-	 * @param $hookName string
-	 * @param $args array
-	 * @return boolean
-	 */
 
 	/**
 	 * Get the name of this plugin. The name must be unique within
@@ -98,6 +83,8 @@ class BootstrappedThemePlugin extends ThemePlugin {
 		// Add Custom JS
 		$templateMgr->addJavaScript($this->getPluginPath() . '/js/custom.js');
 
+		$templateMgr->assign('pluginPath', $this->getPluginPath());
+
 		if (($stylesheetFilename = $this->getStylesheetFilename()) != null) {
 			$path = Request::getBaseUrl() . '/' . $this->getPluginPath() . '/compass/stylesheets/' . $stylesheetFilename;
 			$templateMgr->addStyleSheet($path);
@@ -107,7 +94,7 @@ class BootstrappedThemePlugin extends ThemePlugin {
 
 		$requestedPage = PKPRequest::getRequestedPage();
 		if ($requestedPage == 'article') {
-			$path = Request::getBaseUrl() . '/' . $this->getPluginPath() . '/compass/stylesheets/article.css';
+			$path = Request::getBaseUrl() . '/' . $this->getPluginPath() . '/compass/stylesheets/style_article.css';
 			$templateMgr->addStyleSheet($path);
 			$templateMgr->addJavaScript($this->getPluginPath() . '/js/article.js');
 		}
