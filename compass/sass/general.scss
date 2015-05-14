@@ -5,15 +5,15 @@
 * General classes and ids
 * =====================================
 */
-
+// !important so as to ensure the override of any other class' text-align
 .center{
-	text-align:center;
+	text-align:center!important;
 }
 .left {
-	text-align: left;
+	text-align: left!important;
 }
 .right{
-	text-align: right;
+	text-align: right!important;
 }
 
 .b, b{

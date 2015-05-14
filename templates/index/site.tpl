@@ -16,7 +16,6 @@
 {/strip}
 
 <br />
-<h2>{$journalFilesPath}</h2>
 {if $intro}<div id="intro">{$intro|nl2br}</div>{/if}
 
 <a name="journals"></a>
