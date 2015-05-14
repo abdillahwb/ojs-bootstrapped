@@ -342,12 +342,8 @@ th {
   }
 
   /* line 83, ../sass/bootstrap/_print.scss */
-  .btn > .caret, input[type="submit"] > .caret, input[value="cancel"] > .caret, input[value="Cancel"] > .caret, input[value='delete'] > .caret,
-  .dropup > .btn > .caret,
-  .dropup > input[type="submit"] > .caret,
-  .dropup > input[value="cancel"] > .caret,
-  .dropup > input[value="Cancel"] > .caret,
-  .dropup > input[value='delete'] > .caret {
+  .btn > .caret,
+  .dropup > .btn > .caret {
     border-top-color: #000 !important;
   }
 
@@ -3812,7 +3808,7 @@ output {
 }
 
 /* line 115, ../sass/bootstrap/_forms.scss */
-.form-control, input[class="uploadField"] {
+.form-control {
   display: block;
   width: 100%;
   height: 34px;
@@ -3831,32 +3827,32 @@ output {
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
 /* line 57, ../sass/bootstrap/mixins/_forms.scss */
-.form-control:focus, input[class="uploadField"]:focus {
+.form-control:focus {
   border-color: #66afe9;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
 /* line 103, ../sass/bootstrap/mixins/_vendor-prefixes.scss */
-.form-control::-moz-placeholder, input[class="uploadField"]::-moz-placeholder {
+.form-control::-moz-placeholder {
   color: #999;
   opacity: 1;
 }
 /* line 107, ../sass/bootstrap/mixins/_vendor-prefixes.scss */
-.form-control:-ms-input-placeholder, input[class="uploadField"]:-ms-input-placeholder {
+.form-control:-ms-input-placeholder {
   color: #999;
 }
 /* line 108, ../sass/bootstrap/mixins/_vendor-prefixes.scss */
-.form-control::-webkit-input-placeholder, input[class="uploadField"]::-webkit-input-placeholder {
+.form-control::-webkit-input-placeholder {
   color: #999;
 }
 /* line 141, ../sass/bootstrap/_forms.scss */
-.form-control[disabled], input[disabled][class="uploadField"], .form-control[readonly], input[readonly][class="uploadField"], fieldset[disabled] .form-control, fieldset[disabled] input[class="uploadField"] {
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
   background-color: #eeeeee;
   opacity: 1;
 }
 /* line 148, ../sass/bootstrap/_forms.scss */
-.form-control[disabled], input[disabled][class="uploadField"], fieldset[disabled] .form-control, fieldset[disabled] input[class="uploadField"] {
+.form-control[disabled], fieldset[disabled] .form-control {
   cursor: not-allowed;
 }
 
@@ -3879,82 +3875,44 @@ input[type="search"] {
     line-height: 34px;
   }
   /* line 188, ../sass/bootstrap/_forms.scss */
-  input[type="date"].input-sm, .input-group-sm > input[type="date"].form-control, .input-group-sm > input[type="date"][class="uploadField"],
+  input[type="date"].input-sm, .input-group-sm > input[type="date"].form-control,
   .input-group-sm > input[type="date"].input-group-addon,
-  .input-group-sm > .input-group-btn > input[type="date"].btn,
-  .input-group-sm > .input-group-btn > input[type="date"][type="submit"],
-  .input-group-sm > .input-group-btn > input[type="date"][value="cancel"],
-  .input-group-sm > .input-group-btn > input[type="date"][value="Cancel"],
-  .input-group-sm > .input-group-btn > input[type="date"][value='delete'], .input-group-sm input[type="date"],
+  .input-group-sm > .input-group-btn > input[type="date"].btn, .input-group-sm input[type="date"],
   input[type="time"].input-sm,
   .input-group-sm > input[type="time"].form-control,
-  .input-group-sm > input[type="time"][class="uploadField"],
   .input-group-sm > input[type="time"].input-group-addon,
-  .input-group-sm > .input-group-btn > input[type="time"].btn,
-  .input-group-sm > .input-group-btn > input[type="time"][type="submit"],
-  .input-group-sm > .input-group-btn > input[type="time"][value="cancel"],
-  .input-group-sm > .input-group-btn > input[type="time"][value="Cancel"],
-  .input-group-sm > .input-group-btn > input[type="time"][value='delete'], .input-group-sm
+  .input-group-sm > .input-group-btn > input[type="time"].btn, .input-group-sm
   input[type="time"],
   input[type="datetime-local"].input-sm,
   .input-group-sm > input[type="datetime-local"].form-control,
-  .input-group-sm > input[type="datetime-local"][class="uploadField"],
   .input-group-sm > input[type="datetime-local"].input-group-addon,
-  .input-group-sm > .input-group-btn > input[type="datetime-local"].btn,
-  .input-group-sm > .input-group-btn > input[type="datetime-local"][type="submit"],
-  .input-group-sm > .input-group-btn > input[type="datetime-local"][value="cancel"],
-  .input-group-sm > .input-group-btn > input[type="datetime-local"][value="Cancel"],
-  .input-group-sm > .input-group-btn > input[type="datetime-local"][value='delete'], .input-group-sm
+  .input-group-sm > .input-group-btn > input[type="datetime-local"].btn, .input-group-sm
   input[type="datetime-local"],
   input[type="month"].input-sm,
   .input-group-sm > input[type="month"].form-control,
-  .input-group-sm > input[type="month"][class="uploadField"],
   .input-group-sm > input[type="month"].input-group-addon,
-  .input-group-sm > .input-group-btn > input[type="month"].btn,
-  .input-group-sm > .input-group-btn > input[type="month"][type="submit"],
-  .input-group-sm > .input-group-btn > input[type="month"][value="cancel"],
-  .input-group-sm > .input-group-btn > input[type="month"][value="Cancel"],
-  .input-group-sm > .input-group-btn > input[type="month"][value='delete'], .input-group-sm
+  .input-group-sm > .input-group-btn > input[type="month"].btn, .input-group-sm
   input[type="month"] {
     line-height: 30px;
   }
   /* line 193, ../sass/bootstrap/_forms.scss */
-  input[type="date"].input-lg, .input-group-lg > input[type="date"].form-control, .input-group-lg > input[type="date"][class="uploadField"],
+  input[type="date"].input-lg, .input-group-lg > input[type="date"].form-control,
   .input-group-lg > input[type="date"].input-group-addon,
-  .input-group-lg > .input-group-btn > input[type="date"].btn,
-  .input-group-lg > .input-group-btn > input[type="date"][type="submit"],
-  .input-group-lg > .input-group-btn > input[type="date"][value="cancel"],
-  .input-group-lg > .input-group-btn > input[type="date"][value="Cancel"],
-  .input-group-lg > .input-group-btn > input[type="date"][value='delete'], .input-group-lg input[type="date"],
+  .input-group-lg > .input-group-btn > input[type="date"].btn, .input-group-lg input[type="date"],
   input[type="time"].input-lg,
   .input-group-lg > input[type="time"].form-control,
-  .input-group-lg > input[type="time"][class="uploadField"],
   .input-group-lg > input[type="time"].input-group-addon,
-  .input-group-lg > .input-group-btn > input[type="time"].btn,
-  .input-group-lg > .input-group-btn > input[type="time"][type="submit"],
-  .input-group-lg > .input-group-btn > input[type="time"][value="cancel"],
-  .input-group-lg > .input-group-btn > input[type="time"][value="Cancel"],
-  .input-group-lg > .input-group-btn > input[type="time"][value='delete'], .input-group-lg
+  .input-group-lg > .input-group-btn > input[type="time"].btn, .input-group-lg
   input[type="time"],
   input[type="datetime-local"].input-lg,
   .input-group-lg > input[type="datetime-local"].form-control,
-  .input-group-lg > input[type="datetime-local"][class="uploadField"],
   .input-group-lg > input[type="datetime-local"].input-group-addon,
-  .input-group-lg > .input-group-btn > input[type="datetime-local"].btn,
-  .input-group-lg > .input-group-btn > input[type="datetime-local"][type="submit"],
-  .input-group-lg > .input-group-btn > input[type="datetime-local"][value="cancel"],
-  .input-group-lg > .input-group-btn > input[type="datetime-local"][value="Cancel"],
-  .input-group-lg > .input-group-btn > input[type="datetime-local"][value='delete'], .input-group-lg
+  .input-group-lg > .input-group-btn > input[type="datetime-local"].btn, .input-group-lg
   input[type="datetime-local"],
   input[type="month"].input-lg,
   .input-group-lg > input[type="month"].form-control,
-  .input-group-lg > input[type="month"][class="uploadField"],
   .input-group-lg > input[type="month"].input-group-addon,
-  .input-group-lg > .input-group-btn > input[type="month"].btn,
-  .input-group-lg > .input-group-btn > input[type="month"][type="submit"],
-  .input-group-lg > .input-group-btn > input[type="month"][value="cancel"],
-  .input-group-lg > .input-group-btn > input[type="month"][value="Cancel"],
-  .input-group-lg > .input-group-btn > input[type="month"][value='delete'], .input-group-lg
+  .input-group-lg > .input-group-btn > input[type="month"].btn, .input-group-lg
   input[type="month"] {
     line-height: 46px;
   }
@@ -4047,31 +4005,19 @@ input[type="checkbox"] {
   min-height: 34px;
 }
 /* line 306, ../sass/bootstrap/_forms.scss */
-.form-control-static.input-lg, .input-group-lg > .form-control-static.form-control, .input-group-lg > input.form-control-static[class="uploadField"],
+.form-control-static.input-lg, .input-group-lg > .form-control-static.form-control,
 .input-group-lg > .form-control-static.input-group-addon,
-.input-group-lg > .input-group-btn > .form-control-static.btn,
-.input-group-lg > .input-group-btn > input.form-control-static[type="submit"],
-.input-group-lg > .input-group-btn > input.form-control-static[value="cancel"],
-.input-group-lg > .input-group-btn > input.form-control-static[value="Cancel"],
-.input-group-lg > .input-group-btn > input.form-control-static[value='delete'], .form-control-static.input-sm, .input-group-sm > .form-control-static.form-control, .input-group-sm > input.form-control-static[class="uploadField"],
+.input-group-lg > .input-group-btn > .form-control-static.btn, .form-control-static.input-sm, .input-group-sm > .form-control-static.form-control,
 .input-group-sm > .form-control-static.input-group-addon,
-.input-group-sm > .input-group-btn > .form-control-static.btn,
-.input-group-sm > .input-group-btn > input.form-control-static[type="submit"],
-.input-group-sm > .input-group-btn > input.form-control-static[value="cancel"],
-.input-group-sm > .input-group-btn > input.form-control-static[value="Cancel"],
-.input-group-sm > .input-group-btn > input.form-control-static[value='delete'] {
+.input-group-sm > .input-group-btn > .form-control-static.btn {
   padding-left: 0;
   padding-right: 0;
 }
 
 /* line 71, ../sass/bootstrap/mixins/_forms.scss */
-.input-sm, .input-group-sm > .form-control, .input-group-sm > input[class="uploadField"],
+.input-sm, .input-group-sm > .form-control,
 .input-group-sm > .input-group-addon,
-.input-group-sm > .input-group-btn > .btn,
-.input-group-sm > .input-group-btn > input[type="submit"],
-.input-group-sm > .input-group-btn > input[value="cancel"],
-.input-group-sm > .input-group-btn > input[value="Cancel"],
-.input-group-sm > .input-group-btn > input[value='delete'] {
+.input-group-sm > .input-group-btn > .btn {
   height: 30px;
   padding: 5px 10px;
   font-size: 12px;
@@ -4099,7 +4045,7 @@ select[multiple].input-sm,
 }
 
 /* line 71, ../sass/bootstrap/mixins/_forms.scss */
-.form-group-sm .form-control, .form-group-sm input[class="uploadField"] {
+.form-group-sm .form-control {
   height: 30px;
   padding: 5px 10px;
   font-size: 12px;
@@ -4126,13 +4072,9 @@ select[multiple].input-sm,
 }
 
 /* line 71, ../sass/bootstrap/mixins/_forms.scss */
-.input-lg, .input-group-lg > .form-control, .input-group-lg > input[class="uploadField"],
+.input-lg, .input-group-lg > .form-control,
 .input-group-lg > .input-group-addon,
-.input-group-lg > .input-group-btn > .btn,
-.input-group-lg > .input-group-btn > input[type="submit"],
-.input-group-lg > .input-group-btn > input[value="cancel"],
-.input-group-lg > .input-group-btn > input[value="Cancel"],
-.input-group-lg > .input-group-btn > input[value='delete'] {
+.input-group-lg > .input-group-btn > .btn {
   height: 46px;
   padding: 10px 16px;
   font-size: 18px;
@@ -4160,7 +4102,7 @@ select[multiple].input-lg,
 }
 
 /* line 71, ../sass/bootstrap/mixins/_forms.scss */
-.form-group-lg .form-control, .form-group-lg input[class="uploadField"] {
+.form-group-lg .form-control {
   height: 46px;
   padding: 10px 16px;
   font-size: 18px;
@@ -4191,7 +4133,7 @@ select[multiple].input-lg,
   position: relative;
 }
 /* line 360, ../sass/bootstrap/_forms.scss */
-.has-feedback .form-control, .has-feedback input[class="uploadField"] {
+.has-feedback .form-control {
   padding-right: 42.5px;
 }
 
@@ -4210,26 +4152,18 @@ select[multiple].input-lg,
 }
 
 /* line 377, ../sass/bootstrap/_forms.scss */
-.input-lg + .form-control-feedback, .input-group-lg > .form-control + .form-control-feedback, .input-group-lg > input[class="uploadField"] + .form-control-feedback,
+.input-lg + .form-control-feedback, .input-group-lg > .form-control + .form-control-feedback,
 .input-group-lg > .input-group-addon + .form-control-feedback,
-.input-group-lg > .input-group-btn > .btn + .form-control-feedback,
-.input-group-lg > .input-group-btn > input[type="submit"] + .form-control-feedback,
-.input-group-lg > .input-group-btn > input[value="cancel"] + .form-control-feedback,
-.input-group-lg > .input-group-btn > input[value="Cancel"] + .form-control-feedback,
-.input-group-lg > .input-group-btn > input[value='delete'] + .form-control-feedback {
+.input-group-lg > .input-group-btn > .btn + .form-control-feedback {
   width: 46px;
   height: 46px;
   line-height: 46px;
 }
 
 /* line 382, ../sass/bootstrap/_forms.scss */
-.input-sm + .form-control-feedback, .input-group-sm > .form-control + .form-control-feedback, .input-group-sm > input[class="uploadField"] + .form-control-feedback,
+.input-sm + .form-control-feedback, .input-group-sm > .form-control + .form-control-feedback,
 .input-group-sm > .input-group-addon + .form-control-feedback,
-.input-group-sm > .input-group-btn > .btn + .form-control-feedback,
-.input-group-sm > .input-group-btn > input[type="submit"] + .form-control-feedback,
-.input-group-sm > .input-group-btn > input[value="cancel"] + .form-control-feedback,
-.input-group-sm > .input-group-btn > input[value="Cancel"] + .form-control-feedback,
-.input-group-sm > .input-group-btn > input[value='delete'] + .form-control-feedback {
+.input-group-sm > .input-group-btn > .btn + .form-control-feedback {
   width: 30px;
   height: 30px;
   line-height: 30px;
@@ -4245,13 +4179,13 @@ select[multiple].input-lg,
   color: #3c763d;
 }
 /* line 21, ../sass/bootstrap/mixins/_forms.scss */
-.has-success .form-control, .has-success input[class="uploadField"] {
+.has-success .form-control {
   border-color: #3c763d;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 /* line 24, ../sass/bootstrap/mixins/_forms.scss */
-.has-success .form-control:focus, .has-success input[class="uploadField"]:focus {
+.has-success .form-control:focus {
   border-color: #2b542c;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
@@ -4277,13 +4211,13 @@ select[multiple].input-lg,
   color: #8a6d3b;
 }
 /* line 21, ../sass/bootstrap/mixins/_forms.scss */
-.has-warning .form-control, .has-warning input[class="uploadField"] {
+.has-warning .form-control {
   border-color: #8a6d3b;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 /* line 24, ../sass/bootstrap/mixins/_forms.scss */
-.has-warning .form-control:focus, .has-warning input[class="uploadField"]:focus {
+.has-warning .form-control:focus {
   border-color: #66512c;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
@@ -4309,13 +4243,13 @@ select[multiple].input-lg,
   color: #a94442;
 }
 /* line 21, ../sass/bootstrap/mixins/_forms.scss */
-.has-error .form-control, .has-error input[class="uploadField"] {
+.has-error .form-control {
   border-color: #a94442;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 /* line 24, ../sass/bootstrap/mixins/_forms.scss */
-.has-error .form-control:focus, .has-error input[class="uploadField"]:focus {
+.has-error .form-control:focus {
   border-color: #843534;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
@@ -4356,7 +4290,7 @@ select[multiple].input-lg,
     vertical-align: middle;
   }
   /* line 448, ../sass/bootstrap/_forms.scss */
-  .form-inline .form-control, .form-inline input[class="uploadField"] {
+  .form-inline .form-control {
     display: inline-block;
     width: auto;
     vertical-align: middle;
@@ -4373,12 +4307,11 @@ select[multiple].input-lg,
   /* line 463, ../sass/bootstrap/_forms.scss */
   .form-inline .input-group .input-group-addon,
   .form-inline .input-group .input-group-btn,
-  .form-inline .input-group .form-control,
-  .form-inline .input-group input[class="uploadField"] {
+  .form-inline .input-group .form-control {
     width: auto;
   }
   /* line 471, ../sass/bootstrap/_forms.scss */
-  .form-inline .input-group > .form-control, .form-inline .input-group > input[class="uploadField"] {
+  .form-inline .input-group > .form-control {
     width: 100%;
   }
   /* line 475, ../sass/bootstrap/_forms.scss */
@@ -4465,7 +4398,7 @@ select[multiple].input-lg,
 }
 
 /* line 9, ../sass/bootstrap/_buttons.scss */
-.btn, input[type="submit"], input[value="cancel"], input[value="Cancel"], input[value='delete'] {
+.btn {
   display: inline-block;
   margin-bottom: 0;
   font-weight: normal;
@@ -4486,25 +4419,25 @@ select[multiple].input-lg,
   user-select: none;
 }
 /* line 26, ../sass/bootstrap/_buttons.scss */
-.btn:focus, input[type="submit"]:focus, input[value="cancel"]:focus, input[value="Cancel"]:focus, input[value='delete']:focus, .btn.focus, input.focus[type="submit"], input.focus[value="cancel"], input.focus[value="Cancel"], input.focus[value='delete'], .btn:active:focus, input[type="submit"]:active:focus, input[value="cancel"]:active:focus, input[value="Cancel"]:active:focus, input[value='delete']:active:focus, .btn:active.focus, input[type="submit"]:active.focus, input[value="cancel"]:active.focus, input[value="Cancel"]:active.focus, input[value='delete']:active.focus, .btn.active:focus, input.active[type="submit"]:focus, input.active[value="cancel"]:focus, input.active[value="Cancel"]:focus, input.active[value='delete']:focus, .btn.active.focus, input.active.focus[type="submit"], input.active.focus[value="cancel"], input.active.focus[value="Cancel"], input.active.focus[value='delete'] {
+.btn:focus, .btn.focus, .btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
 /* line 32, ../sass/bootstrap/_buttons.scss */
-.btn:hover, input[type="submit"]:hover, input[value="cancel"]:hover, input[value="Cancel"]:hover, input[value='delete']:hover, .btn:focus, input[type="submit"]:focus, input[value="cancel"]:focus, input[value="Cancel"]:focus, input[value='delete']:focus, .btn.focus, input.focus[type="submit"], input.focus[value="cancel"], input.focus[value="Cancel"], input.focus[value='delete'] {
+.btn:hover, .btn:focus, .btn.focus {
   color: #333;
   text-decoration: none;
 }
 /* line 39, ../sass/bootstrap/_buttons.scss */
-.btn:active, input[type="submit"]:active, input[value="cancel"]:active, input[value="Cancel"]:active, input[value='delete']:active, .btn.active, input.active[type="submit"], input.active[value="cancel"], input.active[value="Cancel"], input.active[value='delete'] {
+.btn:active, .btn.active {
   outline: 0;
   background-image: none;
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 /* line 46, ../sass/bootstrap/_buttons.scss */
-.btn.disabled, input.disabled[type="submit"], input.disabled[value="cancel"], input.disabled[value="Cancel"], input.disabled[value='delete'], .btn[disabled], input[disabled][type="submit"], input[disabled][value="cancel"], input[disabled][value="Cancel"], input[disabled][value='delete'], fieldset[disabled] .btn, fieldset[disabled] input[type="submit"], fieldset[disabled] input[value="cancel"], fieldset[disabled] input[value="Cancel"], fieldset[disabled] input[value='delete'] {
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn {
   cursor: not-allowed;
   pointer-events: none;
   opacity: 0.65;
@@ -4568,28 +4501,28 @@ select[multiple].input-lg,
 }
 
 /* line 67, ../sass/bootstrap/_buttons.scss */
-.btn-success, input[type="submit"] {
+.btn-success {
   color: #fff;
   background-color: #5cb85c;
   border-color: #4cae4c;
 }
 /* line 11, ../sass/bootstrap/mixins/_buttons.scss */
-.btn-success:hover, input[type="submit"]:hover, .btn-success:focus, input[type="submit"]:focus, .btn-success.focus, input.focus[type="submit"], .btn-success:active, input[type="submit"]:active, .btn-success.active, input.active[type="submit"], .open > .btn-success.dropdown-toggle, .open > input.dropdown-toggle[type="submit"] {
+.btn-success:hover, .btn-success:focus, .btn-success.focus, .btn-success:active, .btn-success.active, .open > .btn-success.dropdown-toggle {
   color: #fff;
   background-color: #449d44;
   border-color: #398439;
 }
 /* line 21, ../sass/bootstrap/mixins/_buttons.scss */
-.btn-success:active, input[type="submit"]:active, .btn-success.active, input.active[type="submit"], .open > .btn-success.dropdown-toggle, .open > input.dropdown-toggle[type="submit"] {
+.btn-success:active, .btn-success.active, .open > .btn-success.dropdown-toggle {
   background-image: none;
 }
 /* line 29, ../sass/bootstrap/mixins/_buttons.scss */
-.btn-success.disabled, input.disabled[type="submit"], .btn-success.disabled:hover, input.disabled[type="submit"]:hover, .btn-success.disabled:focus, input.disabled[type="submit"]:focus, .btn-success.disabled.focus, input.disabled.focus[type="submit"], .btn-success.disabled:active, input.disabled[type="submit"]:active, .btn-success.disabled.active, input.disabled.active[type="submit"], .btn-success[disabled], input[disabled][type="submit"], .btn-success[disabled]:hover, input[disabled][type="submit"]:hover, .btn-success[disabled]:focus, input[disabled][type="submit"]:focus, .btn-success[disabled].focus, input[disabled].focus[type="submit"], .btn-success[disabled]:active, input[disabled][type="submit"]:active, .btn-success[disabled].active, input[disabled].active[type="submit"], fieldset[disabled] .btn-success, fieldset[disabled] input[type="submit"], fieldset[disabled] .btn-success:hover, fieldset[disabled] input[type="submit"]:hover, fieldset[disabled] .btn-success:focus, fieldset[disabled] input[type="submit"]:focus, fieldset[disabled] .btn-success.focus, fieldset[disabled] input.focus[type="submit"], fieldset[disabled] .btn-success:active, fieldset[disabled] input[type="submit"]:active, fieldset[disabled] .btn-success.active, fieldset[disabled] input.active[type="submit"] {
+.btn-success.disabled, .btn-success.disabled:hover, .btn-success.disabled:focus, .btn-success.disabled.focus, .btn-success.disabled:active, .btn-success.disabled.active, .btn-success[disabled], .btn-success[disabled]:hover, .btn-success[disabled]:focus, .btn-success[disabled].focus, .btn-success[disabled]:active, .btn-success[disabled].active, fieldset[disabled] .btn-success, fieldset[disabled] .btn-success:hover, fieldset[disabled] .btn-success:focus, fieldset[disabled] .btn-success.focus, fieldset[disabled] .btn-success:active, fieldset[disabled] .btn-success.active {
   background-color: #5cb85c;
   border-color: #4cae4c;
 }
 /* line 40, ../sass/bootstrap/mixins/_buttons.scss */
-.btn-success .badge, input[type="submit"] .badge {
+.btn-success .badge {
   color: #5cb85c;
   background-color: #fff;
 }
@@ -4649,28 +4582,28 @@ select[multiple].input-lg,
 }
 
 /* line 79, ../sass/bootstrap/_buttons.scss */
-.btn-danger, input[value="cancel"], input[value="Cancel"], input[value='delete'] {
+.btn-danger {
   color: #fff;
   background-color: #d9534f;
   border-color: #d43f3a;
 }
 /* line 11, ../sass/bootstrap/mixins/_buttons.scss */
-.btn-danger:hover, input[value="cancel"]:hover, input[value="Cancel"]:hover, input[value='delete']:hover, .btn-danger:focus, input[value="cancel"]:focus, input[value="Cancel"]:focus, input[value='delete']:focus, .btn-danger.focus, input.focus[value="cancel"], input.focus[value="Cancel"], input.focus[value='delete'], .btn-danger:active, input[value="cancel"]:active, input[value="Cancel"]:active, input[value='delete']:active, .btn-danger.active, input.active[value="cancel"], input.active[value="Cancel"], input.active[value='delete'], .open > .btn-danger.dropdown-toggle, .open > input.dropdown-toggle[value="cancel"], .open > input.dropdown-toggle[value="Cancel"], .open > input.dropdown-toggle[value='delete'] {
+.btn-danger:hover, .btn-danger:focus, .btn-danger.focus, .btn-danger:active, .btn-danger.active, .open > .btn-danger.dropdown-toggle {
   color: #fff;
   background-color: #c9302c;
   border-color: #ac2925;
 }
 /* line 21, ../sass/bootstrap/mixins/_buttons.scss */
-.btn-danger:active, input[value="cancel"]:active, input[value="Cancel"]:active, input[value='delete']:active, .btn-danger.active, input.active[value="cancel"], input.active[value="Cancel"], input.active[value='delete'], .open > .btn-danger.dropdown-toggle, .open > input.dropdown-toggle[value="cancel"], .open > input.dropdown-toggle[value="Cancel"], .open > input.dropdown-toggle[value='delete'] {
+.btn-danger:active, .btn-danger.active, .open > .btn-danger.dropdown-toggle {
   background-image: none;
 }
 /* line 29, ../sass/bootstrap/mixins/_buttons.scss */
-.btn-danger.disabled, input.disabled[value="cancel"], input.disabled[value="Cancel"], input.disabled[value='delete'], .btn-danger.disabled:hover, input.disabled[value="cancel"]:hover, input.disabled[value="Cancel"]:hover, input.disabled[value='delete']:hover, .btn-danger.disabled:focus, input.disabled[value="cancel"]:focus, input.disabled[value="Cancel"]:focus, input.disabled[value='delete']:focus, .btn-danger.disabled.focus, input.disabled.focus[value="cancel"], input.disabled.focus[value="Cancel"], input.disabled.focus[value='delete'], .btn-danger.disabled:active, input.disabled[value="cancel"]:active, input.disabled[value="Cancel"]:active, input.disabled[value='delete']:active, .btn-danger.disabled.active, input.disabled.active[value="cancel"], input.disabled.active[value="Cancel"], input.disabled.active[value='delete'], .btn-danger[disabled], input[disabled][value="cancel"], input[disabled][value="Cancel"], input[disabled][value='delete'], .btn-danger[disabled]:hover, input[disabled][value="cancel"]:hover, input[disabled][value="Cancel"]:hover, input[disabled][value='delete']:hover, .btn-danger[disabled]:focus, input[disabled][value="cancel"]:focus, input[disabled][value="Cancel"]:focus, input[disabled][value='delete']:focus, .btn-danger[disabled].focus, input[disabled].focus[value="cancel"], input[disabled].focus[value="Cancel"], input[disabled].focus[value='delete'], .btn-danger[disabled]:active, input[disabled][value="cancel"]:active, input[disabled][value="Cancel"]:active, input[disabled][value='delete']:active, .btn-danger[disabled].active, input[disabled].active[value="cancel"], input[disabled].active[value="Cancel"], input[disabled].active[value='delete'], fieldset[disabled] .btn-danger, fieldset[disabled] input[value="cancel"], fieldset[disabled] input[value="Cancel"], fieldset[disabled] input[value='delete'], fieldset[disabled] .btn-danger:hover, fieldset[disabled] input[value="cancel"]:hover, fieldset[disabled] input[value="Cancel"]:hover, fieldset[disabled] input[value='delete']:hover, fieldset[disabled] .btn-danger:focus, fieldset[disabled] input[value="cancel"]:focus, fieldset[disabled] input[value="Cancel"]:focus, fieldset[disabled] input[value='delete']:focus, fieldset[disabled] .btn-danger.focus, fieldset[disabled] input.focus[value="cancel"], fieldset[disabled] input.focus[value="Cancel"], fieldset[disabled] input.focus[value='delete'], fieldset[disabled] .btn-danger:active, fieldset[disabled] input[value="cancel"]:active, fieldset[disabled] input[value="Cancel"]:active, fieldset[disabled] input[value='delete']:active, fieldset[disabled] .btn-danger.active, fieldset[disabled] input.active[value="cancel"], fieldset[disabled] input.active[value="Cancel"], fieldset[disabled] input.active[value='delete'] {
+.btn-danger.disabled, .btn-danger.disabled:hover, .btn-danger.disabled:focus, .btn-danger.disabled.focus, .btn-danger.disabled:active, .btn-danger.disabled.active, .btn-danger[disabled], .btn-danger[disabled]:hover, .btn-danger[disabled]:focus, .btn-danger[disabled].focus, .btn-danger[disabled]:active, .btn-danger[disabled].active, fieldset[disabled] .btn-danger, fieldset[disabled] .btn-danger:hover, fieldset[disabled] .btn-danger:focus, fieldset[disabled] .btn-danger.focus, fieldset[disabled] .btn-danger:active, fieldset[disabled] .btn-danger.active {
   background-color: #d9534f;
   border-color: #d43f3a;
 }
 /* line 40, ../sass/bootstrap/mixins/_buttons.scss */
-.btn-danger .badge, input[value="cancel"] .badge, input[value="Cancel"] .badge, input[value='delete'] .badge {
+.btn-danger .badge {
   color: #d9534f;
   background-color: #fff;
 }
@@ -4704,7 +4637,7 @@ select[multiple].input-lg,
 }
 
 /* line 127, ../sass/bootstrap/_buttons.scss */
-.btn-lg, .btn-group-lg > .btn, .btn-group-lg > input[type="submit"], .btn-group-lg > input[value="cancel"], .btn-group-lg > input[value="Cancel"], .btn-group-lg > input[value='delete'] {
+.btn-lg, .btn-group-lg > .btn {
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.33333;
@@ -4712,7 +4645,7 @@ select[multiple].input-lg,
 }
 
 /* line 131, ../sass/bootstrap/_buttons.scss */
-.btn-sm, .btn-group-sm > .btn, .btn-group-sm > input[type="submit"], .btn-group-sm > input[value="cancel"], .btn-group-sm > input[value="Cancel"], .btn-group-sm > input[value='delete'] {
+.btn-sm, .btn-group-sm > .btn {
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
@@ -4720,7 +4653,7 @@ select[multiple].input-lg,
 }
 
 /* line 135, ../sass/bootstrap/_buttons.scss */
-.btn-xs, .btn-group-xs > .btn, .btn-group-xs > input[type="submit"], .btn-group-xs > input[value="cancel"], .btn-group-xs > input[value="Cancel"], .btn-group-xs > input[value='delete'] {
+.btn-xs, .btn-group-xs > .btn {
   padding: 1px 5px;
   font-size: 12px;
   line-height: 1.5;
@@ -4967,52 +4900,24 @@ tbody.collapse.in {
   vertical-align: middle;
 }
 /* line 11, ../sass/bootstrap/_button-groups.scss */
-.btn-group > .btn, .btn-group > input[type="submit"], .btn-group > input[value="cancel"], .btn-group > input[value="Cancel"], .btn-group > input[value='delete'],
-.btn-group-vertical > .btn,
-.btn-group-vertical > input[type="submit"],
-.btn-group-vertical > input[value="cancel"],
-.btn-group-vertical > input[value="Cancel"],
-.btn-group-vertical > input[value='delete'] {
+.btn-group > .btn,
+.btn-group-vertical > .btn {
   position: relative;
   float: left;
 }
 /* line 15, ../sass/bootstrap/_button-groups.scss */
-.btn-group > .btn:hover, .btn-group > input[type="submit"]:hover, .btn-group > input[value="cancel"]:hover, .btn-group > input[value="Cancel"]:hover, .btn-group > input[value='delete']:hover, .btn-group > .btn:focus, .btn-group > input[type="submit"]:focus, .btn-group > input[value="cancel"]:focus, .btn-group > input[value="Cancel"]:focus, .btn-group > input[value='delete']:focus, .btn-group > .btn:active, .btn-group > input[type="submit"]:active, .btn-group > input[value="cancel"]:active, .btn-group > input[value="Cancel"]:active, .btn-group > input[value='delete']:active, .btn-group > .btn.active, .btn-group > input.active[type="submit"], .btn-group > input.active[value="cancel"], .btn-group > input.active[value="Cancel"], .btn-group > input.active[value='delete'],
+.btn-group > .btn:hover, .btn-group > .btn:focus, .btn-group > .btn:active, .btn-group > .btn.active,
 .btn-group-vertical > .btn:hover,
-.btn-group-vertical > input[type="submit"]:hover,
-.btn-group-vertical > input[value="cancel"]:hover,
-.btn-group-vertical > input[value="Cancel"]:hover,
-.btn-group-vertical > input[value='delete']:hover,
 .btn-group-vertical > .btn:focus,
-.btn-group-vertical > input[type="submit"]:focus,
-.btn-group-vertical > input[value="cancel"]:focus,
-.btn-group-vertical > input[value="Cancel"]:focus,
-.btn-group-vertical > input[value='delete']:focus,
 .btn-group-vertical > .btn:active,
-.btn-group-vertical > input[type="submit"]:active,
-.btn-group-vertical > input[value="cancel"]:active,
-.btn-group-vertical > input[value="Cancel"]:active,
-.btn-group-vertical > input[value='delete']:active,
-.btn-group-vertical > .btn.active,
-.btn-group-vertical > input.active[type="submit"],
-.btn-group-vertical > input.active[value="cancel"],
-.btn-group-vertical > input.active[value="Cancel"],
-.btn-group-vertical > input.active[value='delete'] {
+.btn-group-vertical > .btn.active {
   z-index: 2;
 }
 
 /* line 26, ../sass/bootstrap/_button-groups.scss */
-.btn-group .btn + .btn, .btn-group input[type="submit"] + .btn, .btn-group input[value="cancel"] + .btn, .btn-group input[value="Cancel"] + .btn, .btn-group input[value='delete'] + .btn, .btn-group .btn + input[type="submit"], .btn-group input[type="submit"] + input[type="submit"], .btn-group input[value="cancel"] + input[type="submit"], .btn-group input[value="Cancel"] + input[type="submit"], .btn-group input[value='delete'] + input[type="submit"], .btn-group .btn + input[value="cancel"], .btn-group input[type="submit"] + input[value="cancel"], .btn-group input[value="cancel"] + input[value="cancel"], .btn-group input[value="Cancel"] + input[value="cancel"], .btn-group input[value='delete'] + input[value="cancel"], .btn-group .btn + input[value="Cancel"], .btn-group input[type="submit"] + input[value="Cancel"], .btn-group input[value="cancel"] + input[value="Cancel"], .btn-group input[value="Cancel"] + input[value="Cancel"], .btn-group input[value='delete'] + input[value="Cancel"], .btn-group .btn + input[value='delete'], .btn-group input[type="submit"] + input[value='delete'], .btn-group input[value="cancel"] + input[value='delete'], .btn-group input[value="Cancel"] + input[value='delete'], .btn-group input[value='delete'] + input[value='delete'],
+.btn-group .btn + .btn,
 .btn-group .btn + .btn-group,
-.btn-group input[type="submit"] + .btn-group,
-.btn-group input[value="cancel"] + .btn-group,
-.btn-group input[value="Cancel"] + .btn-group,
-.btn-group input[value='delete'] + .btn-group,
 .btn-group .btn-group + .btn,
-.btn-group .btn-group + input[type="submit"],
-.btn-group .btn-group + input[value="cancel"],
-.btn-group .btn-group + input[value="Cancel"],
-.btn-group .btn-group + input[value='delete'],
 .btn-group .btn-group + .btn-group {
   margin-left: -1px;
 }
@@ -5036,29 +4941,29 @@ tbody.collapse.in {
   float: left;
 }
 /* line 43, ../sass/bootstrap/_button-groups.scss */
-.btn-toolbar > .btn, .btn-toolbar > input[type="submit"], .btn-toolbar > input[value="cancel"], .btn-toolbar > input[value="Cancel"], .btn-toolbar > input[value='delete'],
+.btn-toolbar > .btn,
 .btn-toolbar > .btn-group,
 .btn-toolbar > .input-group {
   margin-left: 5px;
 }
 
 /* line 50, ../sass/bootstrap/_button-groups.scss */
-.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > input[type="submit"]:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > input[value="cancel"]:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > input[value="Cancel"]:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > input[value='delete']:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
   border-radius: 0;
 }
 
 /* line 55, ../sass/bootstrap/_button-groups.scss */
-.btn-group > .btn:first-child, .btn-group > input[type="submit"]:first-child, .btn-group > input[value="cancel"]:first-child, .btn-group > input[value="Cancel"]:first-child, .btn-group > input[value='delete']:first-child {
+.btn-group > .btn:first-child {
   margin-left: 0;
 }
 /* line 57, ../sass/bootstrap/_button-groups.scss */
-.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > input[type="submit"]:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > input[value="cancel"]:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > input[value="Cancel"]:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > input[value='delete']:first-child:not(:last-child):not(.dropdown-toggle) {
+.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
 
 /* line 62, ../sass/bootstrap/_button-groups.scss */
-.btn-group > .btn:last-child:not(:first-child), .btn-group > input[type="submit"]:last-child:not(:first-child), .btn-group > input[value="cancel"]:last-child:not(:first-child), .btn-group > input[value="Cancel"]:last-child:not(:first-child), .btn-group > input[value='delete']:last-child:not(:first-child),
+.btn-group > .btn:last-child:not(:first-child),
 .btn-group > .dropdown-toggle:not(:first-child) {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
@@ -5070,19 +4975,19 @@ tbody.collapse.in {
 }
 
 /* line 71, ../sass/bootstrap/_button-groups.scss */
-.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, .btn-group > .btn-group:not(:first-child):not(:last-child) > input[type="submit"], .btn-group > .btn-group:not(:first-child):not(:last-child) > input[value="cancel"], .btn-group > .btn-group:not(:first-child):not(:last-child) > input[value="Cancel"], .btn-group > .btn-group:not(:first-child):not(:last-child) > input[value='delete'] {
+.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn {
   border-radius: 0;
 }
 
 /* line 75, ../sass/bootstrap/_button-groups.scss */
-.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, .btn-group > .btn-group:first-child:not(:last-child) > input[type="submit"]:last-child, .btn-group > .btn-group:first-child:not(:last-child) > input[value="cancel"]:last-child, .btn-group > .btn-group:first-child:not(:last-child) > input[value="Cancel"]:last-child, .btn-group > .btn-group:first-child:not(:last-child) > input[value='delete']:last-child,
+.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child,
 .btn-group > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
 
 /* line 80, ../sass/bootstrap/_button-groups.scss */
-.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child, .btn-group > .btn-group:last-child:not(:first-child) > input[type="submit"]:first-child, .btn-group > .btn-group:last-child:not(:first-child) > input[value="cancel"]:first-child, .btn-group > .btn-group:last-child:not(:first-child) > input[value="Cancel"]:first-child, .btn-group > .btn-group:last-child:not(:first-child) > input[value='delete']:first-child {
+.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
@@ -5094,13 +4999,13 @@ tbody.collapse.in {
 }
 
 /* line 104, ../sass/bootstrap/_button-groups.scss */
-.btn-group > .btn + .dropdown-toggle, .btn-group > input[type="submit"] + .dropdown-toggle, .btn-group > input[value="cancel"] + .dropdown-toggle, .btn-group > input[value="Cancel"] + .dropdown-toggle, .btn-group > input[value='delete'] + .dropdown-toggle {
+.btn-group > .btn + .dropdown-toggle {
   padding-left: 8px;
   padding-right: 8px;
 }
 
 /* line 108, ../sass/bootstrap/_button-groups.scss */
-.btn-group > .btn-lg + .dropdown-toggle, .btn-group-lg.btn-group > .btn + .dropdown-toggle, .btn-group-lg.btn-group > input[type="submit"] + .dropdown-toggle, .btn-group-lg.btn-group > input[value="cancel"] + .dropdown-toggle, .btn-group-lg.btn-group > input[value="Cancel"] + .dropdown-toggle, .btn-group-lg.btn-group > input[value='delete'] + .dropdown-toggle {
+.btn-group > .btn-lg + .dropdown-toggle, .btn-group-lg.btn-group > .btn + .dropdown-toggle {
   padding-left: 12px;
   padding-right: 12px;
 }
@@ -5117,29 +5022,25 @@ tbody.collapse.in {
 }
 
 /* line 126, ../sass/bootstrap/_button-groups.scss */
-.btn .caret, input[type="submit"] .caret, input[value="cancel"] .caret, input[value="Cancel"] .caret, input[value='delete'] .caret {
+.btn .caret {
   margin-left: 0;
 }
 
 /* line 130, ../sass/bootstrap/_button-groups.scss */
-.btn-lg .caret, .btn-group-lg > .btn .caret, .btn-group-lg > input[type="submit"] .caret, .btn-group-lg > input[value="cancel"] .caret, .btn-group-lg > input[value="Cancel"] .caret, .btn-group-lg > input[value='delete'] .caret {
+.btn-lg .caret, .btn-group-lg > .btn .caret {
   border-width: 5px 5px 0;
   border-bottom-width: 0;
 }
 
 /* line 135, ../sass/bootstrap/_button-groups.scss */
-.dropup .btn-lg .caret, .dropup .btn-group-lg > .btn .caret, .dropup .btn-group-lg > input[type="submit"] .caret, .dropup .btn-group-lg > input[value="cancel"] .caret, .dropup .btn-group-lg > input[value="Cancel"] .caret, .dropup .btn-group-lg > input[value='delete'] .caret {
+.dropup .btn-lg .caret, .dropup .btn-group-lg > .btn .caret {
   border-width: 0 5px 5px;
 }
 
 /* line 144, ../sass/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn, .btn-group-vertical > input[type="submit"], .btn-group-vertical > input[value="cancel"], .btn-group-vertical > input[value="Cancel"], .btn-group-vertical > input[value='delete'],
+.btn-group-vertical > .btn,
 .btn-group-vertical > .btn-group,
-.btn-group-vertical > .btn-group > .btn,
-.btn-group-vertical > .btn-group > input[type="submit"],
-.btn-group-vertical > .btn-group > input[value="cancel"],
-.btn-group-vertical > .btn-group > input[value="Cancel"],
-.btn-group-vertical > .btn-group > input[value='delete'] {
+.btn-group-vertical > .btn-group > .btn {
   display: block;
   float: none;
   width: 100%;
@@ -5155,57 +5056,49 @@ tbody.collapse.in {
   clear: both;
 }
 /* line 156, ../sass/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn-group > .btn, .btn-group-vertical > .btn-group > input[type="submit"], .btn-group-vertical > .btn-group > input[value="cancel"], .btn-group-vertical > .btn-group > input[value="Cancel"], .btn-group-vertical > .btn-group > input[value='delete'] {
+.btn-group-vertical > .btn-group > .btn {
   float: none;
 }
 /* line 161, ../sass/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn + .btn, .btn-group-vertical > input[type="submit"] + .btn, .btn-group-vertical > input[value="cancel"] + .btn, .btn-group-vertical > input[value="Cancel"] + .btn, .btn-group-vertical > input[value='delete'] + .btn, .btn-group-vertical > .btn + input[type="submit"], .btn-group-vertical > input[type="submit"] + input[type="submit"], .btn-group-vertical > input[value="cancel"] + input[type="submit"], .btn-group-vertical > input[value="Cancel"] + input[type="submit"], .btn-group-vertical > input[value='delete'] + input[type="submit"], .btn-group-vertical > .btn + input[value="cancel"], .btn-group-vertical > input[type="submit"] + input[value="cancel"], .btn-group-vertical > input[value="cancel"] + input[value="cancel"], .btn-group-vertical > input[value="Cancel"] + input[value="cancel"], .btn-group-vertical > input[value='delete'] + input[value="cancel"], .btn-group-vertical > .btn + input[value="Cancel"], .btn-group-vertical > input[type="submit"] + input[value="Cancel"], .btn-group-vertical > input[value="cancel"] + input[value="Cancel"], .btn-group-vertical > input[value="Cancel"] + input[value="Cancel"], .btn-group-vertical > input[value='delete'] + input[value="Cancel"], .btn-group-vertical > .btn + input[value='delete'], .btn-group-vertical > input[type="submit"] + input[value='delete'], .btn-group-vertical > input[value="cancel"] + input[value='delete'], .btn-group-vertical > input[value="Cancel"] + input[value='delete'], .btn-group-vertical > input[value='delete'] + input[value='delete'],
+.btn-group-vertical > .btn + .btn,
 .btn-group-vertical > .btn + .btn-group,
-.btn-group-vertical > input[type="submit"] + .btn-group,
-.btn-group-vertical > input[value="cancel"] + .btn-group,
-.btn-group-vertical > input[value="Cancel"] + .btn-group,
-.btn-group-vertical > input[value='delete'] + .btn-group,
 .btn-group-vertical > .btn-group + .btn,
-.btn-group-vertical > .btn-group + input[type="submit"],
-.btn-group-vertical > .btn-group + input[value="cancel"],
-.btn-group-vertical > .btn-group + input[value="Cancel"],
-.btn-group-vertical > .btn-group + input[value='delete'],
 .btn-group-vertical > .btn-group + .btn-group {
   margin-top: -1px;
   margin-left: 0;
 }
 
 /* line 171, ../sass/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn:not(:first-child):not(:last-child), .btn-group-vertical > input[type="submit"]:not(:first-child):not(:last-child), .btn-group-vertical > input[value="cancel"]:not(:first-child):not(:last-child), .btn-group-vertical > input[value="Cancel"]:not(:first-child):not(:last-child), .btn-group-vertical > input[value='delete']:not(:first-child):not(:last-child) {
+.btn-group-vertical > .btn:not(:first-child):not(:last-child) {
   border-radius: 0;
 }
 /* line 174, ../sass/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn:first-child:not(:last-child), .btn-group-vertical > input[type="submit"]:first-child:not(:last-child), .btn-group-vertical > input[value="cancel"]:first-child:not(:last-child), .btn-group-vertical > input[value="Cancel"]:first-child:not(:last-child), .btn-group-vertical > input[value='delete']:first-child:not(:last-child) {
+.btn-group-vertical > .btn:first-child:not(:last-child) {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 /* line 178, ../sass/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn:last-child:not(:first-child), .btn-group-vertical > input[type="submit"]:last-child:not(:first-child), .btn-group-vertical > input[value="cancel"]:last-child:not(:first-child), .btn-group-vertical > input[value="Cancel"]:last-child:not(:first-child), .btn-group-vertical > input[value='delete']:last-child:not(:first-child) {
+.btn-group-vertical > .btn:last-child:not(:first-child) {
   border-bottom-left-radius: 4px;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
 
 /* line 183, ../sass/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > input[type="submit"], .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > input[value="cancel"], .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > input[value="Cancel"], .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > input[value='delete'] {
+.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn {
   border-radius: 0;
 }
 
 /* line 187, ../sass/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > input[type="submit"]:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > input[value="cancel"]:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > input[value="Cancel"]:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > input[value='delete']:last-child,
+.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child,
 .btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 
 /* line 192, ../sass/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > input[type="submit"]:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > input[value="cancel"]:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > input[value="Cancel"]:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > input[value='delete']:first-child {
+.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
@@ -5218,14 +5111,14 @@ tbody.collapse.in {
   border-collapse: separate;
 }
 /* line 205, ../sass/bootstrap/_button-groups.scss */
-.btn-group-justified > .btn, .btn-group-justified > input[type="submit"], .btn-group-justified > input[value="cancel"], .btn-group-justified > input[value="Cancel"], .btn-group-justified > input[value='delete'],
+.btn-group-justified > .btn,
 .btn-group-justified > .btn-group {
   float: none;
   display: table-cell;
   width: 1%;
 }
 /* line 211, ../sass/bootstrap/_button-groups.scss */
-.btn-group-justified > .btn-group .btn, .btn-group-justified > .btn-group input[type="submit"], .btn-group-justified > .btn-group input[value="cancel"], .btn-group-justified > .btn-group input[value="Cancel"], .btn-group-justified > .btn-group input[value='delete'] {
+.btn-group-justified > .btn-group .btn {
   width: 100%;
 }
 /* line 215, ../sass/bootstrap/_button-groups.scss */
@@ -5234,22 +5127,10 @@ tbody.collapse.in {
 }
 
 /* line 236, ../sass/bootstrap/_button-groups.scss */
-[data-toggle="buttons"] > .btn input[type="radio"], [data-toggle="buttons"] > input[type="submit"] input[type="radio"], [data-toggle="buttons"] > input[value="cancel"] input[type="radio"], [data-toggle="buttons"] > input[value="Cancel"] input[type="radio"], [data-toggle="buttons"] > input[value='delete'] input[type="radio"],
+[data-toggle="buttons"] > .btn input[type="radio"],
 [data-toggle="buttons"] > .btn input[type="checkbox"],
-[data-toggle="buttons"] > input[type="submit"] input[type="checkbox"],
-[data-toggle="buttons"] > input[value="cancel"] input[type="checkbox"],
-[data-toggle="buttons"] > input[value="Cancel"] input[type="checkbox"],
-[data-toggle="buttons"] > input[value='delete'] input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="radio"],
-[data-toggle="buttons"] > .btn-group > input[type="submit"] input[type="radio"],
-[data-toggle="buttons"] > .btn-group > input[value="cancel"] input[type="radio"],
-[data-toggle="buttons"] > .btn-group > input[value="Cancel"] input[type="radio"],
-[data-toggle="buttons"] > .btn-group > input[value='delete'] input[type="radio"],
-[data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"],
-[data-toggle="buttons"] > .btn-group > input[type="submit"] input[type="checkbox"],
-[data-toggle="buttons"] > .btn-group > input[value="cancel"] input[type="checkbox"],
-[data-toggle="buttons"] > .btn-group > input[value="Cancel"] input[type="checkbox"],
-[data-toggle="buttons"] > .btn-group > input[value='delete'] input[type="checkbox"] {
+[data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"] {
   position: absolute;
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
@@ -5268,7 +5149,7 @@ tbody.collapse.in {
   padding-right: 0;
 }
 /* line 19, ../sass/bootstrap/_input-groups.scss */
-.input-group .form-control, .input-group input[class="uploadField"] {
+.input-group .form-control {
   position: relative;
   z-index: 2;
   float: left;
@@ -5279,15 +5160,13 @@ tbody.collapse.in {
 /* line 54, ../sass/bootstrap/_input-groups.scss */
 .input-group-addon,
 .input-group-btn,
-.input-group .form-control,
-.input-group input[class="uploadField"] {
+.input-group .form-control {
   display: table-cell;
 }
 /* line 59, ../sass/bootstrap/_input-groups.scss */
 .input-group-addon:not(:first-child):not(:last-child),
 .input-group-btn:not(:first-child):not(:last-child),
-.input-group .form-control:not(:first-child):not(:last-child),
-.input-group input[class="uploadField"]:not(:first-child):not(:last-child) {
+.input-group .form-control:not(:first-child):not(:last-child) {
   border-radius: 0;
 }
 
@@ -5314,11 +5193,7 @@ tbody.collapse.in {
 /* line 85, ../sass/bootstrap/_input-groups.scss */
 .input-group-addon.input-sm,
 .input-group-sm > .input-group-addon,
-.input-group-sm > .input-group-btn > .input-group-addon.btn,
-.input-group-sm > .input-group-btn > input.input-group-addon[type="submit"],
-.input-group-sm > .input-group-btn > input.input-group-addon[value="cancel"],
-.input-group-sm > .input-group-btn > input.input-group-addon[value="Cancel"],
-.input-group-sm > .input-group-btn > input.input-group-addon[value='delete'] {
+.input-group-sm > .input-group-btn > .input-group-addon.btn {
   padding: 5px 10px;
   font-size: 12px;
   border-radius: 3px;
@@ -5326,11 +5201,7 @@ tbody.collapse.in {
 /* line 90, ../sass/bootstrap/_input-groups.scss */
 .input-group-addon.input-lg,
 .input-group-lg > .input-group-addon,
-.input-group-lg > .input-group-btn > .input-group-addon.btn,
-.input-group-lg > .input-group-btn > input.input-group-addon[type="submit"],
-.input-group-lg > .input-group-btn > input.input-group-addon[value="cancel"],
-.input-group-lg > .input-group-btn > input.input-group-addon[value="Cancel"],
-.input-group-lg > .input-group-btn > input.input-group-addon[value='delete'] {
+.input-group-lg > .input-group-btn > .input-group-addon.btn {
   padding: 10px 16px;
   font-size: 18px;
   border-radius: 6px;
@@ -5342,29 +5213,13 @@ tbody.collapse.in {
 }
 
 /* line 104, ../sass/bootstrap/_input-groups.scss */
-.input-group .form-control:first-child, .input-group input[class="uploadField"]:first-child,
+.input-group .form-control:first-child,
 .input-group-addon:first-child,
 .input-group-btn:first-child > .btn,
-.input-group-btn:first-child > input[type="submit"],
-.input-group-btn:first-child > input[value="cancel"],
-.input-group-btn:first-child > input[value="Cancel"],
-.input-group-btn:first-child > input[value='delete'],
 .input-group-btn:first-child > .btn-group > .btn,
-.input-group-btn:first-child > .btn-group > input[type="submit"],
-.input-group-btn:first-child > .btn-group > input[value="cancel"],
-.input-group-btn:first-child > .btn-group > input[value="Cancel"],
-.input-group-btn:first-child > .btn-group > input[value='delete'],
 .input-group-btn:first-child > .dropdown-toggle,
 .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
-.input-group-btn:last-child > input[type="submit"]:not(:last-child):not(.dropdown-toggle),
-.input-group-btn:last-child > input[value="cancel"]:not(:last-child):not(.dropdown-toggle),
-.input-group-btn:last-child > input[value="Cancel"]:not(:last-child):not(.dropdown-toggle),
-.input-group-btn:last-child > input[value='delete']:not(:last-child):not(.dropdown-toggle),
-.input-group-btn:last-child > .btn-group:not(:last-child) > .btn,
-.input-group-btn:last-child > .btn-group:not(:last-child) > input[type="submit"],
-.input-group-btn:last-child > .btn-group:not(:last-child) > input[value="cancel"],
-.input-group-btn:last-child > .btn-group:not(:last-child) > input[value="Cancel"],
-.input-group-btn:last-child > .btn-group:not(:last-child) > input[value='delete'] {
+.input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
@@ -5375,29 +5230,13 @@ tbody.collapse.in {
 }
 
 /* line 116, ../sass/bootstrap/_input-groups.scss */
-.input-group .form-control:last-child, .input-group input[class="uploadField"]:last-child,
+.input-group .form-control:last-child,
 .input-group-addon:last-child,
 .input-group-btn:last-child > .btn,
-.input-group-btn:last-child > input[type="submit"],
-.input-group-btn:last-child > input[value="cancel"],
-.input-group-btn:last-child > input[value="Cancel"],
-.input-group-btn:last-child > input[value='delete'],
 .input-group-btn:last-child > .btn-group > .btn,
-.input-group-btn:last-child > .btn-group > input[type="submit"],
-.input-group-btn:last-child > .btn-group > input[value="cancel"],
-.input-group-btn:last-child > .btn-group > input[value="Cancel"],
-.input-group-btn:last-child > .btn-group > input[value='delete'],
 .input-group-btn:last-child > .dropdown-toggle,
 .input-group-btn:first-child > .btn:not(:first-child),
-.input-group-btn:first-child > input[type="submit"]:not(:first-child),
-.input-group-btn:first-child > input[value="cancel"]:not(:first-child),
-.input-group-btn:first-child > input[value="Cancel"]:not(:first-child),
-.input-group-btn:first-child > input[value='delete']:not(:first-child),
-.input-group-btn:first-child > .btn-group:not(:first-child) > .btn,
-.input-group-btn:first-child > .btn-group:not(:first-child) > input[type="submit"],
-.input-group-btn:first-child > .btn-group:not(:first-child) > input[value="cancel"],
-.input-group-btn:first-child > .btn-group:not(:first-child) > input[value="Cancel"],
-.input-group-btn:first-child > .btn-group:not(:first-child) > input[value='delete'] {
+.input-group-btn:first-child > .btn-group:not(:first-child) > .btn {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
@@ -5414,24 +5253,24 @@ tbody.collapse.in {
   white-space: nowrap;
 }
 /* line 140, ../sass/bootstrap/_input-groups.scss */
-.input-group-btn > .btn, .input-group-btn > input[type="submit"], .input-group-btn > input[value="cancel"], .input-group-btn > input[value="Cancel"], .input-group-btn > input[value='delete'] {
+.input-group-btn > .btn {
   position: relative;
 }
 /* line 142, ../sass/bootstrap/_input-groups.scss */
-.input-group-btn > .btn + .btn, .input-group-btn > input[type="submit"] + .btn, .input-group-btn > input[value="cancel"] + .btn, .input-group-btn > input[value="Cancel"] + .btn, .input-group-btn > input[value='delete'] + .btn, .input-group-btn > .btn + input[type="submit"], .input-group-btn > input[type="submit"] + input[type="submit"], .input-group-btn > input[value="cancel"] + input[type="submit"], .input-group-btn > input[value="Cancel"] + input[type="submit"], .input-group-btn > input[value='delete'] + input[type="submit"], .input-group-btn > .btn + input[value="cancel"], .input-group-btn > input[type="submit"] + input[value="cancel"], .input-group-btn > input[value="cancel"] + input[value="cancel"], .input-group-btn > input[value="Cancel"] + input[value="cancel"], .input-group-btn > input[value='delete'] + input[value="cancel"], .input-group-btn > .btn + input[value="Cancel"], .input-group-btn > input[type="submit"] + input[value="Cancel"], .input-group-btn > input[value="cancel"] + input[value="Cancel"], .input-group-btn > input[value="Cancel"] + input[value="Cancel"], .input-group-btn > input[value='delete'] + input[value="Cancel"], .input-group-btn > .btn + input[value='delete'], .input-group-btn > input[type="submit"] + input[value='delete'], .input-group-btn > input[value="cancel"] + input[value='delete'], .input-group-btn > input[value="Cancel"] + input[value='delete'], .input-group-btn > input[value='delete'] + input[value='delete'] {
+.input-group-btn > .btn + .btn {
   margin-left: -1px;
 }
 /* line 146, ../sass/bootstrap/_input-groups.scss */
-.input-group-btn > .btn:hover, .input-group-btn > input[type="submit"]:hover, .input-group-btn > input[value="cancel"]:hover, .input-group-btn > input[value="Cancel"]:hover, .input-group-btn > input[value='delete']:hover, .input-group-btn > .btn:focus, .input-group-btn > input[type="submit"]:focus, .input-group-btn > input[value="cancel"]:focus, .input-group-btn > input[value="Cancel"]:focus, .input-group-btn > input[value='delete']:focus, .input-group-btn > .btn:active, .input-group-btn > input[type="submit"]:active, .input-group-btn > input[value="cancel"]:active, .input-group-btn > input[value="Cancel"]:active, .input-group-btn > input[value='delete']:active {
+.input-group-btn > .btn:hover, .input-group-btn > .btn:focus, .input-group-btn > .btn:active {
   z-index: 2;
 }
 /* line 155, ../sass/bootstrap/_input-groups.scss */
-.input-group-btn:first-child > .btn, .input-group-btn:first-child > input[type="submit"], .input-group-btn:first-child > input[value="cancel"], .input-group-btn:first-child > input[value="Cancel"], .input-group-btn:first-child > input[value='delete'],
+.input-group-btn:first-child > .btn,
 .input-group-btn:first-child > .btn-group {
   margin-right: -1px;
 }
 /* line 161, ../sass/bootstrap/_input-groups.scss */
-.input-group-btn:last-child > .btn, .input-group-btn:last-child > input[type="submit"], .input-group-btn:last-child > input[value="cancel"], .input-group-btn:last-child > input[value="Cancel"], .input-group-btn:last-child > input[value='delete'],
+.input-group-btn:last-child > .btn,
 .input-group-btn:last-child > .btn-group {
   margin-left: -1px;
 }
@@ -5920,7 +5759,7 @@ tbody.collapse.in {
     vertical-align: middle;
   }
   /* line 448, ../sass/bootstrap/_forms.scss */
-  .navbar-form .form-control, .navbar-form input[class="uploadField"] {
+  .navbar-form .form-control {
     display: inline-block;
     width: auto;
     vertical-align: middle;
@@ -5937,12 +5776,11 @@ tbody.collapse.in {
   /* line 463, ../sass/bootstrap/_forms.scss */
   .navbar-form .input-group .input-group-addon,
   .navbar-form .input-group .input-group-btn,
-  .navbar-form .input-group .form-control,
-  .navbar-form .input-group input[class="uploadField"] {
+  .navbar-form .input-group .form-control {
     width: auto;
   }
   /* line 471, ../sass/bootstrap/_forms.scss */
-  .navbar-form .input-group > .form-control, .navbar-form .input-group > input[class="uploadField"] {
+  .navbar-form .input-group > .form-control {
     width: 100%;
   }
   /* line 475, ../sass/bootstrap/_forms.scss */
@@ -6020,12 +5858,12 @@ tbody.collapse.in {
   margin-bottom: 8px;
 }
 /* line 346, ../sass/bootstrap/_navbar.scss */
-.navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn, .btn-group-sm > input.navbar-btn[type="submit"], .btn-group-sm > input.navbar-btn[value="cancel"], .btn-group-sm > input.navbar-btn[value="Cancel"], .btn-group-sm > input.navbar-btn[value='delete'] {
+.navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn {
   margin-top: 10px;
   margin-bottom: 10px;
 }
 /* line 349, ../sass/bootstrap/_navbar.scss */
-.navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn, .btn-group-xs > input.navbar-btn[type="submit"], .btn-group-xs > input.navbar-btn[value="cancel"], .btn-group-xs > input.navbar-btn[value="Cancel"], .btn-group-xs > input.navbar-btn[value='delete'] {
+.navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn {
   margin-top: 14px;
   margin-bottom: 14px;
 }
@@ -6473,7 +6311,7 @@ tbody.collapse.in {
   display: none;
 }
 /* line 25, ../sass/bootstrap/_labels.scss */
-.btn .label, input[type="submit"] .label, input[value="cancel"] .label, input[value="Cancel"] .label, input[value='delete'] .label {
+.btn .label {
   position: relative;
   top: -1px;
 }
@@ -6559,12 +6397,12 @@ a.label:hover, a.label:focus {
   display: none;
 }
 /* line 27, ../sass/bootstrap/_badges.scss */
-.btn .badge, input[type="submit"] .badge, input[value="cancel"] .badge, input[value="Cancel"] .badge, input[value='delete'] .badge {
+.btn .badge {
   position: relative;
   top: -1px;
 }
 /* line 32, ../sass/bootstrap/_badges.scss */
-.btn-xs .badge, .btn-group-xs > .btn .badge, .btn-group-xs > input[type="submit"] .badge, .btn-group-xs > input[value="cancel"] .badge, .btn-group-xs > input[value="Cancel"] .badge, .btn-group-xs > input[value='delete'] .badge, .btn-group-xs > .btn .badge, .btn-group-xs > input[type="submit"] .badge, .btn-group-xs > input[value="cancel"] .badge, .btn-group-xs > input[value="Cancel"] .badge, .btn-group-xs > input[value='delete'] .badge {
+.btn-xs .badge, .btn-group-xs > .btn .badge, .btn-group-xs > .btn .badge {
   top: 0;
   padding: 1px 5px;
 }
@@ -7789,12 +7627,12 @@ button.close {
   clear: both;
 }
 /* line 110, ../sass/bootstrap/_modals.scss */
-.modal-footer .btn + .btn, .modal-footer input[type="submit"] + .btn, .modal-footer input[value="cancel"] + .btn, .modal-footer input[value="Cancel"] + .btn, .modal-footer input[value='delete'] + .btn, .modal-footer .btn + input[type="submit"], .modal-footer input[type="submit"] + input[type="submit"], .modal-footer input[value="cancel"] + input[type="submit"], .modal-footer input[value="Cancel"] + input[type="submit"], .modal-footer input[value='delete'] + input[type="submit"], .modal-footer .btn + input[value="cancel"], .modal-footer input[type="submit"] + input[value="cancel"], .modal-footer input[value="cancel"] + input[value="cancel"], .modal-footer input[value="Cancel"] + input[value="cancel"], .modal-footer input[value='delete'] + input[value="cancel"], .modal-footer .btn + input[value="Cancel"], .modal-footer input[type="submit"] + input[value="Cancel"], .modal-footer input[value="cancel"] + input[value="Cancel"], .modal-footer input[value="Cancel"] + input[value="Cancel"], .modal-footer input[value='delete'] + input[value="Cancel"], .modal-footer .btn + input[value='delete'], .modal-footer input[type="submit"] + input[value='delete'], .modal-footer input[value="cancel"] + input[value='delete'], .modal-footer input[value="Cancel"] + input[value='delete'], .modal-footer input[value='delete'] + input[value='delete'] {
+.modal-footer .btn + .btn {
   margin-left: 5px;
   margin-bottom: 0;
 }
 /* line 115, ../sass/bootstrap/_modals.scss */
-.modal-footer .btn-group .btn + .btn, .modal-footer .btn-group input[type="submit"] + .btn, .modal-footer .btn-group input[value="cancel"] + .btn, .modal-footer .btn-group input[value="Cancel"] + .btn, .modal-footer .btn-group input[value='delete'] + .btn, .modal-footer .btn-group .btn + input[type="submit"], .modal-footer .btn-group input[type="submit"] + input[type="submit"], .modal-footer .btn-group input[value="cancel"] + input[type="submit"], .modal-footer .btn-group input[value="Cancel"] + input[type="submit"], .modal-footer .btn-group input[value='delete'] + input[type="submit"], .modal-footer .btn-group .btn + input[value="cancel"], .modal-footer .btn-group input[type="submit"] + input[value="cancel"], .modal-footer .btn-group input[value="cancel"] + input[value="cancel"], .modal-footer .btn-group input[value="Cancel"] + input[value="cancel"], .modal-footer .btn-group input[value='delete'] + input[value="cancel"], .modal-footer .btn-group .btn + input[value="Cancel"], .modal-footer .btn-group input[type="submit"] + input[value="Cancel"], .modal-footer .btn-group input[value="cancel"] + input[value="Cancel"], .modal-footer .btn-group input[value="Cancel"] + input[value="Cancel"], .modal-footer .btn-group input[value='delete'] + input[value="Cancel"], .modal-footer .btn-group .btn + input[value='delete'], .modal-footer .btn-group input[type="submit"] + input[value='delete'], .modal-footer .btn-group input[value="cancel"] + input[value='delete'], .modal-footer .btn-group input[value="Cancel"] + input[value='delete'], .modal-footer .btn-group input[value='delete'] + input[value='delete'] {
+.modal-footer .btn-group .btn + .btn {
   margin-left: -1px;
 }
 /* line 119, ../sass/bootstrap/_modals.scss */
@@ -8329,7 +8167,7 @@ button.close {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
 /* line 228, ../sass/bootstrap/_carousel.scss */
-.carousel-caption .btn, .carousel-caption input[type="submit"], .carousel-caption input[value="cancel"], .carousel-caption input[value="Cancel"], .carousel-caption input[value='delete'] {
+.carousel-caption .btn {
   text-shadow: none;
 }
 
@@ -8740,12 +8578,11 @@ button.close {
 
   /* line 12, ../sass/hacks.scss */
   sup {
-    top: -0.5em !important;
     left: 0em !important;
   }
 }
 @media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dppx) and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dppx) and (max-width: 767px) {
-  /* line 17, ../sass/hacks.scss */
+  /* line 16, ../sass/hacks.scss */
   .notify-badge {
     margin-top: -0.5em !important;
   }
@@ -9530,13 +9367,13 @@ html.no-js .collapse {
 }
 
 /* line 382, ../sass/screen.scss */
-.btn-danger, input[value="cancel"], input[value="Cancel"], input[value='delete'] {
+.btn-danger {
   background: #660000;
   border-color: #660000;
 }
 
 /* line 386, ../sass/screen.scss */
-.btn-success, input[type="submit"] {
+.btn-success {
   background: #333333;
   border-color: #333333;
 }
@@ -9569,7 +9406,7 @@ ul.steplist li a {
 }
 
 /* line 409, ../sass/screen.scss */
-.form-control:focus, input[class="uploadField"]:focus {
+.form-control:focus {
   border-color: #646464;
   -moz-box-shadow: inset 0 0.0625em 0.0625em rgba(194, 193, 186, 0.075), 0 0 0.5em rgba(100, 100, 100, 0.6);
   -webkit-box-shadow: inset 0 0.0625em 0.0625em rgba(194, 193, 186, 0.075), 0 0 0.5em rgba(100, 100, 100, 0.6);
@@ -9864,17 +9701,17 @@ html.no-js .dropdown:hover .dropdown-menu, html.no-js .dropdown:focus .dropdown-
 */
 /* line 9, ../sass/general.scss */
 .center {
-  text-align: center;
+  text-align: center !important;
 }
 
 /* line 12, ../sass/general.scss */
 .left {
-  text-align: left;
+  text-align: left !important;
 }
 
 /* line 15, ../sass/general.scss */
 .right {
-  text-align: right;
+  text-align: right !important;
 }
 
 /* line 19, ../sass/general.scss */
@@ -9904,28 +9741,22 @@ html.no-js .dropdown:hover .dropdown-menu, html.no-js .dropdown:focus .dropdown-
   font-weight: normal;
 }
 
-/* line 13, ../sass/main.scss */
-input[type="submit"] {
-  margin-top: 0.5em !important;
-}
-
-/* line 19, ../sass/main.scss */
-input[class="uploadField"] {
-  height: 100% !important;
-  padding: 0.5em 0em 0.5em 0.5em !important;
-}
-
-/* line 25, ../sass/main.scss */
-input[value="cancel"], input[value="Cancel"], input[value='delete'] {
-  margin-top: 0.5em !important;
+/*
+* =====================================
+* Header elements
+* =====================================
+*/
+/* line 15, ../sass/main.scss */
+#vt-logo {
+  margin-left: -1.8em !important;
 }
 
 @media (max-width: 767px) {
-  /* line 33, ../sass/main.scss */
+  /* line 21, ../sass/main.scss */
   html.no-js div.hidden-xs {
     display: block !important;
   }
-  /* line 36, ../sass/main.scss */
+  /* line 24, ../sass/main.scss */
   html.no-js div.visible-xs {
     display: none !important;
   }
