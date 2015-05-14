@@ -1,0 +1,556 @@
+/*==============CSS for Tables======================================*/
+/* line 16, ../sass/table.scss */
+table.art {
+  width: 100%;
+  border-style: solid;
+  border-spacing: 0em;
+  margin: 0 0 1em 0;
+}
+
+/* line 25, ../sass/table.scss */
+table.art caption {
+  text-align: left;
+  padding: 0.4em 0.1875em;
+  font-weight: bold;
+}
+
+/* line 33, ../sass/table.scss */
+table.art tbody td {
+  padding: 0.1875em 0.375em;
+  vertical-align: top;
+  text-align: center;
+  border: 0.1em solid black !important;
+}
+
+/* line 44, ../sass/table.scss */
+table.art thead th, table.art tbody th {
+  padding: 0.1875em 0.375em;
+  vertical-align: top;
+  text-align: center;
+  font-weight: bold;
+  border: 0.1em solid black !important;
+}
+
+/* line 55, ../sass/table.scss */
+table.art thead tr, table.art tbody tr {
+  border: 0.1em solid black !important;
+}
+
+/* line 62, ../sass/table.scss */
+table.art thead td:first-child, table.art thead table.art th:first-child, table.art tbody td:first-child, table.art tbody table.art th:first-child {
+  text-align: left;
+}
+
+/* line 68, ../sass/table.scss */
+tfoot {
+  border: none !important;
+}
+/* line 70, ../sass/table.scss */
+tfoot tr, tfoot td, tfoot th {
+  border: none !important;
+}
+
+/* line 75, ../sass/table.scss */
+table.grid td, table.grid th {
+  border-left: solid .1em;
+  border-top: solid .1em;
+}
+
+/* line 80, ../sass/table.scss */
+table.grid thead tr:first-child th {
+  border-top: 0em solid;
+}
+
+/* line 84, ../sass/table.scss */
+table.grid tr th:last-child, table.grid tr td:last-child {
+  border-right: .1em solid;
+}
+
+/* line 88, ../sass/table.scss */
+table.grid tfoot tr td:first-child, table.grid tfoot tr th:first-child {
+  border-left: 0em solid;
+}
+
+/* line 91, ../sass/table.scss */
+table.grid tfoot tr td:last-child, table.grid tfoot tr th:last-child {
+  border-right: 0em solid;
+}
+
+/* line 95, ../sass/table.scss */
+table.vert {
+  border-left: solid .1em;
+}
+
+/* line 98, ../sass/table.scss */
+table.vert td, table.vert th {
+  border-left: .1em solid;
+}
+
+/* line 102, ../sass/table.scss */
+table.vert thead tr:first-child th {
+  border-top: 0em solid;
+}
+
+/* line 106, ../sass/table.scss */
+table.vert tr th:last-child, table.vert tr td:last-child {
+  border-right: .1em solid;
+}
+
+/* line 110, ../sass/table.scss */
+table.vert tfoot tr td:first-child, table.vert tfoot tr th:first-child {
+  border-left: 0em solid;
+}
+
+/* line 113, ../sass/table.scss */
+table.vert tfoot tr td:last-child, table.vert tfoot tr th:last-child {
+  border-right: 0em solid;
+}
+
+/* line 117, ../sass/table.scss */
+table.left td, table.left th {
+  text-align: left;
+}
+
+/* line 121, ../sass/table.scss */
+tr.left td, tr.left th {
+  text-align: left;
+}
+
+/* line 125, ../sass/table.scss */
+table.right td, table.right th {
+  text-align: right;
+}
+
+/* line 129, ../sass/table.scss */
+tr.right td, tr.right th {
+  text-align: right;
+}
+
+/* line 133, ../sass/table.scss */
+tr.right th:first-child, tr.right td:first-child {
+  text-align: left;
+}
+
+/* line 137, ../sass/table.scss */
+table.underline th, table.underline td {
+  border-bottom: .1em solid;
+}
+
+/* line 141, ../sass/table.scss */
+table.underline tr:last-of-type th, table.underline tr:last-of-type td {
+  border-bottom: 0em solid;
+}
+
+/* line 145, ../sass/table.scss */
+tr.underline th, tr.underline td {
+  border-bottom: .1em solid;
+}
+
+/* line 149, ../sass/table.scss */
+tr.overline th, tr.overline td {
+  border-top: .1em solid;
+}
+
+/* line 153, ../sass/table.scss */
+tr.underlinedark th, tr.underlinedark td {
+  border-bottom: 0.125em solid;
+}
+
+/* line 157, ../sass/table.scss */
+table.spaced tbody td {
+  padding-top: 1em;
+}
+
+/* line 161, ../sass/table.scss */
+table.spaced tbody tr:first-child td {
+  padding-top: 0.4em;
+}
+
+/* line 165, ../sass/table.scss */
+tr.spaced th, tr.spaced td {
+  padding-top: 1em;
+}
+
+/* line 168, ../sass/table.scss */
+table {
+  width: 100%;
+  border-spacing: 0.125em;
+}
+
+/* line 172, ../sass/table.scss */
+table.art tr, table.art th, table.art td {
+  border: .1em solid black;
+}
+
+/* line 175, ../sass/table.scss */
+td th, td tr, td td {
+  border: .1em solid black;
+}
+
+/* line 180, ../sass/table.scss */
+table.cube td:first-child {
+  width: 50%;
+}
+
+/* line 185, ../sass/table.scss */
+#content blockquote th, #content blockquote tr, #content blockquote td {
+  border: .1em solid black;
+}
+
+/*==================End table CSS==============================================*/
+/* line 7, ../sass/style_article.scss */
+blockquote {
+  font-size: 1em;
+  margin: 0 0 2em;
+}
+
+/* line 12, ../sass/style_article.scss */
+.artmargin {
+  margin: 0 .5em;
+  position: relative;
+  line-height: 1.77em;
+}
+/* line 17, ../sass/style_article.scss */
+.artmargin h2 {
+  margin-bottom: 1em !important;
+}
+/* line 20, ../sass/style_article.scss */
+.artmargin p {
+  font-size: 1.13em;
+}
+/* line 22, ../sass/style_article.scss */
+.artmargin p.bigFirst {
+  margin-top: 1em;
+}
+/* line 25, ../sass/style_article.scss */
+.artmargin p.bigFirst:first-letter {
+  font-size: 4em;
+  float: left;
+  padding: 0.125em;
+  font-style: italic;
+  margin-left: 0;
+  line-height: 2.5em;
+  margin-top: -0.9375em;
+  padding: 0.75em 0 0 0;
+}
+
+/* line 38, ../sass/style_article.scss */
+.alanauthor {
+  background: #686868;
+  padding: 1em;
+  margin-bottom: 0.4em;
+  color: #ffffff;
+  font-weight: normal;
+  font-size: 1.1em;
+  font-family: Geneva, Tahoma, sans-serif;
+  width: 15em !important;
+}
+
+/* line 48, ../sass/style_article.scss */
+.indent {
+  text-indent: 2em;
+}
+
+/* line 51, ../sass/style_article.scss */
+.block {
+  margin-left: 2.5em;
+}
+
+/* line 54, ../sass/style_article.scss */
+.floatleft {
+  float: left;
+  padding-right: 0.625em;
+}
+
+/* line 58, ../sass/style_article.scss */
+.floatright {
+  float: right;
+  padding-left: 0.625em;
+}
+
+/* line 63, ../sass/style_article.scss */
+.vol_ssn {
+  float: right;
+  font-weight: bold;
+  margin-right: 1.5em;
+  font-size: 1.1em;
+}
+
+/* line 69, ../sass/style_article.scss */
+.vol_issue {
+  float: left;
+  font-weight: bold;
+  margin-left: 1.5em;
+  font-size: 1.1em;
+}
+
+/* line 76, ../sass/style_article.scss */
+.subheading {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+/* line 81, ../sass/style_article.scss */
+.subheading2 {
+  font-style: italic;
+  font-size: 1.1em;
+}
+
+/* line 86, ../sass/style_article.scss */
+.subheading3 {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+/* line 91, ../sass/style_article.scss */
+.vl_logo {
+  background: black;
+  color: white;
+  font-family: Arial;
+  font-size: 0.6em;
+  border-width: 0.0625em;
+  border-style: solid;
+  border-color: black;
+  font-weight: bold;
+  padding: 0.125em;
+}
+
+/* line 102, ../sass/style_article.scss */
+cite {
+  font-style: inherit;
+}
+/* line 105, ../sass/style_article.scss */
+cite a {
+  white-space: pre;
+  /* CSS 2.0 */
+  white-space: pre-wrap;
+  /* CSS 2.1 */
+  white-space: pre-line;
+  /* CSS 3.0 */
+  white-space: -pre-wrap;
+  /* Opera 4-6 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  white-space: -moz-pre-wrap;
+  /* Mozilla */
+  white-space: -hp-pre-wrap;
+  /* HP Printers */
+  word-wrap: break-word;
+  /* IE 5+ */
+}
+
+/* line 118, ../sass/style_article.scss */
+sup {
+  top: .15em;
+}
+
+/* line 125, ../sass/style_article.scss */
+.outdent {
+  text-indent: -2em;
+}
+
+/* line 129, ../sass/style_article.scss */
+.outdentflush {
+  text-indent: -2em;
+  padding-left: 2em;
+}
+
+/* line 134, ../sass/style_article.scss */
+.outdentli {
+  text-indent: -1.3em;
+}
+
+/* line 138, ../sass/style_article.scss */
+img {
+  border: 0;
+}
+
+/* line 142, ../sass/style_article.scss */
+img.center {
+  -webkit-align-content: center;
+  align-content: center;
+}
+
+/* line 146, ../sass/style_article.scss */
+.small-caps {
+  font-variant: small-caps;
+}
+
+/* line 150, ../sass/style_article.scss */
+.notbold {
+  font-weight: normal;
+}
+
+/* line 154, ../sass/style_article.scss */
+.notitalic {
+  font-style: normal;
+}
+
+/* line 158, ../sass/style_article.scss */
+.sup, sup {
+  vertical-align: super;
+  font-size: 0.83em;
+}
+
+/* line 163, ../sass/style_article.scss */
+.sub {
+  vertical-align: sub;
+  font-size: 0.83em;
+}
+
+/* line 167, ../sass/style_article.scss */
+.sansserif {
+  font-family: "PT Sans", sans-serif !important;
+}
+
+/* line 170, ../sass/style_article.scss */
+.pdf {
+  font-weight: normal;
+  font-size: 0.8em;
+  padding-left: 1.25em;
+  font-style: normal;
+}
+
+/* line 177, ../sass/style_article.scss */
+.artlink {
+  font-size: 0.85em;
+  padding-left: 1.25em;
+  font-style: normal;
+}
+
+/* line 184, ../sass/style_article.scss */
+.overline {
+  border-style: solid;
+  border-width: 0.0625em 0em 0em 0em;
+}
+
+/* line 188, ../sass/style_article.scss */
+div.quoteright {
+  float: right;
+  width: 16em;
+  line-height: 1.6em;
+  margin: .5em 0 .5em 2em;
+  text-align: left;
+  padding: 0.5em 0em 0.5em 0.3em;
+  border-top: thick solid #999999;
+  border-bottom: thin solid #999999;
+  font-family: Verdana, Arial, Geneva, sans-serif;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+/* line 201, ../sass/style_article.scss */
+div.quoteright p {
+  font-size: 0.8em;
+  line-height: 1.3em;
+}
+
+/* line 206, ../sass/style_article.scss */
+.va_caption {
+  font-style: italic;
+  font-size: .75em;
+  font-family: Verdana, Arial, Geneva, sans-serif;
+}
+
+/* line 211, ../sass/style_article.scss */
+ul.NoBullet {
+  list-style-type: none;
+}
+
+/* line 214, ../sass/style_article.scss */
+ol {
+  list-style-type: decimal;
+  margin-left: 1em;
+}
+
+/* line 219, ../sass/style_article.scss */
+.clip {
+  *zoom: 1;
+  padding: 0 1em;
+  border: 0.0625em solid #333333;
+  margin-bottom: 1em;
+}
+/* line 22, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+.clip:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+/* line 225, ../sass/style_article.scss */
+.clip div:last-of-type {
+  clear: both;
+}
+
+/* line 230, ../sass/style_article.scss */
+.clipLeft {
+  float: left;
+}
+
+/* line 234, ../sass/style_article.scss */
+.clipRight {
+  float: right;
+}
+
+/* line 238, ../sass/style_article.scss */
+.cliptitle {
+  margin: 1em 0 0 0;
+  text-align: left;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+/* line 246, ../sass/style_article.scss */
+.Z3988 {
+  padding-left: .2em;
+}
+
+/* line 250, ../sass/style_article.scss */
+div.allBorders {
+  border: 1px solid black;
+  padding: .5em;
+}
+
+@media (max-width: 767px) {
+  /* line 256, ../sass/style_article.scss */
+  h2 {
+    text-align: center;
+  }
+
+  /* line 259, ../sass/style_article.scss */
+  .alanauthor {
+    width: 100% !important;
+    font-size: 1.3em;
+  }
+
+  /* line 263, ../sass/style_article.scss */
+  div.quoteright {
+    float: left;
+    width: 100% !important;
+    margin: 0 0 1em 0;
+    font-size: 1.2em;
+  }
+  /* line 269, ../sass/style_article.scss */
+  div.quoteright img {
+    display: block;
+    margin: auto;
+  }
+
+  /* line 274, ../sass/style_article.scss */
+  .clipLeft, .clipRight {
+    float: none;
+    text-align: center;
+  }
+}
+/* iPhone / mobile webkit */
+@media screen and (max-width: 480px) {
+  /* line 282, ../sass/style_article.scss */
+  .vol_ssn, .vol_issue {
+    float: none;
+    margin: auto;
+    text-align: center;
+  }
+}
