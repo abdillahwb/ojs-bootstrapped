@@ -7,6 +7,30 @@
 
 /*
 * =====================================
+* No-js functionality
+* =====================================
+*/
+html.no-js{
+	.dropdown:hover, .dropdown:focus {
+		.dropdown-menu {
+			display:block;
+		}
+	}
+	#navbarToggle:hover, #navbarToggle:focus {
+		#mobileUser {
+			display: block;
+		}
+	}
+	.collapse {
+	  display: block
+	}
+	#rightSidebar {
+		@include float-left;
+			
+		}
+	}
+/*
+* =====================================
 * Header elements
 * =====================================
 */
@@ -72,7 +96,6 @@ table.mceLayout {
 
 .value {
 	padding-top: .1em;
-//	vertical-align: bottom;
 }
 form {
 	p {
@@ -136,15 +159,6 @@ form, table.data {
 	background-color: #fff!important;
 }
 
-//table.data, table.info {
-//	tr {
-//		@extend .form-group;
-//	}
-//
-//	.label {
-//		@extend .control-label;
-//	}
-//}
 
 @media (max-width: $tablet-break + 1px) {
 	#notifyBtn, #searchBtn {
