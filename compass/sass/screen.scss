@@ -43,12 +43,6 @@ li {
 	vertical-align: middle;
 }
 
-// Need to add in no-js functionality
-html.no-js{
-	.collapse {
-	  display: block
-	}
-}
 #body.container {
 	min-height: 50em;
 }
@@ -212,22 +206,48 @@ html.no-js{
 	padding: em(2px);
 }
 
-#userNotify, #user, #info, #searchDrop, #notifySub {
+#userNotify, 
+#user, 
+#info, 
+#searchDrop, 
+#notifySub {
 	font-size: 1.29em;
  	line-height: 1.3333333em;
   	height: em(45.5px);
 }
 
-#userNotify > a, #user > a, #info > a, #searchDrop > a, #notifySub > a  {
+#sidebar-drop {
+	font-size: 2.5em;
+  	height: 2em;
+}
+
+
+#userNotify > a, 
+#user > a, 
+#info > a, 
+#searchDrop > a, 
+#notifySub > a,
+#sidebar-drop > a  {
 	width: 100%; 
 	height: 100%;
 }
 
-#userNotify > a > .glyphicon, #user > a > .glyphicon, #info > a > .glyphicon, #searchDrop > a > .glyphicon, #notifySub > a > .glyphicon {
+#userNotify > a > .glyphicon, 
+#user > a > .glyphicon, 
+#info > a > .glyphicon, 
+#searchDrop > a > .glyphicon, 
+#notifySub > a > .glyphicon {
 	font-size: em($base-font-size - 1px); 
 	padding-top: em(1px);
 	color: $nav_font_color;
 }
+
+#sidebar-drop > a > .glyphicon {
+	font-size: em($base-font-size - 1px); 
+	padding-top: em(1px);
+	color: $vt_deep_gray;
+}
+
 #userNotify, #info {
 	padding-right: .5em!important;
 	.dropdown-menu {
@@ -281,6 +301,19 @@ html.no-js{
 	}
 }
  
+#sidebar-tab {
+	@include float-right;
+
+	#sidebar {
+		margin-left: -8em;
+
+		#rightSidebar {
+			width: 100%!important;
+			margin-right: 0%!important;
+			padding: 1em!important;
+		}
+	}
+}
 
 /*
 * =====================================
@@ -305,8 +338,11 @@ html.no-js{
 				color:$breadcrumb_hover !important;
 			}
 		}
+		ol {margin-left: 0em!important;}
+
 		ol.breadcrumb li:first-child {
 			padding-left: 1em;
+
 		}
 	}
 }
@@ -367,8 +403,17 @@ html.no-js{
 		border:none;
 	}
 }
-
-#sidebar, #topBar {
+// Overriding the blocks that are utilized in the navbar
+ #topBar, 
+ // #sidebar, 
+ #sidebarDevelopedBy,
+ #sidebarHelp,
+ #sidebarUser,
+ #notification,
+ #sidebarNavigation,
+ #sidebarFontSize,
+ #sidebarInformation
+{
 	display: none;
 }
 
@@ -629,11 +674,3 @@ table.mceLayout {
 * =====================================
 */
 
-html.no-js {
-	.dropdown:hover, .dropdown:focus {
-		.dropdown-menu {
-			display:block;
-		}
-	}
-	
-}
