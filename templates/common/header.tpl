@@ -50,12 +50,12 @@
 		<script type="text/javascript" src="{$baseUrl}/lib/pkp/js/lib/jquery/plugins/jqueryUi.min.js"></script>
 	{/if}
 
-<!-- 	{call_hook|assign:"leftSidebarCode" name="Templates::Common::LeftSidebar"}
+	{call_hook|assign:"leftSidebarCode" name="Templates::Common::LeftSidebar"}
 	{call_hook|assign:"rightSidebarCode" name="Templates::Common::RightSidebar"}
 	{if $leftSidebarCode || $rightSidebarCode}<link rel="stylesheet" href="{$baseUrl}/styles/sidebar.css" type="text/css" />{/if}
 	{if $leftSidebarCode}<link rel="stylesheet" href="{$baseUrl}/styles/leftSidebar.css" type="text/css" />{/if}
 	{if $rightSidebarCode}<link rel="stylesheet" href="{$baseUrl}/styles/rightSidebar.css" type="text/css" />{/if}
-	{if $leftSidebarCode && $rightSidebarCode}<link rel="stylesheet" href="{$baseUrl}/styles/bothSidebars.css" type="text/css" />{/if} -->
+	{if $leftSidebarCode && $rightSidebarCode}<link rel="stylesheet" href="{$baseUrl}/styles/bothSidebars.css" type="text/css" />{/if}
 
 	{foreach from=$stylesheets item=cssUrl}
 		<link rel="stylesheet" href="{$cssUrl}" type="text/css" />
@@ -149,24 +149,31 @@
 <div id="body" class="container">
 
 <div class="row row-offcanvas row-offcanvas-left">
-<div class=" col-xs-6 col-sm-3 sidebar-offcanvas showhide navbar-collapse" id="sidebar" role="navigation" style="">
+<div class="visible-xs col-md-12" id="canvas-sidebar" role="navigation" style="">
 			<div class="sidebar-nav">
   				{include file="common/mobileMainNavSection.tpl"}
 			</div>
 		</div>
 		
 {if $leftSidebarCode || $rightSidebarCode}
-	<div id="sidebar">
-		{if $leftSidebarCode}
-			<div id="leftSidebar">
-				
-			</div>
-		{/if}
-		{if $rightSidebarCode}
-			<div id="rightSidebar">
-				
-			</div>
-		{/if}
+	<div id="sidebar-tab">
+	<ul class="nav navbar-nav">
+	<li id="sidebar-drop" class="dropdown">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span></a>
+		<ul id="sidebar" class="dropdown-menu" role="menu">
+			{if $leftSidebarCode}
+				<li><div id="leftSidebar">
+					{$leftSidebarCode}
+				</div></li>
+			{/if}
+			{if $rightSidebarCode}
+				<li><div id="rightSidebar">
+					{$rightSidebarCode}
+				</div></li>
+			{/if}
+		</ul>
+		</li>
+	</ul>
 	</div>
 {/if}
 

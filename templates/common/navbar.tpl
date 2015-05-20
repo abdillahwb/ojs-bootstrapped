@@ -20,24 +20,25 @@
 		<div class="navbar navbar-default" role="navigation">
 			<div class="container">
 				<div class="navbar-header">
-					<button id="navbarToggle" type="button" class="navbar-toggle pull-left" data-toggle="offcanvas" data-target=".navbar-collapse">
+					<a id="no-js-home" href="{url context=$homeContext page="index"}"><button id="navbarToggle" type="button" class="navbar-toggle pull-left" data-toggle="offcanvas" data-target=".navbar-collapse">
 				    	<span class="sr-only">Toggle navigation</span>
 		            	<span class="icon-bar"></span>
 		            	<span class="icon-bar"></span>
 		            	<span class="icon-bar"></span>
-		          	</button>
-					<button id="searchBtn" type="button" class="navbar-toggle" data-toggle="modal" data-target="#searchModal" aria-expanded="false" aria-controls="navbar">
+		          	</button></a>
+
+					<a id="no-js-search" href="{url page="search"}"><button id="searchBtn" type="button" class="navbar-toggle" data-toggle="modal" data-target="#searchModal" aria-expanded="false" aria-controls="navbar">
 						<span class="sr-only">Search</span>
 						<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-					</button>
+					</button></a>
 					{if $isUserLoggedIn}
-						<button id="notifyBtn" type="button" class="navbar-toggle" data-toggle="dropdown" data-target="#mobileNotification" aria-expanded="false"  aria-haspopup="true">
+						<a id="no-js-notify" href="{url page="notification"}"><button id="notifyBtn" type="button" class="navbar-toggle" data-toggle="dropdown" data-target="#mobileNotification" aria-expanded="false"  aria-haspopup="true">
 							<span class="glyphicon glyphicon-bell" aria-hidden="true"></span><div class="notify-badge"><span class="badge">{if $unreadNotifications}{$unreadNotifications}{else}0{/if}</span></div>
-						</button>
+						</button></a>
 					{else}
-						<button id="subscribeBtn" type="button" class="navbar-toggle" data-toggle="dropdown" data-target="#mobileNotifySub" aria-expanded="false"  aria-haspopup="true">
+						<a id="no-js-sub" href="{url page="notification" op="subscribeMailList"}"><button id="subscribeBtn" type="button" class="navbar-toggle" data-toggle="dropdown" data-target="#mobileNotifySub" aria-expanded="false"  aria-haspopup="true">
 							<span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span>
-						</button>
+						</button></a>
 					{/if}
 					
 		    		<a class="navbar-brand hidden-xs" href="{url page="index"}">{$siteTitle}</a> 
