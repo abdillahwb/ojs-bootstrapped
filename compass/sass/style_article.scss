@@ -3,7 +3,11 @@
 // @import "hacks.css";
 @import "variables.scss";
 
-
+html.no-js {
+	#sidebar{
+		display: none!important;	
+	}
+}
 blockquote {
 	font-size: $font-size;
 	margin:0 0 2em;
@@ -247,7 +251,7 @@ ol{
 	padding-left:.2em;
 }
 
-div.allBorders {
+.allBorders {
 	border: 1px solid black;
 	padding: .5em;
 }

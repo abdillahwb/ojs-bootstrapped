@@ -199,30 +199,35 @@ table.cube td:first-child {
 
 /*==================End table CSS==============================================*/
 /* line 7, ../sass/style_article.scss */
+html.no-js #sidebar {
+  display: none !important;
+}
+
+/* line 11, ../sass/style_article.scss */
 blockquote {
   font-size: 1em;
   margin: 0 0 2em;
 }
 
-/* line 12, ../sass/style_article.scss */
+/* line 16, ../sass/style_article.scss */
 .artmargin {
   margin: 0 .5em;
   position: relative;
   line-height: 1.77em;
 }
-/* line 17, ../sass/style_article.scss */
+/* line 21, ../sass/style_article.scss */
 .artmargin h2 {
   margin-bottom: 1em !important;
 }
-/* line 20, ../sass/style_article.scss */
+/* line 24, ../sass/style_article.scss */
 .artmargin p {
   font-size: 1.13em;
 }
-/* line 22, ../sass/style_article.scss */
+/* line 26, ../sass/style_article.scss */
 .artmargin p.bigFirst {
   margin-top: 1em;
 }
-/* line 25, ../sass/style_article.scss */
+/* line 29, ../sass/style_article.scss */
 .artmargin p.bigFirst:first-letter {
   font-size: 4em;
   float: left;
@@ -234,7 +239,7 @@ blockquote {
   padding: 0.75em 0 0 0;
 }
 
-/* line 38, ../sass/style_article.scss */
+/* line 42, ../sass/style_article.scss */
 .alanauthor {
   background: #686868;
   padding: 1em;
@@ -246,29 +251,29 @@ blockquote {
   width: 15em !important;
 }
 
-/* line 48, ../sass/style_article.scss */
+/* line 52, ../sass/style_article.scss */
 .indent {
   text-indent: 2em;
 }
 
-/* line 51, ../sass/style_article.scss */
+/* line 55, ../sass/style_article.scss */
 .block {
   margin-left: 2.5em;
 }
 
-/* line 54, ../sass/style_article.scss */
+/* line 58, ../sass/style_article.scss */
 .floatleft {
   float: left;
   padding-right: 0.625em;
 }
 
-/* line 58, ../sass/style_article.scss */
+/* line 62, ../sass/style_article.scss */
 .floatright {
   float: right;
   padding-left: 0.625em;
 }
 
-/* line 63, ../sass/style_article.scss */
+/* line 67, ../sass/style_article.scss */
 .vol_ssn {
   float: right;
   font-weight: bold;
@@ -276,7 +281,7 @@ blockquote {
   font-size: 1.1em;
 }
 
-/* line 69, ../sass/style_article.scss */
+/* line 73, ../sass/style_article.scss */
 .vol_issue {
   float: left;
   font-weight: bold;
@@ -284,26 +289,26 @@ blockquote {
   font-size: 1.1em;
 }
 
-/* line 76, ../sass/style_article.scss */
+/* line 80, ../sass/style_article.scss */
 .subheading {
   font-weight: bold;
   font-size: 1.1em;
 }
 
-/* line 81, ../sass/style_article.scss */
+/* line 85, ../sass/style_article.scss */
 .subheading2 {
   font-style: italic;
   font-size: 1.1em;
 }
 
-/* line 86, ../sass/style_article.scss */
+/* line 90, ../sass/style_article.scss */
 .subheading3 {
   font-style: italic;
   font-weight: bold;
   font-size: 1em;
 }
 
-/* line 91, ../sass/style_article.scss */
+/* line 95, ../sass/style_article.scss */
 .vl_logo {
   background: black;
   color: white;
@@ -316,11 +321,11 @@ blockquote {
   padding: 0.125em;
 }
 
-/* line 102, ../sass/style_article.scss */
+/* line 106, ../sass/style_article.scss */
 cite {
   font-style: inherit;
 }
-/* line 105, ../sass/style_article.scss */
+/* line 109, ../sass/style_article.scss */
 cite a {
   white-space: pre;
   /* CSS 2.0 */
@@ -340,71 +345,71 @@ cite a {
   /* IE 5+ */
 }
 
-/* line 118, ../sass/style_article.scss */
+/* line 122, ../sass/style_article.scss */
 sup {
   top: .15em;
 }
 
-/* line 125, ../sass/style_article.scss */
+/* line 129, ../sass/style_article.scss */
 .outdent {
   text-indent: -2em;
 }
 
-/* line 129, ../sass/style_article.scss */
+/* line 133, ../sass/style_article.scss */
 .outdentflush {
   text-indent: -2em;
   padding-left: 2em;
 }
 
-/* line 134, ../sass/style_article.scss */
+/* line 138, ../sass/style_article.scss */
 .outdentli {
   text-indent: -1.3em;
 }
 
-/* line 138, ../sass/style_article.scss */
+/* line 142, ../sass/style_article.scss */
 img {
   border: 0;
 }
 
-/* line 142, ../sass/style_article.scss */
+/* line 146, ../sass/style_article.scss */
 img.center {
   -webkit-align-content: center;
   align-content: center;
 }
 
-/* line 146, ../sass/style_article.scss */
+/* line 150, ../sass/style_article.scss */
 .small-caps {
   font-variant: small-caps;
 }
 
-/* line 150, ../sass/style_article.scss */
+/* line 154, ../sass/style_article.scss */
 .notbold {
   font-weight: normal;
 }
 
-/* line 154, ../sass/style_article.scss */
+/* line 158, ../sass/style_article.scss */
 .notitalic {
   font-style: normal;
 }
 
-/* line 158, ../sass/style_article.scss */
+/* line 162, ../sass/style_article.scss */
 .sup, sup {
   vertical-align: super;
   font-size: 0.83em;
 }
 
-/* line 163, ../sass/style_article.scss */
+/* line 167, ../sass/style_article.scss */
 .sub {
   vertical-align: sub;
   font-size: 0.83em;
 }
 
-/* line 167, ../sass/style_article.scss */
+/* line 171, ../sass/style_article.scss */
 .sansserif {
   font-family: "PT Sans", sans-serif !important;
 }
 
-/* line 170, ../sass/style_article.scss */
+/* line 174, ../sass/style_article.scss */
 .pdf {
   font-weight: normal;
   font-size: 0.8em;
@@ -412,20 +417,20 @@ img.center {
   font-style: normal;
 }
 
-/* line 177, ../sass/style_article.scss */
+/* line 181, ../sass/style_article.scss */
 .artlink {
   font-size: 0.85em;
   padding-left: 1.25em;
   font-style: normal;
 }
 
-/* line 184, ../sass/style_article.scss */
+/* line 188, ../sass/style_article.scss */
 .overline {
   border-style: solid;
   border-width: 0.0625em 0em 0em 0em;
 }
 
-/* line 188, ../sass/style_article.scss */
+/* line 192, ../sass/style_article.scss */
 div.quoteright {
   float: right;
   width: 16em;
@@ -439,31 +444,31 @@ div.quoteright {
   font-weight: bold;
   font-size: 1.1em;
 }
-/* line 201, ../sass/style_article.scss */
+/* line 205, ../sass/style_article.scss */
 div.quoteright p {
   font-size: 0.8em;
   line-height: 1.3em;
 }
 
-/* line 206, ../sass/style_article.scss */
+/* line 210, ../sass/style_article.scss */
 .va_caption {
   font-style: italic;
   font-size: .75em;
   font-family: Verdana, Arial, Geneva, sans-serif;
 }
 
-/* line 211, ../sass/style_article.scss */
+/* line 215, ../sass/style_article.scss */
 ul.NoBullet {
   list-style-type: none;
 }
 
-/* line 214, ../sass/style_article.scss */
+/* line 218, ../sass/style_article.scss */
 ol {
   list-style-type: decimal;
   margin-left: 1em;
 }
 
-/* line 219, ../sass/style_article.scss */
+/* line 223, ../sass/style_article.scss */
 .clip {
   *zoom: 1;
   padding: 0 1em;
@@ -479,22 +484,22 @@ ol {
   overflow: hidden;
   visibility: hidden;
 }
-/* line 225, ../sass/style_article.scss */
+/* line 229, ../sass/style_article.scss */
 .clip div:last-of-type {
   clear: both;
 }
 
-/* line 230, ../sass/style_article.scss */
+/* line 234, ../sass/style_article.scss */
 .clipLeft {
   float: left;
 }
 
-/* line 234, ../sass/style_article.scss */
+/* line 238, ../sass/style_article.scss */
 .clipRight {
   float: right;
 }
 
-/* line 238, ../sass/style_article.scss */
+/* line 242, ../sass/style_article.scss */
 .cliptitle {
   margin: 1em 0 0 0;
   text-align: left;
@@ -503,43 +508,43 @@ ol {
   font-size: 1em;
 }
 
-/* line 246, ../sass/style_article.scss */
+/* line 250, ../sass/style_article.scss */
 .Z3988 {
   padding-left: .2em;
 }
 
-/* line 250, ../sass/style_article.scss */
-div.allBorders {
+/* line 254, ../sass/style_article.scss */
+.allBorders {
   border: 1px solid black;
   padding: .5em;
 }
 
 @media (max-width: 767px) {
-  /* line 256, ../sass/style_article.scss */
+  /* line 260, ../sass/style_article.scss */
   h2 {
     text-align: center;
   }
 
-  /* line 259, ../sass/style_article.scss */
+  /* line 263, ../sass/style_article.scss */
   .alanauthor {
     width: 100% !important;
     font-size: 1.3em;
   }
 
-  /* line 263, ../sass/style_article.scss */
+  /* line 267, ../sass/style_article.scss */
   div.quoteright {
     float: left;
     width: 100% !important;
     margin: 0 0 1em 0;
     font-size: 1.2em;
   }
-  /* line 269, ../sass/style_article.scss */
+  /* line 273, ../sass/style_article.scss */
   div.quoteright img {
     display: block;
     margin: auto;
   }
 
-  /* line 274, ../sass/style_article.scss */
+  /* line 278, ../sass/style_article.scss */
   .clipLeft, .clipRight {
     float: none;
     text-align: center;
@@ -547,7 +552,7 @@ div.allBorders {
 }
 /* iPhone / mobile webkit */
 @media screen and (max-width: 480px) {
-  /* line 282, ../sass/style_article.scss */
+  /* line 286, ../sass/style_article.scss */
   .vol_ssn, .vol_issue {
     float: none;
     margin: auto;

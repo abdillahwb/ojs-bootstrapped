@@ -10,7 +10,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="{$currentLocale|replace:"_":"-"}" xml:lang="{$currentLocale|replace:"_":"-"}">
+<html class="no-js" xmlns="http://www.w3.org/1999/xhtml" lang="{$currentLocale|replace:"_":"-"}" xml:lang="{$currentLocale|replace:"_":"-"}">
 <head>
 	<title>{$article->getLocalizedTitle()|strip_tags|escape} | {$article->getFirstAuthor(true)|strip_tags|escape} | {$currentJournal->getLocalizedTitle()|strip_tags|escape}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset={$defaultCharset|escape}" />
@@ -110,14 +110,17 @@
 <div class="container" id="body">
 
 <div class="row row-offcanvas row-offcanvas-left">
-<div class=" col-xs-6 col-sm-3 sidebar-offcanvas showhide navbar-collapse" id="sidebar" role="navigation" style="">
+<div class="visible-xs col-md-12" id="canvas-sidebar" role="navigation" style="">
 			<div class="sidebar-nav">
   				{include file="common/mobileMainNavSection.tpl"}
 			</div>
 		</div>
-
+		
 {if $leftSidebarCode || $rightSidebarCode}
-	<div id="sidebar">
+	<div id="sidebar-tab">
+	<a href="#" role="button" aria-expanded="false"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span></a>
+	</div>
+		<div id="sidebar" class="hide">
 		{if $leftSidebarCode}
 			<div id="leftSidebar">
 				{$leftSidebarCode}
@@ -128,7 +131,7 @@
 				{$rightSidebarCode}
 			</div>
 		{/if}
-	</div>
+		</div>
 {/if}
 
 <div class="row" id="main">

@@ -157,24 +157,20 @@
 		
 {if $leftSidebarCode || $rightSidebarCode}
 	<div id="sidebar-tab">
-	<ul class="nav navbar-nav">
-	<li id="sidebar-drop" class="dropdown">
-	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span></a>
-		<ul id="sidebar" class="dropdown-menu" role="menu">
-			{if $leftSidebarCode}
-				<li><div id="leftSidebar">
-					{$leftSidebarCode}
-				</div></li>
-			{/if}
-			{if $rightSidebarCode}
-				<li><div id="rightSidebar">
-					{$rightSidebarCode}
-				</div></li>
-			{/if}
-		</ul>
-		</li>
-	</ul>
+	<a href="#" role="button" aria-expanded="false"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span></a>
 	</div>
+		<div id="sidebar" class="hide">
+		{if $leftSidebarCode}
+			<div id="leftSidebar">
+				{$leftSidebarCode}
+			</div>
+		{/if}
+		{if $rightSidebarCode}
+			<div id="rightSidebar">
+				{$rightSidebarCode}
+			</div>
+		{/if}
+		</div>
 {/if}
 
 <div id="main" class="row">

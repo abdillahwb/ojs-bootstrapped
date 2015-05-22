@@ -1,3 +1,4 @@
+
 @import "bootstrap.scss";
 @import "hacks.scss";
 @import "offCanvas.scss";
@@ -11,24 +12,54 @@
 * =====================================
 */
 html.no-js{
-	.dropdown:hover, .dropdown:focus {
-		.dropdown-menu {
-			display:block;
+	
+	#container {
+
+		.visible-xs {
+			display: none!important;
+		}
+		.hidden-xs {
+			.navbar-static-top {
+				padding: 0!important;
+			}
+			display: inherit!important;
+			.nav {
+				li {
+					display: inline-block!important;
+				}
+
+			}
+			.navbar-nav {
+				margin: 0!important;
+			}
+		} 
+		.dropdown:hover, .dropdown:focus {
+			.dropdown-menu {
+				display:block;
+			}
+		}
+		#navbarToggle:hover, #navbarToggle:focus {
+			#mobileUser {
+				display: block;
+			}
+		}
+		.collapse {
+		  display: block
+		}
+		#body {
+
+		}
+		#sidebar-tab {
+			display: none;
+		}
+		#sidebar{
+			display: block!important;	
+			#rightSidebar {
+				display: block;	
+			}
 		}
 	}
-	#navbarToggle:hover, #navbarToggle:focus {
-		#mobileUser {
-			display: block;
-		}
-	}
-	.collapse {
-	  display: block
-	}
-	#rightSidebar {
-		@include float-left;
-			
-		}
-	}
+}
 /*
 * =====================================
 * Header elements
