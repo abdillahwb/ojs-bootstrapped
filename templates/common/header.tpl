@@ -148,7 +148,7 @@
 {include file="common/breadcrumbs.tpl"}
 <div id="body" class="container">
 
-<div class="row row-offcanvas row-offcanvas-left">
+<div class="row row-offcanvas row-offcanvas-left"> 
 <div class="visible-xs col-md-12" id="canvas-sidebar" role="navigation" style="">
 			<div class="sidebar-nav">
   				{include file="common/mobileMainNavSection.tpl"}

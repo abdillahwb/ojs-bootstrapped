@@ -79,7 +79,8 @@ class BootstrappedThemePlugin extends ThemePlugin {
 
 		// Add in Bootstrap JS
 		$templateMgr->addJavaScript($this->getPluginPath() . '/js/bootstrap.min.js');
-
+		// Add Notify JS
+		$templateMgr->addJavaScript($this->getPluginPath() . '/js/notify.min.js');
 		// Add Custom JS
 		$templateMgr->addJavaScript($this->getPluginPath() . '/js/custom.js');
 

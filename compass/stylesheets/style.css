@@ -10076,11 +10076,6 @@ table.mceLayout {
     border-bottom-right-radius: 0.25em !important;
   }
 }
-/*
-* =====================================
-* No-JS Solutions
-* =====================================
-*/
 @media screen and (max-device-width: 480px) {
   /* line 6, ../sass/mobile.scss */
   .container .notify-badge {
