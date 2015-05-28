@@ -256,15 +256,6 @@ ol{
 	padding: .5em;
 }
 
-#sidebar-tab {
-	margin-right: -2em;
-}
-
-#sidebar {
-	#rightSidebar {
-		@include float-right;
-	}
-}
 
 @media (max-width: 767px) {
 	h2 {

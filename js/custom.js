@@ -47,7 +47,7 @@ $(document).ready(function() {
       }
     });
     //hide sidebar if nothing is inside it
-    if ($('#rightSidebar').has('div.block').length && $('div.block').length === 1) {
+    if ($('#rightSidebar').has('div.block').length && $('#rightSidebar').has('div.block').length === 1) {
       $('#sidebar-tab').css('display', 'none');
     }
 });
