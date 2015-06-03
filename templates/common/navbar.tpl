@@ -41,7 +41,6 @@
 						</button></a>
 					{/if}
 					
-		    		<a class="navbar-brand hidden-xs" href="{url page="index"}">{$siteTitle}</a> 
 		   		</div>
 			</div>
 		</div>
