@@ -1,6 +1,3 @@
-<div class="navbar-header">
-	<a class="navbar-brand" href="{url page="index"}">{$siteTitle}</a>
-</div>
 <div class="navbar-default">
 	<ul class="nav navbar-nav">
 		<li id="about"><a href="{url page="about"}">{translate key="navigation.about"}</a></li>

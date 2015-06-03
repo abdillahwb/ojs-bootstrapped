@@ -946,50 +946,45 @@ table.mceLayout {
   .container .navbar-toggle:hover > .notify-badge .badge, .container .navbar-toggle:focus > .notify-badge .badge {
     background: #333333;
   }
-  /* line 621, ../sass/screen.scss */
-  .container .navbar-header {
-    margin-right: 0 !important;
-    margin-left: 0 !important;
-  }
-  /* line 626, ../sass/screen.scss */
+  /* line 622, ../sass/screen.scss */
   .container #notifyBtn span {
     margin-right: -0.5em !important;
   }
-  /* line 630, ../sass/screen.scss */
+  /* line 626, ../sass/screen.scss */
   .container .notify-badge {
     margin-top: -2.5em;
     margin-right: -.2em;
     padding-left: .5em;
     font-size: 1em !important;
   }
-  /* line 636, ../sass/screen.scss */
+  /* line 632, ../sass/screen.scss */
   .container .notify-badge span {
     font-size: .625em;
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 645, ../sass/screen.scss */
+  /* line 641, ../sass/screen.scss */
   .steplist {
     display: none;
   }
 
-  /* line 648, ../sass/screen.scss */
+  /* line 644, ../sass/screen.scss */
   .mceButton {
     width: 1.0625em !important;
     height: 1.0625em !important;
     margin-right: 0.125em !important;
   }
 
-  /* line 654, ../sass/screen.scss */
+  /* line 650, ../sass/screen.scss */
   #submissionPreparationChecklist .input-group, #notifications .input-group {
     width: 100%;
   }
-  /* line 657, ../sass/screen.scss */
+  /* line 653, ../sass/screen.scss */
   #submissionPreparationChecklist .input-group-addon, #notifications .input-group-addon {
     display: inherit;
     min-width: 100%;
   }
-  /* line 661, ../sass/screen.scss */
+  /* line 657, ../sass/screen.scss */
   #submissionPreparationChecklist .input-group-addon:first-child, #notifications .input-group-addon:first-child {
     border-right: 1px solid #ccc;
     -moz-border-radius-topleft: 0.25em !important;
@@ -1005,7 +1000,7 @@ table.mceLayout {
     -webkit-border-bottom-right-radius: 0 !important;
     border-bottom-right-radius: 0 !important;
   }
-  /* line 668, ../sass/screen.scss */
+  /* line 664, ../sass/screen.scss */
   #submissionPreparationChecklist .input-group-addon:last-child, #notifications .input-group-addon:last-child {
     border-left: 1px solid #ccc;
     -moz-border-radius-topleft: 0 !important;
