@@ -1,4 +1,4 @@
-pkp-bootstrappish
+Bootstrapped
 =================
 
-A theme implementing as many PKP features as possible while leaving the core intact
+A theme implementing as many Bootstrap features as possible while leaving the OJS's core intact.
