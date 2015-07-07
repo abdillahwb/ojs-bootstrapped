@@ -33,6 +33,7 @@
     width:auto;
 }
 .navbar__menu--search {width:20em;}
+.navbar__menu--divider {@include background($vt_deep_gray);}
 
 .navbar__dropdown--user {margin-right: -5.4em;}
 .navbar__dropdown--notification {margin-right: -.8em;}
