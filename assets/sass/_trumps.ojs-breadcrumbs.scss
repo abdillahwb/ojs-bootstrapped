@@ -1,6 +1,6 @@
 #breadcrumb {
     width:auto!important;
-    font-size: $font-size + .1em!important;
+    font-size: $font-size + .2px!important;
     margin-top: -2.5em;
     a {
         &:link, &:visited, &:active {color: $breadcrumb_color;}
