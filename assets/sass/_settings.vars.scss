@@ -1,0 +1,74 @@
+// ======================================
+// ======Imported Compass Variables======
+// ======================================
+// ////////////////////////////////////
+//  Variables can be configured below
+// ////////////////////////////////////
+// $base-font-size: 16px
+// $base-line-height 24px
+// =====================================
+// Color variables
+// =====================================
+//
+$vt_header_url: "../img/vt_header_secondary_bg_960.jpg";
+$vt_logo_url: "../img/vt_logo_tm_320px.png";
+$vt_deep_maroon: #660000;
+$vt_orange: #ff6600;
+$vt_deep_gray: #333333;
+$vt_md_gray: #646464;
+$vt_lt_gray: #c2c1ba;
+$form_gray: #eee;
+$default_gray_outline: #ccc;
+$link_hover: #12252c;
+$link_color: #557082;
+$breadcrumb_color: $link_hover;
+$breadcrumb_hover: $vt_deep_maroon;
+$nav_font_color: #ffffff;
+$vt_lt_cream: #f5f5eb;
+//
+// =====================================
+// Other variables
+// =====================================
+//
+$font-size: $base-font-size;
+$default-font-family: "PT Sans", sans-serif;
+// Article vars
+$base-font-color: black;
+$alan_background: #686868;
+//
+// =====================================
+// Vars for vertical rhythm
+// =====================================
+//
+$scale: 1.5; // Proportion by which the $base-font-size will scale up
+// Sass Map for sizes
+$break-sizes: (
+	sm: (
+		base-font-size: 14px,
+		base-line-height: 1em,
+		scale: 1.25
+	),
+	md: (
+		base-font-size: 16px,
+		base-line-height: 1.1em,
+		scale: 1.4
+	),
+	lg: (
+		base-font-size: 20px,
+		base-line-height: 1.2em,
+		scale: 1.5
+	)
+);
+// Breakpoints
+$breakpoints: (
+	sm: 480px,
+	md: 960px,
+	lg: 1200px
+);
+// List of font sizes for vertical rhythm
+// p = paragraph
+// bq = blockquote
+// h___ = etc.
+// hero = hero text
+// hero text is not utilized at this juncture, but it may be in future
+$font-sizes: (bq, p, hsix, hfive, hfour, hthree, htwo, hone, hero);

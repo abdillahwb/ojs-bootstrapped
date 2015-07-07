@@ -1,0 +1,6 @@
+#main {
+    @include filter-margin-left(0!important);
+    margin-left: 0!important;
+    color: $vt_deep_gray;
+    padding: 0 0 0 1em!important;
+}

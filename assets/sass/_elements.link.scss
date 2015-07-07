@@ -1,0 +1,9 @@
+a {
+    &:link, &:visited, &:active {
+        color: $link_color;
+    }
+    &:hover, &:focus {
+        @include background(none);
+        color: $link_hover;
+    }
+}

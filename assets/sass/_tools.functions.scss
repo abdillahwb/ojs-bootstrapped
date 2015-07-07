@@ -1,0 +1,8 @@
+//Function to convert px to em
+@function em($px, $base: $base-font-size) {
+    @return ($px / $base) * 1em;
+}
+// Plays a part in the vertical rhythm
+@function get-breakpoint-property($prop, $bp) {
+  @return map-get(map-get($break-sizes, $bp), $prop);
+}

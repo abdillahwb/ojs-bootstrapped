@@ -1,0 +1,47 @@
+// The following mixins (vr-font-properties, breakpoint, and set-font-sizes) are for vertical rhythm
+@mixin vr-font-properties($label, $base-font-size, $base-line-height, $scale) {
+	$scale-value: index($font-sizes, $label) - 1;
+	$fs: $base-font-size * pow($scale, $scale-value);
+	$lh: $base-font-size * $base-line-height / $fs;
+
+	@while $lh < 1 {
+		$lh: $lh + $lh;
+	}
+
+	font-size: $fs;
+	line-height: $lh;
+}
+
+// This mixin checks the name of the breakpoint passed to it against the
+// list of labels in the $breakpoints map. If the name is missing,
+// it returns an error message.
+@mixin breakpoint ($name){
+	@if not map-has-key($breakpoints, $name){
+		@warn "Invalid breakpoint `#{$name}`.";
+	} @else {
+		@if map-get($breakpoints, $name) == '' {
+			@content;
+		} @else {
+			@media (min-width: map-get($breakpoints, $name)) {
+				@content;
+			}
+		}
+	}
+}
+
+@mixin set-font-sizes($font-sizes) {
+	// Loop that will search and return the right property value based on the breakpoint value
+	@each $size, $data in $break-sizes {
+		$break-font-size: get-breakpoint-property(base-font-size, $size);
+		$break-line-height: get-breakpoint-property(base-line-height, $size);
+		$s: get-breakpoint-property(scale, $size);
+
+		@include breakpoint($size) {
+			@each $label in $font-sizes {
+				%#{$label} {
+					@include vr-font-properties($label, $break-font-size, $break-line-height, $s);
+				}
+			}
+		}
+	}
+}

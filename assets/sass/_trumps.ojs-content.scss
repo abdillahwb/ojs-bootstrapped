@@ -1,0 +1,5 @@
+#content {
+    @include filter-margin-left(5%);
+    margin-left: 5%;
+    border: none;
+}

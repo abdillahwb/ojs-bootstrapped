@@ -1,0 +1,13 @@
+#header {
+    @include background(url($vt_header_url) repeat scroll center top transparent!important);
+    border: 0em none;
+    height: em(167px);
+    @include min-width(100%!important);
+    padding: 0;
+    @include filter-margin(0em);
+    margin: 0;
+
+    #headerTitle {
+        color: $nav_font_color
+    }
+}

@@ -1,0 +1,14 @@
+#breadcrumb {
+    width:auto!important;
+    font-size: $font-size + .1em!important;
+    margin-top: -2.5em;
+    a {
+        &:link, &:visited, &:active {color: $breadcrumb_color;}
+        &:hover, &:focus {
+            @include background(none);
+            color: $breadcrumb_hover!important;
+        }
+    }
+    ol {margin-left: 0em!important;}
+    ol.breadcrumb li:first-child {padding-left: 1em;}
+}
