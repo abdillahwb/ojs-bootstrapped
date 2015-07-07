@@ -1,0 +1,14 @@
+ul.steplist li a{
+	color:$link_color;
+}
+h4.checkbox-inline {
+	input[type="checkbox"] {
+		margin-top: em(-4px)!important;
+	}
+}
+table.mceLayout {
+    width: 100% !important;
+}
+.defaultSkin table{
+	@include float-left;
+}
