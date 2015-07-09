@@ -1,0 +1,19 @@
+.btn-danger {
+	@include background($vt_deep_maroon);
+	border-color: $vt_deep_maroon;
+}
+.btn-success {
+	@include background($vt_deep_gray);
+	border-color: $vt_deep_gray;
+}
+.btn-info {
+	@include background($vt_md_gray);
+	border-color: $vt_md_gray;
+}
+.btn-info:hover, .btn-info:focus, .btn-info:active {
+	@include background($vt_lt_gray);
+	border-color: $vt_md_gray;
+}
+.btn-info:focus, .btn-info:active, .btn-info.active:focus {
+	outline: em(5px) auto $vt_md_gray!important;
+}
