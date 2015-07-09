@@ -1,0 +1,48 @@
+.form__subheading {
+    font-size: em($base-font-size + 2px);
+    font-weight: normal!important;
+}
+
+.form__input-group--empty {
+	border: em(1px) $default_gray_outline solid!important;
+	@include border-top-left-radius(em(4px)!important);
+	@include border-top-right-radius(em(4px)!important);
+	@include border-bottom-left-radius(em(4px)!important);
+	@include border-bottom-right-radius(em(4px)!important);
+	@include background($form_gray);
+	font-weight: normal;
+  	line-height: $base-line-height;
+  	color: #555;
+  	padding: em(6px) em(12px);
+  	@include filter-margin-top(-1%);
+  	margin-top: -1%;
+  	width: 100%;
+
+  	input[type="checkbox"], input[type="radio"] {
+		margin: 0!important;
+	}
+  	& > label {
+		@include float-left;
+	}
+}
+
+.form__option {
+	margin-left: 2%!important;
+	@include filter-margin-left(2%!important);
+}
+
+.form__option--user-reg {
+	margin-top: -1em;
+	margin-left:-1em!important;
+	.form__input-group--empty {
+		@include background(#fff);
+		padding-left: 2em;
+	}
+}
+
+#displayNumAnnouncements {
+	.form__input-group--empty {
+		@include background(#fff);
+		padding-left: 2em;
+	}
+}

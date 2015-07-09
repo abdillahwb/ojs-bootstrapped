@@ -1,0 +1,100 @@
+@include breakpoint(md) {
+    #body.container {width: 100%;}
+
+    .navbar {
+		max-height: 100%;
+
+		.glyphicon {
+			font-size: 1.5em;
+		}
+	}
+	.navbar-collapse {
+		padding-right: 0em;
+
+		ul.nav.navbar-nav {
+			margin: em(7.5px) em(-28px) em(-14px);
+
+			li {
+				padding-left: em(10px);
+			}
+		}
+	}
+	.navbar-collapse.in {
+		overflow-y: inherit;
+	}
+
+	.navbar-default .navbar-brand {
+		font-size: em($base-font-size + 8px);
+	}
+
+	.navbar__glyph  {
+		color: $nav_font_color;
+	}
+
+	.navbar-toggle .icon-bar {
+		width: em(30px);
+		height: em(4.4px);
+	}
+	.navbar-toggle:hover, .navbar-toggle:focus {
+		background-color: $vt_deep_maroon!important;
+		border-color: $vt_deep_maroon;
+
+		& > .notify-badge {
+			.badge {
+				@include background($vt_deep_gray);
+			}
+		}
+
+	}
+	#notifyBtn {
+		span {
+			margin-right: -.5em!important;
+		}
+	}
+	.notify-badge {
+		margin-top: -2.5em;
+		margin-right: -.2em;
+		padding-left: .5em;
+		font-size: $font-size!important;
+
+		span {
+			font-size: .625em;
+		}
+	}
+
+}
+
+@include breakpoint(sm) {
+	.steplist {
+		display:none;
+	}
+	.mceButton {
+    	width: em(17px)!important;
+    	height: em(17px)!important;
+   		margin-right: em(2px)!important;
+	}
+	#submissionPreparationChecklist, #notifications {
+		.input-group {
+			width: 100%;
+		}
+		.input-group-addon {
+			display: inherit;
+			@include min-width(100%);
+
+			&:first-child {
+				border-right: 1px solid #ccc;
+				@include border-top-left-radius(em(4px)!important);
+				@include border-top-right-radius(em(4px)!important);
+				@include border-bottom-left-radius(0!important);
+				@include border-bottom-right-radius(0!important);
+			}
+			&:last-child {
+				border-left: 1px solid #ccc;
+				@include border-top-left-radius(0!important);
+				@include border-top-right-radius(0!important);
+				@include border-bottom-left-radius(em(4px)!important);
+				@include border-bottom-right-radius(em(4px)!important);
+			}
+		}
+	}
+}

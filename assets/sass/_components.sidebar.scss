@@ -1,0 +1,14 @@
+.sidebar__tray {
+	@include float-right;
+	font-size: 2.5em;
+  	height: 2em;
+
+	&--link {
+		margin-left: -1.4em;
+	}
+    &--glyph {
+        font-size: em($base-font-size - 1px);
+        padding-top: em(1px);
+        color: $vt_deep_gray;
+    }
+}
