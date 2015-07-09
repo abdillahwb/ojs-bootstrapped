@@ -117,7 +117,7 @@
 		</div>
 		
 {if $leftSidebarCode || $rightSidebarCode}
-	<div id="sidebar-tab">
+	<div id="sidebar__tray">
 	<a href="#" role="button" aria-expanded="false"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span></a>
 	</div>
 		<div id="sidebar" class="hide">

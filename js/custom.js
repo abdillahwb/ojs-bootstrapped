@@ -16,7 +16,7 @@ $(document).ready(function() {
       }
   });
 
-  $('#sidebar-tab').click(function(){
+  $('#sidebar__tray').click(function(){
     $('#sidebar').toggleClass('hide');
     var sidebar_width = $('#rightSidebar').width();
     var main_width = $('#main').width();
@@ -48,7 +48,7 @@ $(document).ready(function() {
     });
     //hide sidebar if nothing is inside it
     if ($('#rightSidebar').has('div.block').length === 1) {
-      $('#sidebar-tab').css('display', 'none');
+      $('#sidebar__tray').css('display', 'none');
     }
 });
 
