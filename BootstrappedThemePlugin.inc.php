@@ -18,7 +18,7 @@ import('classes.plugins.ThemePlugin');
 import('lib.pkp.classes.user.PKPUser');
 
 class BootstrappedThemePlugin extends ThemePlugin {
-	
+
 
 	/**
 	 * Get the name of this plugin. The name must be unique within
@@ -54,7 +54,7 @@ class BootstrappedThemePlugin extends ThemePlugin {
 
 		$templateMgr->template_dir[0] = Core::getBaseDir() . DIRECTORY_SEPARATOR . 'plugins' . DIRECTORY_SEPARATOR . 'themes' . DIRECTORY_SEPARATOR . 'bootstrapped' . DIRECTORY_SEPARATOR . 'templates';
 		$templateMgr->compile_id = 'bootstrapped';
-		
+
 		// Add viewport
 		$viewport = ' <meta name="viewport" content="width=device-width, initial-scale=1">';
 
@@ -87,21 +87,21 @@ class BootstrappedThemePlugin extends ThemePlugin {
 		$templateMgr->assign('pluginPath', $this->getPluginPath());
 
 		if (($stylesheetFilename = $this->getStylesheetFilename()) != null) {
-			$path = Request::getBaseUrl() . '/' . $this->getPluginPath() . '/compass/stylesheets/' . $stylesheetFilename;
+			$path = Request::getBaseUrl() . '/' . $this->getPluginPath() . '/assets/stylesheets/' . $stylesheetFilename;
 			$templateMgr->addStyleSheet($path);
-		
-		
+
+
 		}
 
 		$requestedPage = PKPRequest::getRequestedPage();
 		if ($requestedPage == 'article') {
-			$path = Request::getBaseUrl() . '/' . $this->getPluginPath() . '/compass/stylesheets/style_article.css';
+			$path = Request::getBaseUrl() . '/' . $this->getPluginPath() . '/assets/stylesheets/style_article.css';
 			$templateMgr->addStyleSheet($path);
 			$templateMgr->addJavaScript($this->getPluginPath() . '/js/article.js');
 		}
 
 	}
-	
+
 }
 
 ?>

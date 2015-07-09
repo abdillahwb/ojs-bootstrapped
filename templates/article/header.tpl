@@ -76,7 +76,7 @@
 
 <div id="header">
 <div id="headerTitle">
-<h1><img id="vt-logo" src="{$baseUrl}/{$pluginPath}/compass/img/vt_logo_tm_320px.png" alt="Virginia Tech Logo" /></h1>
+<h1><img id="vt-logo" src="{$baseUrl}/{$pluginPath}/assets/img/vt_logo_tm_320px.png" alt="Virginia Tech Logo" /></h1>
 <!-- <h1>
 {if $displayPageHeaderLogo && is_array($displayPageHeaderLogo)}
 	<img src="{$publicFilesDir}/{$displayPageHeaderLogo.uploadName|escape:"url"}" width="{$displayPageHeaderLogo.width|escape}" height="{$displayPageHeaderLogo.height|escape}" {if $displayPageHeaderLogoAltText != ''}alt="{$displayPageHeaderLogoAltText|escape}"{else}alt="{translate key="common.pageHeaderLogo.altText"}"{/if} />
@@ -115,7 +115,7 @@
   				{include file="common/mobileMainNavSection.tpl"}
 			</div>
 		</div>
-		
+
 {if $leftSidebarCode || $rightSidebarCode}
 	<div id="sidebar-tab">
 	<a href="#" role="button" aria-expanded="false"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span></a>
