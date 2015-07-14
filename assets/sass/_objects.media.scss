@@ -27,7 +27,7 @@
 		font-size: em($base-font-size + 8px);
 	}
 
-	.navbar__glyph  {
+	.navbar__glyph--mobile  {
 		color: $nav_font_color;
 	}
 
@@ -39,26 +39,21 @@
 		background-color: $vt_deep_maroon!important;
 		border-color: $vt_deep_maroon;
 
-		& > .notify-badge {
-			.badge {
-				@include background($vt_deep_gray);
-			}
-		}
-
-	}
-	#notifyBtn {
-		span {
-			margin-right: -.5em!important;
-		}
-	}
-	.notify-badge {
-		margin-top: -2.5em;
+	.navbar__notify-badge {
+        margin-top: -2.5em;
 		margin-right: -.2em;
 		padding-left: .5em;
 		font-size: $font-size!important;
-
 		span {
-			font-size: .625em;
+			@include background($vt_deep_gray);
+            font-size: .625em;
+		}
+	}
+
+	}
+	#notifyBtn {
+		.navbar__glyph--mobile {
+			margin-right: -.5em!important;
 		}
 	}
 
