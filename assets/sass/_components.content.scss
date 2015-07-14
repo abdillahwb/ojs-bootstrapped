@@ -1,0 +1,21 @@
+.content--block {
+    margin-left: 2.5em;
+}
+.content--indent {
+    text-indent: 2em;
+}
+.content--big-first {
+    margin-top: 1em;
+    &::first-letter {
+        font-size: $font-size * 4;
+        @include float-left();
+        padding: em(2px);
+        font-style: italic;
+        margin-left: 0;
+        line-height: em(40px);
+        margin-top: em(-15px);
+        padding: em(12px) 0 0 0;
+    }
+}
+.content--left {@include float-left();}
+.content--right {@include float-right();}
