@@ -1,3 +1,11 @@
+form {
+	p {
+		input[type="checkbox"], input[type="radio"] {
+			margin-top: -.2em;
+		}
+	}
+}
+
 ul.steplist li a{
 	color:$link_color;
 }
@@ -8,6 +16,7 @@ h4.checkbox-inline {
 }
 table.mceLayout {
     width: 100% !important;
+	margin-bottom: 1em!important;
 }
 .defaultSkin table{
 	@include float-left;

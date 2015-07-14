@@ -1,1 +1,7 @@
-label {font-weight: bold;}
+label {
+    font-weight: bold;
+    color: $vt_deep_gray;
+    font-size: em($base-font-size - 1px);
+    vertical-align: top;
+    padding-left: .3em;
+}

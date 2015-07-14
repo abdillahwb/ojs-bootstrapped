@@ -51,12 +51,14 @@
 	}
 
 	}
-	#notifyBtn {
+	.navbar--mobile--notify {
 		.navbar__glyph--mobile {
 			margin-right: -.5em!important;
 		}
 	}
-
+    .navbar--mobile--notify, .navbar--mobile--search {
+        @include float-left();
+    }
 }
 
 @include breakpoint(sm) {

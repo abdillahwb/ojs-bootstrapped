@@ -22,6 +22,7 @@ textarea.form-control {
 }
 
 .label {
-	color:$vt_deep_gray;
-	font-size: em($base-font-size - 2px);
+	@extend label;
 }
+
+.value {padding-top: .1em;}
