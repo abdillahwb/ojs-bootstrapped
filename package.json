@@ -1,0 +1,17 @@
+{
+  "name": "bootstrapped",
+  "version": "1.0.0",
+  "description": "OJS Plugin to emulate bootstrap features",
+  "repository": {
+    "type": "git",
+    "url": "git+https://chasehd@bitbucket.org/chasehd/ojs-bootstrapped.git"
+  },
+  "author": "ChaseHD",
+  "license": "MIT",
+  "homepage": "https://bitbucket.org/chasehd/ojs-bootstrapped#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-cssmin": "^0.12.3",
+    "grunt-purifycss": "^0.1.0"
+  }
+}
