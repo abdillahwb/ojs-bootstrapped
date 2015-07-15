@@ -18,7 +18,7 @@ import('classes.plugins.ThemePlugin');
 import('lib.pkp.classes.user.PKPUser');
 
 class BootstrappedThemePlugin extends ThemePlugin {
-	
+
 
 	/**
 	 * Get the name of this plugin. The name must be unique within
@@ -38,7 +38,7 @@ class BootstrappedThemePlugin extends ThemePlugin {
 	}
 
 	function getStylesheetFilename() {
-		return 'style.css'; //style.css until bootstrapification is complete. Then, main.css.
+		return 'main.css';
 	}
 
 	function getLocaleFilename($locale) {
@@ -54,7 +54,7 @@ class BootstrappedThemePlugin extends ThemePlugin {
 
 		$templateMgr->template_dir[0] = Core::getBaseDir() . DIRECTORY_SEPARATOR . 'plugins' . DIRECTORY_SEPARATOR . 'themes' . DIRECTORY_SEPARATOR . 'bootstrapped' . DIRECTORY_SEPARATOR . 'templates';
 		$templateMgr->compile_id = 'bootstrapped';
-		
+
 		// Add viewport
 		$viewport = ' <meta name="viewport" content="width=device-width, initial-scale=1">';
 
@@ -78,7 +78,7 @@ class BootstrappedThemePlugin extends ThemePlugin {
 		$templateMgr->addJavaScript($this->getPluginPath() . '/js/modernizr.custom.64607.js');
 
 		// Add in Bootstrap JS
-		$templateMgr->addJavaScript($this->getPluginPath() . '/js/bootstrap.min.js');
+		$templateMgr->addJavaScript($this->getPluginPath() . '/js/bootstrap/bootstrap.min.js');
 		// Add Notify JS
 		$templateMgr->addJavaScript($this->getPluginPath() . '/js/notify.min.js');
 		// Add Custom JS
@@ -87,10 +87,10 @@ class BootstrappedThemePlugin extends ThemePlugin {
 		$templateMgr->assign('pluginPath', $this->getPluginPath());
 
 		if (($stylesheetFilename = $this->getStylesheetFilename()) != null) {
-			$path = Request::getBaseUrl() . '/' . $this->getPluginPath() . '/compass/stylesheets/' . $stylesheetFilename;
+			$path = Request::getBaseUrl() . '/' . $this->getPluginPath() . '/assets/stylesheets/' . $stylesheetFilename;
 			$templateMgr->addStyleSheet($path);
-		
-		
+
+
 		}
 
 		$requestedPage = PKPRequest::getRequestedPage();
@@ -101,7 +101,7 @@ class BootstrappedThemePlugin extends ThemePlugin {
 		}
 
 	}
-	
+
 }
 
 ?>
