@@ -19,3 +19,55 @@
 }
 .content--left {@include float-left();}
 .content--right {@include float-right();}
+
+.content--align-right {
+    text-align: right!important;
+}
+.content--align-center {
+    text-align: center!important;
+}
+.content--align-left {
+    text-align: left!important;
+}
+
+.content--bold {font-weight: bold;}
+.content--italic {font-style: italic;}
+.content--underline {text-decoration: underline;}
+.content--normalize {
+    font-style: normal;
+    font-weight: normal;
+}
+
+.content__subheading {
+    font-weight: bold;
+    font-size: em($font-size) + .1em;
+}
+.content__subheading--italic {
+    font-style: italic;
+    font-size: em($font-size) + .1em;
+}
+
+.content--sup {
+    vertical-align: super;
+    font-size: em($font-size) - .17em;
+}
+
+.content--sub {
+    vertical-align: sub;
+    font-size: em($font-size) - .17em;
+}
+
+.content--sansserif {
+    font-family: 'PT Sans', sans-serif!important;
+}
+
+.content--overline {
+    border-style:solid;
+	border-width: em(1px) 0em 0em 0em;
+}
+
+.content__list--nobullet {
+    @include no-bullets();
+}
+
+.content--hide {display: none;}

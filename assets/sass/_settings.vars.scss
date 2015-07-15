@@ -40,28 +40,28 @@ $alan_background: #686868;
 // Vars for vertical rhythm
 // =====================================
 //
-$scale: 1.5; // Proportion by which the $base-font-size will scale up
+$scale: 1.3; // Proportion by which the $base-font-size will scale up
 // Sass Map for sizes
 $break-sizes: (
 	sm: (
-		base-font-size: 14px,
+		base-font-size: 16px,
 		base-line-height: 1em,
-		scale: 1.25
+		scale: 1.2
 	),
 	md: (
-		base-font-size: 16px,
-		base-line-height: 1.1em,
-		scale: 1.4
+		base-font-size: 18px,
+		base-line-height: 1.2em,
+		scale: 1.15
 	),
 	lg: (
 		base-font-size: 20px,
 		base-line-height: 1.2em,
-		scale: 1.5
+		scale: 1.1
 	)
 );
 // Breakpoints
 $breakpoints: (
-	sm: 480px,
+	sm: 300px,
 	md: 960px,
 	lg: 1200px
 );

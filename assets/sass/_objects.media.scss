@@ -1,4 +1,77 @@
-@include breakpoint(md) {
+@media screen and (max-width: map-get($breakpoints, md)) {
+
+    .row-offcanvas {
+      position: relative;
+      @include single-transition(all, 0.25s, ease-in-out);
+      @include min-height(50em);
+    }
+    .row-offcanvas-right .sidebar-offcanvas {
+      right: -60%;
+      margin-right: 0px;
+    }
+    .row-offcanvas-left {
+
+       .sidebar-offcanvas {
+        left: -70%;
+        overflow:hidden!important;
+        @include background(#ffffff);
+        .sidebar-nav {
+          margin-top: -.6em;
+          width:100%;
+        }
+      }
+    }
+    .row-offcanvas-right.active {
+      right: 60%;
+    }
+    .row-offcanvas-left.active {
+      left: 70%;
+    }
+    .sidebar-offcanvas {
+      position: absolute;
+      top: -1.45em;
+      width: 70%;
+      @include min-height(120em);
+      display: none;
+      border-top: none;
+      // border-right: 2px solid $vt_deep_gray;
+      // border-bottom: 2px solid $vt_deep_gray;
+
+      .sidebar-nav {
+        @include min-height(120em);
+
+        #userWelcome {
+          padding-left: 3em!important;
+          color: $vt_deep_gray;
+        }
+        li.dropdown.open a.dropdown-toggle {
+          @include background($vt_deep_maroon);
+        }
+        ul.nav.navbar-nav {
+          min-height: 100%!important;
+        }
+        ul.dropdown-menu > li {
+          margin-left: -2em!important;
+
+          a {
+            padding-left: em(25px) + .5em!important;
+          }
+        }
+      }
+
+      li {
+        width: 100%;
+        height: 100%;
+        margin: 0!important;
+        padding-left: 1.5em!important;
+        color: $nav_font_color;
+        font-size: em($font-size) + .4em;
+
+      }
+
+    }
+
+
     #body.container {width: 100%;}
 
     .navbar {
@@ -59,9 +132,12 @@
     .navbar--mobile--notify, .navbar--mobile--search {
         @include float-left();
     }
+    .article__content--title {
+        text-align: center;
+    }
 }
 
-@include breakpoint(sm) {
+@media screen and (max-width: map-get($breakpoints, sm)) {
 	.steplist {
 		display:none;
 	}
@@ -94,4 +170,10 @@
 			}
 		}
 	}
+
+    .article__issue, .article__season {
+        @include reset-float();
+        margin: auto;
+        text-align: center;
+    }
 }
