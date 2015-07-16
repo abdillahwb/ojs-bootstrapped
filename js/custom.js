@@ -17,16 +17,15 @@ $(document).ready(function() {
   });
 
   $('.sidebar__tray').click(function(){
+      var sidebar_width = $('#rightSidebar').width();
+      var main_width = $('#main').width();
     $('#sidebar').toggleClass('content--hide');
-    var sidebar_width = $('#rightSidebar').width();
-    var main_width = $('#main').width();
     if ($('#sidebar').hasClass('content--hide')) {
       $('#main').css('width', '90%');
     }
     else {
-      $('#main').width(main_width - sidebar_width);
+      $('#main').css('width', '58%');
     }
-    //
   });
 
     // Replace the no-js <a> with the buttons they wrap to enable native Bootstrap functionality
@@ -47,7 +46,7 @@ $(document).ready(function() {
       }
     });
     //hide sidebar if nothing is inside it
-    if ($('#rightSidebar').has('div.block').length === 0) {
+    if ($('#rightSidebar').has('div.block').length === 1) {
       $('.sidebar__tray').css('display', 'none');
     }
     console.log($('#rightSidebar').has('div.block').length);
