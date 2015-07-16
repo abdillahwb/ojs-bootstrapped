@@ -27,25 +27,25 @@
 		            	<span class="icon-bar"></span>
 		          	</button></a>
 
-					<a id="no-js-search" href="{url page="search"}"><button id="searchBtn" type="button" class="navbar-toggle" data-toggle="modal" data-target="#searchModal" aria-expanded="false" aria-controls="navbar">
+					<a id="no-js-search" href="{url page="search"}"><button id="searchBtn" type="button" class="navbar-toggle navbar--mobile--search" data-toggle="modal" data-target="#searchModal" aria-expanded="false" aria-controls="navbar">
 						<span class="sr-only">Search</span>
-						<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+						<span class="glyphicon glyphicon-search navbar__glyph--mobile" aria-hidden="true"></span>
 					</button></a>
 					{if $isUserLoggedIn}
-						<a id="no-js-notify" href="{url page="notification"}"><button id="notifyBtn" type="button" class="navbar-toggle" data-toggle="dropdown" data-target="#mobileNotification" aria-expanded="false"  aria-haspopup="true">
-							<span class="glyphicon glyphicon-bell" aria-hidden="true"></span><div class="notify-badge"><span class="badge">{if $unreadNotifications}{$unreadNotifications}{else}0{/if}</span></div>
+						<a id="no-js-notify" href="{url page="notification"}"><button id="notifyBtn" type="button" class="navbar-toggle navbar--mobile--notify" data-toggle="dropdown" data-target="#mobileNotification" aria-expanded="false"  aria-haspopup="true">
+							<span class="glyphicon glyphicon-bell navbar__glyph--mobile" aria-hidden="true"></span><div class="navbar__notify-badge"><span class="badge">{if $unreadNotifications}{$unreadNotifications}{else}0{/if}</span></div>
 						</button></a>
 					{else}
 						<a id="no-js-sub" href="{url page="notification" op="subscribeMailList"}"><button id="subscribeBtn" type="button" class="navbar-toggle" data-toggle="dropdown" data-target="#mobileNotifySub" aria-expanded="false"  aria-haspopup="true">
-							<span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span>
+							<span class="glyphicon glyphicon-bullhorn navbar__glyph--mobile" aria-hidden="true"></span>
 						</button></a>
 					{/if}
-					
+
 		   		</div>
 			</div>
 		</div>
 <!-- User and notification build for mobile display -->
-		<div id="mobileUser" class="dropdown visible-xs">	
+		<div id="mobileUser" class="dropdown visible-xs">
 			<ul class="dropdown-menu pull-right" role="menu" aria-labelledby="userBtn">
 				{if $isUserLoggedIn}
 					<li>

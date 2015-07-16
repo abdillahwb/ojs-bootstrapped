@@ -21,3 +21,15 @@ table.mceLayout {
 .defaultSkin table{
 	@include float-left;
 }
+
+div.separator {border-bottom: 1px solid!important;}
+.headseparator, .endseparator {border-top: 1px solid!important;}
+
+td.data {padding-left: 5em;}
+
+#forAuthorsToIndexTheirWork {
+	input[type="checkbox"], input[type="radio"] {
+		margin-top: 25px!important;
+	}
+}
+#showCoverPage {margin-top: -1em;}

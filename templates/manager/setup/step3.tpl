@@ -84,7 +84,9 @@
 		<td width="20%" class="label" rowspan="3">
 			{translate key="submission.copyrightHolder"}
 		</td>
-		<td width="80%" class="data">
+		</tr>
+<tr>
+<td width="80%" class="data">
 			<input type="radio" value="author" name="copyrightHolderType" {if $copyrightHolderType=="author"}checked="checked" {/if}id="copyrightHolderType-author" />&nbsp;<label for="copyrightHolderType-author">{translate key="user.role.author"}</label>
 		</td>
 	</tr>
@@ -102,7 +104,9 @@
 		<td width="20%" class="label" rowspan="2">
 			{translate key="manager.setup.copyrightYearBasis"}
 		</td>
-		<td width="80%" class="data">
+		</tr>
+<tr>
+<td width="80%" class="data">
 			<input type="radio" value="issue" name="copyrightYearBasis" {if $copyrightYearBasis=="issue"}checked="checked" {/if}id="copyrightYearBasis-issue" />&nbsp;<label for="copyrightYearBasis-issue">{translate key="issue.issue"}</label> ({translate key="manager.setup.copyrightYearBasis.Issue"})
 		</td>
 	</tr>
@@ -113,18 +117,24 @@
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="manager.setup.permissions.priorAgreement"}</td>
+	</tr>
+	<tr>
 		<td class="label">
-			<input type="checkbox" name="copyrightNoticeAgree" id="copyrightNoticeAgree" value="1"{if $copyrightNoticeAgree} checked="checked"{/if} />&nbsp;<label for="copyrightNoticeAgree">{translate key="manager.setup.authorCopyrightNoticeAgree"}</label>
+			<input type="checkbox" name="copyrightNoticeAgree" id="copyrightNoticeAgree" value="1"{if $copyrightNoticeAgree} checked="checked"{/if} style="margin: .8em 0;" />&nbsp;<label for="copyrightNoticeAgree" style="margin: 1em 0;">{translate key="manager.setup.authorCopyrightNoticeAgree"}</label>
 		</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="manager.setup.permissions.display"}</td>
+	</tr>
+	<tr>
 		<td class="value">
-			<input type="checkbox" name="includeCopyrightStatement" id="includeCopyrightStatement" value="1"{if $includeCopyrightStatement} checked="checked"{/if} />&nbsp;<label for="includeCopyrightStatement">{translate key="manager.setup.includeCopyrightStatement"}</label>
+			<input type="checkbox" name="includeCopyrightStatement" id="includeCopyrightStatement" value="1"{if $includeCopyrightStatement} checked="checked"{/if} style="margin-left: .3em;" />&nbsp;<label for="includeCopyrightStatement">{translate key="manager.setup.includeCopyrightStatement"}</label>
 		</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name=licenseURL key="submission.licenseURL"}</td>
+	</tr>
+	<tr>
 		<td class="value">
 			<select name="licenseURLSelect" id="licenseURLSelect" onchange="document.getElementById('licenseURL').value=document.getElementById('licenseURLSelect').options[document.getElementById('licenseURLSelect').selectedIndex].value; document.getElementById('licenseURL').readOnly=(document.getElementById('licenseURL').value==''?false:true);">
 				{assign var=foundCc value=0}
@@ -143,7 +153,9 @@
 		</td>
 	</tr>
 	<tr valign="top">
-		<td class="label">{translate key="manager.setup.permissions.display"}</td>
+		<td class="label">{translate key="manager.setup.permissions.display"}</td
+	</tr>
+	<tr>
 		<td class="value">
 			<input type="checkbox" name="includeLicense" id="includeLicense" value="1"{if $includeLicense} checked="checked"{/if} />&nbsp;<label for="includeLicense">{translate key="manager.setup.includeLicense"}</label>
 		</td>
@@ -425,7 +437,7 @@
 				}
 			});
 		});
-		
+
 		function permissionsValues() {
 			perm = ':';
 			licenseNames = ["copyrightYearBasis", "copyrightHolderType"];

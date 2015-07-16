@@ -3,7 +3,7 @@
     height: 100%;
 }
 .navbar__glyph {
-    font-size: em($base-font-size - 1px);
+    font-size: inherit!important;
     padding-top: em(1px);
     color: $nav_font_color;
 }
@@ -14,7 +14,7 @@
     @include inline-block($alignment: $inline-block-alignment, $ie-alignment: auto);
     @include filter-margin-top(-1.3em);
     @include filter-margin-left(-.4em);
-    margin-top: -1em;
+    margin-top: -1.5em;
     margin-left: -.42em;
 
     span {
@@ -26,8 +26,7 @@
 .navbar__menu {
     font-size: 1.29em;
     line-height: 1.3333333em;
-    height: em(45.5px);
-    padding-right: .5em;
+    height: 2.8em;
 }
 .navbar__menu--announcements {
     width:auto;

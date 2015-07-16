@@ -17,7 +17,7 @@
 		{/if}{* enableAnnouncements *}
 		{if !empty($forReaders) || !empty($forAuthors) || !empty($forLibrarians)}
 			<li id="info" class="dropdown navbar__menu">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></a>
+				<a href="#" class="dropdown-toggle navbar__link" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-info-sign navbar__glyph" aria-hidden="true"></span></a>
 				<ul class="dropdown-menu navbar__dropdown--beveled" role="menu">
 					{if !empty($forReaders)}<li><a href="{url page="information" op="readers"}">{translate key="navigation.infoForReaders"}</a></li><li class="navbar__menu--divider"></li>{/if}
 					{if !empty($forAuthors)}<li><a href="{url page="information" op="authors"}">{translate key="navigation.infoForAuthors"}</a></li><li class="navbar__menu--divider"></li>{/if}
@@ -45,7 +45,7 @@
           	<ul  class="dropdown-menu navbar__dropdown--search" role="menu">
           		<li id="searchTarget" class="navbar__menu--search">
 					<form class="form-inline" role="form" method="post" id="searchBar" action={url page="search"}>
-						<div class="col-lg-6">
+						<div class="col-lg-12">
 						    <div class="input-group navbar__search-form__input">
 						    	{capture assign="queryFilter"}{call_hook name="Templates::Search::SearchResults::FilterInput" filterName="query" filterValue=$query}{/capture}
 								{if empty($queryFilter)}

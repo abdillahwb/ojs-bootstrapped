@@ -3,7 +3,6 @@
     @include filter-margin-left(5%);
     margin-left: 5%;
 }
-h1 {@extend %hone;}
 h2 {@extend %htwo;}
 h3 {@extend %hthree;}
 h4 {@extend %hfour;}

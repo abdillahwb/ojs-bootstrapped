@@ -55,4 +55,13 @@
 	}
 }
 
+.navbar-nav {
+	li {
+		.dropdown-menu {
+			margin-left: -.1em;
+			margin-top: -.1em!important;
+		}
+	}
+}
+
 .modal-backdrop {z-index: 0;}
