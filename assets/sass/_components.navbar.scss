@@ -34,9 +34,9 @@
 .navbar__menu--search {width:20em;}
 .navbar__menu--divider {@include background($vt_deep_gray);}
 
-.navbar__dropdown--user {margin-right: -5.4em;}
+.navbar__dropdown--user {margin-right: -3.9em;}
 .navbar__dropdown--notification {margin-right: -.8em;}
-.navbar__dropdown--search {margin-right: -8.7em;}
+.navbar__dropdown--search {margin-right: -7.4em;}
 .navbar__dropdown--beveled {
     @include border-top-left-radius(em(5px));
     @include border-top-right-radius(em(5px));
