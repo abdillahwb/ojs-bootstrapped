@@ -9,7 +9,7 @@ module.exports = function(grunt) {
                 expand: true,
                 cwd: 'assets/stylesheets/main',
                 src: ['*.css', '!*.min.css'],
-                dest: 'assets/stylesheets/main',
+                dest: 'assets/stylesheets',
                 ext: '.min.css'
               }]
             }
@@ -50,11 +50,12 @@ module.exports = function(grunt) {
               'templates/submission/*.tpl',
               'templates/subscription/*.tpl',
               'templates/user/*.tpl',
-              'js/*.js'],
-          css: ['assets/stylesheets/main/*.min.css'],
-          dest: 'tmp/main.min.css'
+              'js/*.js',
+              'js/bootstrap/*.js'],
+          css: ['assets/stylesheets/main/*.css'],
+          dest: 'assets/stylesheets/main/main.css'
         },
       },
     });
-    grunt.registerTask('default', ['cssmin','purifycss']);
+    grunt.registerTask('default', ['purifycss', 'cssmin']);
 };
