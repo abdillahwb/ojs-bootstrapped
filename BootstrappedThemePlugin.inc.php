@@ -93,13 +93,6 @@ class BootstrappedThemePlugin extends ThemePlugin {
 
 		}
 
-		$requestedPage = PKPRequest::getRequestedPage();
-		if ($requestedPage == 'article') {
-			$path = Request::getBaseUrl() . '/' . $this->getPluginPath() . '/compass/stylesheets/style_article.css';
-			$templateMgr->addStyleSheet($path);
-			$templateMgr->addJavaScript($this->getPluginPath() . '/js/article.js');
-		}
-
 	}
 
 }
