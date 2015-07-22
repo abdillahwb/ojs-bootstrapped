@@ -14,8 +14,8 @@
     @include inline-block($alignment: $inline-block-alignment, $ie-alignment: auto);
     @include filter-margin-top(-1.3em);
     @include filter-margin-left(-.4em);
-    margin-top: -1.5em;
-    margin-left: -.42em;
+    margin-top: -1.2em;
+    margin-left: -.5em;
 
     span {
         @include background($vt_deep_maroon);
