@@ -2003,16 +2003,6 @@ tbody.collapse.in {
   -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
 }
-.caret {
-  display: inline-block;
-  width: 0;
-  height: 0;
-  margin-left: 2px;
-  vertical-align: middle;
-  border-top: 4px dashed;
-  border-right: 4px solid transparent;
-  border-left: 4px solid transparent;
-}
 .dropdown {
   position: relative;
 }
@@ -2113,11 +2103,6 @@ tbody.collapse.in {
 .pull-right > .dropdown-menu {
   right: 0;
   left: auto;
-}
-.navbar-fixed-bottom .dropdown .caret {
-  border-top: 0;
-  border-bottom: 4px solid;
-  content: "";
 }
 .navbar-fixed-bottom .dropdown .dropdown-menu {
   top: auto;
@@ -2269,7 +2254,7 @@ tbody.collapse.in {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.btn .caret, input[type="submit"] .caret, input[value="Save"] .caret, input[value="cancel"] .caret, input[value="Cancel"] .caret, #assignBlocksToSidebars input[class="button defaultButton"] .caret {
+ input[type="submit"] .caret, input[value="Save"] .caret, input[value="cancel"] .caret, input[value="Cancel"] .caret, #assignBlocksToSidebars input[class="button defaultButton"] .caret {
   margin-left: 0;
 }
  .btn-group-lg > input[type="submit"] .caret, .btn-group-lg > input[value="Save"] .caret, .btn-group-lg > input[value="cancel"] .caret, .btn-group-lg > input[value="Cancel"] .caret, #assignBlocksToSidebars .btn-group-lg > input[class="button defaultButton"] .caret {
@@ -4667,6 +4652,8 @@ td.data {
 }
 #header #headerTitle {
   color: #ffffff;
+  height: inherit;
+  min-width: inherit;
 }
 #main {
   -webkit-filter-margin-left: 0 !important;
@@ -4741,7 +4728,7 @@ td.data {
   .navbar {
  display: none;
 }
-  .btn > .caret, input[type="submit"] > .caret, input[value="Save"] > .caret, input[value="cancel"] > .caret, input[value="Cancel"] > .caret, #assignBlocksToSidebars input[class="button defaultButton"] > .caret,
+input[type="submit"] > .caret, input[value="Save"] > .caret, input[value="cancel"] > .caret, input[value="Cancel"] > .caret, #assignBlocksToSidebars input[class="button defaultButton"] > .caret,
   .dropup > input[type="submit"] > .caret,
   .dropup > input[value="Save"] > .caret,
   .dropup > input[value="cancel"] > .caret,

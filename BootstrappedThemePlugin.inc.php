@@ -19,7 +19,6 @@ import('lib.pkp.classes.user.PKPUser');
 
 class BootstrappedThemePlugin extends ThemePlugin {
 
-
 	/**
 	 * Get the name of this plugin. The name must be unique within
 	 * its category.
@@ -41,9 +40,9 @@ class BootstrappedThemePlugin extends ThemePlugin {
 		return 'main.min.css';
 	}
 
-	function getLocaleFilename($locale) {
-		return null; // No locale data
-	}
+	// function getLocaleFilename($locale) {
+	// 	return parent::getLocaleFilename($locale);
+	// }
 
 	/**
 	 * Activate the theme.

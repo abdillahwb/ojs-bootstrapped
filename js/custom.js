@@ -45,9 +45,8 @@ $(document).ready(function() {
         $('[value="Save and continue"').prop('disabled', true);
       }
     });
-    //hide sidebar if nothing is inside it
+    //hide sidebar if nothing is inside it but user block
     if ($('#rightSidebar').has('div.block').length === 1) {
       $('.sidebar__tray').css('display', 'none');
     }
-    console.log($('#rightSidebar').has('div.block').length);
 });

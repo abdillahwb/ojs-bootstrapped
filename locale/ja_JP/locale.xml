@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/themes/bootstrapped/locale/ja_JP/locale.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ja_JP locale.
+  *
+  -->
+ 
+<locale name="ja_JP" full_name="日本語">
+	<message key="plugins.themes.bootstrapped.displayName">ユーザブロック</message>
+	<message key="plugins.themes.bootstrapped.description">サイドバーにユーザアカウントツール（ログイン、ログアウト、プロフィールリンクなど）を付けます。</message>
+	<message key="plugins.themes.bootstrapped.loggedInAs">次のアカウントでログインされています</message>
+	<message key="plugins.themes.bootstrapped.myJournals">マイ･ジャーナル</message>
+	<message key="plugins.themes.bootstrapped.myProfile">マイ･プロフィール</message>
+	<message key="plugins.themes.bootstrapped.logout">ログアウト</message>
+	<message key="plugins.themes.bootstrapped.signOutAsUser">ユーザとしてログアウト</message>
+	<message key="plugins.themes.bootstrapped.rememberMe">アカウントを記憶する</message>
+</locale>

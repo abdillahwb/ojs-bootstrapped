@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/themes/bootstrapped/locale/sr_SR/locale.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the sr_SR (Serbian) locale.
+  *
+  -->
+ 
+<locale name="sr_SR" full_name="Serbian">
+	<message key="plugins.themes.bootstrapped.displayName">Korisnički blok</message>
+	<message key="plugins.themes.bootstrapped.description">Ovaj dodatak generiše alatke vezane za korisnike (npr. prijava, odjava, link ka profilu, itd.)</message>
+	<message key="plugins.themes.bootstrapped.loggedInAs">Prijavljeni ste kao...</message>
+	<message key="plugins.themes.bootstrapped.myJournals">Moji časopisi</message>
+	<message key="plugins.themes.bootstrapped.myProfile">Moj profil</message>
+	<message key="plugins.themes.bootstrapped.logout">Odjavi se</message>
+	<message key="plugins.themes.bootstrapped.signOutAsUser">Odjavi se kao korisnik</message>
+	<message key="plugins.themes.bootstrapped.rememberMe">Upamti me</message>
+</locale>
