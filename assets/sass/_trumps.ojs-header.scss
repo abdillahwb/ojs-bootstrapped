@@ -11,5 +11,9 @@
         color: $nav_font_color;
         height: inherit;
         min-width: inherit;
+
+        img {
+            max-height: $header_img_height;
+        }
     }
 }
