@@ -33,7 +33,7 @@
 					</button></a>
 					{if $isUserLoggedIn}
 						<a id="no-js-notify" href="{url page="notification"}"><button id="notifyBtn" type="button" class="navbar-toggle navbar--mobile--notify" data-toggle="dropdown" data-target="#mobileNotification" aria-expanded="false"  aria-haspopup="true">
-							<span class="glyphicon glyphicon-bell navbar__glyph--mobile" aria-hidden="true"></span><div class="navbar__notify-badge"><span class="badge">{if $unreadNotifications}{$unreadNotifications}{else}0{/if}</span></div>
+							<span class="glyphicon glyphicon-bell navbar__glyph--mobile" aria-hidden="true"></span><div class="navbar__notify-badge" {if $unreadNotifications == 0} style="margin-left: -.8em;"{/if}><span class="badge" {if $unreadNotifications == 0} style="visibility: hidden;"{/if}>{if $unreadNotifications > 0} {$unreadNotifications}{else}0{/if}</span></div>
 						</button></a>
 					{else}
 						<a id="no-js-sub" href="{url page="notification" op="subscribeMailList"}"><button id="subscribeBtn" type="button" class="navbar-toggle" data-toggle="dropdown" data-target="#mobileNotifySub" aria-expanded="false"  aria-haspopup="true">
