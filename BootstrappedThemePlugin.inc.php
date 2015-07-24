@@ -19,6 +19,15 @@ import('lib.pkp.classes.user.PKPUser');
 
 class BootstrappedThemePlugin extends ThemePlugin {
 
+	function register($category, $path) {
+		$success = parent::register($category, $path);
+		if ($success) {
+			$this->addLocaleData();
+			AppLocale::requireComponents(array(LOCALE_COMPONENT_PKP_USER));
+		}
+		return $success;
+	}
+
 	/**
 	 * Get the name of this plugin. The name must be unique within
 	 * its category.
@@ -39,10 +48,6 @@ class BootstrappedThemePlugin extends ThemePlugin {
 	function getStylesheetFilename() {
 		return 'main.min.css';
 	}
-
-	// function getLocaleFilename($locale) {
-	// 	return parent::getLocaleFilename($locale);
-	// }
 
 	/**
 	 * Activate the theme.
@@ -82,8 +87,6 @@ class BootstrappedThemePlugin extends ThemePlugin {
 		$templateMgr->addJavaScript($this->getPluginPath() . '/js/notify.min.js');
 		// Add Custom JS
 		$templateMgr->addJavaScript($this->getPluginPath() . '/js/custom.js');
-
-		$templateMgr->assign('pluginPath', $this->getPluginPath());
 
 		if (($stylesheetFilename = $this->getStylesheetFilename()) != null) {
 			$path = Request::getBaseUrl() . '/' . $this->getPluginPath() . '/assets/stylesheets/' . $stylesheetFilename;

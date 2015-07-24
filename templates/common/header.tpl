@@ -174,7 +174,7 @@
 		{/if}
 		</div>
 {/if}
-{php}$plugins = PluginRegistry::loadAllPlugins(); print_r($plugins);{/php}
+
 <div id="main" class="row">
 {include file="common/scroll2top.tpl"}
 
