@@ -91,10 +91,13 @@ class BootstrappedThemePlugin extends ThemePlugin {
 		if (($stylesheetFilename = $this->getStylesheetFilename()) != null) {
 			$path = Request::getBaseUrl() . '/' . $this->getPluginPath() . '/assets/stylesheets/' . $stylesheetFilename;
 			$templateMgr->addStyleSheet($path);
-
-
 		}
-
+		// borrows logic from user block plugin to handle user dropdown
+		if (!defined('SESSION_DISABLE_INIT')) {
+			$session =& Request::getSession();
+			$templateMgr->assign_by_ref('userSession', $session);
+			$templateMgr->assign('loggedInUsername', $session->getSessionVar('username'));
+		}
 	}
 
 }
