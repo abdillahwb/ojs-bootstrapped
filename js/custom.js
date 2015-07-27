@@ -37,14 +37,6 @@ $(document).ready(function() {
     //Add in the classes to display the off-canvas menu
     $('#canvas-sidebar').removeClass('col-md-12').addClass('col-xs-6 col-sm-3 sidebar-offcanvas showhide navbar-collapse');
 
-    //Prevent user from removing the userblockplugin from the sidebar because it will break the navbar
-    $('[value="userblockplugin"]').css('display', 'none');
-    $('[value="←"]').click(function() {
-      if ($('[name=blockUnselectedWidget]').has('[value=userblockplugin]').length) {
-        $('#journalLayout').notify("You cannot remove the User block from the sidebar. It will break the theme. Please refresh the page.", {position: 'top center'}, "warn");
-        $('[value="Save and continue"').prop('disabled', true);
-      }
-    });
     //hide sidebar if nothing is inside it but user block
     if ($('#rightSidebar').has('div.block').length === 1) {
       $('.sidebar__tray').css('display', 'none');
