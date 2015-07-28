@@ -15,9 +15,6 @@ Bootstrapped uses Sass and follows, as closely as possible, the ITCSS architectu
 
 You'll find you can make most of your customizations through changing the variables found in the \_settings.vars.scss file.
 
-### IMPORTANT
-
-**In order for the plugin to work properly, you must have the User Login block enabled and located on one of the sidebars.**
 
   [c67d9dac]: https://github.com/cu-library/OJS-Modern-Theme "OJS Modern Theme"
   [63bac875]: https://github.com/cul/cdrs-bootstrappish "CDRS Bootstrappish"
