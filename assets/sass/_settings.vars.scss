@@ -20,7 +20,7 @@ $vt_lt_gray: #c2c1ba;
 $form_gray: #eee;
 $default_gray_outline: #ccc;
 $link_hover: #12252c;
-$link_color: #557082;
+$link_color: #445968;
 $breadcrumb_color: $link_hover;
 $breadcrumb_hover: $vt_deep_maroon;
 $nav_font_color: #ffffff;
@@ -32,9 +32,9 @@ $vt_lt_cream: #f5f5eb;
 //
 $font-size: $base-font-size;
 $default-font-family: "PT Sans", sans-serif;
+$header_img_height: 98%;
 // Article vars
 $base-font-color: black;
-$header_img_height: 98%;
 $alan_background: #686868;
 //
 // =====================================
@@ -45,17 +45,17 @@ $scale: 1.3; // Proportion by which the $base-font-size will scale up
 // Sass Map for sizes
 $break-sizes: (
 	sm: (
-		base-font-size: 16px,
+		base-font-size: 14px,
 		base-line-height: 1em,
 		scale: 1.2
 	),
 	md: (
-		base-font-size: 18px,
+		base-font-size: 12px,
 		base-line-height: 1.2em,
 		scale: 1.15
 	),
 	lg: (
-		base-font-size: 20px,
+		base-font-size: 14px,
 		base-line-height: 1.2em,
 		scale: 1.1
 	)
@@ -69,7 +69,7 @@ $breakpoints: (
 // List of font sizes for vertical rhythm
 // p = paragraph
 // bq = blockquote
-// h___ = etc.
+// h___ = h1, h2, etc.
 // hero = hero text
 // hero text is not utilized at this juncture, but it may be in future
 $font-sizes: (bq, p, hsix, hfive, hfour, hthree, htwo, hone, hero);
