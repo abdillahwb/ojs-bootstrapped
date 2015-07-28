@@ -7,7 +7,7 @@ module.exports = function(grunt) {
             target: {
               files: [{
                 expand: true,
-                cwd: 'assets/stylesheets/main',
+                cwd: 'assets/stylesheets',
                 src: ['*.css', '!*.min.css'],
                 dest: 'assets/stylesheets',
                 ext: '.min.css'
@@ -51,7 +51,8 @@ module.exports = function(grunt) {
               'templates/subscription/*.tpl',
               'templates/user/*.tpl',
               'js/*.js',
-              'js/bootstrap/*.js'],
+              'js/bootstrap/*.js',
+              'js/ojs_dependencies/*.js'],
           css: ['assets/stylesheets/main/*.css'],
           dest: 'assets/stylesheets/main/main.css'
         },
