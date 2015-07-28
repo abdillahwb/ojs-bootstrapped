@@ -1,4 +1,5 @@
 ol {
     list-style: decimal;
     margin-left: 1em;
+    @extend %p;
 }
