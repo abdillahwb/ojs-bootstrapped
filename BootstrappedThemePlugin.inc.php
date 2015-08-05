@@ -46,7 +46,7 @@ class BootstrappedThemePlugin extends ThemePlugin {
 	}
 
 	function getStylesheetFilename() {
-		return 'main.min.css';
+		return 'main.css';
 	}
 
 	/**
@@ -70,22 +70,22 @@ class BootstrappedThemePlugin extends ThemePlugin {
 		// Selctivizr for IE Pseudo classes
 		$selctivizr = '<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/mootools/1.5.1/mootools-yui-compressed.js"></script>
 						<!--[if (gte IE 6)&(lte IE 8)]>
-  							<script type="text/javascript" src="/js/selectivizr-min.js"></script>
+  							<script type="text/javascript" src="assets/js/selectivizr-min.js"></script>
 						<![endif]-->';
 
 		$additionalHeadData = $templateMgr->get_template_vars('additionalHeadData');
 		$templateMgr->assign('additionalHeadData', $additionalHeadData."\n".$jQuery."\n".$viewport."\n".$fontAwesome."\n".$selctivizr);
 		// Add Scroll2Top JS
-		$templateMgr->addJavaScript($this->getPluginPath() . '/js/scroll2top.js');
+		$templateMgr->addJavaScript($this->getPluginPath() . '/assets/js/scroll2top.js');
 
 		// Add Modernizr JS
-		$templateMgr->addJavaScript($this->getPluginPath() . '/js/modernizr.js');
+		$templateMgr->addJavaScript($this->getPluginPath() . '/assets/js/modernizr.js');
 
 		// Add in Bootstrap JS
-		$templateMgr->addJavaScript($this->getPluginPath() . '/js/bootstrap/bootstrap.min.js');
+		$templateMgr->addJavaScript($this->getPluginPath() . '/components/bootstrap-sass/assets/javascripts/bootstrap.min.js');
 
 		// Add Custom JS
-		$templateMgr->addJavaScript($this->getPluginPath() . '/js/custom.js');
+		$templateMgr->addJavaScript($this->getPluginPath() . '/assets/js/custom.js');
 
 		if (($stylesheetFilename = $this->getStylesheetFilename()) != null) {
 			$path = Request::getBaseUrl() . '/' . $this->getPluginPath() . '/assets/stylesheets/' . $stylesheetFilename;
@@ -97,6 +97,7 @@ class BootstrappedThemePlugin extends ThemePlugin {
 			$templateMgr->assign_by_ref('userSession', $session);
 			$templateMgr->assign('loggedInUsername', $session->getSessionVar('username'));
 		}
+
 	}
 
 }
