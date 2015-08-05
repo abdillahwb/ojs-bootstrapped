@@ -50,11 +50,11 @@ module.exports = function(grunt) {
               'templates/submission/*.tpl',
               'templates/subscription/*.tpl',
               'templates/user/*.tpl',
-              'js/*.js',
-              'js/bootstrap/*.js',
-              'js/ojs_dependencies/*.js'],
-          css: ['assets/stylesheets/main/*.css'],
-          dest: 'assets/stylesheets/main/main.css'
+              'assets/js/*.js',
+              'components/bootstrap-sass/javascripts/*.js',
+              'assets/js/ojs_dependencies/*.js'],
+          css: ['assets/stylesheets/main.css'],
+          dest: 'assets/stylesheets/main.css'
         },
       },
     });
