@@ -1,46 +1,7 @@
 .navbar-collapse {
   max-height: 100%;
 }
+
 #navbarToggle {
   margin-left: 1em;
-}
-.transparent {
-  @include opacity(.3);
-}
-
-.sidebar-offcanvas {
-    & li > a {
-		@include has-layout-block;
-		padding: em(3px) em(20px)!important;
-		@include legacy-pie-clearfix;
-		font-weight: normal;
-		line-height: em($base-line-height + 4px)!important;
-		color: $vt_deep_gray;
-		@include nowrap;
-	}
-
-	& li > a:hover,
-	& li > a:focus {
-		color: $nav_font_color!important;
-		text-decoration: none;
-		@include background($vt_orange);
-	}
-
-	& li > .active > a,
-	& li > .active > a:hover {
-		color: $vt_orange;
-		text-decoration: none;
-		outline: 0;
-		@include background($vt_orange);
-	}
-	li:first-child > a:hover,
-	li:first-child > a:focus,  {
-			@include border-top-left-radius(em(5px));
-			@include border-top-right-radius(em(5px));
-	}
-	li:last-child > a:hover,
-	li:last-child > a:focus {
-		@include border-bottom-left-radius(em(5px));
-		@include border-bottom-right-radius(em(5px));
-	}
 }

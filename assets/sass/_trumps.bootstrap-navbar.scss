@@ -1,6 +1,5 @@
 .navbar {
 	border-radius: 0em;
-	max-height: em(25px);
 	border: none;
 
 	.navbar-right {
@@ -65,3 +64,11 @@
 }
 
 .modal-backdrop {z-index: 0;}
+
+.navbar-collapse ul.nav.navbar-nav {
+	margin: 0px 0px 0px -15px!important;
+}
+
+.navbar-collapse ul.nav.navbar-nav li {
+	padding-left: 0!important;
+}
