@@ -8,6 +8,8 @@
  * Common site footer.
  *
  *}
+{call_hook|assign:"rightSidebarCode" name="Templates::Common::RightSidebar"}
+{call_hook|assign:"leftSidebarCode" name="Templates::Common::LeftSidebar"}
 {if $displayCreativeCommons}
 	{translate key="common.ccLicense"}
 {/if}
@@ -18,6 +20,22 @@
 {call_hook name="Templates::Common::Footer::PageFooter"}
 </div><!-- content -->
 </div><!-- main -->
+{if $rightSidebarCode}
+<div id="sidebarRight"
+    {if $leftSidebarCode}
+        class="col-xs-6 col-sm-3 col-md-2 sidebar-offcanvas"
+    {else}
+        class="col-xs-6 col-sm-3 col-md-3 col-lg-2 sidebar-offcanvas"
+    {/if}
+  role="navigation">
+	<div id="rightSidebar" class="sidebar-nav">
+		<ul class="nav">
+			{$rightSidebarCode}
+		</ul>
+	</div>
+</div>
+{/if}
+</div> {* row *}
 </div><!-- body -->
 
 {get_debug_info}

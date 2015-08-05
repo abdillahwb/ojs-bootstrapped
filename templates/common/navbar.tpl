@@ -16,34 +16,35 @@
 			{include file="common/mainNavSection.tpl"}
 		</nav>
 	</div>
-	<div class="visible-xs">
-		<div class="navbar navbar-default" role="navigation">
-			<div class="container">
-				<div class="navbar-header">
-					<a id="no-js-home" href="{url context=$homeContext page="index"}"><button id="navbarToggle" type="button" class="navbar-toggle pull-left" data-toggle="offcanvas" data-target=".navbar-collapse">
-				    	<span class="sr-only">Toggle navigation</span>
-		            	<span class="icon-bar"></span>
-		            	<span class="icon-bar"></span>
-		            	<span class="icon-bar"></span>
-		          	</button></a>
+	<nav class="navbar navbar-default navbar-static-top visible-xs">
+	   <div class="container-fluid">
+		   <div class="navbar-header">
+			   <a id="no-js-home" href="{url context=$homeContext page="index"}"><button id="navbarToggle" type="button" class="navbar-toggle pull-left" data-toggle="collapse" data-target=".navbar-collapse">
+				   <span class="sr-only">Toggle navigation</span>
+				   <span class="icon-bar"></span>
+				   <span class="icon-bar"></span>
+				   <span class="icon-bar"></span>
+			   </button></a>
+			   <a id="no-js-search" href="{url page="search"}"><button id="searchBtn" type="button" class="navbar-toggle navbar--mobile--search" data-toggle="modal" data-target="#searchModal" aria-expanded="false" aria-controls="navbar">
+				   <span class="sr-only">Search</span>
+				   <span class="glyphicon glyphicon-search navbar__glyph--mobile" aria-hidden="true"></span>
+			   </button></a>
+			   {if $isUserLoggedIn}
+				   <a href="{url page="notification"}"><button id="notifyBtn" type="button" class="navbar-toggle navbar--mobile--notify">
+					   <span class="glyphicon glyphicon-bell navbar__glyph--mobile" aria-hidden="true"></span><div class="navbar__notify-badge" {if $unread == 0} style="margin-left: -.8em;"{/if}><span class="badge" {if $unread == 0} style="visibility: hidden;"{/if}>{if $unread > 0} {$unread}{else}0{/if}</span></div>
+				   </button></a>
+			   {else}
+				   <a href="{url page="notification" op="subscribeMailList"}"><button id="subscribeBtn" type="button" class="navbar-toggle">
+					   <span class="glyphicon glyphicon-bullhorn navbar__glyph--mobile" aria-hidden="true"></span>
+				   </button></a>
+			   {/if}
+			   </div>
+		   <div class="navbar-collapse collapse">
+			   {include file="common/mobileMainNavSection.tpl"}
+		   </div>
 
-					<a id="no-js-search" href="{url page="search"}"><button id="searchBtn" type="button" class="navbar-toggle navbar--mobile--search" data-toggle="modal" data-target="#searchModal" aria-expanded="false" aria-controls="navbar">
-						<span class="sr-only">Search</span>
-						<span class="glyphicon glyphicon-search navbar__glyph--mobile" aria-hidden="true"></span>
-					</button></a>
-					{if $isUserLoggedIn}
-						<a id="no-js-notify" href="{url page="notification"}"><button id="notifyBtn" type="button" class="navbar-toggle navbar--mobile--notify" data-toggle="dropdown" data-target="#mobileNotification" aria-expanded="false"  aria-haspopup="true">
-							<span class="glyphicon glyphicon-bell navbar__glyph--mobile" aria-hidden="true"></span><div class="navbar__notify-badge" {if $unreadNotifications == 0} style="margin-left: -.8em;"{/if}><span class="badge" {if $unreadNotifications == 0} style="visibility: hidden;"{/if}>{if $unreadNotifications > 0} {$unreadNotifications}{else}0{/if}</span></div>
-						</button></a>
-					{else}
-						<a id="no-js-sub" href="{url page="notification" op="subscribeMailList"}"><button id="subscribeBtn" type="button" class="navbar-toggle" data-toggle="dropdown" data-target="#mobileNotifySub" aria-expanded="false"  aria-haspopup="true">
-							<span class="glyphicon glyphicon-bullhorn navbar__glyph--mobile" aria-hidden="true"></span>
-						</button></a>
-					{/if}
-
-		   		</div>
-			</div>
-		</div>
+	   </div>
+	</nav>
 <!-- User and notification build for mobile display -->
 		<div id="mobileUser" class="dropdown visible-xs">
 			<ul class="dropdown-menu pull-right" role="menu" aria-labelledby="userBtn">
@@ -80,4 +81,3 @@
 			</ul>
 		</div>
 <!-- End build -->
-	</div>

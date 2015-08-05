@@ -93,10 +93,10 @@
 		</li>
 		{if $isUserLoggedIn}
 			 <li class="dropdown navbar__menu">
-				<a href="#" class="dropdown-toggle navbar__link" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-bell navbar__glyph" aria-hidden="true"></span><div class="navbar__notify-badge" {if $unreadNotifications == 0} style="margin-left: -.8em;"{/if}><span class="badge" {if $unreadNotifications == 0} style="visibility: hidden;"{/if}>{if $unreadNotifications > 0} {$unreadNotifications}{else}0{/if}</span></div></a>
+				<a href="#" class="dropdown-toggle navbar__link" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-bell navbar__glyph" aria-hidden="true"></span><div class="navbar__notify-badge" {if $unread == 0} style="margin-left: -.8em;"{/if}><span class="badge" {if $unread == 0} style="visibility: hidden;"{/if}>{if $unread > 0} {$unread}{else}0{/if}</span></div></a>
 				<ul class="dropdown-menu navbar__dropdown--notification navbar__dropdown--beveled" role="menu">
-					<li><a href="{url page="notification"}">{translate key="common.view"}</a>
-						{if $unreadNotifications > 0}{translate key="notification.notificationsNew" numNew=$unreadNotifications}{/if}</li>
+					<li><a href="{url page="notification"}">{translate key="common.view"} {if $unread > 0}{translate key="notification.notificationsNew" numNew=$unread}{/if}</a>
+						</li>
 						<li class="navbar__menu--divider"></li>
 					<li><a href="{url page="notification" op="settings"}">{translate key="common.manage"}</a></li>
 				</ul>

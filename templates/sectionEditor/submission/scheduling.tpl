@@ -18,6 +18,8 @@
 			<td width="25%" class="label">
 				<label for="issueId">{translate key="editor.article.scheduleForPublication"}</label>
 			</td>
+		</tr>
+		<tr>
 			<td width="25%" class="value">
 				{if $publishedArticle}
 					{assign var=issueId value=$publishedArticle->getIssueId()}
@@ -29,6 +31,8 @@
 					{html_options options=$issueOptions|truncate:40:"..." selected=$issueId}
 				</select>
 			</td>
+		</tr>
+		<tr>
 			<td width="50%" class="value">
 				<input type="submit" value="{translate key="common.record"}" class="button defaultButton" />&nbsp;
 				{if $issueId}
@@ -61,6 +65,8 @@
 					{/if}
 					{html_select_date prefix="datePublished" time=$publishedArticle->getDatePublished()|default:"---" all_extra="class=\"selectMenu\"" start_year=$minYear end_year=$maxYear year_empty="-" month_empty="-" day_empty="-"}
 				</td>
+			</tr>
+			<tr>
 				<td class="value">
 					<input type="submit" value="{translate key="common.record"}" class="button defaultButton" />&nbsp;
 				</td>
@@ -83,7 +89,7 @@
 					<input type="hidden" name="sendToScheduling" value=1 />
 					<input type="submit" value="{translate key="payment.waive"}" class="button defaultButton" />&nbsp;
 				</form>
-			</td>	
+			</td>
 		{/if}
 	</tr>
 {/if}
