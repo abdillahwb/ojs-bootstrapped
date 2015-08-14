@@ -7,7 +7,7 @@
  *
  * Article View -- Footer component.
  *}
-
+{call_hook|assign:"rightSidebarCode" name="Templates::Common::RightSidebar"}
 {if $sharingEnabled}
 <!-- start AddThis -->
 	{if isset($sharingDropDownMenu)}
@@ -56,6 +56,22 @@
 {/if}
 </div><!-- content -->
 </div><!-- main -->
+{if $rightSidebarCode}
+<div id="sidebarRight"
+    {if $leftSidebarCode}
+        class="col-xs-6 col-sm-3 col-md-2 sidebar-offcanvas"
+    {else}
+        class="col-xs-6 col-sm-3 col-md-3 col-lg-2 sidebar-offcanvas"
+    {/if}
+  role="navigation">
+	<div id="rightSidebar" class="sidebar-nav">
+		<ul class="nav">
+			{$rightSidebarCode}
+		</ul>
+	</div>
+</div>
+{/if}
+</div> {* row *}
 </div><!-- body -->
 
 {if $defineTermsContextId}
@@ -83,12 +99,12 @@
 		document.captureEvents(Event.DBLCLICK);
 	}
 
-	// Make sure to only open the reading tools when double clicking within the galley	
+	// Make sure to only open the reading tools when double clicking within the galley
 	if (document.getElementById('inlinePdfResizer')) {
-		context = document.getElementById('inlinePdfResizer');	
+		context = document.getElementById('inlinePdfResizer');
 	}
 	else if (document.getElementById('content')) {
-		context = document.getElementById('content');	
+		context = document.getElementById('content');
 	}
 	else {
 		context = document;

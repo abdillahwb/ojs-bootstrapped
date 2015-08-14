@@ -51,6 +51,8 @@
 				<td width="20%" class="label">
 					<label for="issueId">{translate key="editor.issues.published"}</label>
 				</td>
+			</tr>
+			<tr>
 				<td class="value">
 					{* Find good values for starting and ending year options *}
 					{assign var=currentYear value=$smarty.now|date_format:"%Y"}

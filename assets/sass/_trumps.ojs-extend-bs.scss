@@ -1,4 +1,4 @@
-input[type="submit"], input[value="Save"], button[type="submit"], input[value="Select All"] {
+input[type="submit"], input[value="Save"], button[type="submit"], input[value="Select All"], input[type="button"] {
 	@extend .btn-success;
 	@extend .btn;
 	margin-top: .5em!important;

@@ -35,10 +35,6 @@
 
 	{call_hook|assign:"leftSidebarCode" name="Templates::Common::LeftSidebar"}
 	{call_hook|assign:"rightSidebarCode" name="Templates::Common::RightSidebar"}
-	{if $leftSidebarCode || $rightSidebarCode}<link rel="stylesheet" href="{$baseUrl}/styles/sidebar.css" type="text/css" />{/if}
-	{if $leftSidebarCode}<link rel="stylesheet" href="{$baseUrl}/styles/leftSidebar.css" type="text/css" />{/if}
-	{if $rightSidebarCode}<link rel="stylesheet" href="{$baseUrl}/styles/rightSidebar.css" type="text/css" />{/if}
-	{if $leftSidebarCode && $rightSidebarCode}<link rel="stylesheet" href="{$baseUrl}/styles/bothSidebars.css" type="text/css" />{/if}
 
 	{foreach from=$stylesheets item=cssUrl}
 		<link rel="stylesheet" href="{$cssUrl}" type="text/css" />
@@ -75,28 +71,29 @@
 <div id="container">
 
 <div id="header">
-    <div id="headerTitle">
-    {if $displayPageHeaderLogo && is_array($displayPageHeaderLogo)}
-    	<img src="{$publicFilesDir}/{$displayPageHeaderLogo.uploadName|escape:"url"}" {if $displayPageHeaderLogoAltText != ''}alt="{$displayPageHeaderLogoAltText|escape}"{else}alt="{translate key="common.pageHeaderLogo.altText"}"{/if} />
-    {/if}
-    {if $displayPageHeaderTitle && is_array($displayPageHeaderTitle)}
-    	<img src="{$publicFilesDir}/{$displayPageHeaderTitle.uploadName|escape:"url"}" {if $displayPageHeaderTitleAltText != ''}alt="{$displayPageHeaderTitleAltText|escape}"{else}alt="{translate key="common.pageHeader.altText"}"{/if} />
-    {elseif $displayPageHeaderTitle}
-    <h1>
-    	{$displayPageHeaderTitle}
-    {elseif $alternatePageHeader}
-    <h1>
-    	{$alternatePageHeader}
-    {elseif $siteTitle}
-    <h1>
-    	{$siteTitle}
-    {else}
-    <h1>
-    	{$applicationName}
-    {/if}
-    </h1>
-    </div>
+<div id="headerTitle">
+{if $displayPageHeaderLogo && is_array($displayPageHeaderLogo)}
+	<img src="{$publicFilesDir}/{$displayPageHeaderLogo.uploadName|escape:"url"}" {if $displayPageHeaderLogoAltText != ''}alt="{$displayPageHeaderLogoAltText|escape}"{else}alt="{translate key="common.pageHeaderLogo.altText"}"{/if} />
+{/if}
+{if $displayPageHeaderTitle && is_array($displayPageHeaderTitle)}
+	<img src="{$publicFilesDir}/{$displayPageHeaderTitle.uploadName|escape:"url"}" {if $displayPageHeaderTitleAltText != ''}alt="{$displayPageHeaderTitleAltText|escape}"{else}alt="{translate key="common.pageHeader.altText"}"{/if} />
+{elseif $displayPageHeaderTitle}
+<h1>
+	{$displayPageHeaderTitle}
+{elseif $alternatePageHeader}
+<h1>
+	{$alternatePageHeader}
+{elseif $siteTitle}
+<h1>
+	{$siteTitle}
+{else}
+<h1>
+	{$applicationName}
+{/if}
+</h1>
 </div>
+</div>
+
 {include file="common/navbar.tpl"}
 <div id="breadcrumb">
 	<ol class="breadcrumb">
@@ -112,30 +109,40 @@
 <div class="container" id="body">
 
 <div class="row row-offcanvas row-offcanvas-left">
-<div class="visible-xs col-md-12" id="canvas-sidebar" role="navigation" style="">
-			<div class="sidebar-nav">
-  				{include file="common/mobileMainNavSection.tpl"}
-			</div>
-		</div>
-
-{if $leftSidebarCode || $rightSidebarCode}
-	<div id="sidebar__tray">
-	<a href="#" class="sidebar__tray--link" role="button" aria-expanded="false"><span class="glyphicon glyphicon-th-list sidebar__tray--glyph" aria-hidden="true"></span></a>
-	</div>
-		<div id="sidebar" class="hide">
+	<div class="row-offcanvas row-offcanvas-right">
 		{if $leftSidebarCode}
-			<div id="leftSidebar">
-				{$leftSidebarCode}
+			<div id="sidebarLeft"
+			{if $rightSidebarCode}
+				class="col-xs-6 col-sm-3 col-md-2 sidebar-offcanvas"
+			{else}
+				class="col-xs-6 col-sm-3 col-md-3 col-lg-2 sidebar-offcanvas"
+			{/if}
+				role="navigation">
+				<div id="leftSidebar" class="sidebar-nav">
+					<ul class="nav">
+						{$leftSidebarCode}
+					</ul>
+				</div>
 			</div>
+		{/if}
+	<div id="main"
+		{if $leftSidebarCode && $rightSidebarCode}
+			class="col-xs-12 col-sm-6 col-md-8"
+		{elseif $leftSidebarCode || $rightSidebarCode}
+			class="col-xs-12 col-sm-9 col-md-9 col-lg-10"
+		{else}
+			class="col-lg-12"
+		{/if}
+			>
+		{if $leftSidebarCode}
+		<p class="pull-left visible-xs" style="margin-right: 1em;">
+            <button class="btn btn-info btn-lg" type="button" data-toggle="offcanvas"><span class="glyphicon glyphicon-chevron-left"></span></button>
+        </p>
 		{/if}
 		{if $rightSidebarCode}
-			<div id="rightSidebar">
-				{$rightSidebarCode}
-			</div>
+        <p class="pull-right visible-xs">
+            <button class="btn btn-info btn-lg" type="button" data-toggle="offcanvasright"><span class="glyphicon glyphicon-chevron-right"></span></button>
+        </p>
 		{/if}
-		</div>
-{/if}
-
-<div class="row" id="main">
 	{include file="common/scroll2top.tpl"}
-		<div id="content" class=".col-xs-12 .col-md-8">
+		<div id="content">
