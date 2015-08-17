@@ -3,8 +3,3 @@
     @include filter-margin-left(5%);
     margin-left: 5%;
 }
-h2 {@extend %htwo;}
-h3 {@extend %hthree;}
-h4 {@extend %hfour;}
-h5 {@extend %hfive;}
-h6 {@extend %hsix;}

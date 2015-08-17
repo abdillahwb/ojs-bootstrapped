@@ -1,1 +1,6 @@
-blockquote {@extend %bq; margin: 0 0 2em;}
+blockquote {
+    font-size: 14px;
+    line-height: 1.35em;
+    margin: 0 0 2em;
+    border-left: none!important;
+}
