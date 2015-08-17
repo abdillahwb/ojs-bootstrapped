@@ -7893,111 +7893,21 @@ button.close {
   }
 }
 @media (min-width: 300px) {
-  blockquote {
-    font-size: 16px;
-    line-height: 1.6em;
-  }
-
-  li, p, ol {
+  li, ol {
     font-size: 17.6px;
     line-height: 1.45455em;
   }
-
-  h6 {
-    font-size: 19.36px;
-    line-height: 1.32231em;
-  }
-
-  h5 {
-    font-size: 21.296px;
-    line-height: 1.2021em;
-  }
-
-  h4 {
-    font-size: 23.4256px;
-    line-height: 1.09282em;
-  }
-
-  h3 {
-    font-size: 25.76816px;
-    line-height: 1.98695em;
-  }
-
-  h2 {
-    font-size: 28.34498px;
-    line-height: 1.80632em;
-  }
 }
 @media (min-width: 767px) {
-  blockquote {
-    font-size: 12px;
-    line-height: 1.2em;
-  }
-
-  li, p, ol {
+  li, ol {
     font-size: 13.8px;
     line-height: 1.04348em;
   }
-
-  h6 {
-    font-size: 15.87px;
-    line-height: 1.81474em;
-  }
-
-  h5 {
-    font-size: 18.2505px;
-    line-height: 1.57804em;
-  }
-
-  h4 {
-    font-size: 20.98807px;
-    line-height: 1.37221em;
-  }
-
-  h3 {
-    font-size: 24.13629px;
-    line-height: 1.19322em;
-  }
-
-  h2 {
-    font-size: 27.75673px;
-    line-height: 1.03759em;
-  }
 }
 @media (min-width: 1200px) {
-  blockquote {
-    font-size: 14px;
-    line-height: 1.2em;
-  }
-
-  li, p, ol {
+  li, ol {
     font-size: 15.4px;
     line-height: 1.09091em;
-  }
-
-  h6 {
-    font-size: 16.94px;
-    line-height: 1.98347em;
-  }
-
-  h5 {
-    font-size: 18.634px;
-    line-height: 1.80316em;
-  }
-
-  h4 {
-    font-size: 20.4974px;
-    line-height: 1.63923em;
-  }
-
-  h3 {
-    font-size: 22.54714px;
-    line-height: 1.49021em;
-  }
-
-  h2 {
-    font-size: 24.80185px;
-    line-height: 1.35474em;
   }
 }
 body {
@@ -8005,7 +7915,14 @@ body {
 }
 
 blockquote {
+  font-size: 14px;
+  line-height: 1.35em;
   margin: 0 0 2em;
+  border-left: none !important;
+}
+
+cite {
+  font-style: normal !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -8033,6 +7950,11 @@ a:link, a:visited, a:active {
 a:hover, a:focus {
   background: none;
   color: #12252c;
+}
+
+p {
+  font-size: 17px;
+  line-height: 1.25em;
 }
 
 textarea {
@@ -8140,15 +8062,15 @@ ol {
   float: right;
 }
 
-.content--align-right {
+.content--align-right, .right {
   text-align: right !important;
 }
 
-.content--align-center {
+.content--align-center, .center {
   text-align: center !important;
 }
 
-.content--align-left {
+.content--align-left, .left {
   text-align: left !important;
 }
 
@@ -8220,6 +8142,9 @@ ol {
   margin: 0 .5em;
   position: relative;
 }
+.article__content h2, .article__content h3 {
+  margin-top: 0.5em !important;
+}
 
 .article__content--left {
   padding-right: 0.625em;
@@ -8255,12 +8180,18 @@ ol {
   font-size: 1.1em;
 }
 
-.article__reference {
+.article__reference, .outdent {
   text-indent: -2em;
   padding-left: 2em;
 }
 
-.article__reference--url {
+.article__caption {
+  font-style: italic;
+  font-size: .75em;
+  font-family: Verdana, Arial, Geneva, sans-serif;
+}
+
+cite a {
   white-space: pre;
   /* CSS 2.0 */
   white-space: pre-wrap;
@@ -8277,12 +8208,6 @@ ol {
   /* HP Printers */
   word-wrap: break-word;
   /* IE 5+ */
-}
-
-.article__caption {
-  font-style: italic;
-  font-size: .75em;
-  font-family: Verdana, Arial, Geneva, sans-serif;
 }
 
 .navbar__link {
@@ -8383,6 +8308,142 @@ ol {
   font-size: 0.9375em;
   padding-top: 0.0625em;
   color: #333333;
+}
+
+table.art {
+  width: 100%;
+  border-style: solid;
+  border-width: 1px 0px 1px 0px;
+  border-spacing: 0px;
+  margin: 0px 0px 1em 0px;
+}
+
+table.art caption {
+  text-align: left;
+  padding: 0.4em 3px;
+  font-weight: bold;
+}
+
+table.art td {
+  padding: 3px 6px;
+  vertical-align: top;
+  text-align: center;
+}
+
+table.art th {
+  padding: 3px 6px;
+  vertical-align: top;
+  text-align: center;
+  font-weight: bold;
+}
+
+table.art td:first-child, table.art th:first-child {
+  text-align: left;
+}
+
+table.art tfoot td, table.art tfoot th {
+  border-top: 1px solid;
+}
+
+table.foot {
+  border-width: 1px 0px 0px 0px;
+  border-style: solid;
+}
+
+table.grid td, table.grid th {
+  border-left: solid 1px;
+  border-top: solid 1px;
+}
+
+table.grid thead tr:first-child th {
+  border-top: 0px solid;
+}
+
+table.grid tr th:last-child, table.grid tr td:last-child {
+  border-right: 1px solid;
+}
+
+table.grid tfoot tr td:first-child, table.grid tfoot tr th:first-child {
+  border-left: 0px solid;
+}
+
+table.grid tfoot tr td:last-child, table.grid tfoot tr th:last-child {
+  border-right: 0px solid;
+}
+
+/*table.vert {
+	border-left:solid 1px;
+}*/
+table.vert td, table.vert th {
+  border-left: 1px solid;
+}
+
+table.vert thead tr:first-child th {
+  border-top: 0px solid;
+}
+
+table.vert tr th:last-child, table.vert tr td:last-child {
+  border-right: 1px solid;
+}
+
+table.vert tfoot tr td:first-child, table.vert tfoot tr th:first-child {
+  border-left: 0px solid;
+}
+
+table.vert tfoot tr td:last-child, table.vert tfoot tr th:last-child {
+  border-right: 0px solid;
+}
+
+table.left td, table.left th {
+  text-align: left;
+}
+
+tr.left td, tr.left th {
+  text-align: left;
+}
+
+table.right td, table.right th {
+  text-align: right;
+}
+
+tr.right td, tr.right th {
+  text-align: right;
+}
+
+tr.right th:first-child, tr.right td:first-child {
+  text-align: left;
+}
+
+table.underline th, table.underline td {
+  border-bottom: 1px solid;
+}
+
+table.underline tr:last-of-type th, table.underline tr:last-of-type td {
+  border-bottom: 0px solid;
+}
+
+tr.underline th, tr.underline td {
+  border-bottom: 1px solid;
+}
+
+tr.overline th, tr.overline td {
+  border-top: 1px solid;
+}
+
+tr.underlinedark th, tr.underlinedark td {
+  border-bottom: 2px solid;
+}
+
+table.spaced tbody td {
+  padding-top: 1em;
+}
+
+table.spaced tbody tr:first-child td {
+  padding-top: 0.4em;
+}
+
+tr.spaced th, tr.spaced td {
+  padding-top: 1em;
 }
 
 .btn-danger, input[value="cancel"], input[value="Cancel"], input[value='delete'], input[value='Delete'], input[value='Close'], input[value='close'], input[value='Reset Article Permissions'] {
