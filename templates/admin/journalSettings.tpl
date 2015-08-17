@@ -55,14 +55,20 @@ function doSubmit() {
 {/if}
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="title" key="manager.setup.journalTitle" required="true"}</td>
+	</tr>
+	<tr>
 		<td width="80%" class="value"><input type="text" id="title" name="title[{$formLocale|escape}]" value="{$title[$formLocale]|escape}" size="40" maxlength="120" class="textField" /></td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="description" key="admin.journals.journalDescription"}</td>
+	</tr>
+	<tr>
 		<td class="value"><textarea name="description[{$formLocale|escape}]" id="description" cols="40" rows="10" class="textArea">{$description[$formLocale]|escape}</textarea></td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="journalPath" key="journal.path" required="true"}</td>
+	</tr>
+	<tr>
 		<td class="value">
 			<input type="text" id="journalPath" name="journalPath" value="{$journalPath|escape}" size="16" maxlength="32" class="textField" />
 			<br />
@@ -72,7 +78,7 @@ function doSubmit() {
 	</tr>
 	<tr valign="top">
 		<td colspan="2" class="label">
-			<input type="checkbox" name="enabled" id="enabled" value="1"{if $enabled} checked="checked"{/if} /> <label for="enabled">{translate key="admin.journals.enableJournalInstructions"}</label>
+			<input type="checkbox" name="enabled" id="enabled" value="1"{if $enabled} checked="checked"{/if} /> <label style="margin-top: .3em;" for="enabled">{translate key="admin.journals.enableJournalInstructions"}</label>
 		</td>
 	</tr>
 </table>
@@ -84,4 +90,3 @@ function doSubmit() {
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 
 {include file="common/footer.tpl"}
-
