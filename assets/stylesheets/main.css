@@ -8809,6 +8809,10 @@ td.data {
   line-height: 1.25em;
 }
 
+#announcements {
+  width: inherit;
+}
+
 #rightSidebar, #leftSidebar {
   width: 100% !important;
   margin-right: 0% !important;
