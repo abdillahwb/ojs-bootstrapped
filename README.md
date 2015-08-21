@@ -28,6 +28,10 @@ There is the capability to use Grunt to clean and minify the Sass and CSS. If yo
 Get Compass: [http://compass-style.org/install/][compass]  
 Get Grunt: [http://gruntjs.com/getting-started][grunt]
 
+### Custom Metadata
+
+There is a section in the templates/article/dublincore.tpl that has metadata specific to Virginia Tech journals. Feel free to remove this section for your own purposes.
+
 ### License
 
     This program is free software: you can redistribute it and/or modify
