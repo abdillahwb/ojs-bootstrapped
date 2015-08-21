@@ -21,9 +21,12 @@ You'll find you can make most of your customizations through changing the variab
 
 As the theme doesn't fully incorporate Bootstrap and doesn't override every template, it isn't a completely responsive design. It stops at around 560px. This is due to the tables used in most of the forms in OJS.
 
-### Using Grunt
+### Using Grunt and Compass
 
-There is the capability to use Grunt to clean and minify the Sass and CSS; however, as it stands, the tasks are removing some crucial Bootstrap JS. So, the plugin implements the non-minified version by default.
+There is the capability to use Grunt to clean and minify the Sass and CSS. If you make changes to the SCSS files, make sure you have `compass` installed so you can compile the changes. Once you've done that,  you can run the default Grunt task via the command line:  `grunt` from the root directory of the plugin. It uses purifycss to purge unused CSS and cssmin to minify it.
+
+Get Compass: [http://compass-style.org/install/][compass]  
+Get Grunt: [http://gruntjs.com/getting-started][grunt]
 
 ### License
 
@@ -42,3 +45,6 @@ There is the capability to use Grunt to clean and minify the Sass and CSS; howev
 
   [c67d9dac]: https://github.com/cu-library/OJS-Modern-Theme "OJS Modern Theme"
   [63bac875]: https://github.com/cul/cdrs-bootstrappish "CDRS Bootstrappish"
+  [compass]: http://compass-style.org/install/ "Compass Installation"
+  [grunt]: http://gruntjs.com/getting-started "Grunt Installation"
+  
