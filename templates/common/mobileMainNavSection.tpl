@@ -9,14 +9,14 @@
 				<li id="userHome"><a href="{url journal="index" page="user"}">{translate key="navigation.userHome"}</a></li>
 				<li class="nav-divider"></li>
 				{if $hasOtherJournals}
-				<li><a href="{url journal="index" page="user"}">{translate key="plugins.block.user.myJournals"}</a></li>
+				<li><a href="{url journal="index" page="user"}">{translate key="plugins.themes.bootstrapped.myJournals"}</a></li>
 				<li class="nav-divider"></li>
 				{/if}
-				<li><a href="{url page="user" op="profile"}">{translate key="plugins.block.user.myProfile"}</a></li>
+				<li><a href="{url page="user" op="profile"}">{translate key="plugins.themes.bootstrapped.myProfile"}</a></li>
 				<li class="nav-divider"></li>
-				<li><a href="{url page="login" op="signOut"}">{translate key="plugins.block.user.logout"}</a></li>
+				<li><a href="{url page="login" op="signOut"}">{translate key="plugins.themes.bootstrapped.logout"}</a></li>
 				{if $userSession->getSessionVar('signedInAs')}
-					<li><a href="{url page="login" op="signOutAsUser"}">{translate key="plugins.block.user.signOutAsUser"}</a></li>
+					<li><a href="{url page="login" op="signOutAsUser"}">{translate key="plugins.themes.bootstrapped.signOutAsUser"}</a></li>
 				{/if}
 			{else}
 				<li id="login"><a href="{url page="login"}">{translate key="navigation.login"}</a></li>

@@ -34,3 +34,7 @@ js/editor.js
 compass/.sass-cache/0967150e88e4401ab739963e9346b76fb7812cdf/hacks.scssc
 
 .brackets.json
+
+.sass-cache/
+
+assets/stylesheets/main/

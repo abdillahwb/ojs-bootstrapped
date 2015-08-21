@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/themes/bootstrapped/locale/pt_PT/locale.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the pt_PT (Português) locale.
+  *
+  -->
+ 
+<locale name="pt_PT" full_name="Português">
+	<message key="plugins.themes.bootstrapped.displayName">Plugin Bloco do Utilizador</message>
+	<message key="plugins.themes.bootstrapped.description">Este plugin oferece ferramentas de utilizador na barra lateral (ex.: entrar, sair do sistema, acesso ao perfil, etc).</message>
+	<message key="plugins.themes.bootstrapped.loggedInAs">Ligado como:</message>
+	<message key="plugins.themes.bootstrapped.myJournals">Minhas Revistas</message>
+	<message key="plugins.themes.bootstrapped.myProfile">Perfil</message>
+	<message key="plugins.themes.bootstrapped.logout">Sair do sistema</message>
+	<message key="plugins.themes.bootstrapped.signOutAsUser">Sair do sistema como utilizador</message>
+	<message key="plugins.themes.bootstrapped.rememberMe">Memorizar nome utilizador</message>
+</locale>

@@ -160,30 +160,38 @@
 	</tr>
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="coverPage" key="editor.issues.coverPage"}</td>
+	</tr>
+	<tr>
 		<td width="80%" class="value"><input type="file" name="coverPage" id="coverPage" class="uploadField" />&nbsp;&nbsp;{translate key="form.saveToUpload"}<br />{translate key="editor.issues.coverPageInstructions"}<br />{translate key="editor.issues.uploaded"}:&nbsp;{if $fileName[$formLocale] }<a href="javascript:openWindow('{$publicFilesDir}/{$fileName[$formLocale]|escape:"url"}');" class="file">{$originalFileName[$formLocale]}</a>&nbsp;<a href="{url op="removeIssueCoverPage" path=$issueId|to_array:$formLocale}" onclick="return confirm('{translate|escape:"jsparam" key="editor.issues.removeCoverPage"}')">{translate key="editor.issues.remove"}</a>{else}&mdash;{/if}</td>
 	</tr>
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="coverPageAltText" key="common.altText"}</td>
+	</tr>
+	<tr>
 		<td width="80%" class="value"><input type="text" name="coverPageAltText[{$formLocale|escape}]" value="{$coverPageAltText[$formLocale]|escape}" size="40" maxlength="255" class="textField" /></td>
 	</tr>
 	<tr valign="top">
-		<td>&nbsp;</td>
 		<td class="value"><span class="instruct">{translate key="common.altTextInstructions"}</span></td>
 	</tr>
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="styleFile" key="editor.issues.styleFile"}</td>
+	</tr>
+	<tr>
 		<td width="80%" class="value"><input type="file" name="styleFile" id="styleFile" class="uploadField" />&nbsp;&nbsp;{translate key="form.saveToUpload"}<br />{translate key="editor.issues.uploaded"}:&nbsp;{if $styleFileName}<a href="javascript:openWindow('{$publicFilesDir}/{$styleFileName|escape}');" class="file">{$originalStyleFileName|escape}</a>&nbsp;<a href="{url op="removeStyleFile" path=$issueId}" onclick="return confirm('{translate|escape:"jsparam" key="editor.issues.removeStyleFile"}')">{translate key="editor.issues.remove"}</a>{else}&mdash;{/if}</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="coverPageDescription" key="editor.issues.coverPageCaption"}</td>
+	</tr>
+	<tr>
 		<td class="value"><textarea name="coverPageDescription[{$formLocale|escape}]" id="coverPageDescription" cols="40" rows="5" class="textArea">{$coverPageDescription[$formLocale]|escape}</textarea></td>
 	</tr>
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="hideCoverPageArchives" key="editor.issues.coverPageDisplay"}</td>
+	</tr>
+	<tr>
 		<td width="80%" class="value"><input type="checkbox" name="hideCoverPageArchives[{$formLocale|escape}]" id="hideCoverPageArchives" value="1" {if $hideCoverPageArchives[$formLocale]} checked="checked"{/if} /> <label for="hideCoverPageArchives">{translate key="editor.issues.hideCoverPageArchives"}</label></td>
 	</tr>
 	<tr valign="top">
-		<td width="20%" class="label">&nbsp;</td>
 		<td class="value"><input type="checkbox" name="hideCoverPageCover[{$formLocale|escape}]" id="hideCoverPageCover" value="1" {if $hideCoverPageCover[$formLocale]} checked="checked"{/if} /> <label for="hideCoverPageCover">{translate key="editor.issues.hideCoverPageCover"}</label></td>
 	</tr>
 </table>
@@ -195,4 +203,3 @@
 </form>
 
 {include file="common/footer.tpl"}
-

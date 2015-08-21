@@ -84,7 +84,8 @@
 	</tr>
 </table>
 	<br />
-	<input type="file" name="galleyFile" id="galleyFile" size="10" class="uploadField" />
+	<div style="height: 3em;"
+	><input type="file" name="galleyFile" id="galleyFile" size="10" class="uploadField" /></div>
 	<input type="submit" value="{translate key="common.upload"}" class="button" />
 </div>
 </form>

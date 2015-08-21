@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/themes/bootstrapped/locale/sv_SE/locale.xml
+  *
+  * Translated to sv_SE per@funke.com 2010-03-15
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the sv_SE (Swedish) locale.
+  * Translation by per@funke.com 2009-11-27
+  *
+  -->
+ 
+<locale name="sv_SE" full_name="Swedish">
+	<message key="plugins.themes.bootstrapped.displayName">Användar block</message>
+	<message key="plugins.themes.bootstrapped.description">Detta insticksprogram innehåller verktyg för användarkontohantering i sidokolumn (exempelvis in- och utloggning, profillänk osv.).</message>
+	<message key="plugins.themes.bootstrapped.loggedInAs">Du är inloggad som...</message>
+	<message key="plugins.themes.bootstrapped.notLoggedInAs">Du är inte inloggad! </message>
+	<message key="plugins.themes.bootstrapped.myJournals">Mina tidskrifter</message>
+	<message key="plugins.themes.bootstrapped.myProfile">Min profil</message>
+	<message key="plugins.themes.bootstrapped.logout">Logga ut</message>
+	<message key="plugins.themes.bootstrapped.signOutAsUser">Logga ut som användare</message>
+	<message key="plugins.themes.bootstrapped.rememberMe">Kom ihåg mig</message>
+</locale>

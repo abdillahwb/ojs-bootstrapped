@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Plik językowy dla pl_PL
+  *
+  -->
+ 
+<locale name="pl_PL" full_name="Polski">
+	<message key="plugins.themes.bootstrapped.displayName">Użytkownik</message>
+	<message key="plugins.themes.bootstrapped.description">Ta wtyczka wyświetla narzędzia logowania.</message>
+	<message key="plugins.themes.bootstrapped.loggedInAs">Jesteś zalogowany jako...</message>
+	<message key="plugins.themes.bootstrapped.myJournals">Moje czasopisma</message>
+	<message key="plugins.themes.bootstrapped.myProfile">Mój profil</message>
+	<message key="plugins.themes.bootstrapped.logout">Wyloguj</message>
+	<message key="plugins.themes.bootstrapped.signOutAsUser">Wyloguj jako użytkownik</message>
+	<message key="plugins.themes.bootstrapped.rememberMe">Zapamiętaj mnie</message>
+</locale>

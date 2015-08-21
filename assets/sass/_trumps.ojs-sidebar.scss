@@ -1,0 +1,11 @@
+
+#rightSidebar, #leftSidebar {
+	width: 100%!important;
+	margin-right: 0%!important;
+	margin-top: 2em;
+	padding: 1em!important;
+	font-size: $font-size;
+	@include reset-float();
+
+	div.block {padding-bottom: 0!important;}
+}

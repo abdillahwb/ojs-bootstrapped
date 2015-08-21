@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/themes/bootstrapped/locale/cs_CZ/locale.xml
+  *
+  * Copyright (c) 2014-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for this plugin in Czech.
+  *
+  * Translated by František Chmelik, frantisek.chmelik 'at' upol.cz
+  *
+  -->
+ 
+<locale name="cs_CZ" full_name="Čeština">
+	<message key="plugins.themes.bootstrapped.displayName">Panel uživatele</message>
+	<message key="plugins.themes.bootstrapped.description">Tento plugin zobrazí v postraním panelu nástroje pro práci s účtem uživatele (např.: přihlášení, odhlášení, odkaz na profil atd.).</message>
+	<message key="plugins.themes.bootstrapped.loggedInAs">Jste přihlášen jako...</message>
+	<message key="plugins.themes.bootstrapped.myJournals">Mé časopisy</message>
+	<message key="plugins.themes.bootstrapped.myProfile">Můj profil</message>
+	<message key="plugins.themes.bootstrapped.logout">Odhlásit</message>
+	<message key="plugins.themes.bootstrapped.signOutAsUser">Odhlásit se z Jako uživatel</message>
+	<message key="plugins.themes.bootstrapped.rememberMe">Zapamatuj si mě</message>
+</locale>

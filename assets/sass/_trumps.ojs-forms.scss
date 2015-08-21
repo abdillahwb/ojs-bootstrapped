@@ -1,0 +1,35 @@
+form {
+	p {
+		input[type="checkbox"], input[type="radio"] {
+			margin-top: -.2em;
+		}
+	}
+}
+
+ul.steplist li a{
+	color:$link_color;
+}
+h4.checkbox-inline {
+	input[type="checkbox"] {
+		margin-top: em(-4px)!important;
+	}
+}
+table.mceLayout, .mceEditor {
+    width: 100% !important;
+	margin-bottom: 1em!important;
+}
+.defaultSkin table{
+	@include float-left;
+}
+
+div.separator {border-bottom: 1px solid!important;}
+.headseparator, .endseparator {border-top: 1px solid!important;}
+
+td.data {padding-left: 5em;}
+
+#forAuthorsToIndexTheirWork {
+	input[type="checkbox"], input[type="radio"] {
+		margin-top: 25px!important;
+	}
+}
+#showCoverPage {margin-top: -.1em;}

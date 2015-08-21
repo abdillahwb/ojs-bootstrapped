@@ -1,0 +1,9 @@
+#main {
+    @include filter-margin-left(0!important);
+    margin-left: 0!important;
+    color: $vt_deep_gray;
+    padding: 0 0 0 1em!important;
+    margin-bottom: 5em!important;
+    font-size: em($base-font-size + 8px);
+	line-height: em($base-line-height - 4px);
+}

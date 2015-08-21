@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/themes/bootstrapped/locale/eu_ES/locale.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the eu_ES (Basque (Euskara)) locale.
+  *
+  -->
+
+<locale name="eu_ES" full_name="Euskara">
+	<message key="plugins.themes.bootstrapped.displayName">Erabiltzailearen blokea</message>
+	<message key="plugins.themes.bootstrapped.description">Plugin honek erabiltzaile-kontuaren tresnak ematen ditu alboko barran (saioa hasi, saioa amaitu, profil-esteka, etab.)</message>
+	<message key="plugins.themes.bootstrapped.loggedInAs">Honela hasi duzu saioa...</message>
+	<message key="plugins.themes.bootstrapped.myJournals">Nire aldizkariak</message>
+	<message key="plugins.themes.bootstrapped.myProfile">Nire profila</message>
+	<message key="plugins.themes.bootstrapped.logout">Amaitu saioa</message>
+	<message key="plugins.themes.bootstrapped.signOutAsUser">Amaitu
+erabiltzaile-saioa</message>
+	<message key="plugins.themes.bootstrapped.rememberMe">Gogora nazazu</message>
+</locale>

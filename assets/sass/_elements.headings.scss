@@ -1,0 +1,5 @@
+#{headings()} {
+    font-family: $default-font-family;
+    @include filter-margin-left(5%);
+    margin-left: 5%;
+}

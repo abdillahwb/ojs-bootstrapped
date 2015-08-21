@@ -1,0 +1,5 @@
+#container {
+    width: 100%;
+    @include min-width(35em!important);
+    overflow: hidden!important;
+}

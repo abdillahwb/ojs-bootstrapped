@@ -98,7 +98,7 @@ $(document).ready(function() {
 		</td>
 		<td class="drag">{if !$isLayoutEditor}<a href="{url op="submission" path=$articleId}" class="action">{/if}{$article->getLocalizedTitle()|strip_tags|truncate:60:"..."}{if !$isLayoutEditor}</a>{/if}</td>
 		{if $issueAccess == $smarty.const.ISSUE_ACCESS_SUBSCRIPTION && $currentJournal->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION}
-		<td><select name="accessStatus[{$article->getPublishedArticleId()}]" size="1" class="selectMenu">{html_options options=$accessOptions selected=$article->getAccessStatus()}</select></td>
+		<td style="width: 25%;"><select name="accessStatus[{$article->getPublishedArticleId()}]" size="1" class="selectMenu">{html_options options=$accessOptions selected=$article->getAccessStatus()}</select></td>
 		{/if}
 		{if $enablePublicArticleId}
 		<td><input type="text" name="publishedArticles[{$article->getId()}]" value="{$article->getPubId('publisher-id')|escape}" size="7" maxlength="255" class="textField" /></td>
@@ -135,4 +135,3 @@ $(document).ready(function() {
 {/if}
 
 {include file="common/footer.tpl"}
-
