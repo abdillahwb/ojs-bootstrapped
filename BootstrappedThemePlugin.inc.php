@@ -56,7 +56,7 @@ class BootstrappedThemePlugin extends ThemePlugin {
 
 		// Resets the template directory to the files in this directory -- Credit to https://github.com/cu-library/OJS-Modern-Theme for the fix/redirection
 
-		$templateMgr->template_dir[0] = Core::getBaseDir() . DIRECTORY_SEPARATOR . 'plugins' . DIRECTORY_SEPARATOR . 'themes' . DIRECTORY_SEPARATOR . 'bootstrapped' . DIRECTORY_SEPARATOR . 'templates';
+		$templateMgr->template_dir[0] = Core::getBaseDir() . DIRECTORY_SEPARATOR . 'plugins' . DIRECTORY_SEPARATOR . 'themes' . DIRECTORY_SEPARATOR . 'ojs-bootstrapped' . DIRECTORY_SEPARATOR . 'templates';
 		$templateMgr->compile_id = 'bootstrapped';
 
 		// Add viewport
