@@ -19,6 +19,7 @@ import('lib.pkp.classes.user.PKPUser');
 
 class BootstrappedThemePlugin extends ThemePlugin {
 
+<<<<<<< HEAD
 	function register($category, $path) {
 		$success = parent::register($category, $path);
 		if ($success) {
@@ -27,6 +28,8 @@ class BootstrappedThemePlugin extends ThemePlugin {
 		}
 		return $success;
 	}
+=======
+>>>>>>> master
 
 	/**
 	 * Get the name of this plugin. The name must be unique within
@@ -90,12 +93,24 @@ class BootstrappedThemePlugin extends ThemePlugin {
 		if (($stylesheetFilename = $this->getStylesheetFilename()) != null) {
 			$path = Request::getBaseUrl() . '/' . $this->getPluginPath() . '/assets/stylesheets/' . $stylesheetFilename;
 			$templateMgr->addStyleSheet($path);
+<<<<<<< HEAD
 		}
 		// borrows logic from user block plugin to handle user dropdown
 		if (!defined('SESSION_DISABLE_INIT')) {
 			$session =& Request::getSession();
 			$templateMgr->assign_by_ref('userSession', $session);
 			$templateMgr->assign('loggedInUsername', $session->getSessionVar('username'));
+=======
+
+
+		}
+
+		$requestedPage = PKPRequest::getRequestedPage();
+		if ($requestedPage == 'article') {
+			$path = Request::getBaseUrl() . '/' . $this->getPluginPath() . '/assets/stylesheets/style_article.css';
+			$templateMgr->addStyleSheet($path);
+			$templateMgr->addJavaScript($this->getPluginPath() . '/js/article.js');
+>>>>>>> master
 		}
 
 	}
