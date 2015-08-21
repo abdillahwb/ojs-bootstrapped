@@ -3,8 +3,8 @@
 /**
  * @file BootstrappedThemePlugin.inc.php
  *
- * Copyright (c) 2013 Christopher Anderton
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Copyright (c) 2015 Chase Dooley
+ * Distributed under the GNU GPL v3.
  *
  * @class BootstrappedThemePlugin
  * @ingroup plugins_themes_bootstrapped
