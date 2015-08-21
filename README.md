@@ -21,5 +21,9 @@ You'll find you can make most of your customizations through changing the variab
 
 As the theme doesn't fully incorporate Bootstrap and doesn't override every template, it isn't a completely responsive design. It stops at around 560px. This is due to the tables used in most of the forms in OJS.
 
+### Using Grunt
+
+There is the capability to use Grunt to clean and minify the Sass and CSS; however, as it stands, the tasks are removing some crucial Bootstrap JS. So, the plugin implements the non-minified version by default.
+
   [c67d9dac]: https://github.com/cu-library/OJS-Modern-Theme "OJS Modern Theme"
   [63bac875]: https://github.com/cul/cdrs-bootstrappish "CDRS Bootstrappish"
