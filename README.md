@@ -43,6 +43,8 @@ Get Grunt: [http://gruntjs.com/getting-started][grunt]
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+See the `LICENSE.MD` for more information.
+
   [c67d9dac]: https://github.com/cu-library/OJS-Modern-Theme "OJS Modern Theme"
   [63bac875]: https://github.com/cul/cdrs-bootstrappish "CDRS Bootstrappish"
   [compass]: http://compass-style.org/install/ "Compass Installation"
