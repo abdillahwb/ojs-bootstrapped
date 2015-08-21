@@ -51,7 +51,8 @@ module.exports = function(grunt) {
               'templates/subscription/*.tpl',
               'templates/user/*.tpl',
               'assets/js/*.js',
-              'components/bootstrap-sass/javascripts/*.js',
+              'components/bootstrap-sass/assets/javascripts/*.js',
+              'components/bootstrap-sass/assets/javascripts/bootstrap/*.js',
               'assets/js/ojs_dependencies/*.js'],
           css: ['assets/stylesheets/main.css'],
           dest: 'assets/stylesheets/main.css'
