@@ -17,9 +17,4 @@ $(document).ready(function() {
 
     //Add in the classes to display the off-canvas menu
     $('#canvas-sidebar').removeClass('col-md-12').addClass('col-xs-6 col-sm-3 sidebar-offcanvas showhide navbar-collapse');
-
-    //hide sidebar if nothing is inside it but user block
-    if ($('#rightSidebar').has('div.block').length === 1) {
-      $('.sidebar__tray').css('display', 'none');
-    }
 });
