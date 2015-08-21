@@ -122,11 +122,6 @@
 
 <div id="header">
 <div id="headerTitle">
-<<<<<<< HEAD
-=======
-<h1><img id="vt-logo" src="{$baseUrl}/{$pluginPath}/assets/img/vt_logo_tm_320px.png" alt="Virginia Tech Logo" /></h1>
-<!-- <h1>
->>>>>>> master
 {if $displayPageHeaderLogo && is_array($displayPageHeaderLogo)}
 	<img src="{$publicFilesDir}/{$displayPageHeaderLogo.uploadName|escape:"url"}" {if $displayPageHeaderLogoAltText != ''}alt="{$displayPageHeaderLogoAltText|escape}"{else}alt="{translate key="common.pageHeaderLogo.altText"}"{/if} />
 {/if}
@@ -153,21 +148,7 @@
 <div id="body" class="container">
 
 <div class="row row-offcanvas row-offcanvas-left">
-<<<<<<< HEAD
 	<div class="row-offcanvas row-offcanvas-right">
-=======
-<div class="visible-xs col-md-12" id="canvas-sidebar" role="navigation" style="">
-			<div class="sidebar-nav">
-  				{include file="common/mobileMainNavSection.tpl"}
-			</div>
-		</div>
-
-{if $leftSidebarCode || $rightSidebarCode}
-	<div id="sidebar-tab">
-	<a href="#" role="button" aria-expanded="false"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span></a>
-	</div>
-		<div id="sidebar" class="hide">
->>>>>>> master
 		{if $leftSidebarCode}
 			<div id="sidebarLeft"
 			{if $rightSidebarCode}
@@ -206,18 +187,9 @@
 
 	<h2>{$pageTitleTranslated}</h2>
 
-<<<<<<< HEAD
 	{if $pageSubtitle && !$pageSubtitleTranslated}{translate|assign:"pageSubtitleTranslated" key=$pageSubtitle}{/if}
 	{if $pageSubtitleTranslated}
 		<h3>{$pageSubtitleTranslated}</h3>
 	{/if}
 
 	<div id="content">
-=======
-{if $pageSubtitle && !$pageSubtitleTranslated}{translate|assign:"pageSubtitleTranslated" key=$pageSubtitle}{/if}
-{if $pageSubtitleTranslated}
-	<h3>{$pageSubtitleTranslated}</h3>
-{/if}
-
-<div id="content" class=".col-xs-12 .col-md-8">
->>>>>>> master
